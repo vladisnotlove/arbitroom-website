@@ -8,10 +8,11 @@
     <!--    <link rel="icon" href="img/favicon.ico" type="image/x-icon">-->
     <!--    <link rel="icon" type="image/png" href="img/favicon.png">-->
     <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/icons.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+<div id="dropdownOverlay"></div>
 
 <!--&lt;!&ndash; modal overlay &ndash;&gt;
 <div class="modal__overlay">
@@ -120,32 +121,29 @@
 <div class="overlay"></div>-->
 
 <!-- menu -->
-<div class="menu">
-    <header class="menu__header">
-        <a href="index.html" class="header__logo">
-            <img src="img/logo.svg" alt="">
-        </a>
-        <nav class="menu__header-nav">
-            <a href="about.html">О нас</a>
-            <a href="tariffs.html">Тарифы</a>
-            <a href="partners.html">Партнерам</a>
-            <a href="FAQ.html">FAQ</a>
-            <a href="contacts.html">Контакты</a></nav>
-        <div class="menu__header-action">
-            <a href="" class="menu__action-item modal_enter">Вход </a>
-            <a href="" class="menu__action-item modal_registration">Регистрация</a>
-        </div>
-    </header>
-    <img src="img/close.svg" alt="" class="close">
+<div class="menu__overlay overlay"
+     id="menuOverlay"
+     data-toggle-class="open"
+     data-target="#menu, #menuOverlay"
+></div>
+<div class="menu" id="menu">
+    <a href="">Вход </a>
+    <a href="">Регистрация</a>
+    <div class="menu__divider"></div>
+    <a href="about.html">О нас</a>
+    <a href="tariffs.html">Тарифы</a>
+    <a href="partners.html">Партнерам</a>
+    <a href="FAQ.html">FAQ</a>
+    <a href="contacts.html">Контакты</a>
 </div>
 
 <!-- header -->
-<div class="header__wrapper">
+<div class="header__wrapper ">
     <div class="container">
         <header class="header">
-            <a class="header__logo" href="index.html" >
-                <img class="show-desktop" src="img/logo.svg" alt="">
-                <img class="show-mobile" src="img/logo-small.svg" alt="">
+            <a class="header__logo" href="index.html">
+                <img class="desktop" src="img/logo.svg" alt="">
+                <img class="mobile" src="img/logo-small.svg" alt="">
             </a>
             <nav class="header__nav">
                 <a href="about.html">О нас</a>
@@ -154,21 +152,26 @@
                 <a href="FAQ.html">FAQ</a>
                 <a href="contacts.html">Контакты</a>
             </nav>
-            <div class="header__language language">
-                <div class="language__head">
+            <div class="header__language language dropdown">
+                <div class="language__label dropdown__trigger">
                     <span>Ru</span>
                     <svg class="icon">
                         <use href="img/icons/angle-down.svg#svg"/>
                     </svg>
                 </div>
-                <div class="language__list">
-                    <div class="language__list-item active">
-                        <img src="img/header/lang-1.svg" alt="">RU
+                <div class="language__menu dropdown__menu">
+                    <div class="language__menu-item">
+                        <img src="img/flags/ru.svg" alt="">RU
                     </div>
-                    <div class="language__list-item">
-                        <img src="img/header/lang-4.svg" alt="">EN</div>
-                    <div class="language__list-item"><img src="img/header/lang-3.svg" alt="">FN</div>
-                    <div class="language__list-item"><img src="img/header/lang-2.svg" alt="">KZ</div>
+                    <div class="language__menu-item">
+                        <img src="img/flags/en.svg" alt="">EN
+                    </div>
+                    <div class="language__menu-item">
+                        <img src="img/flags/fi.svg" alt="">FI
+                    </div>
+                    <div class="language__menu-item">
+                        <img src="img/flags/kz.svg" alt="">KZ
+                    </div>
                 </div>
             </div>
             <div class="header__action">
@@ -176,6 +179,12 @@
                 <span>&nbsp;/&nbsp;</span>
                 <a href="" class="header__action-item modal_registration">Регистрация</a>
             </div>
+            <svg class="header__burger icon"
+                 data-toggle-class="open"
+                 data-target="#menu, #menuOverlay"
+            >
+                <use href="img/icons/burger.svg#svg"/>
+            </svg>
         </header>
     </div>
 </div>
@@ -184,8 +193,8 @@
 
     <!-- promo -->
     <section class="promo">
-        <h1 class="title">Открой мир<br/> инвестиций<br/> заново</h1>
         <img class="promo__img" src="img/promo-image.svg" alt="">
+        <h1 class="title">Открой мир<br/> инвестиций<br/> заново</h1>
         <div class="promo__info">
             Токен, обеспеченный реальными активами, с растущей выплатой ежедневного дохода в Bitcoin его владельцу
         </div>
@@ -218,7 +227,7 @@
         </div>
     </section>
 
-    <!-- tarrifs -->
+    <!-- tariffs -->
     <section class="block main-tariffs">
         <img class="background-ellipse" src="img/ellipse-1.png" alt=""/>
         <h2 class="title">
@@ -226,13 +235,11 @@
         </h2>
         <div class="tariff__cards">
             <div class="tariff__card">
-                <div class="tariff__card-title">
-                    <span>Tier 1</span>
-                    <p>
-                        от 100$<span class="separator">•</span>15 календарных дней
-                    </p>
-                </div>
+                <div class="tariff__card-title">Tier 1</div>
                 <div class="tariff__card-subtitle">
+                    от 100$<span class="separator">•</span>15 календарных дней
+                </div>
+                <div class="tariff__card-numbers">
                     <div>15%</div>
                     <span>/ весь срок</span>
                 </div>
@@ -241,13 +248,11 @@
                 </button>
             </div>
             <div class="tariff__card">
-                <div class="tariff__card-title">
-                    <span>Tier 2</span>
-                    <p>
-                        от 100$<span class="separator">•</span>30 календарных дней
-                    </p>
-                </div>
+                <div class="tariff__card-title">Tier 2</div>
                 <div class="tariff__card-subtitle">
+                    от 100$<span class="separator">•</span>30 календарных дней
+                </div>
+                <div class="tariff__card-numbers">
                     <div>50%</div>
                     <span>/ весь срок</span>
                 </div>
@@ -256,13 +261,11 @@
                 </button>
             </div>
             <div class="tariff__card main">
-                <div class="tariff__card-title">
-                    <span>Tier 3</span>
-                    <p>
-                        от 100$<span class="separator">•</span>15 календарных дней
-                    </p>
-                </div>
+                <div class="tariff__card-title">Tier 3</div>
                 <div class="tariff__card-subtitle">
+                    от 100$<span class="separator">•</span>15 календарных дней
+                </div>
+                <div class="tariff__card-numbers">
                     <div>100%</div>
                     <span>/ весь срок</span>
                 </div>
@@ -278,67 +281,61 @@
         <img class="background-ellipse" src="img/ellipse-1.png" alt=""/>
         <h2 class="title">Основные преимущества</h2>
         <div class="advantages__cards">
-
-            <div class="advantages__cards-row">
-                <div class="advantage__card row">
-                    <div class="advantage__card-title">
-                        <div>Более</div>
-                        <div>200</div>
-                    </div>
-                    <span>
-                        удачных IDO проектов которые дали <span class="color-prime">свыше 500% прибыли</span>
-                    </span>
+            <div class="advantages__card with-title card-1">
+                <div class="advantages__card-title">
+                    <div>Более</div>
+                    <div>200</div>
                 </div>
-                <div class="advantage__card row">
-                    <div class="advantage__card-title">
-                        <div>Более</div>
-                        <div>3<span class="small">&nbsp;лет</span></div>
+                <span>
+                    удачных IDO проектов которые дали <span class="color-prime">свыше 500% прибыли</span>
+                </span>
+            </div>
+            <div class="advantages__card with-title card-2">
+                <div class="advantages__card-title">
+                    <div>Более</div>
+                    <div>3<span class="small-text">&nbsp;лет</span></div>
+                </div>
+                <span>
+                    опыта работы в индустрии
+                </span>
+            </div>
+            <div class="advantages__card-group">
+                <div class="advantages__card card-3">
+                <span>
+                    <span class="color-prime">Отсутствие рисков</span> связанных с удержанием токенов IDO
+                    площадки
+                </span>
+                    <img src="img/icons/guard.svg" alt=""/>
+                </div>
+                <div class="advantages__card with-multiple-rows  card-4">
+                    <div>
+                        Закрытие сделок по максимальной цене при помощи
                     </div>
-                    <span>
-                        опыта работы в индустрии
-                    </span>
+                    <div>
+                        <span class="big-text">Smart IDO Bot</span>
+                        <img src="img/icons/chat-bot.svg" alt=""/>
+                    </div>
                 </div>
             </div>
-
-            <div class="advantages__cards-row">
-                <div class="advantages__cards-column">
-                    <div class="advantage__card row">
-                            <span>
-                                <span class="color-prime">Отсутствие рисков</span> связанных с удержанием токенов IDO
-                                площадки
-                            </span>
-                        <img src="img/icons/guard.svg" alt=""/>
-                    </div>
-                    <div class="advantage__card column">
-                        <p>
-                            Закрытие сделок по максимальной цене при помощи
-                        </p>
-                        <p class="advantage__card-big-text row">
-                            Smart IDO Bot
-                            <img src="img/icons/chat-bot.svg" alt=""/>
-                        </p>
-                    </div>
+            <div class="advantages__card-group">
+                <div class="advantages__card card-5">
+                    <span>
+                        <span class="color-prime">Диверсификация инвестиций</span> в IDO площадки
+                    </span>
+                    <img src="img/icons/recycling.svg" alt=""/>
                 </div>
-                <div class="advantages__cards-column">
-                    <div class="advantage__card row">
-                            <span>
-                                <span class="color-prime">Диверсификация инвестиций</span> в IDO площадки
-                            </span>
-                        <img src="img/icons/recycling.svg" alt=""/>
-                    </div>
-                    <div class="advantage__card row">
-                            <span>
-                                Предоставление <span class="color-prime">коротких инвестиционных планов</span> для
-                                партнеров
-                            </span>
-                        <img src="img/icons/clock-money.svg" alt=""/>
-                    </div>
-                    <div class="advantage__card row">
-                            <span class="advantage__card-small-text">
-                                Гарантированная прибыль за счет постепенных разлоков предыдущих проектов
-                            </span>
-                        <img src="img/icons/graph.svg" alt=""/>
-                    </div>
+                <div class="advantages__card card-6">
+                    <span>
+                        Предоставление <span class="color-prime">коротких инвестиционных планов</span> для
+                        партнеров
+                    </span>
+                    <img src="img/icons/clock-money.svg" alt=""/>
+                </div>
+                <div class="advantages__card card-7">
+                    <span>
+                        Гарантированная прибыль за счет постепенных разлоков предыдущих проектов
+                    </span>
+                    <img src="img/icons/graph.svg" alt=""/>
                 </div>
             </div>
         </div>
@@ -346,7 +343,7 @@
 </div>
 
 <!-- video -->
-<section class="block video">
+<section class="video">
     <div class="video__preview">
         <img src="img/video-preview.jpg" alt="">
     </div>
@@ -365,7 +362,7 @@
     <!-- launchpool -->
     <section class="block launchpool">
         <img class="background-ellipse" src="img/ellipse-2.png" alt=""/>
-        <div class="row">
+        <div class="launchpool__main-part">
             <h2 class="title">Launchpool & Launchpad<br/> с любым депозитом</h2>
             <div class="launchpool__description">
                 <p>
@@ -545,7 +542,7 @@
         </div>
     </section>
 
-
+    <!-- goals -->
     <section class="block goals">
         <img class="background-ellipse small" src="img/ellipse-1.png"/>
         <img class="background-ellipse big" src="img/ellipse-2.png"/>
@@ -554,43 +551,42 @@
         </h2>
         <div class="goals__cards">
             <div class="goals__card">
-                <span class="goals__card-title">
+                <div class="goals__card-title">
                     Упрощение
-                </span>
-                <span class="goals__card-description">
+                </div>
+                <div class="goals__card-description">
                     Дать возможность каждому участнику рынка участвовать в Launchpad и Launchpool без регистраций,  верификаций, покупки монет и стейкинга.
-                </span>
+                </div>
             </div>
             <div class="goals__divider"></div>
             <div class="goals__card">
-                <span class="goals__card-title">
+                <div class="goals__card-title">
                     Независимость
-                </span>
-                <span class="goals__card-description">
+                </div>
+                <div class="goals__card-description">
                     Для получения аллокации Spectra имеет в стейкинге на 2-4 года монеты бирж, что позволит участвовать в Launchpad и Launchpool даже на медвежьем рынке.
-                </span>
+                </div>
             </div>
             <div class="goals__divider"></div>
             <div class="goals__card">
-                <span class="goals__card-title">
+                <div class="goals__card-title">
                     Прибыль
-                </span>
-                <span class="goals__card-description">
+                </div>
+                <div class="goals__card-description">
                     За счет программного обеспечения появилась возможность продавать новые монеты одними из первых по самым высоким ценам.
-                </span>
+                </div>
             </div>
             <div class="goals__divider"></div>
             <div class="goals__card">
-                <span class="goals__card-title">
+                <div class="goals__card-title">
                     Комьюнити
-                </span>
-                <span class="goals__card-description">
+                </div>
+                <div class="goals__card-description">
                     Отбор самых перспективных проектов. Поддержка и удержание их монет. Отслеживание развития таких проектов с целью получения более высокой прибыли.
-                </span>
+                </div>
             </div>
         </div>
     </section>
-
 </div>
 
 <div class="footer__wrapper">
@@ -601,13 +597,14 @@
                 инвестировать<br/>
                 сегодня
             </h2>
-            <div class="footer__arrow-img">
+            <div class="footer__img">
                 <img class="shadow" src="img/light-ellipse.png" alt=""/>
                 <img src="img/luminous-arrow.svg" alt=""/>
             </div>
             <div class="footer__header header">
                 <a class="header__logo" href="index.html">
-                    <img src="img/logo.svg" alt="">
+                    <img class="desktop" src="img/logo.svg" alt="">
+                    <img class="mobile" src="img/logo-small.svg" alt="">
                 </a>
                 <nav class="header__nav">
                     <a href="about.html">О нас</a>
@@ -616,22 +613,26 @@
                     <a href="FAQ.html">FAQ</a>
                     <a href="contacts.html">Контакты</a>
                 </nav>
-                <div class="header__language language">
-                    <div class="language__head">
+                <div class="header__language language dropdown">
+                    <div class="language__label dropdown__trigger">
                         <span>Ru</span>
                         <svg class="icon">
                             <use href="img/icons/angle-down.svg#svg"/>
                         </svg>
                     </div>
-                    <div class="language__list">
-                        <div class="language__list-item active">
-                            <img src="img/header/lang-1.svg" alt="">RU
+                    <div class="language__menu dropdown__menu">
+                        <div class="language__menu-item">
+                            <img src="img/flags/ru.svg" alt="">RU
                         </div>
-                        <div class="language__list-item">
-                            <img src="img/header/lang-4.svg" alt="">EN
+                        <div class="language__menu-item">
+                            <img src="img/flags/en.svg" alt="">EN
                         </div>
-                        <div class="language__list-item"><img src="img/header/lang-3.svg" alt="">FN</div>
-                        <div class="language__list-item"><img src="img/header/lang-2.svg" alt="">KZ</div>
+                        <div class="language__menu-item">
+                            <img src="img/flags/fi.svg" alt="">FI
+                        </div>
+                        <div class="language__menu-item">
+                            <img src="img/flags/kz.svg" alt="">KZ
+                        </div>
                     </div>
                 </div>
                 <div class="header__action">
@@ -660,11 +661,15 @@
     </div>
 </div>
 
+
+<!-- lib-modules -->
 <script src="js/jquery-3.5.1.min.js"></script>
-<!--<script src="js/morris.min.js"></script>-->
-<!--<script src="js/rangeslider.min.js"></script>-->
-<!--<script src="js/raphael-min.js"></script>-->
 <script src="js/leader-line.min.js"></script>
-<script src="js/script.js"></script>
+<script type="module" src="js/popper.min.js"></script>
+<!-- modules -->
+<script type="module" src="js/common.js"></script>
+<script type="module" src="js/arrows.js"></script>
+<script type="module" src="js/dropdown.js"></script>
+
 </body>
 </html>
