@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>SPECTRA</title>
-    <link rel="shortcut icon" href="img/favicon.ico">
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="icon" type="image/png" href="img/favicon.png">
-    <link rel="stylesheet" href="fonts/style.css">
-    <link rel="stylesheet" href="css/style.min.css">
+    <!--    <link rel="shortcut icon" href="img/favicon.ico">-->
+    <!--    <link rel="icon" href="img/favicon.ico" type="image/x-icon">-->
+    <!--    <link rel="icon" type="image/png" href="img/favicon.png">-->
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="swiper-on">
+<body>
 
-<!-- modal overlay -->
+<!--&lt;!&ndash; modal overlay &ndash;&gt;
 <div class="modal__overlay">
 
-    <!-- registration -->
+    &lt;!&ndash; registration &ndash;&gt;
     <div id="registration" class="modal">
         <div class="title title_64">Регистрация<br>на платформе</div>
         <div class="modal__content">
@@ -39,7 +40,7 @@
         </div>
     </div>
 
-    <!-- enter -->
+    &lt;!&ndash; enter &ndash;&gt;
     <div id="enter" class="modal">
         <div class="title title_64">Войти в личный<br>кабинет</div>
         <div class="modal__content">
@@ -55,7 +56,7 @@
         </div>
     </div>
 
-    <!-- forgot password -->
+    &lt;!&ndash; forgot password &ndash;&gt;
     <div id="fpass" class="modal">
         <div class="title title_64">Забыли пароль?</div>
         <div class="modal__content">
@@ -66,7 +67,7 @@
         </div>
     </div>
 
-    <!-- questions -->
+    &lt;!&ndash; questions &ndash;&gt;
     <div id="questions" class="modal">
         <div id="question-headinfo" class="modal__headinfo">Общие вопросы</div>
         <div id="question-title" class="title title_64">Чем занимается компания?</div>
@@ -78,12 +79,17 @@
             </div>
             <div class="modal__buttons">
                 <button class="btn btn_promo">Начать сегодня</button>
-                <button class="btn btn_transparent"><img src="img/play.svg" alt=""> Как это работает</button>
+                <button class="btn btn_transparent">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <use href="img/icons/play.svg#svg"/>
+                    </svg>
+                    Как это работает
+                </button>
             </div>
         </div>
     </div>
 
-    <!-- calc -->
+    &lt;!&ndash; calc &ndash;&gt;
     <div id="calc" class="modal">
         <div class="title title_64">Калькулятор</div>
         <div class="modal__content">
@@ -110,14 +116,14 @@
     </div>
 </div>
 
-<!-- menu overlay -->
-<div class="overlay"></div>
+&lt;!&ndash; menu overlay &ndash;&gt;
+<div class="overlay"></div>-->
 
 <!-- menu -->
 <div class="menu">
     <header class="menu__header">
         <a href="index.html" class="header__logo">
-            <img src="img/header-logo.svg" alt="">
+            <img src="img/logo.svg" alt="">
         </a>
         <nav class="menu__header-nav">
             <a href="about.html">О нас</a>
@@ -133,315 +139,532 @@
     <img src="img/close.svg" alt="" class="close">
 </div>
 
-<div class="beams">
-    <div class="container"><img class="bubble" src="img/bg/bubble.png" alt="">
-        <div class="header__wrapper">
-            <div class="container">
-                <header class="header">
-                    <a href="index.html" class="header__logo">
-                        <picture>
-                            <source media="(max-width: 800px)" srcset="img/header-logo-mobile.svg">
-                            <source media="(min-width: 801px)" srcset="img/header-logo.svg">
-                            <img src="img/header-logo.svg" alt="">
-                        </picture>
-                    </a>
-                    <nav class="header__nav">
-                        <a href="about.html">О нас</a>
-                        <a href="tariffs.html">Тарифы</a>
-                        <a href="partners.html">Партнерам</a>
-                        <a href="FAQ.html">FAQ</a>
-                        <a href="contacts.html">Контакты</a>
-                    </nav>
-                    <div class="language">
-                        <div class="language__head">
-                            <span>Ru</span>
-                            <img class="lang__arrow" src="img/icons/angle-down.svg" alt="">
-                        </div>
-                        <div class="language__list">
-                            <div class="language__list-item language__list-item_active"><img src="img/header/lang-1.svg"
-                                                                                             alt="">RU
-                            </div>
-                            <div class="language__list-item"><img src="img/header/lang-4.svg" alt="">EN</div>
-                            <div class="language__list-item"><img src="img/header/lang-3.svg" alt="">FN</div>
-                            <div class="language__list-item"><img src="img/header/lang-2.svg" alt="">KZ</div>
-                        </div>
-                    </div>
-                    <div class="header__action">
-                        <a href="" class="header__action-item modal_enter">Вход </a>
-                        <span>&nbsp;/&nbsp;</span>
-                        <a href="" class="header__action-item modal_registration">Регистрация</a>
-                    </div>
-                    <div class="burger">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </header>
-            </div>
-        </div>
-
-        <!-- promo -->
-        <section class="promo">
-            <h1 class="title">Открой мир<br/> инвестиций<br/> заново</h1>
-            <img class="promo__img" src="img/promo-image.svg" alt="">
-            <div class="promo__info">
-                Токен, обеспеченный реальными активами, с растущей выплатой ежедневного дохода в Bitcoin его владельцу
-            </div>
-            <div class="promo__buttons">
-                <button class="btn btn_promo">Начать сейчас</button>
-                <button class="btn btn_transparent"><img src="img/icons/play.svg" alt=""> Как это работает</button>
-            </div>
-            <div class="promo__cards">
-                <div class="promo__card">
-                    <div><img src="img/icons/card.svg" alt=""></div>
-                    <p>Простое участие в IDO и Launchpad</p>
-                </div>
-                <div class="promo__card">
-                    <div><img src="img/icons/clock.svg" alt=""></div>
-                    <p>Короткие планы с возвратом депозита</p>
-                </div>
-                <div class="promo__card">
-                    <div><img src="img/icons/graph.svg" alt=""></div>
-                    <p>Опция сложного процента</p>
-                </div>
-                <div class="promo__card">
-                    <div><img src="img/icons/speech.svg" alt=""></div>
-                    <p>Круглосуточная<br>поддержка в чате</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- tarrifs -->
-        <section class="main-tariffs">
-            <img class="background-ellipse" src="img/ellipse-1.png"/>
-            <h2 class="title">
-                Тарифные планы
-            </h2>
-            <div class="tariff__cards">
-                <div class="tariff__card">
-                    <div class="tariff__card-title">
-                        <span>Tier 1</span>
-                        <p>
-                            от 100$<span class="separator">•</span>15 календарных дней
-                        </p>
-                    </div>
-                    <div class="tariff__card-subtitle">
-                        <div>15%</div>
-                        <span>/ весь срок</span>
-                    </div>
-                    <button class="btn tariff__btn">
-                        Рассчитать доходность
-                    </button>
-                </div>
-                <div class="tariff__card">
-                    <div class="tariff__card-title">
-                        <span>Tier 2</span>
-                        <p>
-                            от 100$<span class="separator">•</span>30 календарных дней
-                        </p>
-                    </div>
-                    <div class="tariff__card-subtitle">
-                        <div>50%</div>
-                        <span>/ весь срок</span>
-                    </div>
-                    <button class="btn tariff__btn">
-                        Рассчитать доходность
-                    </button>
-                </div>
-                <div class="tariff__card main">
-                    <div class="tariff__card-title">
-                        <span>Tier 3</span>
-                        <p>
-                            от 100$<span class="separator">•</span>15 календарных дней
-                        </p>
-                    </div>
-                    <div class="tariff__card-subtitle">
-                        <div>100%</div>
-                        <span>/ весь срок</span>
-                    </div>
-                    <button class="btn tariff__btn">
-                        Рассчитать доходность
-                    </button>
-                </div>
-            </div>
-        </section>
-        <section class="advantages">
-            <img class="background-ellipse" src="img/ellipse-1.png"/>
-            <h2 class="title">Основные преимущества</h2>
-            <div class="advantages__cards">
-
-                <div class="advantages__cards-row">
-                    <div class="advantage__card row">
-                        <span class="advantage__card-title">
-                            <div>Более</div>
-                            <div>200</div>
-                        </span>
-                        <span>
-                            удачных IDO проектов которые дали <span class="color-prime">свыше 500% прибыли</span>
-                        </span>
-                    </div>
-                    <div class="advantage__card row">
-                        <div class="advantage__card-title">
-                            <div>Более</div>
-                            <div>3<span class="small">&nbsp;лет</span></div>
-                        </div>
-                        <span>
-                            опыта работы в индустрии
-                        </span>
-                    </div>
-                </div>
-
-                <div class="advantages__cards-row">
-                    <div class="advantages__cards-column">
-                        <div class="advantage__card row">
-                            <span>
-                                <span class="color-prime">Отсутствие рисков</span> связанных с удержанием токенов IDO
-                                площадки
-                            </span>
-                            <img src="img/icons/guard.svg"/>
-                        </div>
-                        <div class="advantage__card column">
-                            <p>
-                                Закрытие сделок по максимальной цене при помощи
-                            </p>
-                            <p class="advantage__card-big-text row">
-                                Smart IDO Bot
-                                <img src="img/icons/chat-bot.svg"/>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="advantages__cards-column">
-                        <div class="advantage__card row">
-                            <span>
-                                <span class="color-prime">Диверсификация инвестиций</span> в IDO площадки
-                            </span>
-                            <img src="img/icons/recycling.svg"/>
-                        </div>
-                        <div class="advantage__card row">
-                            <span>
-                                Предоставление <span class="color-prime">коротких инвестиционных планов</span> для
-                                партнеров
-                            </span>
-                            <img src="img/icons/clock-money.svg"/>
-                        </div>
-                        <div class="advantage__card row">
-                            <span class="advantage__card-small-text">
-                                Гарантированная прибыль за счет постепенных разлоков предыдущих проектов
-                            </span>
-                            <img src="img/icons/graph.svg"/>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-</div>
-<section class="video">
-    <div class="video__preview"><img src="img/video/video.jpg" alt=""></div>
-    <div class="video__overlay"></div>
-    <div class="video__play"><img src="img/video/play.svg" alt="">
-        <p>Смотреть видео</p></div>
-</section>
-<div class="beams_bottom">
+<!-- header -->
+<div class="header__wrapper">
     <div class="container">
-        <section class="launchpool"><!-- <div class="launchpool__bg">
-					<img src="img/page-4-beam.png" alt="">
-				</div> -->
-            <div class="launchpool__info">О компании</div>
-            <div class="launchpool__wrapper">
-                <div class="title">Launchpool<br>&&nbsp;Launchpad<br>с любым<br>депозитом</div>
-                <div class="launchpool__subtitle"><p>Задача платформы - сделать легким, доступным и&nbsp;выгодным
-                    участие в запусках новых криптовалютных проектов. Сейчас любой участник рынка может извлекать
-                    прибыль с минимальными вложениями.</p>
-                    <div class="launchpool__buttons">
-                        <button class="btn btn_promo">Начать сегодня</button>
-                        <button class="btn btn_transparent">Больше о нас</button>
-                    </div>
-                </div>
-            </div>
-            <div class="launchpool__pay"><img src="img/pay.png" alt=""></div>
-        </section>
-        <section class="how">
-            <div class="title">Как это<br>работает</div>
-            <div class="swiper swiper2">
-                <div class="how__cards swiper-wrapper">
-                    <div class="how__card">
-                        <div class="how__number">01</div>
-                        <p>Пройдите регистрацию, выберите подходящий тарифный план и пополните счет</p></div>
-                    <div class="how__card">
-                        <div class="how__number">02</div>
-                        <p>Отметьте необходимую опцию продления и капитацизации и начните получать проценты</p></div>
-                    <div class="how__card">
-                        <div class="how__number">03</div>
-                        <p>После окончания работы депозита выводите его или продлевайте</p></div>
-                </div>
-            </div>
-            <div class="arrows-nav_2"><span class="swiper-btn-prev-2"><img src="img/slide-arrow-left.svg"
-                                                                           alt=""> </span><span
-                    class="swiper-btn-next-2"><img src="img/slide-arrow-right.svg" alt=""></span></div>
-        </section>
-        <section class="goals">
-            <div class="title">ЦЕЛИ<br>КОМПАНИИ</div>
-            <div class="goals__cards">
-                <div class="goals__card"><p class="title title_64">Упрощение</p>
-                    <div class="goals__descr">Дать возможность каждому участнику рынка участвовать в&nbsp;Launchpad и
-                        Launchpool без регистраций, верификаций, покупки монет и стейкинга
-                    </div>
-                </div>
-                <div class="divider_light"></div>
-                <div class="goals__card"><p class="title title_64">Независимость</p>
-                    <div class="goals__descr">Для получения аллокации Baochange имеет в стейкинге на&nbsp;2-4 года
-                        монеты бирж, что позволит участвовать в Launchpad и Launchpool даже на медвежьем рынке.
-                    </div>
-                </div>
-                <div class="divider_light"></div>
-                <div class="goals__card"><p class="title title_64">Прибыль</p>
-                    <div class="goals__descr">За счет программного обеспечения появилась возможность продавать новые
-                        монеты одними из&nbsp;первых по самым высоким ценам.
-                    </div>
-                </div>
-                <div class="divider_light"></div>
-                <div class="goals__card"><p class="title title_64">Комьюнити</p>
-                    <div class="goals__descr">Отбор самых перспективных проектов. Поддержка и удержание их монет.
-                        Отслеживание развития таких проектов с целью получения более высокой прибыли.
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-</div>
-<footer class="footer">
-    <div class="container">
-        <div class="footer__up">
-            <div class="title title_footer">Начните<br>инвестировать<br>сегодня</div>
-            <a href="" class="round-arrow"><img src="img/arrow-diagonal.svg" alt=""></a></div>
-        <div class="divider_dark"></div>
-        <div class="footer__down"><a href="index.html" class="footer__logo"><img src="img/footer-logo.svg" alt=""></a>
-            <nav class="footer__nav"><a href="about.html">О нас</a> <a href="tariffs.html">Тарифы</a> <a
-                    href="partners.html">Партнерам</a> <a href="FAQ.html">FAQ</a> <a href="contacts.html">Контакты</a>
+        <header class="header">
+            <a class="header__logo" href="index.html" >
+                <img class="show-desktop" src="img/logo.svg" alt="">
+                <img class="show-mobile" src="img/logo-small.svg" alt="">
+            </a>
+            <nav class="header__nav">
+                <a href="about.html">О нас</a>
+                <a href="tariffs.html">Тарифы</a>
+                <a href="partners.html">Партнерам</a>
+                <a href="FAQ.html">FAQ</a>
+                <a href="contacts.html">Контакты</a>
             </nav>
-            <div class="language">
-                <div class="language__head"><span>RU</span><img class="lang__arrow" src="img/arrow-lang-dark.svg"
-                                                                alt=""></div>
+            <div class="header__language language">
+                <div class="language__head">
+                    <span>Ru</span>
+                    <svg class="icon">
+                        <use href="img/icons/angle-down.svg#svg"/>
+                    </svg>
+                </div>
                 <div class="language__list">
-                    <div class="language__list-item language__list-item_active"><img src="img/header/lang-1.svg" alt="">RU
+                    <div class="language__list-item active">
+                        <img src="img/header/lang-1.svg" alt="">RU
                     </div>
-                    <div class="language__list-item"><img src="img/header/lang-4.svg" alt="">EN</div>
+                    <div class="language__list-item">
+                        <img src="img/header/lang-4.svg" alt="">EN</div>
                     <div class="language__list-item"><img src="img/header/lang-3.svg" alt="">FN</div>
                     <div class="language__list-item"><img src="img/header/lang-2.svg" alt="">KZ</div>
                 </div>
             </div>
-            <div class="footer__action"><a href="" class="footer__action-item modal_enter">Вход </a><span>/</span> <a
-                    href="" class="footer__action-item modal_registration">Регистрация</a></div>
-        </div>
-        <div class="footer__info"><p>© 2022 Spectra. All rights reserved.</p><a href="">Политика конфиденциальности</a>
-        </div>
+            <div class="header__action">
+                <a href="" class="header__action-item modal_enter">Вход </a>
+                <span>&nbsp;/&nbsp;</span>
+                <a href="" class="header__action-item modal_registration">Регистрация</a>
+            </div>
+        </header>
     </div>
-</footer>
+</div>
+
+<div class="container">
+
+    <!-- promo -->
+    <section class="promo">
+        <h1 class="title">Открой мир<br/> инвестиций<br/> заново</h1>
+        <img class="promo__img" src="img/promo-image.svg" alt="">
+        <div class="promo__info">
+            Токен, обеспеченный реальными активами, с растущей выплатой ежедневного дохода в Bitcoin его владельцу
+        </div>
+        <div class="promo__buttons">
+            <button class="btn btn_promo">Начать сейчас</button>
+            <button class="btn btn_transparent">
+                <svg class="icon">
+                    <use href="img/icons/play.svg#svg"/>
+                </svg>
+                Как это работает
+            </button>
+        </div>
+        <div class="promo__cards">
+            <div class="promo__card">
+                <div><img src="img/icons/card.svg" alt=""></div>
+                <p>Простое участие в IDO и Launchpad</p>
+            </div>
+            <div class="promo__card">
+                <div><img src="img/icons/clock.svg" alt=""></div>
+                <p>Короткие планы с возвратом депозита</p>
+            </div>
+            <div class="promo__card">
+                <div><img src="img/icons/graph.svg" alt=""></div>
+                <p>Опция сложного процента</p>
+            </div>
+            <div class="promo__card">
+                <div><img src="img/icons/speech.svg" alt=""></div>
+                <p>Круглосуточная<br>поддержка в чате</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- tarrifs -->
+    <section class="block main-tariffs">
+        <img class="background-ellipse" src="img/ellipse-1.png" alt=""/>
+        <h2 class="title">
+            Тарифные планы
+        </h2>
+        <div class="tariff__cards">
+            <div class="tariff__card">
+                <div class="tariff__card-title">
+                    <span>Tier 1</span>
+                    <p>
+                        от 100$<span class="separator">•</span>15 календарных дней
+                    </p>
+                </div>
+                <div class="tariff__card-subtitle">
+                    <div>15%</div>
+                    <span>/ весь срок</span>
+                </div>
+                <button class="btn tariff__btn">
+                    Рассчитать доходность
+                </button>
+            </div>
+            <div class="tariff__card">
+                <div class="tariff__card-title">
+                    <span>Tier 2</span>
+                    <p>
+                        от 100$<span class="separator">•</span>30 календарных дней
+                    </p>
+                </div>
+                <div class="tariff__card-subtitle">
+                    <div>50%</div>
+                    <span>/ весь срок</span>
+                </div>
+                <button class="btn tariff__btn">
+                    Рассчитать доходность
+                </button>
+            </div>
+            <div class="tariff__card main">
+                <div class="tariff__card-title">
+                    <span>Tier 3</span>
+                    <p>
+                        от 100$<span class="separator">•</span>15 календарных дней
+                    </p>
+                </div>
+                <div class="tariff__card-subtitle">
+                    <div>100%</div>
+                    <span>/ весь срок</span>
+                </div>
+                <button class="btn tariff__btn">
+                    Рассчитать доходность
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- advantages -->
+    <section class="block advantages">
+        <img class="background-ellipse" src="img/ellipse-1.png" alt=""/>
+        <h2 class="title">Основные преимущества</h2>
+        <div class="advantages__cards">
+
+            <div class="advantages__cards-row">
+                <div class="advantage__card row">
+                    <div class="advantage__card-title">
+                        <div>Более</div>
+                        <div>200</div>
+                    </div>
+                    <span>
+                        удачных IDO проектов которые дали <span class="color-prime">свыше 500% прибыли</span>
+                    </span>
+                </div>
+                <div class="advantage__card row">
+                    <div class="advantage__card-title">
+                        <div>Более</div>
+                        <div>3<span class="small">&nbsp;лет</span></div>
+                    </div>
+                    <span>
+                        опыта работы в индустрии
+                    </span>
+                </div>
+            </div>
+
+            <div class="advantages__cards-row">
+                <div class="advantages__cards-column">
+                    <div class="advantage__card row">
+                            <span>
+                                <span class="color-prime">Отсутствие рисков</span> связанных с удержанием токенов IDO
+                                площадки
+                            </span>
+                        <img src="img/icons/guard.svg" alt=""/>
+                    </div>
+                    <div class="advantage__card column">
+                        <p>
+                            Закрытие сделок по максимальной цене при помощи
+                        </p>
+                        <p class="advantage__card-big-text row">
+                            Smart IDO Bot
+                            <img src="img/icons/chat-bot.svg" alt=""/>
+                        </p>
+                    </div>
+                </div>
+                <div class="advantages__cards-column">
+                    <div class="advantage__card row">
+                            <span>
+                                <span class="color-prime">Диверсификация инвестиций</span> в IDO площадки
+                            </span>
+                        <img src="img/icons/recycling.svg" alt=""/>
+                    </div>
+                    <div class="advantage__card row">
+                            <span>
+                                Предоставление <span class="color-prime">коротких инвестиционных планов</span> для
+                                партнеров
+                            </span>
+                        <img src="img/icons/clock-money.svg" alt=""/>
+                    </div>
+                    <div class="advantage__card row">
+                            <span class="advantage__card-small-text">
+                                Гарантированная прибыль за счет постепенных разлоков предыдущих проектов
+                            </span>
+                        <img src="img/icons/graph.svg" alt=""/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- video -->
+<section class="block video">
+    <div class="video__preview">
+        <img src="img/video-preview.jpg" alt="">
+    </div>
+    <div class="video__play">
+        <div class="video__play-circle">
+            <svg class="icon" viewBox="0 0 24 24">
+                <use href="img/icons/play.svg#svg"/>
+            </svg>
+        </div>
+        <p class="video__play-text">Смотреть видео</p>
+    </div>
+</section>
+
+<div class="container">
+
+    <!-- launchpool -->
+    <section class="block launchpool">
+        <img class="background-ellipse" src="img/ellipse-2.png" alt=""/>
+        <div class="row">
+            <h2 class="title">Launchpool & Launchpad<br/> с любым депозитом</h2>
+            <div class="launchpool__description">
+                <p>
+                    Задача платформы — сделать легким, доступным и выгодным участие в новых криптовалютных проектов
+                </p>
+                <p>
+                    Сейчас любой участник рынка может извлекать прибыль с минимальными вложениями.
+                </p>
+                <div class="launchpool__buttons">
+                    <button class="btn">
+                        Начать сейчас
+                    </button>
+                    <button class="btn btn_transparent">
+                        Больше о нас
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="launchpool__cards">
+            <div class="launchpool__card">
+                <div class="launchpool__card-icon">
+                    <img class="launchpool__card-logo" src="img/logos/outer-ring.png" alt="" />
+                </div>
+
+                <div class="launchpool__card-badge">
+                    <div class="shadow"></div>
+                    <img src="img/luminous-circle.svg" alt=""/>
+                    <span>11x</span>
+                </div>
+
+                <div class="launchpool__card-title">
+                    Outer Ring MMO [EXO]
+                </div>
+            </div>
+
+            <div class="launchpool__card">
+                <div class="launchpool__card-icon">
+                    <img class="launchpool__card-logo" src="img/logos/world-of-cryptoids.png" alt="" />
+                </div>
+
+                <div class="launchpool__card-badge">
+                    <div class="shadow"></div>
+                    <img src="img/luminous-circle.svg" alt=""/>
+                    <span>109x</span>
+                </div>
+
+                <div class="launchpool__card-title">
+                    Cryptoids [CAC]
+                </div>
+            </div>
+
+            <div class="launchpool__card">
+                <div class="launchpool__card-icon">
+                    <img class="launchpool__card-logo" src="img/logos/metarun.png" alt="" />
+                </div>
+
+                <div class="launchpool__card-badge">
+                    <div class="shadow"></div>
+                    <img src="img/luminous-circle.svg" alt=""/>
+                    <span>14x</span>
+                </div>
+
+                <div class="launchpool__card-title">
+                    Metarun  [MRUN]
+                </div>
+            </div>
+
+            <div class="launchpool__card">
+                <div class="launchpool__card-icon">
+                    <img class="launchpool__card-logo" src="img/logos/stern.png" alt="" />
+                </div>
+
+                <div class="launchpool__card-badge">
+                    <div class="shadow"></div>
+                    <img src="img/luminous-circle.svg" alt=""/>
+                    <span>229x</span>
+                </div>
+
+                <div class="launchpool__card-title">
+                    STEPN [GMT]
+                </div>
+            </div>
+
+            <div class="launchpool__card">
+                <div class="launchpool__card-icon">
+                    <img class="launchpool__card-logo" src="img/logos/rebelbots.png" alt="" />
+                </div>
+
+                <div class="launchpool__card-badge">
+                    <div class="shadow"></div>
+                    <img src="img/luminous-circle.svg" alt=""/>
+                    <span>22x</span>
+                </div>
+
+                <div class="launchpool__card-title">
+                    Rebelbots [RBLS]
+                </div>
+            </div>
+
+            <div class="launchpool__card">
+                <div class="launchpool__card-icon">
+                    <img class="launchpool__card-logo" src="img/logos/harmony-launcher.png" alt="" />
+                </div>
+
+                <div class="launchpool__card-badge">
+                    <div class="shadow"></div>
+                    <img src="img/luminous-circle.svg" alt=""/>
+                    <span>46x</span>
+                </div>
+
+                <div class="launchpool__card-title">
+                    HarmonyLauncher [HARL]
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- how -->
+    <section class="block how">
+        <h2 class="title">
+            Как это работает
+        </h2>
+        <div class="how__steps">
+            <div class="how__step">
+                <div class="how__step-icon">
+                    <img src="img/icons/check-list.svg" alt="" />
+                </div>
+                <div class="how__step-title">
+                    Пройти регистрацию
+                </div>
+            </div>
+
+            <div class="how__step">
+                <div class="how__step-icon">
+                    <img src="img/icons/cards.svg" alt="" />
+                </div>
+                <div class="how__step-title">
+                    Выбрать подходящий тарифный план
+                </div>
+            </div>
+
+            <div class="how__step">
+                <div class="how__step-icon">
+                    <img src="img/icons/coins.svg" alt="" />
+                </div>
+                <div class="how__step-title">
+                    Пополнить баланс кабинета
+                </div>
+            </div>
+
+            <div class="how__step">
+                <div class="how__step-icon">
+                    <img src="img/icons/check-box.svg" alt="" />
+                </div>
+                <div class="how__step-title">
+                    Отметить необходимую опцию автопродление/капитализация
+                </div>
+            </div>
+
+            <div class="how__step">
+                <div class="how__step-icon">
+                    <img src="img/icons/hand-coin.svg" alt="" />
+                </div>
+                <div class="how__step-title">
+                    Получать проценты и при необходимости выводить
+                </div>
+            </div>
+
+            <div class="how__step">
+                <div class="how__step-icon">
+                    <img src="img/icons/check-list.svg" alt="" />
+                </div>
+                <div class="how__step-title">
+                    После окончания срока работы депозита вывести его или продлить
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="block goals">
+        <img class="background-ellipse small" src="img/ellipse-1.png"/>
+        <img class="background-ellipse big" src="img/ellipse-2.png"/>
+        <h2 class="title">
+            Цели компании
+        </h2>
+        <div class="goals__cards">
+            <div class="goals__card">
+                <span class="goals__card-title">
+                    Упрощение
+                </span>
+                <span class="goals__card-description">
+                    Дать возможность каждому участнику рынка участвовать в Launchpad и Launchpool без регистраций,  верификаций, покупки монет и стейкинга.
+                </span>
+            </div>
+            <div class="goals__divider"></div>
+            <div class="goals__card">
+                <span class="goals__card-title">
+                    Независимость
+                </span>
+                <span class="goals__card-description">
+                    Для получения аллокации Spectra имеет в стейкинге на 2-4 года монеты бирж, что позволит участвовать в Launchpad и Launchpool даже на медвежьем рынке.
+                </span>
+            </div>
+            <div class="goals__divider"></div>
+            <div class="goals__card">
+                <span class="goals__card-title">
+                    Прибыль
+                </span>
+                <span class="goals__card-description">
+                    За счет программного обеспечения появилась возможность продавать новые монеты одними из первых по самым высоким ценам.
+                </span>
+            </div>
+            <div class="goals__divider"></div>
+            <div class="goals__card">
+                <span class="goals__card-title">
+                    Комьюнити
+                </span>
+                <span class="goals__card-description">
+                    Отбор самых перспективных проектов. Поддержка и удержание их монет. Отслеживание развития таких проектов с целью получения более высокой прибыли.
+                </span>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<div class="footer__wrapper">
+    <div class="container">
+        <footer class="footer">
+            <h2 class="title">
+                Начните<br/>
+                инвестировать<br/>
+                сегодня
+            </h2>
+            <div class="footer__arrow-img">
+                <img class="shadow" src="img/light-ellipse.png" alt=""/>
+                <img src="img/luminous-arrow.svg" alt=""/>
+            </div>
+            <div class="footer__header header">
+                <a class="header__logo" href="index.html">
+                    <img src="img/logo.svg" alt="">
+                </a>
+                <nav class="header__nav">
+                    <a href="about.html">О нас</a>
+                    <a href="tariffs.html">Тарифы</a>
+                    <a href="partners.html">Партнерам</a>
+                    <a href="FAQ.html">FAQ</a>
+                    <a href="contacts.html">Контакты</a>
+                </nav>
+                <div class="header__language language">
+                    <div class="language__head">
+                        <span>Ru</span>
+                        <svg class="icon">
+                            <use href="img/icons/angle-down.svg#svg"/>
+                        </svg>
+                    </div>
+                    <div class="language__list">
+                        <div class="language__list-item active">
+                            <img src="img/header/lang-1.svg" alt="">RU
+                        </div>
+                        <div class="language__list-item">
+                            <img src="img/header/lang-4.svg" alt="">EN
+                        </div>
+                        <div class="language__list-item"><img src="img/header/lang-3.svg" alt="">FN</div>
+                        <div class="language__list-item"><img src="img/header/lang-2.svg" alt="">KZ</div>
+                    </div>
+                </div>
+                <div class="header__action">
+                    <a href="" class="header__action-item modal_enter">Вход </a>
+                    <span>&nbsp;/&nbsp;</span>
+                    <a href="" class="header__action-item modal_registration">Регистрация</a>
+                </div>
+            </div>
+            <div class="footer__divider"></div>
+            <div class="footer__links">
+                <div class="footer__social">
+                    <a href="">Телеграм канал</a>
+                    <a href="">Телеграм чат</a>
+                    <a href="">Почта</a>
+                    <a href="">YouTube</a>
+                </div>
+                <div class="footer__gap"></div>
+                <div class="footer__copyright">
+                    © 2022 Spectra. All rights reserved.
+                </div>
+                <div class="footer__privacy-policy">
+                    <a href="">Политика конфиденциальности</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+
 <script src="js/jquery-3.5.1.min.js"></script>
 <!--<script src="js/morris.min.js"></script>-->
 <!--<script src="js/rangeslider.min.js"></script>-->
 <!--<script src="js/raphael-min.js"></script>-->
+<script src="js/leader-line.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
