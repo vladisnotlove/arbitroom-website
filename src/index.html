@@ -80,7 +80,7 @@
             </div>
             <div class="modal__buttons">
                 <button class="btn btn_promo">Начать сегодня</button>
-                <button class="btn btn_transparent">
+                <button class="btn btn-outlined">
                     <svg class="icon" viewBox="0 0 24 24">
                         <use href="img/icons/play.svg#svg"/>
                     </svg>
@@ -121,24 +121,62 @@
 <div class="overlay"></div>-->
 
 <!-- menu -->
-<div class="menu__overlay overlay"
-     id="menuOverlay"
-     data-toggle-class="open"
-     data-target="#menu, #menuOverlay"
-></div>
 <div class="menu" id="menu">
-    <a href="">Вход </a>
-    <a href="">Регистрация</a>
-    <div class="menu__divider"></div>
-    <a href="about.html">О нас</a>
-    <a href="tariffs.html">Тарифы</a>
-    <a href="partners.html">Партнерам</a>
-    <a href="FAQ.html">FAQ</a>
-    <a href="contacts.html">Контакты</a>
+    <div class="menu__header">
+        <div class="menu__language language dropdown">
+            <div class="language__label dropdown__trigger">
+                <span>Ru</span>
+                <svg class="icon">
+                    <use href="img/icons/angle-down.svg#svg"/>
+                </svg>
+            </div>
+            <div class="language__menu dropdown__menu">
+                <div class="language__menu-item">
+                    <img src="img/flags/ru.svg" alt="">RU
+                </div>
+                <div class="language__menu-item">
+                    <img src="img/flags/en.svg" alt="">EN
+                </div>
+                <div class="language__menu-item">
+                    <img src="img/flags/fi.svg" alt="">FI
+                </div>
+                <div class="language__menu-item">
+                    <img src="img/flags/kz.svg" alt="">KZ
+                </div>
+            </div>
+        </div>
+        <div class="menu__close-btn"></div>
+    </div>
+    <div class="menu__body">
+        <button class="menu__action">Вход / регистрация</button>
+        <nav class="menu__nav">
+            <a href="about.html">О нас</a>
+            <a href="tariffs.html">Тарифы</a>
+            <a href="partners.html">Партнерам</a>
+            <a href="FAQ.html">FAQ</a>
+            <a href="contacts.html">Контакты</a>
+        </nav>
+    </div>
+    <div class="menu__footer">
+        <div class="menu__social">
+            <a href="">Телеграм канал</a>
+            <a href="">Телеграм чат</a>
+            <a href="">Почта</a>
+            <a href="">YouTube</a>
+        </div>
+        <div class="footer__other">
+            <div class="footer__copyright">
+                © 2022 Spectra. All rights reserved.
+            </div>
+            <div class="footer__privacy-policy">
+                <a href="">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- header -->
-<div class="header__wrapper ">
+<div class="header__wrapper" id="headerWrapper">
     <div class="container">
         <header class="header">
             <a class="header__logo" href="index.html">
@@ -179,10 +217,7 @@
                 <span>&nbsp;/&nbsp;</span>
                 <a href="" class="header__action-item modal_registration">Регистрация</a>
             </div>
-            <svg class="header__burger icon"
-                 data-toggle-class="open"
-                 data-target="#menu, #menuOverlay"
-            >
+            <svg class="header__burger icon">
                 <use href="img/icons/burger.svg#svg"/>
             </svg>
         </header>
@@ -200,7 +235,7 @@
         </div>
         <div class="promo__buttons">
             <button class="btn btn_promo">Начать сейчас</button>
-            <button class="btn btn_transparent">
+            <button class="btn btn-outlined">
                 <svg class="icon">
                     <use href="img/icons/play.svg#svg"/>
                 </svg>
@@ -235,43 +270,58 @@
         </h2>
         <div class="tariff__cards">
             <div class="tariff__card">
-                <div class="tariff__card-title">Tier 1</div>
-                <div class="tariff__card-subtitle">
-                    от 100$<span class="separator">•</span>15 календарных дней
+                <div>
+                    <div class="tariff__card-title">Tier 1</div>
+                    <div class="tariff__card-subtitle">
+                        от 100$<span class="separator">•</span>15 календарных дней
+                    </div>
                 </div>
-                <div class="tariff__card-numbers">
-                    <div>15%</div>
-                    <span>/ весь срок</span>
+                <div>
+                    <div class="tariff__card-ratio">
+                        <div class="tariff__card-ratio-number">15%</div>
+                        <span class="tariff__card-ratio-text">/ весь срок</span>
+                    </div>
+                    <button class="btn tariff__btn">
+                        Рассчитать доходность
+                    </button>
                 </div>
-                <button class="btn tariff__btn">
-                    Рассчитать доходность
-                </button>
             </div>
             <div class="tariff__card">
-                <div class="tariff__card-title">Tier 2</div>
-                <div class="tariff__card-subtitle">
-                    от 100$<span class="separator">•</span>30 календарных дней
+                <div>
+                    <div class="tariff__card-title">Tier 2</div>
+                    <div class="tariff__card-subtitle">
+                        от 100$<span class="separator">•</span>30 календарных дней
+                    </div>
                 </div>
-                <div class="tariff__card-numbers">
-                    <div>50%</div>
-                    <span>/ весь срок</span>
+                <div>
+                    <div class="tariff__card-ratio">
+                        <div class="tariff__card-ratio-number">50%</div>
+                        <span class="tariff__card-ratio-text">/ весь срок</span>
+                    </div>
+                    <button class="btn tariff__btn">
+                        Рассчитать доходность
+                    </button>
                 </div>
-                <button class="btn tariff__btn">
-                    Рассчитать доходность
-                </button>
             </div>
-            <div class="tariff__card main">
-                <div class="tariff__card-title">Tier 3</div>
-                <div class="tariff__card-subtitle">
-                    от 100$<span class="separator">•</span>15 календарных дней
+            <div class="tariff__card">
+                <div>
+                    <div class="tariff__card-title">Tier 3</div>
+                    <div class="tariff__card-subtitle">
+                        от 100$<span class="separator">•</span>15 календарных дней
+                    </div>
+
                 </div>
-                <div class="tariff__card-numbers">
-                    <div>100%</div>
-                    <span>/ весь срок</span>
+                <div>
+                    <div class="tariff__card-numbers">
+                        <div class="tariff__card-ratio">
+                            <div class="tariff__card-ratio-number">100%</div>
+                            <span class="tariff__card-ratio-text">/ весь срок</span>
+                        </div>
+                    </div>
+                    <button class="btn tariff__btn">
+                        Рассчитать доходность
+                    </button>
                 </div>
-                <button class="btn tariff__btn">
-                    Рассчитать доходность
-                </button>
             </div>
         </div>
     </section>
@@ -347,7 +397,11 @@
     <div class="video__preview">
         <img src="img/video-preview.jpg" alt="">
     </div>
-    <div class="video__play">
+
+    <div class="video__play"
+         data-toggle-class="open"
+         data-target="#mainYoutubeVideo"
+    >
         <div class="video__play-circle">
             <svg class="icon" viewBox="0 0 24 24">
                 <use href="img/icons/play.svg#svg"/>
@@ -356,6 +410,20 @@
         <p class="video__play-text">Смотреть видео</p>
     </div>
 </section>
+
+<div class="youtube-embedded" id="mainYoutubeVideo">
+    <div class="youtube-embedded__overlay"></div>
+    <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/jNQXAC9IVRw"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+    ></iframe>
+</div>
+
 
 <div class="container">
 
@@ -375,7 +443,7 @@
                     <button class="btn">
                         Начать сейчас
                     </button>
-                    <button class="btn btn_transparent">
+                    <button class="btn btn-outlined">
                         Больше о нас
                     </button>
                 </div>
@@ -601,7 +669,7 @@
                 <img class="shadow" src="img/light-ellipse.png" alt=""/>
                 <img src="img/luminous-arrow.svg" alt=""/>
             </div>
-            <div class="footer__header header">
+            <div class="footer__header header" id="footerHeader">
                 <a class="header__logo" href="index.html">
                     <img class="desktop" src="img/logo.svg" alt="">
                     <img class="mobile" src="img/logo-small.svg" alt="">
@@ -635,11 +703,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="header__action">
-                    <a href="" class="header__action-item modal_enter">Вход </a>
-                    <span>&nbsp;/&nbsp;</span>
-                    <a href="" class="header__action-item modal_registration">Регистрация</a>
-                </div>
             </div>
             <div class="footer__divider"></div>
             <div class="footer__links">
@@ -649,12 +712,13 @@
                     <a href="">Почта</a>
                     <a href="">YouTube</a>
                 </div>
-                <div class="footer__gap"></div>
-                <div class="footer__copyright">
-                    © 2022 Spectra. All rights reserved.
-                </div>
-                <div class="footer__privacy-policy">
-                    <a href="">Политика конфиденциальности</a>
+                <div class="footer__other">
+                    <div class="footer__copyright">
+                        © 2022 Spectra. All rights reserved.
+                    </div>
+                    <div class="footer__privacy-policy">
+                        <a href="">Политика конфиденциальности</a>
+                    </div>
                 </div>
             </div>
         </footer>
@@ -668,8 +732,10 @@
 <script type="module" src="js/popper.min.js"></script>
 <!-- modules -->
 <script type="module" src="js/common.js"></script>
+<script type="module" src="js/header.js"></script>
 <script type="module" src="js/arrows.js"></script>
 <script type="module" src="js/dropdown.js"></script>
+<script type="module" src="js/youtube-embedded.js"></script>
 
 </body>
 </html>
