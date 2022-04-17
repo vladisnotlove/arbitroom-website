@@ -1265,15 +1265,15 @@ h1, h2, h3, label, p {
 	}
 
 	.promo__img {
-		width: get-adaptive-value(798px, 300px, $desktop, $small-tablet);
+		width: get-adaptive-value(798px, 290px, $desktop, $small-tablet);
 		top: get-adaptive-value(147px, 67px, $desktop, $small-tablet);
 	}
 
 	.promo__info {
-		font-size: get-adaptive-value(24px, 16px, $desktop, $small-tablet);
-		line-height: get-adaptive-value(36px, 24px, $desktop, $small-tablet);
-		max-width: get-adaptive-value(772px, 280px, $desktop, $small-tablet);
-		margin-top:  get-adaptive-value(52px, 16px, $desktop, $small-tablet);
+		font-size: get-adaptive-value(24px, 16px);
+		line-height: get-adaptive-value(36px, 24px);
+		max-width: get-adaptive-value(772px, 260px);
+		margin-top:  get-adaptive-value(52px, 24px);
 	}
 
 	.promo__buttons {
@@ -1285,8 +1285,8 @@ h1, h2, h3, label, p {
 	}
 
 	.promo__card {
-		font-size: get-adaptive-value(24px, 16px, $desktop, $tablet);
-		line-height: get-adaptive-value(36px, 28px, $desktop, $tablet);
+		font-size: get-adaptive-value(24px, 16px);
+		line-height: get-adaptive-value(36px, 28px);
 	}
 
 	// tariffs
@@ -1432,8 +1432,6 @@ h1, h2, h3, label, p {
 
 @media (max-width: $laptop) {
 
-	.promo__img {
-	}
 
 	.how__step {
 		flex-basis: get-column-width(2, 88px, 1);
@@ -1467,16 +1465,12 @@ h1, h2, h3, label, p {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 
-	.promo__card {
-		font-size: get-adaptive-value(24px, 20px, $desktop, $tablet);
-	}
-
 	.promo {
 		padding-top: get-adaptive-value(200px, 88px);
 	}
 
 	.promo__img {
-		top: get-adaptive-value(147px, 91px, $tablet, $small-tablet);
+		top: get-adaptive-value(147px, 140px, $tablet, $small-tablet);
 	}
 
 	.tariffs__card {
@@ -1566,14 +1560,16 @@ h1, h2, h3, label, p {
 	}
 
 	.promo__info {
-		font-size: get-adaptive-value(24px, 20px);
-		line-height: get-adaptive-value(36px, 24px);
 		max-width: none;
-		margin-top:  get-adaptive-value(52px, 24px);
 	}
 
 	.promo__buttons {
 		margin-top:  get-adaptive-value(72px, 24px);
+	}
+
+	.promo__cards {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr);
 	}
 
 	.promo__card {
