@@ -7,118 +7,11 @@
     <!--    <link rel="shortcut icon" href="img/favicon.ico">-->
     <!--    <link rel="icon" href="img/favicon.ico" type="image/x-icon">-->
     <!--    <link rel="icon" type="image/png" href="img/favicon.png">-->
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/common.css">
 </head>
 <body>
 
 <div id="dropdownOverlay"></div>
-
-<!--&lt;!&ndash; modal overlay &ndash;&gt;
-<div class="modal__overlay">
-
-    &lt;!&ndash; registration &ndash;&gt;
-    <div id="registration" class="modal">
-        <div class="title title_64">Регистрация<br>на платформе</div>
-        <div class="modal__content">
-            <form id="form-registration" action="">
-                <div class="input__wrapper"><input type="text" placeholder="Ваш логин"></div>
-                <div class="input__wrapper"><input type="text" placeholder="Фамилия и имя"></div>
-                <div class="input__wrapper"><input type="url" placeholder="Электронная почта"></div>
-                <div class="input__wrapper"><input type="password" placeholder="Пароль"></div>
-                <div class="input__wrapper"><input type="password" placeholder="Повторите пароль"></div>
-            </form>
-            <div class="modal__rules">
-                <div>Нажимая на кнопку, вы соглашаетесь с <a href="">пользовательским соглашением</a></div>
-                <div>Нажимая на кнопку, вы соглашаетесь с <a href="">политикой&nbsp;конфиденциальности</a></div>
-            </div>
-            <div class="modal__referral"><span>Вас пригласил:</span>
-                <p>Иван Иванов</p>
-                <p>info_ivanov@gmail.com</p></div>
-            <div type="submit" form="form-registration" class="btn btn_modal">Регистрация на платформе</div>
-            <div class="modal__rules tac">Уже есть аккаунт? <a class="modal_enter" href="">Войти с логином и паролем</a>
-            </div>
-        </div>
-    </div>
-
-    &lt;!&ndash; enter &ndash;&gt;
-    <div id="enter" class="modal">
-        <div class="title title_64">Войти в личный<br>кабинет</div>
-        <div class="modal__content">
-            <form id="form-enter" action="">
-                <div class="input__wrapper"><input type="text" placeholder="Ваш логин"></div>
-                <div class="input__wrapper"><input type="password" placeholder="Пароль">
-                    <div class="modal__fpass">Забыли?</div>
-                </div>
-            </form>
-            <div type="submit" form="form-enter" class="btn btn_modal">Войти в личный кабинет</div>
-            <div class="modal__rules tac">Нет аккаунта? <a class="modal_registration" href="">Зарегистрируйтесь</a>
-            </div>
-        </div>
-    </div>
-
-    &lt;!&ndash; forgot password &ndash;&gt;
-    <div id="fpass" class="modal">
-        <div class="title title_64">Забыли пароль?</div>
-        <div class="modal__content">
-            <form id="form-fpass" action="">
-                <div class="input__wrapper"><input type="url" placeholder="Ваша электронная почта"></div>
-            </form>
-            <div type="submit" form="form-fpass" class="btn btn_modal">Восстановить пароль</div>
-        </div>
-    </div>
-
-    &lt;!&ndash; questions &ndash;&gt;
-    <div id="questions" class="modal">
-        <div id="question-headinfo" class="modal__headinfo">Общие вопросы</div>
-        <div id="question-title" class="title title_64">Чем занимается компания?</div>
-        <div class="modal__content">
-            <div id="question-descr" class="modal__descr">Петерис - основатель компании, крипто энтузиаст, участвовал в
-                проектных запусках с 2016 года. Имеет опыт ведения масштабируемого бизнеса.<br><br>Петерис - основатель
-                компании, крипто энтузиаст, участвовал в проектных запусках с 2016 года. Имеет опыт ведения
-                масштабируемого бизнеса.
-            </div>
-            <div class="modal__buttons">
-                <button class="btn btn_promo">Начать сегодня</button>
-                <button class="btn btn-outlined">
-                    <svg class="icon" viewBox="0 0 24 24">
-                        <use href="img/icons/play.svg#svg"/>
-                    </svg>
-                    Как это работает
-                </button>
-            </div>
-        </div>
-    </div>
-
-    &lt;!&ndash; calc &ndash;&gt;
-    <div id="calc" class="modal">
-        <div class="title title_64">Калькулятор</div>
-        <div class="modal__content">
-            <div class="calc__depo"><p>Cумма депозита:</p>
-                <p><input type="number" value="500" max="6"> USDT</p></div>
-            <div class="calc__table">
-                <div><span class="opacity5">Без капитализации</span> <span>Spectra Lite</span> <span>Spectra Pro</span>
-                    <span>Spectra Max</span></div>
-                <div class="divider_light"></div>
-                <div><span>Общая сумма</span> <span>500 USDT</span> <span>500 USDT</span> <span>500 USDT</span></div>
-                <div class="mb30"><span>Проценты</span> <span>500 USDT</span> <span>500 USDT</span>
-                    <span>500 USDT</span></div>
-                <div><span class="opacity5">С капитализацией</span></div>
-                <div class="divider_light"></div>
-                <div><span>Общая сумма</span> <span>500 USDT</span> <span>500 USDT</span> <span>500 USDT</span></div>
-                <div class="mb30"><span>Проценты</span> <span>500 USDT</span> <span>500 USDT</span>
-                    <span>500 USDT</span></div>
-                <div class="divider_light"></div>
-                <div><span>Возврат депозита</span> <span>500 USDT</span> <span>500 USDT</span> <span>500 USDT</span>
-                </div>
-            </div>
-            <button class="btn btn_modal">Начать инвестировать</button>
-        </div>
-    </div>
-</div>
-
-&lt;!&ndash; menu overlay &ndash;&gt;
-<div class="overlay"></div>-->
 
 <!-- menu -->
 <div class="menu__overlay overlay" id="menuOverlay"></div>
