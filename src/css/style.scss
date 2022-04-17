@@ -987,6 +987,10 @@ h1, h2, h3, label, p {
 		right: -91px - 401px;
 		z-index: -2;
 	}
+
+	&.main {
+		margin-bottom: 160px;
+	}
 }
 
 .tariffs__cards {
@@ -1038,7 +1042,6 @@ h1, h2, h3, label, p {
 	flex-flow: row wrap;
 	align-items: baseline;
 	column-gap: 16px;
-	margin-bottom: 48px;
 }
 
 .tariffs__card-ratio-number {
@@ -1053,20 +1056,29 @@ h1, h2, h3, label, p {
 	white-space: nowrap;
 }
 
+.tariffs__card-list {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	padding: 0;
+	margin-top: 24px;
+}
+
+.tariffs__card-list-item {
+	font-size: 20px;
+	line-height: 28px;
+	color: $color-text-secondary;
+	list-style-type: none;
+
+	&::before {
+		display: inline;
+		content: "• ";
+	}
+}
+
 .tariffs__btn {
 	width: 100%;
-}
-
-.tariffs__list {
-	margin-top: calc(35px + (40 + 40 * .25) * ((100vw - 375px) / 1920));
-	font-size: calc(15px + (3 + 3 * .25) * ((100vw - 375px) / 1920));
-	line-height: 120%;
-	padding-left: 0
-}
-
-.tariffs__list li {
-	list-style-type: none;
-	margin-bottom: 10px
+	margin-top: 48px;
 }
 
 
@@ -1616,6 +1628,10 @@ h1, h2, h3, label, p {
 	.block {
 		margin-top: get-adaptive-value(184px, 56px);
 		margin-bottom: get-adaptive-value(184px, 56px);
+
+		&.main {
+			margin-top: get-adaptive-value(168px, 88px);
+		}
 	}
 
 	h1.title {
@@ -1646,7 +1662,6 @@ h1, h2, h3, label, p {
 
 
 	// promo
-
 
 	.promo {
 		padding-top: get-adaptive-value(200px, 88px, $desktop, $tablet);
@@ -1679,6 +1694,12 @@ h1, h2, h3, label, p {
 
 	// tariffs
 
+	.tariffs {
+		&.main {
+			margin-bottom: get-adaptive-value(160px, 24px);
+		}
+	}
+
 	.tariffs__card-ratio-number {
 		font-size: get-adaptive-value(80px, 44px, $desktop, $tablet);
 		line-height: get-adaptive-value(112px, 72px, $desktop, $tablet);
@@ -1692,6 +1713,11 @@ h1, h2, h3, label, p {
 	.tariffs__card-subtitle {
 		font-size: get-adaptive-value(24px, 16px, $desktop, $tablet);
 		line-height: get-adaptive-value(36px, 28px, $desktop, $tablet);
+	}
+
+	.tariffs__card-list-item {
+		font-size: get-adaptive-value(24px, 14px, $desktop, $tablet);
+		line-height: get-adaptive-value(28px, 22px, $desktop, $tablet);
 	}
 
 	.tariffs__btn {
@@ -1868,8 +1894,13 @@ h1, h2, h3, label, p {
 
 	.tariffs__card-subtitle,
 	.tariffs__card-ratio-text {
-		font-size: get-adaptive-value(24px, 14px);
+		font-size: get-adaptive-value(24px, 16px);
 		line-height: get-adaptive-value(36px, 24px);
+	}
+
+	.tariffs__card-list-item {
+		font-size: get-adaptive-value(24px, 16px);
+		line-height: get-adaptive-value(28px, 24px);
 	}
 
 	.advantages__card.card-2 {
@@ -2003,6 +2034,10 @@ h1, h2, h3, label, p {
 	.block {
 		margin-top: 56px;
 		margin-bottom: 56px;
+
+		&.main {
+			margin-top: 88px;
+		}
 	}
 
 	h1.title {
@@ -2092,6 +2127,12 @@ h1, h2, h3, label, p {
 
 	// tariffs
 
+	.tariffs{
+		&.main {
+			margin-bottom: 24px;
+		}
+	}
+
 	.tariffs__card {
 		width: 100%;
 	}
@@ -2114,10 +2155,6 @@ h1, h2, h3, label, p {
 		}
 	}
 
-	.tariffs__card-ratio {
-		margin-bottom: 24px;
-	}
-
 	.tariffs__card-ratio-number {
 		font-size: 56px;
 		line-height: 80px;
@@ -2126,6 +2163,20 @@ h1, h2, h3, label, p {
 	.tariffs__card-ratio-text {
 		font-size: 20px;
 		line-height: 28px;
+	}
+
+	.tariffs__card-list {
+		gap: 8px;
+		margin-top: 16px;
+	}
+
+	.tariffs__card-list-item {
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+	.tariffs__btn {
+		margin-top: 24px;
 	}
 
 	// advantages

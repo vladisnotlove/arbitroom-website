@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SPECTRA</title>
+    <!--    <link rel="shortcut icon" href="img/favicon.ico">-->
+    <!--    <link rel="icon" href="img/favicon.ico" type="image/x-icon">-->
+    <!--    <link rel="icon" type="image/png" href="img/favicon.png">-->
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="dropdownOverlay"></div>
+
+<!--&lt;!&ndash; modal overlay &ndash;&gt;
+<div class="modal__overlay">
+
+    &lt;!&ndash; registration &ndash;&gt;
+    <div id="registration" class="modal">
+        <div class="title title_64">Регистрация<br>на платформе</div>
+        <div class="modal__content">
+            <form id="form-registration" action="">
+                <div class="input__wrapper"><input type="text" placeholder="Ваш логин"></div>
+                <div class="input__wrapper"><input type="text" placeholder="Фамилия и имя"></div>
+                <div class="input__wrapper"><input type="url" placeholder="Электронная почта"></div>
+                <div class="input__wrapper"><input type="password" placeholder="Пароль"></div>
+                <div class="input__wrapper"><input type="password" placeholder="Повторите пароль"></div>
+            </form>
+            <div class="modal__rules">
+                <div>Нажимая на кнопку, вы соглашаетесь с <a href="">пользовательским соглашением</a></div>
+                <div>Нажимая на кнопку, вы соглашаетесь с <a href="">политикой&nbsp;конфиденциальности</a></div>
+            </div>
+            <div class="modal__referral"><span>Вас пригласил:</span>
+                <p>Иван Иванов</p>
+                <p>info_ivanov@gmail.com</p></div>
+            <div type="submit" form="form-registration" class="btn btn_modal">Регистрация на платформе</div>
+            <div class="modal__rules tac">Уже есть аккаунт? <a class="modal_enter" href="">Войти с логином и паролем</a>
+            </div>
+        </div>
+    </div>
+
+    &lt;!&ndash; enter &ndash;&gt;
+    <div id="enter" class="modal">
+        <div class="title title_64">Войти в личный<br>кабинет</div>
+        <div class="modal__content">
+            <form id="form-enter" action="">
+                <div class="input__wrapper"><input type="text" placeholder="Ваш логин"></div>
+                <div class="input__wrapper"><input type="password" placeholder="Пароль">
+                    <div class="modal__fpass">Забыли?</div>
+                </div>
+            </form>
+            <div type="submit" form="form-enter" class="btn btn_modal">Войти в личный кабинет</div>
+            <div class="modal__rules tac">Нет аккаунта? <a class="modal_registration" href="">Зарегистрируйтесь</a>
+            </div>
+        </div>
+    </div>
+
+    &lt;!&ndash; forgot password &ndash;&gt;
+    <div id="fpass" class="modal">
+        <div class="title title_64">Забыли пароль?</div>
+        <div class="modal__content">
+            <form id="form-fpass" action="">
+                <div class="input__wrapper"><input type="url" placeholder="Ваша электронная почта"></div>
+            </form>
+            <div type="submit" form="form-fpass" class="btn btn_modal">Восстановить пароль</div>
+        </div>
+    </div>
+
+    &lt;!&ndash; questions &ndash;&gt;
+    <div id="questions" class="modal">
+        <div id="question-headinfo" class="modal__headinfo">Общие вопросы</div>
+        <div id="question-title" class="title title_64">Чем занимается компания?</div>
+        <div class="modal__content">
+            <div id="question-descr" class="modal__descr">Петерис - основатель компании, крипто энтузиаст, участвовал в
+                проектных запусках с 2016 года. Имеет опыт ведения масштабируемого бизнеса.<br><br>Петерис - основатель
+                компании, крипто энтузиаст, участвовал в проектных запусках с 2016 года. Имеет опыт ведения
+                масштабируемого бизнеса.
+            </div>
+            <div class="modal__buttons">
+                <button class="btn btn_promo">Начать сегодня</button>
+                <button class="btn btn-outlined">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <use href="img/icons/play.svg#svg"/>
+                    </svg>
+                    Как это работает
+                </button>
+            </div>
+        </div>
+    </div>
+
+    &lt;!&ndash; calc &ndash;&gt;
+    <div id="calc" class="modal">
+        <div class="title title_64">Калькулятор</div>
+        <div class="modal__content">
+            <div class="calc__depo"><p>Cумма депозита:</p>
+                <p><input type="number" value="500" max="6"> USDT</p></div>
+            <div class="calc__table">
+                <div><span class="opacity5">Без капитализации</span> <span>Spectra Lite</span> <span>Spectra Pro</span>
+                    <span>Spectra Max</span></div>
+                <div class="divider_light"></div>
+                <div><span>Общая сумма</span> <span>500 USDT</span> <span>500 USDT</span> <span>500 USDT</span></div>
+                <div class="mb30"><span>Проценты</span> <span>500 USDT</span> <span>500 USDT</span>
+                    <span>500 USDT</span></div>
+                <div><span class="opacity5">С капитализацией</span></div>
+                <div class="divider_light"></div>
+                <div><span>Общая сумма</span> <span>500 USDT</span> <span>500 USDT</span> <span>500 USDT</span></div>
+                <div class="mb30"><span>Проценты</span> <span>500 USDT</span> <span>500 USDT</span>
+                    <span>500 USDT</span></div>
+                <div class="divider_light"></div>
+                <div><span>Возврат депозита</span> <span>500 USDT</span> <span>500 USDT</span> <span>500 USDT</span>
+                </div>
+            </div>
+            <button class="btn btn_modal">Начать инвестировать</button>
+        </div>
+    </div>
+</div>
+
+&lt;!&ndash; menu overlay &ndash;&gt;
+<div class="overlay"></div>-->
+
+<!-- menu -->
+<div class="menu__overlay overlay" id="menuOverlay"></div>
+<div class="menu" id="menu">
+    <div>
+        <div class="menu__header">
+            <div class="menu__language language dropdown">
+                <div class="language__label dropdown__trigger">
+                    <span>Ru</span>
+                    <svg class="icon">
+                        <use href="img/icons/angle-down.svg#svg"/>
+                    </svg>
+                </div>
+                <div class="language__menu dropdown__menu">
+                    <div class="language__menu-item">
+                        <img src="img/flags/ru.svg" alt="">RU
+                    </div>
+                    <div class="language__menu-item">
+                        <img src="img/flags/en.svg" alt="">EN
+                    </div>
+                    <div class="language__menu-item">
+                        <img src="img/flags/fi.svg" alt="">FI
+                    </div>
+                    <div class="language__menu-item">
+                        <img src="img/flags/kz.svg" alt="">KZ
+                    </div>
+                </div>
+            </div>
+            <svg class="menu__close-btn icon">
+                <use href="img/icons/close.svg#svg"/>
+            </svg>
+        </div>
+        <div class="menu__body">
+            <button class="btn btn-outlined menu__action">Вход / регистрация</button>
+            <nav class="menu__nav">
+                <a href="about.html">О нас</a>
+                <a href="tariffs.html">Тарифы</a>
+                <a href="partners.html">Партнерам</a>
+                <a href="FAQ.html">FAQ</a>
+                <a href="contacts.html">Контакты</a>
+            </nav>
+        </div>
+    </div>
+    <div class="menu__footer">
+        <div class="menu__social">
+            <a href="">Телеграм канал</a>
+            <a href="">Телеграм чат</a>
+            <a href="">Почта</a>
+            <a href="">YouTube</a>
+        </div>
+        <div class="menu__other">
+            <div class="menu__privacy-policy">
+                <a href="">Политика конфиденциальности</a>
+            </div>
+            <div class="menu__copyright">
+                © 2022 Spectra. All rights reserved.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- header -->
+<div class="header__wrapper" id="headerWrapper">
+    <div class="container">
+        <header class="header">
+            <a class="header__logo" href="index.html">
+                <img class="desktop" src="img/logo.svg" alt="">
+                <img class="mobile" src="img/logo-small.svg" alt="">
+            </a>
+            <nav class="header__nav">
+                <a href="about.html">О нас</a>
+                <a href="tariffs.html">Тарифы</a>
+                <a href="partners.html">Партнерам</a>
+                <a href="FAQ.html">FAQ</a>
+                <a href="contacts.html">Контакты</a>
+            </nav>
+            <div class="header__language language dropdown">
+                <div class="language__label dropdown__trigger">
+                    <span>Ru</span>
+                    <svg class="icon">
+                        <use href="img/icons/angle-down.svg#svg"/>
+                    </svg>
+                </div>
+                <div class="language__menu dropdown__menu">
+                    <div class="language__menu-item">
+                        <img src="img/flags/ru.svg" alt="">RU
+                    </div>
+                    <div class="language__menu-item">
+                        <img src="img/flags/en.svg" alt="">EN
+                    </div>
+                    <div class="language__menu-item">
+                        <img src="img/flags/fi.svg" alt="">FI
+                    </div>
+                    <div class="language__menu-item">
+                        <img src="img/flags/kz.svg" alt="">KZ
+                    </div>
+                </div>
+            </div>
+            <div class="header__action">
+                <a href="" class="header__action-item modal_enter">Вход / Регистрация</a>
+            </div>
+            <svg class="header__burger icon">
+                <use href="img/icons/burger.svg#svg"/>
+            </svg>
+        </header>
+    </div>
+</div>
+
+<div class="container">
+
+    <!-- tariffs -->
+    <section class="block main tariffs">
+        <h2 class="title">
+            Тарифные планы
+        </h2>
+        <div class="tariffs__cards">
+            <div class="tariffs__card">
+                <div>
+                    <div class="tariffs__card-title">Tier 1</div>
+                    <div class="tariffs__card-subtitle">
+                        от 100$<span class="separator">•</span>15 календарных дней
+                    </div>
+                    <div class="tariffs__card-ratio">
+                        <div class="tariffs__card-ratio-number">15%</div>
+                        <span class="tariffs__card-ratio-text">/ весь срок</span>
+                    </div>
+                    <ul class="tariffs__card-list">
+                        <li class="tariffs__card-list-item">Тело депозита возвращается по истечению срока
+                        <li class="tariffs__card-list-item">Минимальный порог входа 100 USDT
+                        <li class="tariffs__card-list-item">Начисления по тарифу ежедневные
+                        <li class="tariffs__card-list-item">Процент доходности в день 1%
+                        <li class="tariffs__card-list-item">Капитализация включена по умолчанию
+                        <li class="tariffs__card-list-item">Автопродление включено по умолчанию
+                        <li class="tariffs__card-list-item">После открытия тарифа его можно дополнительно пополнять
+                        <li class="tariffs__card-list-item">Минимальная сумма пополнения тарифа, после открытия - 1 USDT
+                    </ul>
+                </div>
+                <button class="btn tariffs__btn">
+                    Рассчитать доходность
+                </button>
+            </div>
+            <div class="tariffs__card">
+                <div>
+                    <div class="tariffs__card-title">Tier 2</div>
+                    <div class="tariffs__card-subtitle">
+                        от 100$<span class="separator">•</span>30 календарных дней
+                    </div>
+                    <div class="tariffs__card-ratio">
+                        <div class="tariffs__card-ratio-number">50%</div>
+                        <span class="tariffs__card-ratio-text">/ весь срок</span>
+                    </div>
+                    <ul class="tariffs__card-list">
+                        <li class="tariffs__card-list-item">Тело депозита возвращается по истечению срока
+                        <li class="tariffs__card-list-item">Минимальный порог входа 1000 USDT
+                        <li class="tariffs__card-list-item">Начисления по тарифу ежедневные
+                        <li class="tariffs__card-list-item">Процент доходности в день ~1.67%
+                        <li class="tariffs__card-list-item">Капитализация включена по умолчанию
+                        <li class="tariffs__card-list-item">Автопродление включено по умолчанию
+                        <li class="tariffs__card-list-item">После открытия тарифа его можно дополнительно пополнять
+                        <li class="tariffs__card-list-item">Минимальная сумма пополнения тарифа, после открытия - 1 USDT
+                    </ul>
+                </div>
+                <button class="btn tariffs__btn">
+                    Рассчитать доходность
+                </button>
+            </div>
+            <div class="tariffs__card">
+                <div>
+                    <div class="tariffs__card-title">Tier 3</div>
+                    <div class="tariffs__card-subtitle">
+                        от 100$<span class="separator">•</span>15 календарных дней
+                    </div>
+                    <div class="tariffs__card-numbers">
+                        <div class="tariffs__card-ratio">
+                            <div class="tariffs__card-ratio-number">100%</div>
+                            <span class="tariffs__card-ratio-text">/ весь срок</span>
+                        </div>
+                    </div>
+                    <ul class="tariffs__card-list">
+                        <li class="tariffs__card-list-item">Тело депозита возвращается по истечению срока
+                        <li class="tariffs__card-list-item">Минимальный порог входа 2000 USDT
+                        <li class="tariffs__card-list-item">Начисления по тарифу ежедневные
+                        <li class="tariffs__card-list-item">Процент доходности в день ~2.22%
+                        <li class="tariffs__card-list-item">Капитализация включена по умолчанию
+                        <li class="tariffs__card-list-item">Автопродление включено по умолчанию
+                        <li class="tariffs__card-list-item">После открытия тарифа его можно дополнительно пополнять
+                        <li class="tariffs__card-list-item">Минимальная сумма пополнения тарифа, после открытия - 1 USDT
+                    </ul>
+                </div>
+                <button class="btn tariffs__btn">
+                    Рассчитать доходность
+                </button>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<div class="footer__wrapper">
+    <div class="container">
+        <footer class="footer">
+            <h2 class="title">
+                Начните<br/>
+                инвестировать<br/>
+                сегодня
+            </h2>
+            <div class="footer__img">
+                <img class="shadow" src="img/light-ellipse.png" alt=""/>
+                <img src="img/luminous-arrow.svg" alt=""/>
+            </div>
+            <div class="footer__header header" id="footerHeader">
+                <a class="header__logo" href="index.html">
+                    <img class="desktop" src="img/logo.svg" alt="">
+                    <img class="mobile" src="img/logo-small.svg" alt="">
+                </a>
+                <nav class="header__nav"
+                     data-toggle-class="inactive"
+                     data-target="!self"
+                     data-reason="collapsed-hor"
+                >
+                    <a href="about.html">О нас</a>
+                    <a href="tariffs.html">Тарифы</a>
+                    <a href="partners.html">Партнерам</a>
+                    <a href="FAQ.html">FAQ</a>
+                    <a href="contacts.html">Контакты</a>
+                </nav>
+                <div class="header__language language dropdown">
+                    <div class="language__label dropdown__trigger">
+                        <span>Ru</span>
+                        <svg class="icon">
+                            <use href="img/icons/angle-down.svg#svg"/>
+                        </svg>
+                    </div>
+                    <div class="language__menu dropdown__menu">
+                        <div class="language__menu-item">
+                            <img src="img/flags/ru.svg" alt="">RU
+                        </div>
+                        <div class="language__menu-item">
+                            <img src="img/flags/en.svg" alt="">EN
+                        </div>
+                        <div class="language__menu-item">
+                            <img src="img/flags/fi.svg" alt="">FI
+                        </div>
+                        <div class="language__menu-item">
+                            <img src="img/flags/kz.svg" alt="">KZ
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__divider"></div>
+            <div class="footer__links">
+                <div class="footer__social">
+                    <a href="">Телеграм канал</a>
+                    <a href="">Телеграм чат</a>
+                    <a href="">Почта</a>
+                    <a href="">YouTube</a>
+                </div>
+                <div class="footer__other">
+                    <div class="footer__copyright">
+                        © 2022 Spectra. All rights reserved.
+                    </div>
+                    <div class="footer__privacy-policy">
+                        <a href="">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+
+
+<!-- lib-modules -->
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/leader-line.min.js"></script>
+<script type="module" src="js/popper.min.js"></script>
+<!-- modules -->
+<script type="module" src="js/common.js"></script>
+<script type="module" src="js/header.js"></script>
+<script type="module" src="js/arrows.js"></script>
+<script type="module" src="js/dropdown.js"></script>
+<script type="module" src="js/youtube-embedded.js"></script>
+
+</body>
+</html>
