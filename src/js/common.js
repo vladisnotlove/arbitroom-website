@@ -6,7 +6,7 @@ export const cssVars = {
 
 // UTILS
 
-export function throttle(func, wait, options) {
+export const throttle = (func, wait, options) => {
 	var context, args, result;
 	var timeout = null;
 	var previous = 0;
@@ -38,7 +38,7 @@ export function throttle(func, wait, options) {
 	};
 };
 
-export function debounce(func, wait, immediate) {
+export const debounce = (func, wait, immediate) => {
 	let timeout;
 
 	return function executedFunction() {
@@ -61,9 +61,31 @@ export function debounce(func, wait, immediate) {
 };
 
 export const log = {
-	elementNotExists: (name) => {
+	elementNotFound: (name) => {
 		console.error(`Element \"${name}\" is not found`)
 	}
+}
+
+/**
+ *
+ * @param {[{element: Element, name: string }]} data
+ * @return true - if all elements are valid
+ */
+export const checkElementsNotNull = (data) => {
+	try {
+		let areValid = true;
+		data.forEach(({element, name}) => {
+			if (!element) {
+				log.elementNotFound(name);
+				areValid = false;
+			}
+		});
+		return areValid;
+	}
+	catch (e) {
+		console.error(e);
+	}
+
 }
 
 // MAIN
@@ -74,16 +96,64 @@ window.addEventListener('load', () => {
 
 	document.querySelectorAll("[data-toggle-class]").forEach(elem => {
 		const className = elem.dataset.toggleClass;
-		const target = elem.dataset.target;
+		const reason = elem.dataset.reason;
+		const targets = elem.dataset.target === "!self" ?
+			[elem] :
+			document.querySelectorAll(elem.dataset.target);
 
-		if (className && target) {
-			elem.addEventListener("click", (e) => {
-				document.querySelectorAll(target).forEach(targetElem => {
-					targetElem.classList.toggle(className);
-				})
-			})
+		if (className && targets) {
+			switch (reason) {
+				case "collapsed-hor": {
+					const onResize = () => {
+						const isOverflowed = elem.clientWidth < elem.scrollWidth;
+
+						if (isOverflowed) {
+							targets.forEach(target => {
+								target.classList.add(className);
+							})
+						}
+						else {
+							targets.forEach(target => {
+								if (target.classList.contains(className)) {
+									target.classList.remove(className);
+								}
+							});
+						}
+					}
+					onResize();
+					window.addEventListener("resize", debounce(onResize, 1000));
+					break;
+				}
+				case "scrolled-y": {
+					const onScroll = () => {
+						const rect = elem.getBoundingClientRect()
+						const neededScrollY = rect.top + rect.height * 0.5 + window.scrollY;
+						if (window.scrollY + window.innerHeight * 0.8 > neededScrollY) {
+							targets.forEach(target => {
+								target.classList.add(className);
+							})
+						}
+						else {
+							targets.forEach(target => {
+								if (target.classList.contains(className)) {
+									target.classList.remove(className);
+								}
+							});
+						}
+					}
+					window.addEventListener("scroll", throttle(onScroll, 200));
+					break;
+				}
+				case "click":
+				default: {
+					elem.addEventListener("click", (e) => {
+						targets.forEach(target => {
+							target.classList.toggle(className);
+						})
+					})
+				}
+			}
 		}
 	});
-
 
 });

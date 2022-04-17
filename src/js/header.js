@@ -1,4 +1,4 @@
-import {debounce, log} from './common.js';
+import {debounce, checkElementsNotNull} from './common.js';
 
 // MAIN
 
@@ -8,38 +8,31 @@ window.addEventListener('load', () => {
 	const headerNav = headerWrapper.querySelector(".header__nav");
 
 	const menu = document.getElementById("menu");
-	const menuCloseBtn = menu.querySelector(".menu__close-btn")
+	const menuOverlay = document.getElementById("menuOverlay");
+	const menuCloseBtn = menu.querySelector(".menu__close-btn");
 
-	let elementMissed = false;
+	const elementsNotNull = checkElementsNotNull([
+		{ element: headerWrapper, name: "#headerWrapper"},
+		{ element: headerBurger, name: ".header__burger"},
+		{ element: headerNav, name: ".header__nav"},
+		{ element: menu, name: "#menu"},
+		{ element: menuOverlay, name: "#menuOverlay"},
+		{ element: menuCloseBtn, name: ".menu__close-btn"},
+	])
+	if (!elementsNotNull) return;
 
-	if (!headerWrapper) {
-		log.elementNotExists("#headerWrapper");
-		elementMissed = true;
-	}
-	if (!headerBurger) {
-		log.elementNotExists(".header__burger");
-		elementMissed = true;
-	}
-	if (!headerNav) {
-		log.elementNotExists(".header__nav");
-		elementMissed = true;
-	}
-	if (!menu) {
-		log.elementNotExists("#menu");
-		elementMissed = true;
-	}
-	if (!menuCloseBtn) {
-		log.elementNotExists(".menu__close-btn");
-		elementMissed = true;
-	}
-
-	if (elementMissed) return;
-
-	const onBurgerClick = () => {
+	const openMenu = () => {
 		menu.classList.add("open");
+		menuOverlay.classList.add("open");
 	}
+	const closeMenu = () => {
+		menu.classList.remove("open");
+		menuOverlay.classList.remove("open");
+	}
+	headerBurger.addEventListener("click", openMenu);
+	menuOverlay.addEventListener("click", closeMenu);
+	menuCloseBtn.addEventListener("click", closeMenu);
 
-	headerBurger.addEventListener("click", onBurgerClick);
 
 	const onScroll = () => {
 		if (window.scrollY > 1) {
@@ -51,6 +44,9 @@ window.addEventListener('load', () => {
 			}
 		}
 	}
+	onScroll();
+	window.addEventListener("scroll", onScroll);
+
 
 	const onResize = () => {
 		const isOverflowed = headerNav.clientWidth < headerNav.scrollWidth;
@@ -64,9 +60,7 @@ window.addEventListener('load', () => {
 			}
 		}
 	}
-
-	onScroll();
 	onResize();
-	window.addEventListener("scroll", onScroll);
 	window.addEventListener("resize", debounce(onResize, 1000));
+
 });

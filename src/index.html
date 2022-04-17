@@ -121,41 +121,46 @@
 <div class="overlay"></div>-->
 
 <!-- menu -->
+<div class="menu__overlay overlay" id="menuOverlay"></div>
 <div class="menu" id="menu">
-    <div class="menu__header">
-        <div class="menu__language language dropdown">
-            <div class="language__label dropdown__trigger">
-                <span>Ru</span>
-                <svg class="icon">
-                    <use href="img/icons/angle-down.svg#svg"/>
-                </svg>
+    <div>
+        <div class="menu__header">
+            <div class="menu__language language dropdown">
+                <div class="language__label dropdown__trigger">
+                    <span>Ru</span>
+                    <svg class="icon">
+                        <use href="img/icons/angle-down.svg#svg"/>
+                    </svg>
+                </div>
+                <div class="language__menu dropdown__menu">
+                    <div class="language__menu-item">
+                        <img src="img/flags/ru.svg" alt="">RU
+                    </div>
+                    <div class="language__menu-item">
+                        <img src="img/flags/en.svg" alt="">EN
+                    </div>
+                    <div class="language__menu-item">
+                        <img src="img/flags/fi.svg" alt="">FI
+                    </div>
+                    <div class="language__menu-item">
+                        <img src="img/flags/kz.svg" alt="">KZ
+                    </div>
+                </div>
             </div>
-            <div class="language__menu dropdown__menu">
-                <div class="language__menu-item">
-                    <img src="img/flags/ru.svg" alt="">RU
-                </div>
-                <div class="language__menu-item">
-                    <img src="img/flags/en.svg" alt="">EN
-                </div>
-                <div class="language__menu-item">
-                    <img src="img/flags/fi.svg" alt="">FI
-                </div>
-                <div class="language__menu-item">
-                    <img src="img/flags/kz.svg" alt="">KZ
-                </div>
-            </div>
+            <svg class="menu__close-btn icon">
+                <use href="img/icons/close.svg#svg"/>
+            </svg>
         </div>
-        <div class="menu__close-btn"></div>
-    </div>
-    <div class="menu__body">
-        <button class="menu__action">Вход / регистрация</button>
-        <nav class="menu__nav">
-            <a href="about.html">О нас</a>
-            <a href="tariffs.html">Тарифы</a>
-            <a href="partners.html">Партнерам</a>
-            <a href="FAQ.html">FAQ</a>
-            <a href="contacts.html">Контакты</a>
-        </nav>
+        <div class="menu__body">
+            <button class="btn btn-outlined menu__action">Вход / регистрация</button>
+            <nav class="menu__nav">
+                <a href="about.html">О нас</a>
+                <a href="tariffs.html">Тарифы</a>
+                <a href="partners.html">Партнерам</a>
+                <a href="FAQ.html">FAQ</a>
+                <a href="contacts.html">Контакты</a>
+            </nav>
+        </div>
     </div>
     <div class="menu__footer">
         <div class="menu__social">
@@ -164,12 +169,12 @@
             <a href="">Почта</a>
             <a href="">YouTube</a>
         </div>
-        <div class="footer__other">
-            <div class="footer__copyright">
-                © 2022 Spectra. All rights reserved.
-            </div>
-            <div class="footer__privacy-policy">
+        <div class="menu__other">
+            <div class="menu__privacy-policy">
                 <a href="">Политика конфиденциальности</a>
+            </div>
+            <div class="menu__copyright">
+                © 2022 Spectra. All rights reserved.
             </div>
         </div>
     </div>
@@ -213,9 +218,7 @@
                 </div>
             </div>
             <div class="header__action">
-                <a href="" class="header__action-item modal_enter">Вход </a>
-                <span>&nbsp;/&nbsp;</span>
-                <a href="" class="header__action-item modal_registration">Регистрация</a>
+                <a href="" class="header__action-item modal_enter">Вход / Регистрация</a>
             </div>
             <svg class="header__burger icon">
                 <use href="img/icons/burger.svg#svg"/>
@@ -452,7 +455,7 @@
         <div class="launchpool__cards">
             <div class="launchpool__card">
                 <div class="launchpool__card-icon">
-                    <img class="launchpool__card-logo" src="img/logos/outer-ring.png" alt="" />
+                    <img class="launchpool__card-logo" src="img/logos/outer-ring.png" alt=""/>
                 </div>
 
                 <div class="launchpool__card-badge">
@@ -468,7 +471,7 @@
 
             <div class="launchpool__card">
                 <div class="launchpool__card-icon">
-                    <img class="launchpool__card-logo" src="img/logos/world-of-cryptoids.png" alt="" />
+                    <img class="launchpool__card-logo" src="img/logos/world-of-cryptoids.png" alt=""/>
                 </div>
 
                 <div class="launchpool__card-badge">
@@ -484,7 +487,7 @@
 
             <div class="launchpool__card">
                 <div class="launchpool__card-icon">
-                    <img class="launchpool__card-logo" src="img/logos/metarun.png" alt="" />
+                    <img class="launchpool__card-logo" src="img/logos/metarun.png" alt=""/>
                 </div>
 
                 <div class="launchpool__card-badge">
@@ -494,13 +497,13 @@
                 </div>
 
                 <div class="launchpool__card-title">
-                    Metarun  [MRUN]
+                    Metarun [MRUN]
                 </div>
             </div>
 
             <div class="launchpool__card">
                 <div class="launchpool__card-icon">
-                    <img class="launchpool__card-logo" src="img/logos/stern.png" alt="" />
+                    <img class="launchpool__card-logo" src="img/logos/stern.png" alt=""/>
                 </div>
 
                 <div class="launchpool__card-badge">
@@ -516,7 +519,7 @@
 
             <div class="launchpool__card">
                 <div class="launchpool__card-icon">
-                    <img class="launchpool__card-logo" src="img/logos/rebelbots.png" alt="" />
+                    <img class="launchpool__card-logo" src="img/logos/rebelbots.png" alt=""/>
                 </div>
 
                 <div class="launchpool__card-badge">
@@ -532,7 +535,7 @@
 
             <div class="launchpool__card">
                 <div class="launchpool__card-icon">
-                    <img class="launchpool__card-logo" src="img/logos/harmony-launcher.png" alt="" />
+                    <img class="launchpool__card-logo" src="img/logos/harmony-launcher.png" alt=""/>
                 </div>
 
                 <div class="launchpool__card-badge">
@@ -556,7 +559,7 @@
         <div class="how__steps">
             <div class="how__step">
                 <div class="how__step-icon">
-                    <img src="img/icons/check-list.svg" alt="" />
+                    <img src="img/icons/check-list.svg" alt=""/>
                 </div>
                 <div class="how__step-title">
                     Пройти регистрацию
@@ -565,7 +568,7 @@
 
             <div class="how__step">
                 <div class="how__step-icon">
-                    <img src="img/icons/cards.svg" alt="" />
+                    <img src="img/icons/cards.svg" alt=""/>
                 </div>
                 <div class="how__step-title">
                     Выбрать подходящий тарифный план
@@ -574,7 +577,7 @@
 
             <div class="how__step">
                 <div class="how__step-icon">
-                    <img src="img/icons/coins.svg" alt="" />
+                    <img src="img/icons/coins.svg" alt=""/>
                 </div>
                 <div class="how__step-title">
                     Пополнить баланс кабинета
@@ -583,7 +586,7 @@
 
             <div class="how__step">
                 <div class="how__step-icon">
-                    <img src="img/icons/check-box.svg" alt="" />
+                    <img src="img/icons/check-box.svg" alt=""/>
                 </div>
                 <div class="how__step-title">
                     Отметить необходимую опцию автопродление/капитализация
@@ -592,7 +595,7 @@
 
             <div class="how__step">
                 <div class="how__step-icon">
-                    <img src="img/icons/hand-coin.svg" alt="" />
+                    <img src="img/icons/hand-coin.svg" alt=""/>
                 </div>
                 <div class="how__step-title">
                     Получать проценты и при необходимости выводить
@@ -601,7 +604,7 @@
 
             <div class="how__step">
                 <div class="how__step-icon">
-                    <img src="img/icons/check-list.svg" alt="" />
+                    <img src="img/icons/check-list.svg" alt=""/>
                 </div>
                 <div class="how__step-title">
                     После окончания срока работы депозита вывести его или продлить
@@ -623,7 +626,8 @@
                     Упрощение
                 </div>
                 <div class="goals__card-description">
-                    Дать возможность каждому участнику рынка участвовать в Launchpad и Launchpool без регистраций,  верификаций, покупки монет и стейкинга.
+                    Дать возможность каждому участнику рынка участвовать в Launchpad и Launchpool без регистраций,
+                    верификаций, покупки монет и стейкинга.
                 </div>
             </div>
             <div class="goals__divider"></div>
@@ -632,7 +636,8 @@
                     Независимость
                 </div>
                 <div class="goals__card-description">
-                    Для получения аллокации Spectra имеет в стейкинге на 2-4 года монеты бирж, что позволит участвовать в Launchpad и Launchpool даже на медвежьем рынке.
+                    Для получения аллокации Spectra имеет в стейкинге на 2-4 года монеты бирж, что позволит участвовать
+                    в Launchpad и Launchpool даже на медвежьем рынке.
                 </div>
             </div>
             <div class="goals__divider"></div>
@@ -641,7 +646,8 @@
                     Прибыль
                 </div>
                 <div class="goals__card-description">
-                    За счет программного обеспечения появилась возможность продавать новые монеты одними из первых по самым высоким ценам.
+                    За счет программного обеспечения появилась возможность продавать новые монеты одними из первых по
+                    самым высоким ценам.
                 </div>
             </div>
             <div class="goals__divider"></div>
@@ -650,7 +656,8 @@
                     Комьюнити
                 </div>
                 <div class="goals__card-description">
-                    Отбор самых перспективных проектов. Поддержка и удержание их монет. Отслеживание развития таких проектов с целью получения более высокой прибыли.
+                    Отбор самых перспективных проектов. Поддержка и удержание их монет. Отслеживание развития таких
+                    проектов с целью получения более высокой прибыли.
                 </div>
             </div>
         </div>
@@ -674,7 +681,11 @@
                     <img class="desktop" src="img/logo.svg" alt="">
                     <img class="mobile" src="img/logo-small.svg" alt="">
                 </a>
-                <nav class="header__nav">
+                <nav class="header__nav"
+                     data-toggle-class="inactive"
+                     data-target="!self"
+                     data-reason="collapsed-hor"
+                >
                     <a href="about.html">О нас</a>
                     <a href="tariffs.html">Тарифы</a>
                     <a href="partners.html">Партнерам</a>

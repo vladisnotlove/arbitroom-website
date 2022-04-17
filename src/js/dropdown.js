@@ -1,5 +1,4 @@
-//import Popper from './popper.min.js';
-
+import {checkElementsNotNull} from './common.js';
 
 // MAIN
 
@@ -7,9 +6,20 @@ window.addEventListener('load', () => {
 	const dropdownOverlay = document.getElementById("dropdownOverlay");
 	const components = [];
 
+	const elementsNotNull = checkElementsNotNull([
+		{ element: dropdownOverlay, name: "#dropdownOverlay"},
+	])
+	if (!elementsNotNull) return;
+
 	document.querySelectorAll(".dropdown").forEach((dropdown) => {
 		const trigger = dropdown.querySelector(".dropdown__trigger");
 		const menu = dropdown.querySelector(".dropdown__menu");
+
+		const elementsNotNull = checkElementsNotNull([
+			{ element: trigger, name: ".dropdown__trigger"},
+			{ element: menu, name: ".dropdown__menu"},
+		])
+		if (!elementsNotNull) return;
 
 		const popper = Popper.createPopper(trigger, menu, {
 			modifiers: [
@@ -22,6 +32,7 @@ window.addEventListener('load', () => {
 			],
 			strategy: "fixed",
 		});
+		menu.classList.add("ready");
 
 		trigger?.addEventListener("click", () => {
 			dropdownOverlay.classList.toggle("active");

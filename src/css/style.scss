@@ -25,6 +25,13 @@ $animation-disappear: .5s;
 $grid-columns: 12;
 
 
+$header-height-desktop: 88px;
+$header-height-mobile: 64px;
+
+$container-padding-mobile: 24px;
+$container-padding-desktop: 180px;
+
+
 // MIXINS & FUNCTIONS
 
 @function strip-unit($number) {
@@ -40,9 +47,6 @@ $grid-columns: 12;
 	@return calc(#{$small-value} + #{strip-unit($increment)} * (100vw - #{$small-screen}) / #{strip-unit($big-screen - $small-screen)});
 }
 
-@function container-padding($width, $padding) {
-	@return 0 calc((100vw - (#{$width} - #{$padding * 2})) * 0.5);
-}
 
 @function get-column-width($max-columns, $gap, $columns) {
 	@return calc(((100% - #{$gap} * #{$max-columns - 1}) / #{$max-columns} + #{$gap}) * #{$columns} - #{$gap});
@@ -507,6 +511,11 @@ h2.title {
 	transform: rotate(180deg)
 }
 
+.inactive {
+	opacity: 0;
+	pointer-events: none;
+}
+
 
 // MAIN
 
@@ -519,12 +528,11 @@ h2.title {
 html {
 	scroll-behavior: smooth;
 	scrollbar-width: 0;
-}
 
-html::-webkit-scrollbar {
-	width: 0;
+	&::-webkit-scrollbar {
+		width: 0;
+	}
 }
-
 
 body {
 	background: #32333a;
@@ -537,7 +545,7 @@ h1, h2, h3, label, p {
 }
 
 .container {
-	padding: container-padding($desktop, 180px);
+	padding: 0 calc((100vw - (#{$desktop} - #{$container-padding-desktop * 2})) * 0.5);
 	margin: 0 auto;
 	position: relative;
 	overflow: hidden;
@@ -587,6 +595,10 @@ h1, h2, h3, label, p {
 	z-index: 120;
 	opacity: 1;
 	transition: opacity $animation-appear;
+
+	&:not(.ready) {
+		display: none;
+	}
 
 	&:not(.open) {
 		opacity: 0;
@@ -675,7 +687,7 @@ h1, h2, h3, label, p {
 }
 
 .header {
-	height: 88px;
+	height: $header-height-desktop;
 	display: flex;
 	flex-flow: row nowrap;
 	align-items: center;
@@ -757,14 +769,33 @@ h1, h2, h3, label, p {
 // menu
 
 .menu {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 40px;
+
 	position: fixed;
 	top: 0;
 	right: 0;
+	bottom: 0;
+
+	width: $mobile;
+	max-width: 100vw;
 	height: 100%;
-	padding: 85px 40px 40px;
+	max-height: 100vh;
+
+	overflow: auto;
+	background: $color-background;
+	padding: 0 40px 40px;
+
+	scroll-behavior: smooth;
+	scrollbar-width: 0;
+
+	&::-webkit-scrollbar {
+		width: 0;
+	}
 
 	z-index: 250;
-	background: $color-background;
 
 	transform: translateX(32px);
 	opacity: 0;
@@ -779,10 +810,69 @@ h1, h2, h3, label, p {
 	}
 }
 
-.menu__header {
-
+.menu__overlay {
+	z-index: 225;
 }
 
+.menu__header {
+	height: $header-height-desktop;
+	display: flex;
+	align-items: center;
+	flex-flow: row nowrap;
+}
+
+.menu__close-btn {
+	width: 32px;
+	height: 32px;
+	margin-left: 24px;
+	cursor: pointer;
+}
+
+.menu__action {
+	margin-top: 21px;
+}
+
+.menu__nav {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	margin-top: 32px;
+
+	a {
+		font-size: 20px;
+		line-height: 28px;
+	}
+}
+
+.menu__social {
+	display: flex;
+	flex-flow: row wrap;
+	gap: 24px;
+	font-size: 14px;
+	line-height: 20px;
+	margin-bottom: 47px;
+}
+
+.menu__other {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.menu__copyright {
+	color: $color-text-more-secondary;
+}
+
+.menu__privacy-policy {
+	text-decoration: underline;
+
+	&:hover {
+		cursor: pointer;
+		text-decoration: none;
+	}
+}
 
 // breadcrumbs
 
@@ -846,8 +936,8 @@ h1, h2, h3, label, p {
 
 .promo__cards {
 	margin-top: 124px;
-	display: flex;
-	flex-flow: row wrap;
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
 	gap: var(--grid-gap);
 }
 
@@ -857,7 +947,6 @@ h1, h2, h3, label, p {
 	flex-direction: column;
 	justify-content: space-between;
 	border-radius: var(--border-radius);
-	width: calc(var(--grid-column-gap) * 3 - var(--grid-gap));
 	padding: 32px;
 	font-size: 24px;
 	line-height: 36px;
@@ -1126,13 +1215,16 @@ h1, h2, h3, label, p {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 24px;
+	width: 88px;
+	height: 88px;
 	border-radius: 88px;
 	background: $color-prime;
 	color: $color-prime-contrast;
 
 	.icon {
 		font-size: 48px;
+		transform: scale(1, 1);
+		transition: transform $animation-disappear;
 	}
 }
 
@@ -1142,6 +1234,13 @@ h1, h2, h3, label, p {
 	line-height: 48px;
 	color: $color-prime;
 	text-align: center;
+}
+
+.video__play-circle:hover {
+	.icon {
+		transform: scale(1.1, 1.1) translateX(2%);
+		transition: transform $animation-appear;
+	}
 }
 
 // youtube embedded
@@ -1272,7 +1371,6 @@ h1, h2, h3, label, p {
 	width: 94px;
 	height: 94px;
 
-
 	.shadow {
 		position: absolute;
 		top: 50%;
@@ -1315,19 +1413,11 @@ h1, h2, h3, label, p {
 }
 
 .how__steps {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
-	row-gap: 132px;
-	column-gap: 88px;
-}
-
-.how__step {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-row-gap: 132px;
+	grid-column-gap: 88px;
 	text-align: center;
-	flex-grow: 1;
-	flex-shrink: 1;
-	flex-basis: get-column-width(3, 88px, 1);
-	min-width: 0;
 }
 
 .how__step-icon {
@@ -1499,7 +1589,10 @@ h1, h2, h3, label, p {
 @media (max-width: $desktop) and (min-width: $mobile + 1) {
 
 	.container {
-		padding: 0 get-adaptive-value(180px, 24px);;
+		padding: 0 get-adaptive-value($container-padding-desktop, $container-padding-mobile);
+	}
+	.menu {
+		padding-right: get-adaptive-value($container-padding-desktop, $container-padding-mobile);
 	}
 
 	.block {
@@ -1515,6 +1608,11 @@ h1, h2, h3, label, p {
 	h2.title {
 		font-size: get-adaptive-value(80px, 32px);
 		line-height: get-adaptive-value(104px, 40px);
+		margin-bottom: get-adaptive-value(64px, 32px);
+	}
+
+	.goals h2.title {
+		margin-bottom: get-adaptive-value(88px, 32px);
 	}
 
 	.btn {
@@ -1523,11 +1621,14 @@ h1, h2, h3, label, p {
 		line-height: get-adaptive-value(36px, 20px);
 	}
 
+	.menu__header,
 	.header {
-		height: get-adaptive-value(88px, 64px);
+		height: get-adaptive-value($header-height-desktop, $header-height-mobile);
 	}
 
+
 	// promo
+
 
 	.promo {
 		padding-top: get-adaptive-value(200px, 88px, $desktop, $tablet);
@@ -1550,29 +1651,29 @@ h1, h2, h3, label, p {
 	}
 
 	.promo__card {
-		font-size: get-adaptive-value(24px, 18px, $desktop, $small-tablet);
-		line-height: get-adaptive-value(36px, 28px, $desktop, $small-tablet);
+		font-size: get-adaptive-value(24px, 16px, $desktop, $tablet);
+		line-height: get-adaptive-value(36px, 28px, $desktop, $tablet);
 	}
 
 	// tariffs
 
-	.tariff__card {
-		min-width: 400px;
-	}
-
-	.tariff__card-subtitle {
-		font-size: get-adaptive-value(24px, 20px);
-		line-height: get-adaptive-value(36px, 28px);
-	}
-
 	.tariff__card-ratio-number {
-		font-size: get-adaptive-value(80px, 56px);
-		line-height: get-adaptive-value(112px, 80px);
+		font-size: get-adaptive-value(80px, 44px, $desktop, $tablet);
+		line-height: get-adaptive-value(112px, 72px, $desktop, $tablet);
 	}
 
 	.tariff__card-ratio-text {
-		font-size: get-adaptive-value(24px, 20px);
-		line-height: get-adaptive-value(36px, 28px);
+		font-size: get-adaptive-value(24px, 14px, $desktop, $tablet);
+		line-height: get-adaptive-value(36px, 28px, $desktop, $tablet);
+	}
+
+	.tariff__card-subtitle {
+		font-size: get-adaptive-value(24px, 16px, $desktop, $tablet);
+		line-height: get-adaptive-value(36px, 28px, $desktop, $tablet);
+	}
+
+	.tariff__btn {
+		font-size: get-adaptive-value(24px, 14px, $desktop, $tablet);
 	}
 
 	// advantages
@@ -1607,6 +1708,24 @@ h1, h2, h3, label, p {
 			line-height: get-adaptive-value(86px, 36px);
 		}
 	}
+
+
+	// video
+
+	.video__play-text {
+		font-size: get-adaptive-value(36px, 20px);
+		line-height: get-adaptive-value(48px, 28px);
+	}
+
+	.video__play-circle {
+		width: get-adaptive-value(88px, 56px);
+		height: get-adaptive-value(88px, 56px);
+
+		.icon {
+			font-size: get-adaptive-value(48px, 24px);
+		}
+	}
+
 
 	// launchpool
 
@@ -1664,6 +1783,9 @@ h1, h2, h3, label, p {
 
 @media (max-width: $laptop) {
 
+	.promo__img {
+	}
+
 	.how__step {
 		flex-basis: get-column-width(2, 88px, 1);
 	}
@@ -1685,8 +1807,19 @@ h1, h2, h3, label, p {
 		line-height: get-adaptive-value(128px, 56px);
 	}
 
+	.btn {
+		font-size: get-adaptive-value(24px, 16px);
+		padding: get-adaptive-value(14px, 10px) get-adaptive-value(24px, 12px);
+		line-height: get-adaptive-value(36px, 20px);
+	}
+
+	.promo__cards {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
 	.promo__card {
-		width: calc(var(--grid-column-gap) * 6 - var(--grid-gap));
+		font-size: get-adaptive-value(24px, 20px, $desktop, $tablet);
 	}
 
 	.promo {
@@ -1694,7 +1827,7 @@ h1, h2, h3, label, p {
 	}
 
 	.promo__img {
-		top: get-adaptive-value(147px, 91px, $desktop, $small-tablet);
+		top: get-adaptive-value(147px, 91px, $tablet, $small-tablet);
 	}
 
 	.tariff__card {
@@ -1704,15 +1837,21 @@ h1, h2, h3, label, p {
 
 	.tariff__card-ratio-number {
 		font-size: get-adaptive-value(80px, 44px);
+		line-height: get-adaptive-value(112px, 80px);
 	}
 
 	.tariff__card-subtitle,
 	.tariff__card-ratio-text {
-		font-size: get-adaptive-value(24px, 16px);
+		font-size: get-adaptive-value(24px, 14px);
+		line-height: get-adaptive-value(36px, 24px);
 	}
 
 	.advantages__card.card-2 {
 		font-size: get-adaptive-value(36px, 10px);
+
+		.small-text {
+			font-size: get-adaptive-value(36px, 18px);
+		}
 	}
 
 	.launchpool__main-part {
@@ -1736,8 +1875,9 @@ h1, h2, h3, label, p {
 		margin-top: 64px;
 	}
 
-	.how__step {
-		flex-basis: 300px;
+	.how__steps {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
 	}
 
 	// goals
@@ -1787,7 +1927,6 @@ h1, h2, h3, label, p {
 		line-height: get-adaptive-value(36px, 28px);
 	}
 
-
 	.tariff__card {
 		flex-basis: 100%;
 		flex-grow: 1;
@@ -1808,10 +1947,13 @@ h1, h2, h3, label, p {
 		gap: var(--grid-gap);
 	}
 
+	.how__steps {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr);
+	}
+
 	.launchpool__card {
 		width: calc(var(--grid-column-gap) * 4 - var(--grid-gap));
-		min-width: 140px;
-		flex-grow: 1;
 	}
 
 }
@@ -1858,7 +2000,7 @@ h1, h2, h3, label, p {
 	// header
 
 	.header {
-		height: 64px;
+		height: $header-height-mobile;
 	}
 
 	.header__logo img.mobile {
@@ -1869,6 +2011,10 @@ h1, h2, h3, label, p {
 
 	.header__logo .desktop {
 		display: none;
+	}
+
+	.menu__header {
+		height: $header-height-mobile;
 	}
 
 	// promo
@@ -1902,6 +2048,7 @@ h1, h2, h3, label, p {
 	}
 
 	.promo__cards {
+		grid-template-columns: minmax(0, 1fr);
 		margin-top: 56px;
 	}
 
