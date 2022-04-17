@@ -1559,6 +1559,10 @@ h1, h2, h3, label, p {
     line-height: calc(28px + 8 * (100vw - 420px) / 1500);
   }
 
+  .footer__wrapper {
+    padding-top: calc(56px + 124 * (100vw - 420px) / 1500);
+  }
+
   .footer {
     position: relative;
   }

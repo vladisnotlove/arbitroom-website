@@ -1787,6 +1787,10 @@ h1, h2, h3, label, p {
 
 	// footer
 
+	.footer__wrapper {
+		padding-top: get-adaptive-value(180px, 56px);
+	}
+
 	.footer {
 		position: relative;
 
