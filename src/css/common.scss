@@ -1,7 +1,7 @@
 @import "parts/reset";
 @import "parts/variables";
 @import "parts/fonts";
-@import "parts/components";
+@import "parts/mixins";
 
 
 // COMPONENTS
@@ -582,6 +582,7 @@ h1, h2, h3, label, p {
 
 .tariffs {
 	position: relative;
+	overflow: visible;
 
 	.background-ellipse {
 		position: absolute;
@@ -612,13 +613,8 @@ h1, h2, h3, label, p {
 	padding: 32px;
 	width: calc(var(--grid-column-gap) * 4 - var(--grid-gap));
 	background: $color-dark-background;
-	transition: box-shadow $animation-disappear;
 
-	&:hover {
-		cursor: pointer;
-		box-shadow: 0px 0px 56px rgba(206, 228, 74, 0.24);
-		transition: box-shadow $animation-appear;
-	}
+	@include hover-luminous;
 }
 
 .tariffs__card-title {
@@ -2014,3 +2010,6 @@ h1, h2, h3, label, p {
 		order: 2;
 	}
 }
+
+
+@import "parts/components";
