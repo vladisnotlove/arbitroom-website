@@ -804,7 +804,7 @@ h1, h2, h3, label, p {
 
 	overflow: auto;
 	background: $color-background;
-	padding: 0 40px 40px;
+	padding: 0 $container-padding-mobile $container-padding-mobile;
 
 	scroll-behavior: smooth;
 	scrollbar-width: 0;
