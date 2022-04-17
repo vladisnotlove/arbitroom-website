@@ -1663,6 +1663,10 @@ h1, h2, h3, label, p {
 		margin-top:  get-adaptive-value(72px, 16px, $desktop, $small-tablet);
 	}
 
+	.promo__cards {
+		margin-top:  get-adaptive-value(124px, 56px, $desktop, $small-tablet);
+	}
+
 	.promo__card {
 		font-size: get-adaptive-value(24px, 16px, $desktop, $tablet);
 		line-height: get-adaptive-value(36px, 28px, $desktop, $tablet);
@@ -1952,6 +1956,11 @@ h1, h2, h3, label, p {
 	.tariff__card-subtitle,
 	.tariff__card-ratio-text {
 		font-size: get-adaptive-value(24px, 20px);
+	}
+
+	.advantages__card.card-2 {
+		font-size: get-adaptive-value(36px, 16px);
+		line-height: get-adaptive-value(48px, 24px);
 	}
 
 	.advantages__cards {

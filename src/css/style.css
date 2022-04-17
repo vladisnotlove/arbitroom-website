@@ -1458,6 +1458,10 @@ h1, h2, h3, label, p {
     margin-top: calc(16px + 56 * (100vw - 768px) / 1152);
   }
 
+  .promo__cards {
+    margin-top: calc(56px + 68 * (100vw - 768px) / 1152);
+  }
+
   .promo__card {
     font-size: calc(16px + 8 * (100vw - 1024px) / 896);
     line-height: calc(28px + 8 * (100vw - 1024px) / 896);
@@ -1708,6 +1712,11 @@ h1, h2, h3, label, p {
   .tariff__card-subtitle,
 .tariff__card-ratio-text {
     font-size: calc(20px + 4 * (100vw - 420px) / 1500);
+  }
+
+  .advantages__card.card-2 {
+    font-size: calc(16px + 20 * (100vw - 420px) / 1500);
+    line-height: calc(24px + 24 * (100vw - 420px) / 1500);
   }
 
   .advantages__cards {
