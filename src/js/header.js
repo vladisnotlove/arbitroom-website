@@ -4,8 +4,9 @@ import {debounce, checkElementsNotNull} from './common.js';
 
 window.addEventListener('load', () => {
 	const headerWrapper = document.getElementById("headerWrapper");
+	const header = headerWrapper.querySelector(".header:not(.variant-collapsed)");
+	const headerCollapsed = headerWrapper.querySelector(".header.variant-collapsed");
 	const headerBurger = headerWrapper.querySelector(".header__burger");
-	const headerNav = headerWrapper.querySelector(".header__nav");
 
 	const menu = document.getElementById("menu");
 	const menuOverlay = document.getElementById("menuOverlay");
@@ -14,7 +15,6 @@ window.addEventListener('load', () => {
 	const elementsNotNull = checkElementsNotNull([
 		{ element: headerWrapper, name: "#headerWrapper"},
 		{ element: headerBurger, name: ".header__burger"},
-		{ element: headerNav, name: ".header__nav"},
 		{ element: menu, name: "#menu"},
 		{ element: menuOverlay, name: "#menuOverlay"},
 		{ element: menuCloseBtn, name: ".menu__close-btn"},
@@ -49,15 +49,18 @@ window.addEventListener('load', () => {
 
 
 	const onResize = () => {
-		const isOverflowed = headerNav.clientWidth < headerNav.scrollWidth;
+		let isOverflowed = false;
+		[...header.children].forEach(element => {
+			if (element.clientWidth < element.scrollWidth) isOverflowed = true;
+		})
 
 		if (isOverflowed) {
-			headerWrapper.classList.add("collapsed");
+			header.classList.add("hidden");
+			headerCollapsed.classList.remove("hidden");
 		}
 		else {
-			if (headerWrapper.classList.contains("collapsed")) {
-				headerWrapper.classList.remove("collapsed");
-			}
+			headerCollapsed.classList.add("hidden");
+			header.classList.remove("hidden");
 		}
 	}
 	onResize();

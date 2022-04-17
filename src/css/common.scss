@@ -302,26 +302,17 @@ h1, h2, h3, label, p {
 	right: 0;
 	z-index: 100;
 	transition: background .3s;
+	max-width: 100vw;
 
 	&.scrolled {
 		background: $color-background;
 	}
 
-	&.collapsed {
-
-		.header__action {
-			display: none;
-		}
-
-		.header__nav {
-			opacity: 0;
-			min-width: 0;
-			pointer-events: none;
-		}
-
-		.header__burger {
-			display: block;
-		}
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		position: relative;
 	}
 }
 
@@ -330,7 +321,14 @@ h1, h2, h3, label, p {
 	display: flex;
 	flex-flow: row nowrap;
 	align-items: center;
-	max-width: 100vw;
+	width: 100%;
+	order: 1;
+
+	&.hidden {
+		order: 2;
+		opacity: 0;
+		pointer-events: none;
+	}
 }
 
 .header__logo img {
@@ -339,10 +337,6 @@ h1, h2, h3, label, p {
 }
 
 .header__logo img.mobile {
-	display: none;
-}
-
-.header__burger {
 	display: none;
 }
 
@@ -375,24 +369,7 @@ h1, h2, h3, label, p {
 }
 
 .header__action {
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
 	margin-left: 40px
-}
-
-.header__action a, .header__action span {
-	text-decoration: none;
-	color: inherit;
-	transition: color .6s
-}
-
-.header__action a:hover, .header__action span:hover {
-	color: $color-prime
-}
-
-.header__action span {
-	pointer-events: none
 }
 
 .header__burger {

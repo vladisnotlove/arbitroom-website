@@ -76,7 +76,7 @@
 <!-- header -->
 <div class="header__wrapper" id="headerWrapper">
     <div class="container">
-        <header class="header">
+        <header class="header hidden">
             <a class="header__logo" href="index.html">
                 <img class="desktop" src="img/logo.svg" alt="">
                 <img class="mobile" src="img/logo-small.svg" alt="">
@@ -112,6 +112,34 @@
             </div>
             <div class="header__action">
                 <a href="" class="header__action-item modal_enter">Вход / Регистрация</a>
+            </div>
+        </header>
+        <header class="header hidden variant-collapsed">
+            <a class="header__logo" href="index.html">
+                <img class="desktop" src="img/logo.svg" alt="">
+                <img class="mobile" src="img/logo-small.svg" alt="">
+            </a>
+            <div class="header__language language dropdown">
+                <div class="language__label dropdown__trigger">
+                    <span>Ru</span>
+                    <svg class="icon">
+                        <use href="img/icons/angle-down.svg#svg"/>
+                    </svg>
+                </div>
+                <div class="language__menu dropdown__menu">
+                    <div class="language__menu-item">
+                        <img src="img/flags/ru.svg" alt="">RU
+                    </div>
+                    <div class="language__menu-item">
+                        <img src="img/flags/en.svg" alt="">EN
+                    </div>
+                    <div class="language__menu-item">
+                        <img src="img/flags/fi.svg" alt="">FI
+                    </div>
+                    <div class="language__menu-item">
+                        <img src="img/flags/kz.svg" alt="">KZ
+                    </div>
+                </div>
             </div>
             <svg class="header__burger icon">
                 <use href="img/icons/burger.svg#svg"/>
