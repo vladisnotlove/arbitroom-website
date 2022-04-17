@@ -527,12 +527,25 @@ h2.title {
 
 html {
 	scroll-behavior: smooth;
-	scrollbar-width: 0;
+	scrollbar-width: thin;
+	scrollbar-color: $color-prime $color-background;
 
 	&::-webkit-scrollbar {
-		width: 0;
+		width: 8px;
+		height: 8px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border-radius: 4px;
+		background: $color-prime;
+	}
+
+	&::-webkit-scrollbar-track {
+		border-radius: 4px;
+		background: $color-background;
 	}
 }
+
 
 body {
 	background: #32333a;

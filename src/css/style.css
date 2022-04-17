@@ -445,10 +445,20 @@ h2.title {
 
 html {
   scroll-behavior: smooth;
-  scrollbar-width: 0;
+  scrollbar-width: thin;
+  scrollbar-color: #CEE44A #32333A;
 }
 html::-webkit-scrollbar {
-  width: 0;
+  width: 8px;
+  height: 8px;
+}
+html::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: #CEE44A;
+}
+html::-webkit-scrollbar-track {
+  border-radius: 4px;
+  background: #32333A;
 }
 
 body {
