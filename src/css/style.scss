@@ -567,6 +567,11 @@ h1, h2, h3, label, p {
 .block {
 	margin-top: 184px;
 	margin-bottom: 184px;
+
+	&.main {
+		margin-top: 168px;
+		margin-bottom: 0;
+	}
 }
 
 .background-ellipse {
@@ -973,7 +978,7 @@ h1, h2, h3, label, p {
 
 // tariffs
 
-.main-tariffs {
+.tariffs {
 	position: relative;
 
 	.background-ellipse {
@@ -984,14 +989,14 @@ h1, h2, h3, label, p {
 	}
 }
 
-.tariff__cards {
+.tariffs__cards {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
 	gap: 16px
 }
 
-.tariff__card {
+.tariffs__card {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -1010,13 +1015,13 @@ h1, h2, h3, label, p {
 	}
 }
 
-.tariff__card-title {
+.tariffs__card-title {
 	font-size: 36px;
 	line-height: 48px;
 	margin-bottom: 16px;
 }
 
-.tariff__card-subtitle {
+.tariffs__card-subtitle {
 	font-size: 24px;
 	line-height: 36px;
 	margin-bottom: 24px;
@@ -1028,7 +1033,7 @@ h1, h2, h3, label, p {
 	}
 }
 
-.tariff__card-ratio {
+.tariffs__card-ratio {
 	display: flex;
 	flex-flow: row wrap;
 	align-items: baseline;
@@ -1036,30 +1041,30 @@ h1, h2, h3, label, p {
 	margin-bottom: 48px;
 }
 
-.tariff__card-ratio-number {
+.tariffs__card-ratio-number {
 	font-size: 80px;
 	line-height: 112px;
 	color: $color-prime;
 }
 
-.tariff__card-ratio-text {
+.tariffs__card-ratio-text {
 	font-size: 24px;
 	line-height: 36px;
 	white-space: nowrap;
 }
 
-.tariff__btn {
+.tariffs__btn {
 	width: 100%;
 }
 
-.tariff__list {
+.tariffs__list {
 	margin-top: calc(35px + (40 + 40 * .25) * ((100vw - 375px) / 1920));
 	font-size: calc(15px + (3 + 3 * .25) * ((100vw - 375px) / 1920));
 	line-height: 120%;
 	padding-left: 0
 }
 
-.tariff__list li {
+.tariffs__list li {
 	list-style-type: none;
 	margin-bottom: 10px
 }
@@ -1674,22 +1679,22 @@ h1, h2, h3, label, p {
 
 	// tariffs
 
-	.tariff__card-ratio-number {
+	.tariffs__card-ratio-number {
 		font-size: get-adaptive-value(80px, 44px, $desktop, $tablet);
 		line-height: get-adaptive-value(112px, 72px, $desktop, $tablet);
 	}
 
-	.tariff__card-ratio-text {
+	.tariffs__card-ratio-text {
 		font-size: get-adaptive-value(24px, 14px, $desktop, $tablet);
 		line-height: get-adaptive-value(36px, 28px, $desktop, $tablet);
 	}
 
-	.tariff__card-subtitle {
+	.tariffs__card-subtitle {
 		font-size: get-adaptive-value(24px, 16px, $desktop, $tablet);
 		line-height: get-adaptive-value(36px, 28px, $desktop, $tablet);
 	}
 
-	.tariff__btn {
+	.tariffs__btn {
 		font-size: get-adaptive-value(24px, 14px, $desktop, $tablet);
 	}
 
@@ -1847,18 +1852,18 @@ h1, h2, h3, label, p {
 		top: get-adaptive-value(147px, 91px, $tablet, $small-tablet);
 	}
 
-	.tariff__card {
+	.tariffs__card {
 		width: calc(var(--grid-column-gap) * 6 - var(--grid-gap));
 		min-width: 300px;
 	}
 
-	.tariff__card-ratio-number {
+	.tariffs__card-ratio-number {
 		font-size: get-adaptive-value(80px, 44px);
 		line-height: get-adaptive-value(112px, 80px);
 	}
 
-	.tariff__card-subtitle,
-	.tariff__card-ratio-text {
+	.tariffs__card-subtitle,
+	.tariffs__card-ratio-text {
 		font-size: get-adaptive-value(24px, 14px);
 		line-height: get-adaptive-value(36px, 24px);
 	}
@@ -1944,17 +1949,17 @@ h1, h2, h3, label, p {
 		line-height: get-adaptive-value(36px, 28px);
 	}
 
-	.tariff__card {
+	.tariffs__card {
 		flex-basis: 100%;
 		flex-grow: 1;
 	}
 
-	.tariff__card-ratio-number {
+	.tariffs__card-ratio-number {
 		font-size: get-adaptive-value(80px, 56px);
 	}
 
-	.tariff__card-subtitle,
-	.tariff__card-ratio-text {
+	.tariffs__card-subtitle,
+	.tariffs__card-ratio-text {
 		font-size: get-adaptive-value(24px, 20px);
 	}
 
@@ -2083,16 +2088,16 @@ h1, h2, h3, label, p {
 
 	// tariffs
 
-	.tariff__card {
+	.tariffs__card {
 		width: 100%;
 	}
 
-	.tariff__card-title {
+	.tariffs__card-title {
 		font-size: 28px;
 		line-height: 36px;
 	}
 
-	.tariff__card-subtitle {
+	.tariffs__card-subtitle {
 		font-size: 20px;
 		line-height: 28px;
 		margin-bottom: 16px;
@@ -2105,16 +2110,16 @@ h1, h2, h3, label, p {
 		}
 	}
 
-	.tariff__card-ratio {
+	.tariffs__card-ratio {
 		margin-bottom: 24px;
 	}
 
-	.tariff__card-ratio-number {
+	.tariffs__card-ratio-number {
 		font-size: 56px;
 		line-height: 80px;
 	}
 
-	.tariff__card-ratio-text {
+	.tariffs__card-ratio-text {
 		font-size: 20px;
 		line-height: 28px;
 	}
