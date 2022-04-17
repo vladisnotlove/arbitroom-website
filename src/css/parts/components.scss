@@ -1,0 +1,121 @@
+@import "./variables";
+
+
+// MAIN
+
+.text {
+	font-family: 'Golos';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 36px;
+
+	&.small {
+		font-size: 20px;
+		line-height: 28px;
+		color: $color-text-secondary;
+	}
+
+	&.big {
+		font-size: 36px;
+		line-height: 48px;
+	}
+
+	&.margin-bottom-small {
+		margin-bottom: 24px;
+	}
+
+	&.margin-bottom-medium {
+		margin-bottom: 32px;
+	}
+
+	&.margin-bottom-big {
+		margin-bottom: 48px;
+	}
+
+	&.margin-top-big {
+		margin-top: 48px;
+	}
+}
+
+
+// ADAPTIVE
+
+
+@media (max-width: $desktop) and (min-width: $mobile + 1) {
+	.text {
+		font-size: get-adaptive-value(24px, 20px);
+		line-height: get-adaptive-value(36px, 28px);
+
+		&.small {
+			font-size: get-adaptive-value(20px, 16px);
+			line-height: get-adaptive-value(28px, 24px);
+		}
+
+		&.big {
+			font-size: get-adaptive-value(36px, 28px);
+			line-height: get-adaptive-value(48px, 36px);
+		}
+
+		&.margin-bottom-small {
+			margin-bottom: get-adaptive-value(24px, 32px);
+		}
+
+		&.margin-bottom-medium {
+			margin-bottom: 32px;
+		}
+
+		&.margin-bottom-big {
+			margin-bottom: get-adaptive-value(48px, 32px);
+		}
+
+		&.margin-top-big {
+			margin-top: get-adaptive-value(48px, 32px);
+		}
+	}
+}
+
+@media (max-width: $laptop) {
+
+}
+
+@media (max-width: $tablet) {
+
+}
+
+@media (max-width: $small-tablet) {
+
+}
+
+@media (max-width: $mobile) {
+	.text {
+		font-size: 20px;
+		line-height: 28px;
+
+		&.small {
+			font-size: 16px;
+			line-height: 24px;
+		}
+
+		&.big {
+			font-size: 28px;
+			line-height: 36px;
+		}
+
+		&.margin-bottom-small {
+			margin-bottom: 32px;
+		}
+
+		&.margin-bottom-medium {
+			margin-bottom: 32px;
+		}
+
+		&.margin-bottom-big {
+			margin-bottom: 32px;
+		}
+
+		&.margin-top-big {
+			margin-top: 32px;
+		}
+	}
+}
