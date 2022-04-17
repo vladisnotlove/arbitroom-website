@@ -1313,7 +1313,7 @@ h1, h2, h3, label, p {
 	}
 
 	.tariffs__card-list-item {
-		font-size: get-adaptive-value(24px, 14px, $desktop, $tablet);
+		font-size: get-adaptive-value(20px, 14px, $desktop, $tablet);
 		line-height: get-adaptive-value(28px, 22px, $desktop, $tablet);
 	}
 
@@ -1496,7 +1496,7 @@ h1, h2, h3, label, p {
 	}
 
 	.tariffs__card-list-item {
-		font-size: get-adaptive-value(24px, 16px);
+		font-size: get-adaptive-value(20px, 16px);
 		line-height: get-adaptive-value(28px, 24px);
 	}
 
