@@ -35,8 +35,10 @@ window.addEventListener('load', () => {
 		menu.classList.add("ready");
 
 		trigger?.addEventListener("click", () => {
-			dropdownOverlay.classList.toggle("active");
 			menu.classList.toggle("open");
+			menu.classList.contains("open") ?
+				dropdownOverlay.classList.add("active") :
+				dropdownOverlay.classList.remove("active");
 			popper.setOptions((options) => ({
 				...options,
 				modifiers: [
