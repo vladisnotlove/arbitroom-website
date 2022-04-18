@@ -1,6 +1,5 @@
-import {log, cssVars} from './common.js';
+import cssVars from '../styles/cssVars';
 
-// MAIN
 
 window.addEventListener('load', () => {
 

@@ -1,4 +1,5 @@
-import {checkElementsNotNull} from './common.js';
+import {checkElementsNotNull} from '../utils/log';
+import { createPopper } from '@popperjs/core';
 
 // MAIN
 
@@ -21,7 +22,7 @@ window.addEventListener('load', () => {
 		])
 		if (!elementsNotNull) return;
 
-		const popper = Popper.createPopper(trigger, menu, {
+		const popper = createPopper(trigger, menu, {
 			modifiers: [
 				{
 					name: 'offset',
@@ -32,6 +33,7 @@ window.addEventListener('load', () => {
 			],
 			strategy: "fixed",
 		});
+		document.body.appendChild(menu);
 		menu.classList.add("ready");
 
 		trigger?.addEventListener("click", () => {

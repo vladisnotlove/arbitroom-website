@@ -1,0 +1,52 @@
+@import "variables";
+
+
+.color-prime {
+	color: $color-prime
+}
+
+.hide-on-desktop {
+	@media screen and (min-width: $mobile + 1) {
+		display: none !important;
+	}
+}
+
+.hide-on-mobile {
+	@media screen and (max-width: $mobile) {
+		display: none !important;
+	}
+}
+
+.tac {
+	text-align: center
+}
+
+.opacity5 {
+	opacity: .5
+}
+
+.mb30 {
+	margin-bottom: 30px
+}
+
+.round-arrow {
+	border-radius: 50%;
+	max-width: 243px;
+	max-height: 243px;
+	width: calc(182px + (61 + 61 * .25) * ((100vw - 375px) / 1920));
+	height: calc(182px + (61 + 61 * .25) * ((100vw - 375px) / 1920));
+	display: flex;
+	flex-shrink: 0;
+	align-items: center;
+	justify-content: center;
+	background: #33343b
+}
+
+.rotate180 {
+	transform: rotate(180deg)
+}
+
+.inactive {
+	opacity: 0;
+	pointer-events: none;
+}

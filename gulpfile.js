@@ -1,0 +1,94 @@
+const {src, parallel, series, dest, watch: gulpWatch} = require('gulp');
+const del = require('del');
+const webpackSteam = require('webpack-stream');
+const sass = require('gulp-sass')(require('sass'));
+
+
+// config
+
+const scr = "src/";
+const dist = "dist/"
+
+const paths = {
+	htmlSrcAll: scr + '*.html',
+	htmlSrc: scr + '*.html',
+	htmlDist: dist + "",
+
+	imgSrcAll: scr + 'img/**/*',
+	imgSrc: scr + 'img/**/*',
+	imgDist: dist + 'img/',
+
+	fontsSrcAll: scr + 'fonts/**/*',
+	fontsSrc: scr + 'fonts/**/*',
+	fontsDist: dist + 'fonts/',
+
+	scssSrcAll: scr + 'css/**/*.scss',
+	scssSrc: scr + 'css/*.scss',
+	cssDist: dist + 'css/',
+
+	jsSrcAll: scr + 'js/**/*.js',
+	jsSrc: scr + 'js/index.js',
+	jsDist: dist + 'js/',
+}
+
+
+// builders
+
+const html = () => {
+	return src(paths.htmlSrc).pipe(dest(paths.htmlDist));
+};
+
+const img = () => {
+	return src(paths.imgSrc).pipe(dest(paths.imgDist));
+};
+
+const fonts = () => {
+	return src(paths.fontsSrc).pipe(dest(paths.fontsDist));
+};
+
+const scss = () => {
+	return src(paths.scssSrc).pipe(sass().on('error', sass.logError)).pipe(dest(paths.cssDist));
+};
+
+const js = () => {
+	return src(paths.jsSrc).pipe(
+		webpackSteam({
+			devtool: 'source-map',
+			module: {
+				rules: [
+					{
+						test: require('path').resolve(__dirname, 'node_modules/leader-line/'),
+						use: [{
+							loader: 'skeleton-loader',
+							options: {procedure: content => `${content}; export default LeaderLine`}
+						}]
+					}
+				]
+			}
+		}),
+	).pipe(dest(paths.jsDist));
+};
+
+const all = parallel(html, img, fonts, scss, js);
+
+// public
+
+const watch = (cb) => {
+	gulpWatch(paths.htmlSrcAll, html);
+	gulpWatch(paths.imgSrcAll, img);
+	gulpWatch(paths.fontsSrcAll, fonts);
+	gulpWatch(paths.scssSrcAll, scss);
+	gulpWatch(paths.jsSrcAll, js);
+	cb();
+};
+
+const clean = (cb) => {
+	del(['./dist/**'], {force: true});
+	cb();
+};
+
+const build = series(clean, all);
+
+exports.watch = watch;
+exports.clean = clean;
+exports.build = build;

@@ -1,5 +1,7 @@
 @import "parts/variables";
 
+@import "common";
+
 
 // MAIN
 
@@ -66,7 +68,6 @@
 
 
 // ADAPTIVE
-
 
 @media (max-width: $desktop) and (min-width: $mobile + 1) {
 

@@ -1,6 +1,6 @@
-import {debounce, checkElementsNotNull} from './common.js';
+import debounce from '../utils/debounce';
+import {checkElementsNotNull} from '../utils/log';
 
-// MAIN
 
 window.addEventListener('load', () => {
 	const headerWrapper = document.getElementById("headerWrapper");

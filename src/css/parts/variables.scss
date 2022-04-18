@@ -5,6 +5,7 @@ $color-prime: #CEE44A;
 $color-prime-contrast: rgba(0, 0, 0, 0.92);
 $color-dark-background: rgba(33, 33, 33, 0.48);
 $color-background: #32333A;
+$color-light-background: #3a3a45;
 
 $color-text-prime: #fff;
 $color-text-secondary: rgba(255, 255, 255, 0.64);
@@ -30,6 +31,14 @@ $header-height-mobile: 64px;
 
 $container-padding-mobile: 24px;
 $container-padding-desktop: 180px;
+
+$z-index-header: 100;
+$z-index-header-menu-overlay: 200;
+$z-index-header-menu: 250;
+$z-index-video-player: 500;
+$z-index-dropdown-overlay: 1000;
+$z-index-dropdown-menu: 1050;
+$z-index-modal: 1200;
 
 
 // MIXINS & FUNCTIONS

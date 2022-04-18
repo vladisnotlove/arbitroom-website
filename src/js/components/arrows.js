@@ -1,8 +1,11 @@
-import {cssVars, debounce} from "./common.js"
+import cssVars from '../styles/cssVars';
+import debounce from '../utils/debounce';
+import LeaderLine from "leader-line";
+
 const {arrowBorderRadius,colorPrime} = cssVars;
 
-// UTILS
 
+// UTILS
 
 function addArc(pathData, radius) {
 	var reL = /^L ?([\d.\-+]+) ([\d.\-+]+) ?/,
@@ -75,6 +78,8 @@ function addArc(pathData, radius) {
 window.addEventListener('load', () => {
 
 	// add arrows
+
+	console.log(LeaderLine);
 
 	LeaderLine.positionByWindowResize = false;
 
