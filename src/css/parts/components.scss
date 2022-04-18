@@ -1,4 +1,5 @@
 @import "./variables";
+@import "mixins";
 
 
 // MAIN
@@ -293,27 +294,43 @@ h2.title {
 
 // modal
 
+body.modal-open {
+	overflow: hidden;
+}
+
 .modal {
 	position: fixed;
 	top: 0;
 	left: 0;
-	right: 0;
-	bottom: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	width: 100%;
+	height: 100%;
+
 	z-index: $z-index-modal;
+	overflow-y: auto;
 
 	pointer-events: none;
 	opacity: 0;
 	transition: opacity $animation-disappear;
+
+	background: $color-dark-background;
+
+	@include with-custom-scrollbar ($z-index-modal + 1);
 }
 
 .modal__overlay {
 	z-index: 10;
 }
 
-.modal__dialog {
+.modal__content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	padding: 32px $container-padding-mobile;
+
+	max-width: 100%;
+	min-height: 100%;
+	position: relative;
 	z-index: 20;
 }
 
@@ -326,20 +343,42 @@ h2.title {
 		opacity: 1;
 		pointer-events: auto;
 	}
+
 }
 
-.dialog {
+.modal__dialog {
+	flex-shrink: 0;
 	padding: 48px;
 	border-radius: 32px;
 	background: $color-background;
-	width: 541px;
+	max-width: 541px;
+	width: 100%;
 }
 
-.dialog__title {
+.modal__dialog-title {
 	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 16px;
+
+	margin-bottom: 32px;
 
 	font-size: 36px;
 	line-height: 48px;
+}
+
+.modal__dialog-close-btn {
+	flex-shrink: 0;
+	flex-grow: 0;
+}
+
+.modal__dialog-sub-actions {
+	margin-bottom: -16px;
+	margin-top: 24px;
+
+	font-size: 16px;
+	line-height: 24px;
+	text-align: center;
 }
 
 // ADAPTIVE
