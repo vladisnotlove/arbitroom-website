@@ -1,19 +1,5 @@
 @import "./variables";
 
-
-@mixin common-part {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 32px;
-	outline: 0;
-	font-size: 24px;
-	font-weight: 500;
-	padding: 14px 24px;
-	line-height: 36px;
-	white-space: nowrap;
-}
-
 // MAIN
 
 .btn {

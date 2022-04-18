@@ -6,7 +6,7 @@
 
 // COMPONENTS
 
-
+@import "parts/components";
 
 h1.title {
 	font-family: Golos, sans-serif;
@@ -1946,6 +1946,3 @@ h1, h2, h3, label, p {
 		order: 2;
 	}
 }
-
-
-@import "parts/components";
