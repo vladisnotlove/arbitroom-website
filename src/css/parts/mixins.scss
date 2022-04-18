@@ -5,7 +5,23 @@
 
 	&:hover {
 		cursor: pointer;
-		box-shadow: 0px 0px 56px rgba(206, 228, 74, 0.24);
+		box-shadow: 0 0 56px rgba(206, 228, 74, 0.24);
 		transition: box-shadow $animation-appear;
+	}
+}
+
+@mixin with-outer-collider ($outer-padding: 8px) {
+	position: relative;
+
+	&:after {
+		position: absolute;
+		top: -$outer-padding;
+		left: -$outer-padding;
+		content: "";
+
+		width: calc(100% + #{$outer-padding * 2});
+		height: calc(100% + #{$outer-padding * 2});
+		z-index: 1;
+		cursor: pointer;
 	}
 }

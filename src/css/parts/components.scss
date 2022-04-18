@@ -1,7 +1,105 @@
 @import "./variables";
 
 
+@mixin common-part {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 32px;
+	outline: 0;
+	font-size: 24px;
+	font-weight: 500;
+	padding: 14px 24px;
+	line-height: 36px;
+	white-space: nowrap;
+}
+
 // MAIN
+
+.btn {
+	border: none;
+	border-radius: 32px;
+	outline: 0;
+	font-size: 24px;
+	font-weight: 500;
+	padding: 14px 24px;
+	line-height: 36px;
+	white-space: nowrap;
+	color: $color-prime-contrast;
+	background: $color-prime;
+
+	img:first-child,
+	.icon:first-child {
+		display: inline-block;
+		margin-right: 8px
+	}
+	img:last-child,
+	.icon:last-child {
+		display: inline-block;
+		margin-left: 8px
+	}
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.btn-outlined {
+	background: 0 0;
+	border: 1px solid $color-prime;
+	color: #fff;
+	transition: background $animation-unhover;
+
+	&:hover {
+		opacity: 1;
+		background: change-color($color-prime, $alpha: 0.12);
+		transition: background $animation-hover;
+	}
+}
+
+.btn-text {
+	color: $color-prime;
+	border: none;
+	background: transparent;
+
+	img:first-child,
+	.icon:first-child {
+		display: inline-block;
+		margin-right: 8px
+	}
+	img:last-child,
+	.icon:last-child {
+		display: inline-block;
+		margin-left: 8px
+	}
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.more-btn {
+	.more-btn__show-more {
+		color: inherit;
+	}
+
+	.more-btn__hide {
+		color: inherit;
+		display: none;
+	}
+
+	&.expanded {
+
+		.more-btn__show-more {
+			display: none;
+		}
+
+		.more-btn__hide {
+			display: initial;
+		}
+	}
+}
+
 
 .text {
 	font-family: 'Golos';
@@ -38,11 +136,34 @@
 	}
 }
 
+.card {
+	background: $color-dark-background;
+	border-radius: 32px;
+	padding: 48px;
+
+	&.small {
+		padding: 24px;
+	}
+}
+
+.collapse {
+	height: 0;
+	overflow: hidden;
+}
+
+
 
 // ADAPTIVE
 
 
 @media (max-width: $desktop) and (min-width: $mobile + 1) {
+
+	.btn {
+		font-size: get-adaptive-value(24px, 16px);
+		padding: get-adaptive-value(14px, 10px) get-adaptive-value(24px, 12px);
+		line-height: get-adaptive-value(36px, 20px);
+	}
+
 	.text {
 		font-size: get-adaptive-value(24px, 20px);
 		line-height: get-adaptive-value(36px, 28px);
@@ -73,6 +194,10 @@
 			margin-top: get-adaptive-value(48px, 32px);
 		}
 	}
+
+	.card {
+		padding: get-adaptive-value(48px, 32px);
+	}
 }
 
 @media (max-width: $laptop) {
@@ -81,13 +206,31 @@
 
 @media (max-width: $tablet) {
 
+	.btn {
+		font-size: get-adaptive-value(24px, 16px);
+		padding: get-adaptive-value(14px, 10px) get-adaptive-value(24px, 12px);
+		line-height: get-adaptive-value(36px, 20px);
+	}
+
 }
 
 @media (max-width: $small-tablet) {
-
+	.card {
+		border-radius: 16px;
+		padding: 32px;
+	}
 }
 
 @media (max-width: $mobile) {
+
+	.btn,
+	.btn-outlined {
+		padding: 10px 12px;
+		font-size: 16px;
+		line-height: 32px;
+		border-radius: 32px;
+	}
+
 	.text {
 		font-size: 20px;
 		line-height: 28px;
@@ -117,5 +260,10 @@
 		&.margin-top-big {
 			margin-top: 32px;
 		}
+	}
+
+	.card {
+		border-radius: 16px;
+		padding: 32px;
 	}
 }

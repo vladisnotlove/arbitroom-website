@@ -6,61 +6,6 @@
 
 // COMPONENTS
 
-.btn {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 32px;
-	border: none;
-	outline: 0;
-	font-size: 24px;
-	font-weight: 500;
-	padding: 14px 24px;
-	line-height: 36px;
-	white-space: nowrap;
-	color: $color-prime-contrast;
-	background: $color-prime;
-
-	img:first-child,
-	.icon:first-child {
-		display: inline-block;
-		margin-right: 8px
-	}
-	img:last-child,
-	.icon:last-child {
-		display: inline-block;
-		margin-left: 8px
-	}
-
-	&:hover {
-		cursor: pointer;
-	}
-}
-
-.btn-outlined {
-	background: 0 0;
-	border: 1px solid $color-prime;
-	color: #fff;
-	transition: background $animation-unhover;
-
-	.icon {
-		color: $color-prime;
-
-		&:first-child {
-			margin-right: 8px
-		}
-	}
-
-	img:first-child {
-		margin-right: 8px
-	}
-
-	&:hover {
-		opacity: 1;
-		background: change-color($color-prime, $alpha: 0.12);
-		transition: background $animation-hover;
-	}
-}
 
 
 h1.title {
@@ -1246,11 +1191,6 @@ h1, h2, h3, label, p {
 		margin-bottom: get-adaptive-value(88px, 32px);
 	}
 
-	.btn {
-		font-size: get-adaptive-value(24px, 16px);
-		padding: get-adaptive-value(14px, 10px) get-adaptive-value(24px, 12px);
-		line-height: get-adaptive-value(36px, 20px);
-	}
 
 	.menu__header,
 	.header__wrapper {
@@ -1286,7 +1226,7 @@ h1, h2, h3, label, p {
 
 	.promo__card {
 		font-size: get-adaptive-value(24px, 16px);
-		line-height: get-adaptive-value(36px, 28px);
+		line-height: get-adaptive-value(36px, 24px);
 	}
 
 	// tariffs

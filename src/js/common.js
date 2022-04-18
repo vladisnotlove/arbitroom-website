@@ -2,6 +2,7 @@
 export const cssVars = {
 	colorPrime: '#CEE44A',
 	arrowBorderRadius: 40,
+	animationAppear: 0.25,  // s
 }
 
 // UTILS
@@ -62,7 +63,7 @@ export const debounce = (func, wait, immediate) => {
 
 export const log = {
 	elementNotFound: (name) => {
-		console.error(`Element \"${name}\" is not found`)
+		console.error(`Element \"${name}\" is not found`);
 	}
 }
 
