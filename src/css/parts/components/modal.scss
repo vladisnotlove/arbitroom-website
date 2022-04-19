@@ -1,0 +1,147 @@
+@import "../variables";
+@import "../mixins";
+
+
+body.modal-open {
+	overflow: hidden;
+	scroll-behavior: auto;
+	padding-right: $scrollbar-width;
+}
+
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	max-width: 100%;
+
+	z-index: $z-index-modal;
+	overflow-y: auto;
+
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity $animation-disappear;
+
+	background: $color-dark-background;
+
+	@include with-custom-scrollbar ($z-index-modal + 1);
+}
+
+.modal__overlay {
+	z-index: 10;
+}
+
+.modal__content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	padding: 44px 16px;
+
+	max-width: 100%;
+	min-height: 100%;
+	position: relative;
+	z-index: 20;
+}
+
+.modal.open {
+	opacity: 1;
+	pointer-events: auto;
+	transition: opacity $animation-appear;
+
+	.modal__overlay {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+}
+
+.modal__dialog {
+	flex-shrink: 0;
+	padding: 48px;
+	border-radius: 32px;
+	background: $color-background;
+	min-width: 0;
+	max-width: 541px;
+	width: 100%;
+}
+
+.modal__dialog-title {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 16px;
+
+	margin-bottom: 32px;
+
+	font-size: 36px;
+	line-height: 48px;
+}
+
+.modal__dialog-close-btn {
+	flex-shrink: 0;
+	flex-grow: 0;
+}
+
+.modal__dialog-sub-actions {
+	margin-bottom: -16px;
+	margin-top: 24px;
+
+	font-size: 16px;
+	line-height: 24px;
+	text-align: center;
+}
+
+// ADAPTIVE
+
+@media (max-width: $desktop) and (min-width: $mobile + 1) {
+
+	.modal__dialog {
+		padding: get-adaptive-value(48px, 32px);
+	}
+
+	.modal__dialog-title {
+		font-size: get-adaptive-value(36px, 20px);
+		line-height: get-adaptive-value(48px, 28px);
+	}
+
+	.modal__dialog-sub-actions {
+		margin-bottom: get-adaptive-value(-16px, 0px);
+		font-size: get-adaptive-value(16px, 14px);
+		line-height: get-adaptive-value(24px, 20px);
+	}
+}
+
+@media (max-width: $laptop) {
+
+}
+
+@media (max-width: $tablet) {
+
+
+}
+
+@media (max-width: $small-tablet) {
+
+}
+
+@media (max-width: $mobile) {
+
+
+	.modal__dialog {
+		padding: 32px;
+		border-radius: 16px;
+	}
+
+	.modal__dialog-title {
+		font-size: 20px;
+		line-height: 28px;
+	}
+
+	.modal__dialog-sub-actions {
+		margin-bottom: 0px;
+		font-size: 14px;
+		line-height: 20px;
+	}
+}

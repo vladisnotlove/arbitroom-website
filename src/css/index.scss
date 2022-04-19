@@ -11,14 +11,14 @@
 // promo
 
 .promo {
-	padding-top: 229px;
+	padding-top: 141px;
 	position: relative
 }
 
 .promo__img {
 	position: absolute;
 	right: -13px;
-	top: 176px;
+	top: 87px;
 	width: 798px;
 	object-fit: contain;
 }
@@ -602,12 +602,12 @@
 	// promo
 
 	.promo {
-		padding-top: get-adaptive-value(200px, 88px, $desktop, $tablet);
+		padding-top: get-adaptive-value(112px, 24px, $desktop, $tablet);
 	}
 
 	.promo__img {
 		width: get-adaptive-value(798px, 290px, $desktop, $small-tablet);
-		top: get-adaptive-value(147px, 67px, $desktop, $small-tablet);
+		top: get-adaptive-value(59px, 67px, $desktop, $small-tablet);
 	}
 
 	.promo__info {
@@ -777,11 +777,11 @@
 	}
 
 	.promo {
-		padding-top: get-adaptive-value(200px, 88px);
+		padding-top: get-adaptive-value(112px, 24px);
 	}
 
 	.promo__img {
-		top: get-adaptive-value(147px, 140px, $tablet, $small-tablet);
+		top: get-adaptive-value(59px, 140px, $tablet, $small-tablet);
 	}
 
 	.tariffs__card {

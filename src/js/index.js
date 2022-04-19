@@ -4,3 +4,4 @@ import "./components/dropdown";
 import "./components/header";
 import "./components/arrows";
 import "./components/youtube-embedded";
+import "./components/modal";

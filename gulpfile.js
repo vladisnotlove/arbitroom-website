@@ -3,6 +3,8 @@ const del = require('del');
 const webpackSteam = require('webpack-stream');
 const sass = require('gulp-sass')(require('sass'));
 
+const yargs = require('yargs');
+const isProduction = (yargs.argv.production !== undefined);
 
 // config
 
@@ -53,7 +55,8 @@ const scss = () => {
 const js = () => {
 	return src(paths.jsSrc).pipe(
 		webpackSteam({
-			devtool: 'source-map',
+			mode: isProduction ? "production" : "development",
+			devtool: isProduction ?  undefined : 'source-map',
 			module: {
 				rules: [
 					{
@@ -63,31 +66,29 @@ const js = () => {
 							options: {procedure: content => `${content}; export default LeaderLine`}
 						}]
 					}
-				]
-			}
+				],
+			},
 		}),
 	).pipe(dest(paths.jsDist));
 };
 
-const all = parallel(html, img, fonts, scss, js);
-
 // public
-
-const watch = (cb) => {
-	gulpWatch(paths.htmlSrcAll, html);
-	gulpWatch(paths.imgSrcAll, img);
-	gulpWatch(paths.fontsSrcAll, fonts);
-	gulpWatch(paths.scssSrcAll, scss);
-	gulpWatch(paths.jsSrcAll, js);
-	cb();
-};
 
 const clean = (cb) => {
 	del(['./dist/**'], {force: true});
 	cb();
 };
 
-const build = series(clean, all);
+const build = series(clean, parallel(html, img, fonts, scss, js));
+
+const watch = series(build, (cb) => {
+	gulpWatch(paths.htmlSrcAll, html);
+	gulpWatch(paths.imgSrcAll, img);
+	gulpWatch(paths.fontsSrcAll, fonts);
+	gulpWatch(paths.scssSrcAll, scss);
+	gulpWatch(paths.jsSrcAll, js);
+	cb();
+});
 
 exports.watch = watch;
 exports.clean = clean;

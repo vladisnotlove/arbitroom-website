@@ -25,13 +25,6 @@ $animation-disappear: .5s;
 
 $grid-columns: 12;
 
-
-$header-height-desktop: 88px;
-$header-height-mobile: 64px;
-
-$container-padding-mobile: 24px;
-$container-padding-desktop: 180px;
-
 $z-index-header: 100;
 $z-index-header-menu-overlay: 200;
 $z-index-header-menu: 250;
@@ -39,6 +32,18 @@ $z-index-video-player: 500;
 $z-index-dropdown-overlay: 1000;
 $z-index-dropdown-menu: 1050;
 $z-index-modal: 1200;
+
+
+$scrollbar-width: 8px;
+
+$header-height-desktop: 88px;
+$header-height-mobile: 64px;
+
+$container-padding-mobile: 24px;
+$container-padding-desktop: 180px;
+
+
+
 
 
 // MIXINS & FUNCTIONS

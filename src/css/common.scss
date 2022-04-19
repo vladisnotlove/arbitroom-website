@@ -3,12 +3,16 @@
 @import "parts/fonts";
 @import "parts/mixins";
 
-@import "parts/components";
+@import "parts/components/simple-components";
+@import "parts/components/btns";
+@import "parts/components/dropdown";
+@import "parts/components/modal";
+
 @import "parts/modificators";
 
 
 * {
-	font-family: Golos;
+	font-family: Golos, sans-serif;
 	font-style: normal;
 	color: $color-text-prime;
 }
@@ -19,17 +23,17 @@ html {
 	scrollbar-color: $color-prime $color-background;
 
 	&::-webkit-scrollbar {
-		width: 8px;
-		height: 8px;
+		width: $scrollbar-width;
+		height: $scrollbar-width;
 	}
 
 	&::-webkit-scrollbar-thumb {
-		border-radius: 4px;
+		border-radius: $scrollbar-width / 2;
 		background: $color-prime;
 	}
 
 	&::-webkit-scrollbar-track {
-		border-radius: 4px;
+		border-radius: $scrollbar-width / 2;
 		background: $color-background;
 	}
 }
@@ -84,10 +88,10 @@ h1, h2, h3, label, p {
 // header
 
 .header__wrapper {
-	position: fixed;
+	position: sticky;
 	top: 0;
 	left: 0;
-	right: 0;
+	width: 100%;
 	z-index: $z-index-header;
 	height: $header-height-desktop;
 	overflow: hidden;
@@ -131,36 +135,44 @@ h1, h2, h3, label, p {
 	display: none;
 }
 
+$header-link: 10px;
+
 .header__nav {
 	flex-basis: 0;
 	flex-grow: 1;
 	overflow: hidden;
 	display: flex;
 	align-items: center;
-	column-gap: 40px;
-	margin-left: 49px;
-	margin-right: 24px;
+	column-gap: 40px - $header-link * 2;
+	margin-left: 49px - $header-link;
+	margin-right: 24px - $header-link;
 }
 
+.header__action,
 .header__nav a {
-	font-family: "Golos";
+	font-family: Golos, sans-serif;
 	font-style: normal;
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 24px;
+	padding: $header-link;
 
 	color: inherit;
 	text-decoration: none;
 	white-space: nowrap;
-	transition: color .6s
-}
 
-.header__nav a:hover {
-	color: $color-prime
+	cursor: pointer;
+	transition: color $animation-appear;
+
+	&:hover {
+		color: $color-prime;
+		transition: color $animation-disappear;
+	}
 }
 
 .header__action {
-	margin-left: 40px
+	margin-left: 40px - $header-link;
+	margin-right: -$header-link;
 }
 
 .header__burger {
@@ -418,91 +430,6 @@ h1, h2, h3, label, p {
 
 @media (max-width: $tablet) {
 
-	.promo__cards {
-		display: grid;
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-	}
-
-	.promo {
-		padding-top: get-adaptive-value(200px, 88px);
-	}
-
-	.promo__img {
-		top: get-adaptive-value(147px, 140px, $tablet, $small-tablet);
-	}
-
-	.tariffs__card {
-		width: calc(var(--grid-column-gap) * 6 - var(--grid-gap));
-		min-width: 300px;
-	}
-
-	.tariffs__card-ratio-number {
-		font-size: get-adaptive-value(80px, 44px);
-		line-height: get-adaptive-value(112px, 80px);
-	}
-
-	.tariffs__card-subtitle,
-	.tariffs__card-ratio-text {
-		font-size: get-adaptive-value(24px, 16px);
-		line-height: get-adaptive-value(36px, 24px);
-	}
-
-	.tariffs__card-list-item {
-		font-size: get-adaptive-value(20px, 16px);
-		line-height: get-adaptive-value(28px, 24px);
-	}
-
-	.advantages__card.card-2 {
-		font-size: get-adaptive-value(36px, 10px);
-
-		.small-text {
-			font-size: get-adaptive-value(36px, 18px);
-		}
-	}
-
-	.launchpool__main-part {
-		display: block;
-	}
-
-	.launchpool__description {
-		margin-top: 48px;
-
-		p {
-			margin: 0;
-			max-width: 600px;
-		}
-	}
-
-	.launchpool__buttons {
-		margin-top: 48px;
-	}
-
-	.launchpool__cards {
-		margin-top: 64px;
-	}
-
-	.how__steps {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-	}
-
-	// goals
-
-	.goals__card {
-		display: block;
-	}
-
-	.goals__card-title {
-		margin-bottom: 24px;
-	}
-
-	.goals__card-description {
-		color: $color-text-secondary
-	}
-
-	.goals__divider {
-		margin: 48px 0;
-	}
 }
 
 @media (max-width: $small-tablet) {
