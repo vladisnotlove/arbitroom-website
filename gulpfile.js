@@ -2,8 +2,8 @@ const {src, parallel, series, dest, watch: gulpWatch} = require('gulp');
 const del = require('del');
 const webpackSteam = require('webpack-stream');
 const sass = require('gulp-sass')(require('sass'));
-
 const yargs = require('yargs');
+
 const isProduction = (yargs.argv.production !== undefined);
 
 // config
@@ -32,7 +32,6 @@ const paths = {
 	jsSrc: scr + 'js/index.js',
 	jsDist: dist + 'js/',
 }
-
 
 // builders
 
