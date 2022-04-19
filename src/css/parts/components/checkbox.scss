@@ -1,0 +1,97 @@
+@import "../variables";
+@import "../mixins";
+
+
+// MAIN
+
+.checkbox {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.checkbox__mark {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 32px;
+	height: 32px;
+}
+
+.checkbox__mark-unchecked-icon {
+	width: 20px;
+	height: 20px;
+	color: $color-text-secondary;
+	transition: color $animation-unhover;
+}
+
+.checkbox__mark-checked-icon {
+	display: none;
+
+	width: 20px;
+	height: 20px;
+
+	color: $color-prime;
+}
+
+.checkbox__input {
+	position: absolute;
+	opacity: 0;
+
+	&:checked {
+
+		& + .checkbox__mark {
+
+			.checkbox__mark-unchecked-icon {
+				display: none;
+			}
+
+			.checkbox__mark-checked-icon {
+				display: initial;
+			}
+		}
+
+	}
+}
+
+.checkbox:hover {
+	cursor: pointer;
+
+	.checkbox__mark-unchecked-icon {
+		color: $color-prime;
+		transition: color $animation-hover;
+	}
+}
+
+// ADAPTIVE
+
+@media (max-width: $desktop) and (min-width: $mobile + 1) {
+	.checkbox {
+		font-size: get-adaptive-value(16px, 14px);
+		line-height: get-adaptive-value(24px, 20px);
+	}
+}
+
+@media (max-width: $laptop) {
+
+}
+
+@media (max-width: $tablet) {
+
+
+}
+
+@media (max-width: $small-tablet) {
+
+}
+
+@media (max-width: $mobile) {
+	.checkbox {
+		font-size: 14px;
+		line-height: 20px;
+	}
+}
