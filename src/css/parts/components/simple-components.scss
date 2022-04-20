@@ -49,6 +49,17 @@ h2.title {
 	margin-bottom: 64px;
 }
 
+// link
+
+.link {
+	cursor: pointer;
+	text-decoration: underline;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
 // overlay
 
 .overlay {

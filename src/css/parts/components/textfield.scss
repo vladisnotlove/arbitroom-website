@@ -87,6 +87,22 @@
 			border-color: $color-prime;
 		}
 	}
+
+	&::placeholder {
+		color: $color-text-more-secondary;
+	}
+
+	// remove number arrows
+
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+
+	&[type=number] {
+		-moz-appearance: textfield;
+	}
 }
 
 .textfield.error:not(.disabled) {

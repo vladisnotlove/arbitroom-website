@@ -1,0 +1,97 @@
+@import "../variables";
+@import "../mixins";
+
+
+// MAIN
+
+.form {
+	.textfield + .textfield {
+		margin-top: 32px;
+	}
+
+	.checkbox + .textfield,
+	.textfield + .checkbox {
+		margin-top: 48px;
+	}
+
+	.checkbox + .checkbox {
+		margin-top: 16px;
+	}
+}
+
+.registration-form {
+
+	.textfield + .registration-form__inviter,
+	.checkbox + .registration-form__inviter {
+		margin-top: 32px;
+	}
+}
+
+.registration-form__inviter {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	gap: 8px;
+
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.registration-form__inviter-title {
+	color: $color-text-secondary
+}
+
+.registration-form__inviter-name {
+	color: $color-text-prime
+}
+
+.registration-form__inviter-email {
+	color: $color-text-prime
+}
+
+
+// ADAPTIVE
+
+@media (max-width: $desktop) and (min-width: $mobile + 1) {
+
+	.registration-form__inviter {
+		font-size: get-adaptive-value(16px, 14px);
+		line-height: get-adaptive-value(24px, 20px);
+	}
+}
+
+@media (max-width: $laptop) {
+
+}
+
+@media (max-width: $tablet) {
+
+
+}
+
+@media (max-width: $small-tablet) {
+
+}
+
+@media (max-width: $mobile) {
+
+	.form {
+		.textfield + .textfield {
+			margin-top: 32px;
+		}
+
+		.checkbox + .textfield,
+		.textfield + .checkbox {
+			margin-top: 48px;
+		}
+
+		.checkbox + .checkbox {
+			margin-top: 16px;
+		}
+	}
+
+	.registration-form__inviter {
+		font-size: 14px;
+		line-height: 20px;
+	}
+}

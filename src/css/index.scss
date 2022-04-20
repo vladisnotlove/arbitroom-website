@@ -949,7 +949,7 @@
 	// promo
 
 	.promo {
-		padding-top: 88px;
+		padding-top: 24px;
 	}
 
 	.promo__img {
@@ -1016,6 +1016,10 @@
 			width: 1px;
 			height: 8px;
 		}
+	}
+
+	.tariffs__card-ratio {
+		gap: 4px
 	}
 
 	.tariffs__card-ratio-number {

@@ -1,15 +1,15 @@
-@import "parts/reset";
 @import "parts/variables";
 @import "parts/fonts";
 @import "parts/mixins";
 
+@import "parts/reset";
 @import "parts/components/simple-components";
 @import "parts/components/btns";
 @import "parts/components/dropdown";
 @import "parts/components/modal";
 @import "parts/components/textfield";
 @import "parts/components/checkbox";
-
+@import "parts/components/forms";
 @import "parts/modificators";
 
 

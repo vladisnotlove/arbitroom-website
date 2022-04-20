@@ -93,6 +93,10 @@ body.modal-open {
 	text-align: center;
 }
 
+.modal__dialog-content {
+	margin-bottom: 32px;
+}
+
 // ADAPTIVE
 
 @media (max-width: $desktop) and (min-width: $mobile + 1) {

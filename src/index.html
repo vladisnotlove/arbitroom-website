@@ -13,35 +13,240 @@
 
 <div id="dropdownOverlay"></div>
 
-
-<!-- enter modal -->
+<!-- registration modal -->
 <div class="modal" id="registrationModal">
     <div class="modal__content">
         <div class="modal__dialog">
             <div class="modal__dialog-title">
-            <span>
-                Регистрация на платформе
-            </span>
+                <span>
+                    Регистрация на платформе
+                </span>
                 <button class="modal__dialog-close-btn icon-btn rounded small">
                     <svg class="icon" viewBox="0 0 20 20">
                         <use href="img/icons/close-rounded.svg#svg" />
                     </svg>
                 </button>
             </div>
-            <div class="modal__dialog-content">
+            <form class="form registration-form">
+                <div class="modal__dialog-content">
 
-            </div>
-            <div class="modal__dialog-actions">
-                <button class="btn full-width">
-                    Регистрация на платформе
-                </button>
-            </div>
+                    <div class="textfield">
+                        <div class="textfield__body">
+                            <input class="textfield__input"
+                                   type="text"
+                                   placeholder="Ваш логин"
+                            >
+                            <div class="textfield__line"></div>
+                        </div>
+                    </div>
+
+                    <div class="textfield">
+                        <div class="textfield__body">
+                            <input class="textfield__input"
+                                   type="text"
+                                   placeholder="Фамилия и имя"
+                            >
+                            <div class="textfield__line"></div>
+                        </div>
+                    </div>
+
+                    <div class="textfield">
+                        <div class="textfield__body">
+                            <input class="textfield__input"
+                                   type="text"
+                                   placeholder="Электронная почта"
+                            >
+                            <div class="textfield__line"></div>
+                        </div>
+                    </div>
+
+                    <div class="textfield">
+                        <div class="textfield__body">
+                            <input class="textfield__input"
+                                   type="password"
+                                   placeholder="Пароль"
+                            >
+                            <div class="textfield__line"></div>
+                        </div>
+                    </div>
+
+                    <div class="textfield">
+                        <div class="textfield__body">
+                            <input class="textfield__input"
+                                   type="password"
+                                   placeholder="Повторить пароль"
+                            >
+                            <div class="textfield__line"></div>
+                        </div>
+                    </div>
+
+                    <div class="textfield error">
+                        <div class="textfield__label">
+                            Label
+                        </div>
+                        <div class="textfield__body">
+                            <div class="textfield__start-adornment">
+                                <svg class="icon" viewBox="0 0 20 20">
+                                    <use href="img/icons/close-rounded.svg#svg"/>
+                                </svg>
+                            </div>
+                            <input class="textfield__input" type="text" placeholder="Example input">
+                            <div class="textfield__end-adornment">
+                                <svg class="icon" viewBox="0 0 20 20">
+                                    <use href="img/icons/close-rounded.svg#svg"/>
+                                </svg>
+                            </div>
+                            <div class="textfield__line"></div>
+                        </div>
+                        <div class="textfield__caption">
+                            Caption
+                        </div>
+                    </div>
+
+                    <label class="checkbox">
+                        <div class="checkbox__body">
+                            <input class="checkbox__input" type="checkbox"/>
+                            <div class="checkbox__mark">
+                                <svg class="checkbox__mark-checked-icon icon" viewBox="0 0 24 24">
+                                    <use href="img/icons/checkbox-checked.svg#svg"/>
+                                </svg>
+                                <svg class="checkbox__mark-unchecked-icon icon" viewBox="0 0 24 24">
+                                    <use href="img/icons/checkbox-unchecked.svg#svg"/>
+                                </svg>
+                            </div>
+                        </div>
+                        Я прочел(а) и согласен(а) с пользовательским соглашением
+                    </label>
+
+                    <label class="checkbox">
+                        <div class="checkbox__body">
+                            <input class="checkbox__input" type="checkbox"/>
+                            <div class="checkbox__mark">
+                                <svg class="checkbox__mark-checked-icon icon" viewBox="0 0 24 24">
+                                    <use href="img/icons/checkbox-checked.svg#svg"/>
+                                </svg>
+                                <svg class="checkbox__mark-unchecked-icon icon" viewBox="0 0 24 24">
+                                    <use href="img/icons/checkbox-unchecked.svg#svg"/>
+                                </svg>
+                            </div>
+                        </div>
+                        Я прочел(а) и согласен(а) с политикой конфиденциальности
+                    </label>
+                    <div class="registration-form__inviter">
+                        <div class="registration-form__inviter-title">Вас пригласил:</div>
+                        <div class="registration-form__inviter-name">Иван Иванов</div>
+                        <div class="registration-form__inviter-email">info_ivanov@gmail.com</div>
+                    </div>
+                </div>
+                <div class="modal__dialog-actions">
+                    <button class="btn full-width">
+                        Регистрация на платформе
+                    </button>
+                </div>
+            </form>
             <div class="modal__dialog-sub-actions">
                 Уже есть аккаунт?
-                <a href="">
+                <span class="link" data-modal data-target="#loginModal">
                     Войти с логином и паролем
-                </a>
+                </span>
             </div>
+        </div>
+    </div>
+</div>
+
+<!-- login modal -->
+<div class="modal" id="loginModal">
+    <div class="modal__content">
+        <div class="modal__dialog">
+            <div class="modal__dialog-title">
+                <span>
+                    Войти в личный кабинет
+                </span>
+                <button class="modal__dialog-close-btn icon-btn rounded small">
+                    <svg class="icon" viewBox="0 0 20 20">
+                        <use href="img/icons/close-rounded.svg#svg" />
+                    </svg>
+                </button>
+            </div>
+            <form class="form">
+                <div class="modal__dialog-content">
+
+                    <div class="textfield">
+                        <div class="textfield__body">
+                            <input class="textfield__input"
+                                   type="text"
+                                   placeholder="Ваш логин"
+                            >
+                            <div class="textfield__line"></div>
+                        </div>
+                    </div>
+
+                    <div class="textfield">
+                        <div class="textfield__body">
+                            <input class="textfield__input"
+                                   type="password"
+                                   placeholder="Пароль"
+                            >
+                            <div class="textfield__end-adornment">
+                                <button class="btn btn-text" type="button" data-modal data-target="#restorationModal">
+                                    Забыли?
+                                </button>
+                            </div>
+                            <div class="textfield__line"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal__dialog-actions">
+                    <button class="btn full-width">
+                        Войти
+                    </button>
+                </div>
+            </form>
+            <div class="modal__dialog-sub-actions">
+                Нет аккаунта?
+                <span class="link" data-modal data-target="#registrationModal">
+                    Зарегистрируйтесь
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- restoration modal -->
+<div class="modal" id="restorationModal">
+    <div class="modal__content">
+        <div class="modal__dialog">
+            <div class="modal__dialog-title">
+                <span>
+                    Забыли пароль?
+                </span>
+                <button class="modal__dialog-close-btn icon-btn rounded small">
+                    <svg class="icon" viewBox="0 0 20 20">
+                        <use href="img/icons/close-rounded.svg#svg" />
+                    </svg>
+                </button>
+            </div>
+            <form class="form">
+                <div class="modal__dialog-content">
+
+                    <div class="textfield">
+                        <div class="textfield__body">
+                            <input class="textfield__input"
+                                   type="text"
+                                   placeholder="Ваша электронная почта"
+                            >
+                            <div class="textfield__line"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal__dialog-actions">
+                    <button class="btn full-width">
+                        Восстановление пароля
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
@@ -79,7 +284,9 @@
             </svg>
         </div>
         <div class="menu__body">
-            <button class="btn btn-outlined menu__action" data-modal data-target="#registrationModal">Вход / Регистрация</button>
+            <button class="btn btn-outlined menu__action" data-modal data-target="#loginModal">
+                Вход / Регистрация
+            </button>
             <nav class="menu__nav">
                 <a href="about.html">О нас</a>
                 <a href="tariffs.html">Тарифы</a>
@@ -144,7 +351,7 @@
                     </div>
                 </div>
             </div>
-            <div class="header__action" data-modal data-target="#registrationModal">
+            <div class="header__action" data-modal data-target="#loginModal">
                 Вход / Регистрация
             </div>
         </header>
