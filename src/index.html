@@ -251,6 +251,104 @@
     </div>
 </div>
 
+<!-- calculator modal -->
+<div class="modal" id="calculatorModal">
+    <div class="modal__content">
+        <div class="modal__dialog">
+            <div class="modal__dialog-title">
+                <span>
+                    Калькулятор
+                </span>
+                <button class="modal__dialog-close-btn icon-btn rounded small">
+                    <svg class="icon" viewBox="0 0 20 20">
+                        <use href="img/icons/close-rounded.svg#svg" />
+                    </svg>
+                </button>
+            </div>
+            <form class="form calc-form">
+                <div class="modal__dialog-content">
+
+                    <div class="text big">Сумма депозита:</div>
+                    <div class="textfield big error">
+                        <div class="textfield__body">
+                            <input class="textfield__input"
+                                   type="text"
+                                   placeholder="Ввести"
+                            >
+                            <div class="textfield__line"></div>
+                        </div>
+                        <div class="textfield__caption">
+                            Ограничение на сумму: 5000000
+                        </div>
+                    </div>
+
+                    <div class="calc-form__result">
+                        <div class="calc-form__result-section">
+                            <div class="calc-form__result-section-title">
+                                Без капитализации
+                            </div>
+                            <div class="calc-form__result-row">
+                                <div class="calc-form__result-row-key">
+                                    Общая сумма:
+                                </div>
+                                <div class="calc-form__result-row-value">
+                                    500 USDT
+                                </div>
+                            </div>
+                            <div class="calc-form__result-row">
+                                <div class="calc-form__result-row-key">
+                                    Проценты:
+                                </div>
+                                <div class="calc-form__result-row-value">
+                                    500 USDT
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calc-form__result-section">
+                            <div class="calc-form__result-section-title">
+                                С капитализацией
+                            </div>
+                            <div class="calc-form__result-row">
+                                <div class="calc-form__result-row-key">
+                                    Общая сумма:
+                                </div>
+                                <div class="calc-form__result-row-value">
+                                    500 USDT
+                                </div>
+                            </div>
+                            <div class="calc-form__result-row">
+                                <div class="calc-form__result-row-key">
+                                    Проценты:
+                                </div>
+                                <div class="calc-form__result-row-value">
+                                    500 USDT
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calc-form__result-divider"></div>
+                        <div class="calc-form__result-conclusion">
+                            <div class="calc-form__result-row">
+                                <div class="calc-form__result-row-key">
+                                    Возврат депозита
+                                </div>
+                                <div class="calc-form__result-row-value">
+                                    500 USDT
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal__dialog-actions">
+                    <button class="btn full-width">
+                        Восстановление пароля
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 
 <!-- menu -->
 <div class="menu__overlay overlay" id="menuOverlay"></div>
@@ -434,7 +532,7 @@
             Тарифные планы
         </h2>
         <div class="tariffs__cards">
-        <div class="tariffs__card">
+        <div class="tariffs__card" data-modal data-target="#calculatorModal">
             <div>
                 <div class="tariffs__card-title">Tier 1</div>
                 <div class="tariffs__card-subtitle">
@@ -449,7 +547,7 @@
                 Рассчитать доходность
             </button>
         </div>
-        <div class="tariffs__card">
+        <div class="tariffs__card" data-modal data-target="#calculatorModal">
             <div>
                 <div class="tariffs__card-title">Tier 2</div>
                 <div class="tariffs__card-subtitle">
@@ -464,7 +562,7 @@
                 Рассчитать доходность
             </button>
         </div>
-        <div class="tariffs__card">
+        <div class="tariffs__card" data-modal data-target="#calculatorModal">
             <div>
                 <div class="tariffs__card-title">Tier 3</div>
                 <div class="tariffs__card-subtitle">

@@ -132,6 +132,14 @@
 	opacity: 0.5;
 }
 
+.textfield.big {
+
+	.textfield__input {
+		font-size: 20px;
+		line-height: 28px;
+	}
+}
+
 
 // ADAPTIVE
 
@@ -153,5 +161,12 @@
 }
 
 @media (max-width: $mobile) {
+	.textfield.big {
+
+		.textfield__input {
+			font-size: 20px;
+			line-height: 28px;
+		}
+	}
 
 }

@@ -19,6 +19,8 @@
 	}
 }
 
+// registration
+
 .registration-form {
 
 	.textfield + .registration-form__inviter,
@@ -49,6 +51,60 @@
 	color: $color-text-prime
 }
 
+// calculator
+
+.calc-form {
+	.textfield + .calc-form__result {
+		margin-top: 40px;
+	}
+}
+
+$result-padding: 8px;
+
+.calc-form__result {
+	display: flex;
+	flex-direction: column;
+	padding: 0 $result-padding;
+}
+
+.calc-form__result-section + .calc-form__result-section {
+	margin-top: 24px;
+}
+
+.calc-form__result-section-title {
+	font-size: 16px;
+	line-height: 24px;
+	color: $color-text-secondary;
+
+	padding-bottom: 10px;
+	border-bottom: 1px solid $color-text-secondary;
+	margin-bottom: 8px;
+}
+
+.calc-form__result-row {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: space-between;
+
+	padding: 12px 0;
+
+	font-size: 20px;
+	line-height: 28px;
+}
+
+.calc-form__result-divider {
+	margin-top: 40px;
+	margin-bottom: 8px;
+	margin-left: -$result-padding;
+	margin-right: -$result-padding;
+	border-bottom: 1px solid $color-text-secondary;
+}
+
+.calc-form__result-conclusion {
+	margin-bottom: 24px;
+}
+
 
 // ADAPTIVE
 
@@ -71,10 +127,6 @@
 
 @media (max-width: $small-tablet) {
 
-}
-
-@media (max-width: $mobile) {
-
 	.form {
 		.textfield + .textfield {
 			margin-top: 32px;
@@ -90,8 +142,69 @@
 		}
 	}
 
+
 	.registration-form__inviter {
 		font-size: 14px;
 		line-height: 20px;
 	}
+
+
+	$result-padding: 8px;
+
+	.calc-form {
+		.text + .textfield {
+			margin-top: 8px;
+		}
+	}
+
+	.calc-form__result {
+		padding: 0;
+	}
+
+	.calc-form__result-section + .calc-form__result-section {
+		margin-top: 32px;
+	}
+
+	.calc-form__result-section-title {
+		color: $color-text-prime;
+
+		padding-bottom: 16px;
+		margin-bottom: 16px;
+	}
+
+	.calc-form__result-row {
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+		justify-content: space-between;
+
+		padding: 0;
+	}
+
+	.calc-form__result-row + .calc-form__result-row {
+		margin-top: 16px;
+	}
+
+	.calc-form__result-row-key {
+		color: $color-text-secondary;
+		font-size: 14px;
+		line-height: 20px;
+	}
+
+	.calc-form__result-row-value {
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+	.calc-form__result-divider {
+		margin: 32px 0;
+	}
+
+	.calc-form__result-conclusion {
+		margin-bottom: 0;
+	}
+}
+
+@media (max-width: $mobile) {
+
 }
