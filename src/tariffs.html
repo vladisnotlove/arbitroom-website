@@ -13,6 +13,391 @@
 
 <div id="dropdownOverlay"></div>
 
+<!-- registration modal -->
+<div class="modal" id="registrationModal">
+    <div class="modal__content">
+        <div class="modal__dialog">
+            <div class="modal__dialog-title">
+                <span>
+                    Регистрация на платформе
+                </span>
+                <button class="modal__dialog-close-btn icon-btn rounded small">
+                    <svg class="icon" viewBox="0 0 20 20">
+                        <use href="img/icons/close-rounded.svg#svg" />
+                    </svg>
+                </button>
+            </div>
+            <form class="form registration-form">
+                <div class="modal__dialog-content">
+
+                    <div class="textfield">
+                        <div class="textfield__body">
+                            <input class="textfield__input"
+                                   type="text"
+                                   placeholder="Ваш логин"
+                            >
+                            <div class="textfield__line"></div>
+                        </div>
+                    </div>
+
+                    <div class="textfield">
+                        <div class="textfield__body">
+                            <input class="textfield__input"
+                                   type="text"
+                                   placeholder="Фамилия и имя"
+                            >
+                            <div class="textfield__line"></div>
+                        </div>
+                    </div>
+
+                    <div class="textfield">
+                        <div class="textfield__body">
+                            <input class="textfield__input"
+                                   type="text"
+                                   placeholder="Электронная почта"
+                            >
+                            <div class="textfield__line"></div>
+                        </div>
+                    </div>
+
+                    <div class="textfield">
+                        <div class="textfield__body">
+                            <input class="textfield__input"
+                                   type="password"
+                                   placeholder="Пароль"
+                            >
+                            <div class="textfield__line"></div>
+                        </div>
+                    </div>
+
+                    <div class="textfield">
+                        <div class="textfield__body">
+                            <input class="textfield__input"
+                                   type="password"
+                                   placeholder="Повторить пароль"
+                            >
+                            <div class="textfield__line"></div>
+                        </div>
+                    </div>
+
+                    <div class="textfield error">
+                        <div class="textfield__label">
+                            Label
+                        </div>
+                        <div class="textfield__body">
+                            <div class="textfield__start-adornment">
+                                <svg class="icon" viewBox="0 0 20 20">
+                                    <use href="img/icons/close-rounded.svg#svg"/>
+                                </svg>
+                            </div>
+                            <input class="textfield__input" type="text" placeholder="Example input">
+                            <div class="textfield__end-adornment">
+                                <svg class="icon" viewBox="0 0 20 20">
+                                    <use href="img/icons/close-rounded.svg#svg"/>
+                                </svg>
+                            </div>
+                            <div class="textfield__line"></div>
+                        </div>
+                        <div class="textfield__caption">
+                            Caption
+                        </div>
+                    </div>
+
+                    <label class="checkbox">
+                        <div class="checkbox__body">
+                            <input class="checkbox__input" type="checkbox"/>
+                            <div class="checkbox__mark">
+                                <svg class="checkbox__mark-checked-icon icon" viewBox="0 0 24 24">
+                                    <use href="img/icons/checkbox-checked.svg#svg"/>
+                                </svg>
+                                <svg class="checkbox__mark-unchecked-icon icon" viewBox="0 0 24 24">
+                                    <use href="img/icons/checkbox-unchecked.svg#svg"/>
+                                </svg>
+                            </div>
+                        </div>
+                        Я прочел(а) и согласен(а) с пользовательским соглашением
+                    </label>
+
+                    <label class="checkbox">
+                        <div class="checkbox__body">
+                            <input class="checkbox__input" type="checkbox"/>
+                            <div class="checkbox__mark">
+                                <svg class="checkbox__mark-checked-icon icon" viewBox="0 0 24 24">
+                                    <use href="img/icons/checkbox-checked.svg#svg"/>
+                                </svg>
+                                <svg class="checkbox__mark-unchecked-icon icon" viewBox="0 0 24 24">
+                                    <use href="img/icons/checkbox-unchecked.svg#svg"/>
+                                </svg>
+                            </div>
+                        </div>
+                        Я прочел(а) и согласен(а) с политикой конфиденциальности
+                    </label>
+                    <div class="registration-form__inviter">
+                        <div class="registration-form__inviter-title">Вас пригласил:</div>
+                        <div class="registration-form__inviter-name">Иван Иванов</div>
+                        <div class="registration-form__inviter-email">info_ivanov@gmail.com</div>
+                    </div>
+                </div>
+                <div class="modal__dialog-actions">
+                    <button class="btn full-width">
+                        Регистрация на платформе
+                    </button>
+                </div>
+            </form>
+            <div class="modal__dialog-sub-actions">
+                Уже есть аккаунт?
+                <span class="link" data-modal data-target="#loginModal">
+                    Войти с логином и паролем
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- login modal -->
+<div class="modal" id="loginModal">
+    <div class="modal__content">
+        <div class="modal__dialog">
+            <div class="modal__dialog-title">
+                <span>
+                    Войти в личный кабинет
+                </span>
+                <button class="modal__dialog-close-btn icon-btn rounded small">
+                    <svg class="icon" viewBox="0 0 20 20">
+                        <use href="img/icons/close-rounded.svg#svg" />
+                    </svg>
+                </button>
+            </div>
+            <form class="form">
+                <div class="modal__dialog-content">
+
+                    <div class="textfield">
+                        <div class="textfield__body">
+                            <input class="textfield__input"
+                                   type="text"
+                                   placeholder="Ваш логин"
+                            >
+                            <div class="textfield__line"></div>
+                        </div>
+                    </div>
+
+                    <div class="textfield">
+                        <div class="textfield__body">
+                            <input class="textfield__input"
+                                   type="password"
+                                   placeholder="Пароль"
+                            >
+                            <div class="textfield__end-adornment">
+                                <button class="btn btn-text" type="button" data-modal data-target="#restorationModal">
+                                    Забыли?
+                                </button>
+                            </div>
+                            <div class="textfield__line"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal__dialog-actions">
+                    <button class="btn full-width">
+                        Войти
+                    </button>
+                </div>
+            </form>
+            <div class="modal__dialog-sub-actions">
+                Нет аккаунта?
+                <span class="link" data-modal data-target="#registrationModal">
+                    Зарегистрируйтесь
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- restoration modal -->
+<div class="modal" id="restorationModal">
+    <div class="modal__content">
+        <div class="modal__dialog">
+            <div class="modal__dialog-title">
+                <span>
+                    Забыли пароль?
+                </span>
+                <button class="modal__dialog-close-btn icon-btn rounded small">
+                    <svg class="icon" viewBox="0 0 20 20">
+                        <use href="img/icons/close-rounded.svg#svg" />
+                    </svg>
+                </button>
+            </div>
+            <form class="form">
+                <div class="modal__dialog-content">
+
+                    <div class="textfield">
+                        <div class="textfield__body">
+                            <input class="textfield__input"
+                                   type="text"
+                                   placeholder="Ваша электронная почта"
+                            >
+                            <div class="textfield__line"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal__dialog-actions">
+                    <button class="btn full-width">
+                        Восстановление пароля
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- calculator modal -->
+<div class="modal" id="calculatorModal">
+    <div class="modal__content">
+        <div class="modal__dialog">
+            <div class="modal__dialog-title">
+                <span>
+                    Калькулятор
+                </span>
+                <button class="modal__dialog-close-btn icon-btn rounded small">
+                    <svg class="icon" viewBox="0 0 20 20">
+                        <use href="img/icons/close-rounded.svg#svg" />
+                    </svg>
+                </button>
+            </div>
+            <form class="form calc-form">
+                <div class="modal__dialog-content">
+
+                    <div class="text big">Сумма депозита:</div>
+                    <div class="textfield big error">
+                        <div class="textfield__body">
+                            <input class="textfield__input"
+                                   type="text"
+                                   placeholder="Ввести"
+                            >
+                            <div class="textfield__line"></div>
+                        </div>
+                        <div class="textfield__caption">
+                            Ограничение на сумму: 5000000
+                        </div>
+                    </div>
+
+                    <div class="calc-form__result">
+                        <div class="calc-form__result-section">
+                            <div class="calc-form__result-section-title">
+                                Без капитализации
+                            </div>
+                            <div class="calc-form__result-row">
+                                <div class="calc-form__result-row-key">
+                                    Общая сумма:
+                                </div>
+                                <div class="calc-form__result-row-value">
+                                    500 USDT
+                                </div>
+                            </div>
+                            <div class="calc-form__result-row">
+                                <div class="calc-form__result-row-key">
+                                    Проценты:
+                                </div>
+                                <div class="calc-form__result-row-value">
+                                    500 USDT
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calc-form__result-section">
+                            <div class="calc-form__result-section-title">
+                                С капитализацией
+                            </div>
+                            <div class="calc-form__result-row">
+                                <div class="calc-form__result-row-key">
+                                    Общая сумма:
+                                </div>
+                                <div class="calc-form__result-row-value">
+                                    500 USDT
+                                </div>
+                            </div>
+                            <div class="calc-form__result-row">
+                                <div class="calc-form__result-row-key">
+                                    Проценты:
+                                </div>
+                                <div class="calc-form__result-row-value">
+                                    500 USDT
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calc-form__result-divider"></div>
+                        <div class="calc-form__result-conclusion">
+                            <div class="calc-form__result-row">
+                                <div class="calc-form__result-row-key">
+                                    Возврат депозита
+                                </div>
+                                <div class="calc-form__result-row-value">
+                                    500 USDT
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal__dialog-actions">
+                    <button class="btn full-width">
+                        Начать инвестировать
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- balance modal -->
+<div class="modal" id="balanceModal">
+    <div class="modal__content">
+        <div class="modal__dialog">
+            <div class="modal__dialog-title">
+                <span>
+                    USDT (TRC20)
+                </span>
+                <button class="modal__dialog-close-btn icon-btn rounded small">
+                    <svg class="icon" viewBox="0 0 20 20">
+                        <use href="img/icons/close-rounded.svg#svg" />
+                    </svg>
+                </button>
+            </div>
+            <form class="form balance-form">
+                <div class="modal__dialog-content">
+                    <div class="balance-form__qr">
+                        <img src="img/qrcode.png" />
+                    </div>
+                    <div class="balance-form__qr-hint">
+                        Для пополнения баланса, переведите сумму USDT на этот адрес:
+                    </div>
+                    <div class="balance-form__link-copier link-copier">
+                        <div class="link-copier__text">
+                            0x29D7d1dd5B6f9C864d9db560D72a247c17812341234123414441fwadf
+                        </div>
+                        <div class="link-copier__icon-container">
+                            <svg class="icon" viewBox="0 0 24 24">
+                                <use href="img/icons/copy.svg#svg" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="balance-form__link-copier-hint color-text-secondary">
+                        После подтверждения сети (TRC20) средства автоматически отобразятся в вашем кабинете!
+                    </div>
+                    <div class="balance-form__link-copier-hint">
+                        Минимальная сумма пополнения 100 USDT
+                    </div>
+                </div>
+                <div class="modal__dialog-actions">
+                    <button class="btn" style="min-width: 152px">
+                        Ок
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 <!-- menu -->
 <div class="menu__overlay overlay" id="menuOverlay"></div>
 <div class="menu" id="menu">
@@ -45,7 +430,9 @@
             </svg>
         </div>
         <div class="menu__body">
-            <button class="btn btn-outlined menu__action">Вход / регистрация</button>
+            <button class="btn btn-outlined menu__action" data-modal data-target="#loginModal">
+                Вход / Регистрация
+            </button>
             <nav class="menu__nav">
                 <a href="about.html">О нас</a>
                 <a href="tariffs.html">Тарифы</a>
@@ -110,8 +497,8 @@
                     </div>
                 </div>
             </div>
-            <div class="header__action">
-                <a href="" class="header__action-item modal_enter">Вход / Регистрация</a>
+            <div class="header__action" data-modal data-target="#loginModal">
+                Вход / Регистрация
             </div>
         </header>
         <header class="header hidden variant-collapsed">
@@ -147,6 +534,7 @@
         </header>
     </div>
 </div>
+
 
 <div class="container">
 

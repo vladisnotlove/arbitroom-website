@@ -1,0 +1,63 @@
+@import "../variables";
+@import "../mixins";
+
+
+// MAIN
+
+.link-copier {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	padding: 16px;
+	border-radius: 8px;
+
+	background: $color-dark-background;
+
+	* {
+		color: $color-prime;
+	}
+}
+
+.link-copier__text {
+	min-width: 0;
+	flex-grow: 1;
+
+	font-size: 16px;
+	line-height: 24px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+
+// ADAPTIVE
+
+@media (max-width: $desktop) and (min-width: $mobile + 1) {
+
+	.link-copier__text {
+		font-size: get-adaptive-value(16px, 14px);
+		line-height: get-adaptive-value(24px, 20px);
+	}
+
+}
+
+@media (max-width: $laptop) {
+
+}
+
+@media (max-width: $tablet) {
+
+}
+
+@media (max-width: $small-tablet) {
+
+}
+
+@media (max-width: $mobile) {
+
+	.link-copier__text {
+		font-size: 14px;
+		line-height: 20px;
+	}
+
+}

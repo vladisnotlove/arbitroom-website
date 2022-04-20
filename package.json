@@ -24,6 +24,7 @@
     "gulp": "^4.0.2",
     "gulp-rollup": "^2.17.0",
     "gulp-sass": "^5.1.0",
+    "http-server": "^14.1.0",
     "sass": "^1.50.0",
     "skeleton-loader": "^2.0.0",
     "webpack": "^5.72.0",

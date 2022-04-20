@@ -19,7 +19,7 @@
 	}
 }
 
-// registration
+// registration-form
 
 .registration-form {
 
@@ -51,7 +51,7 @@
 	color: $color-text-prime
 }
 
-// calculator
+// calc-form
 
 .calc-form {
 	.textfield + .calc-form__result {
@@ -105,6 +105,60 @@ $result-padding: 8px;
 	margin-bottom: 24px;
 }
 
+// balance-form
+
+.balance-form__qr {
+	padding: 8px;
+	border-radius: 8px;
+
+	max-width: 174px;
+	max-height: 174px;
+	width: 174px;
+	height: 174px;
+
+	background: #fff;
+
+	margin: 0 auto;
+
+	& > * {
+		max-width: 100%;
+		max-height: 100%;
+	}
+}
+
+.balance-form__qr-hint {
+	font-size: 20px;
+	line-height: 28px;
+	text-align: center;
+
+	margin: 32px 0;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+
+.balance-form__link-copier-hint {
+	font-size: 16px;
+	line-height: 24px;
+	text-align: center;
+
+	margin: 24px 0;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
 
 // ADAPTIVE
 
@@ -114,6 +168,17 @@ $result-padding: 8px;
 		font-size: get-adaptive-value(16px, 14px);
 		line-height: get-adaptive-value(24px, 20px);
 	}
+
+	.balance-form__qr-hint {
+		font-size: get-adaptive-value(20px, 16px);
+		line-height: get-adaptive-value(28px, 24px);
+	}
+
+	.balance-form__link-copier-hint {
+		font-size: get-adaptive-value(16px, 14px);
+		line-height: get-adaptive-value(24px, 20px);
+	}
+
 }
 
 @media (max-width: $laptop) {
@@ -141,13 +206,6 @@ $result-padding: 8px;
 			margin-top: 16px;
 		}
 	}
-
-
-	.registration-form__inviter {
-		font-size: 14px;
-		line-height: 20px;
-	}
-
 
 	$result-padding: 8px;
 
@@ -207,4 +265,18 @@ $result-padding: 8px;
 
 @media (max-width: $mobile) {
 
+	.registration-form__inviter {
+		font-size: 14px;
+		line-height: 20px;
+	}
+
+	.balance-form__qr-hint {
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+	.balance-form__link-copier-hint {
+		font-size: 14px;
+		line-height: 20px;
+	}
 }

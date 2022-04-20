@@ -4,31 +4,25 @@
 // btn
 
 .btn {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+
 	border: none;
-	border-radius: 32px;
+	border-radius: 64px;
 	outline: 0;
 	font-weight: 500;
 	padding: 14px 24px;
 	font-size: 24px;
 	line-height: 36px;
 	white-space: nowrap;
+
 	color: $color-prime-contrast;
 	background: $color-prime;
 
-	img:first-child,
-	.icon:first-child {
-		display: inline-block;
-		margin-right: 8px
-	}
-	img:last-child,
-	.icon:last-child {
-		display: inline-block;
-		margin-left: 8px
-	}
-
-	&:hover {
-		cursor: pointer;
-	}
+	cursor: pointer;
 }
 
 .btn-outlined {
@@ -36,6 +30,10 @@
 	border: 1px solid $color-prime;
 	color: #fff;
 	transition: background $animation-unhover;
+
+	.icon {
+		color: $color-prime;
+	}
 
 	&:hover {
 		opacity: 1;
@@ -48,21 +46,6 @@
 	color: $color-prime;
 	border: none;
 	background: transparent;
-
-	img:first-child,
-	.icon:first-child {
-		display: inline-block;
-		margin-right: 8px
-	}
-	img:last-child,
-	.icon:last-child {
-		display: inline-block;
-		margin-left: 8px
-	}
-
-	&:hover {
-		cursor: pointer;
-	}
 }
 
 .icon-btn {
@@ -96,6 +79,16 @@
 }
 
 .more-btn {
+
+	.more-btn__show-more,
+	.more-btn__hide {
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: center;
+		justify-content: center;
+		gap: 12px;
+	}
+
 	.more-btn__show-more {
 		color: inherit;
 	}
@@ -148,7 +141,6 @@
 		padding: 14px 12px;
 		font-size: 16px;
 		line-height: 20px;
-		border-radius: 32px;
 	}
 
 }

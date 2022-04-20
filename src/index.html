@@ -341,7 +341,7 @@
                 </div>
                 <div class="modal__dialog-actions">
                     <button class="btn full-width">
-                        Восстановление пароля
+                        Начать инвестировать
                     </button>
                 </div>
             </form>
@@ -349,6 +349,54 @@
     </div>
 </div>
 
+<!-- balance modal -->
+<div class="modal" id="balanceModal">
+    <div class="modal__content">
+        <div class="modal__dialog">
+            <div class="modal__dialog-title">
+                <span>
+                    USDT (TRC20)
+                </span>
+                <button class="modal__dialog-close-btn icon-btn rounded small">
+                    <svg class="icon" viewBox="0 0 20 20">
+                        <use href="img/icons/close-rounded.svg#svg" />
+                    </svg>
+                </button>
+            </div>
+            <form class="form balance-form">
+                <div class="modal__dialog-content">
+                    <div class="balance-form__qr">
+                        <img src="img/qrcode.png" />
+                    </div>
+                    <div class="balance-form__qr-hint">
+                        Для пополнения баланса, переведите сумму USDT на этот адрес:
+                    </div>
+                    <div class="balance-form__link-copier link-copier">
+                        <div class="link-copier__text">
+                            0x29D7d1dd5B6f9C864d9db560D72a247c17812341234123414441fwadf
+                        </div>
+                        <div class="link-copier__icon-container">
+                            <svg class="icon" viewBox="0 0 24 24">
+                                <use href="img/icons/copy.svg#svg" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="balance-form__link-copier-hint color-text-secondary">
+                        После подтверждения сети (TRC20) средства автоматически отобразятся в вашем кабинете!
+                    </div>
+                    <div class="balance-form__link-copier-hint">
+                        Минимальная сумма пополнения 100 USDT
+                    </div>
+                </div>
+                <div class="modal__dialog-actions">
+                    <button class="btn" style="min-width: 152px">
+                        Ок
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 <!-- menu -->
 <div class="menu__overlay overlay" id="menuOverlay"></div>
@@ -486,6 +534,7 @@
         </header>
     </div>
 </div>
+
 
 <div class="container">
 

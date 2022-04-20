@@ -5,6 +5,10 @@
 	color: $color-prime
 }
 
+.color-text-secondary {
+	color: $color-text-secondary
+}
+
 .hide-on-desktop {
 	@media screen and (min-width: $mobile + 1) {
 		display: none !important;

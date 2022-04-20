@@ -54,9 +54,12 @@ h2.title {
 .link {
 	cursor: pointer;
 	text-decoration: underline;
+	transition: color $animation-unhover;
 
 	&:hover {
+		color: $color-prime;
 		text-decoration: none;
+		transition: color $animation-hover;
 	}
 }
 
