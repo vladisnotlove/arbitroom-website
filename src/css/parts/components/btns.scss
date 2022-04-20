@@ -23,6 +23,13 @@
 	background: $color-prime;
 
 	cursor: pointer;
+	box-shadow: 0 0 0 rgba(206, 228, 74, 0.5);
+	transition: box-shadow $animation-disappear;
+
+	&:hover {
+		box-shadow: 0 0 24px rgba(206, 228, 74, 0.5);
+		transition: box-shadow $animation-appear;
+	}
 }
 
 .btn-outlined {
@@ -30,12 +37,14 @@
 	border: 1px solid $color-prime;
 	color: #fff;
 	transition: background $animation-unhover;
+	box-shadow: none;
 
 	.icon {
 		color: $color-prime;
 	}
 
 	&:hover {
+		box-shadow: none;
 		opacity: 1;
 		background: change-color($color-prime, $alpha: 0.12);
 		transition: background $animation-hover;
@@ -46,6 +55,11 @@
 	color: $color-prime;
 	border: none;
 	background: transparent;
+	box-shadow: none;
+
+	&:hover {
+		box-shadow: none;
+	}
 }
 
 .icon-btn {
