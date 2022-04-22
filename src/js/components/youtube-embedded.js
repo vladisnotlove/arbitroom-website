@@ -9,6 +9,8 @@ window.addEventListener('load', () => {
 		const overlay = container.querySelector(".youtube-embedded__overlay");
 		const iframe = container.querySelector("iframe");
 
+		iframe.src = iframe.dataset.src;
+
 		if (overlay) {
 			overlay.addEventListener("click", () => {
 				container.classList.remove("open");

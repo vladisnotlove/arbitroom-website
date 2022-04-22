@@ -98,15 +98,22 @@ window.addEventListener('load', () => {
 			...(isDifferentRows ? {
 				startSocket: endY > startY ? "bottom" : "top",
 				endSocket: startY < endY ? "top" : "bottom",
+				startSocketGravity: endY > startY ? [0,16] : [0,-16],
+				endSocketGravity: startY < endY ? [0,-16] : [0,16]
 			} : {
 				startSocket: "auto",
 				endSocket: "auto",
+				startSocketGravity: 0,
+				endSocketGravity: 0,
 			}),
 		}
 	}
 	const fixLineStyles = () => {
 		document.querySelectorAll('.leader-line .leader-line-line-path:first-child').forEach(line => {
-			line.setAttribute('d', addArc(line.getAttribute('d'), arrowBorderRadius));
+			const radius = Math.min(arrowBorderRadius, line.getBoundingClientRect().height * 0.45);
+			console.log(radius);
+			const pathData = line.getAttribute('d');
+			line.setAttribute('d', addArc(pathData, radius));
 		});
 	}
 

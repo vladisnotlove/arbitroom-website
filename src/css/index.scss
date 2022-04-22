@@ -12,6 +12,7 @@
 
 .promo {
 	padding-top: 141px;
+	padding-bottom: 173px;
 	position: relative
 }
 
@@ -66,15 +67,28 @@
 	position: relative;
 	overflow: visible;
 
-	.background-ellipse {
-		position: absolute;
-		top: 27px - 401px;
-		right: -91px - 401px;
-		z-index: -2;
-	}
-
 	&.main {
-		margin-bottom: 160px;
+		padding-bottom: 160px;
+	}
+}
+
+.tariffs__tabs-menu {
+	display: none;
+}
+
+.tariffs__tabs-menu-item {
+	padding: 8px 16px;
+	border-radius: 24px;
+
+	font-size: 20px;
+	line-height: 28px;
+
+	background: $color-dark-background;
+	cursor: pointer;
+
+	&.active {
+		background: $color-background-inverted;
+		color: $color-text-prime-inverted;
 	}
 }
 
@@ -161,6 +175,33 @@
 	margin-top: 48px;
 }
 
+
+.tariffs.inverted {
+
+	.tariffs__card {
+		background: $color-background;
+
+		&:hover {
+			box-shadow: 0 0 0 8px $color-prime;
+		}
+	}
+
+	.tariffs__card-ratio-number {
+		color: $color-text-prime
+	}
+
+	.tariffs__tabs-menu-item {
+		background: $color-background;
+
+		&.active {
+			color: $color-prime-contrast;
+			background: $color-prime;
+		}
+
+	}
+
+}
+
 // advantages
 
 .advantages {
@@ -168,14 +209,15 @@
 
 	.background-ellipse {
 		position: absolute;
-		bottom: -35px - 401px;
+		top: 50%;
 		left: 50%;
-		transform: translateX(-50%);
+		max-height: 100%;
+		transform: translate(-50%, -50%);
 		z-index: -2;
 	}
 }
 
-.advantages__cards {
+.advantages__cards.desktop {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	grid-gap: var(--grid-gap);
@@ -195,6 +237,10 @@
 	& > .advantages__card-group:nth-child(4) {
 		grid-column: 7 / -1;
 	}
+}
+
+.advantages__cards.mobile {
+	display: none;
 }
 
 .advantages__card-group {
@@ -396,14 +442,6 @@
 .launchpool {
 	position: relative;
 
-	.background-ellipse {
-		position: absolute;
-		left: 50%;
-		bottom: -527px;
-		transform: translateX(-49%);
-		z-index: -1;
-	}
-
 	.title {
 		flex: 7 0 0;
 		margin: 0;
@@ -424,10 +462,6 @@
 	p {
 		font-size: 20px;
 		line-height: 28px;
-
-		&:not(:last-child) {
-			margin-top: 16px;
-		}
 	}
 }
 
@@ -513,6 +547,22 @@
 	line-height: 36px;
 }
 
+.launchpool.inverted {
+
+	.launchpool__description p {
+		color: $color-text-prime-inverted;
+	}
+
+	.launchpool__card-icon {
+		background: $color-background;
+	}
+
+	.launchpool__card-title {
+		color: $color-text-prime-inverted;
+	}
+
+}
+
 
 // how
 
@@ -528,6 +578,10 @@
 }
 
 .how__step-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
 	img {
 		height: 164px;
 		object-fit: cover;
@@ -544,41 +598,59 @@
 // goals
 
 .goals {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	grid-template-areas: "t c";
+	grid-gap: var(--grid-gap);
 	position: relative;
+	overflow: visible;
 
 	.title {
-		margin-bottom: 88px;
+		align-self: start;
+		position: sticky;
+		top: $header-height-desktop + 16px;
+		grid-area: t;
+		margin-bottom: 0;
 	}
+}
 
-	.background-ellipse.small {
-		position: absolute;
-		left: -65px - 401px;
-		bottom: -26px - 401px;
-		z-index: -5;
-	}
-
-	.background-ellipse.big {
-		position: absolute;
-		left: 26px - 401px;
-		bottom: -9px - 401px;
-		z-index: -5;
-	}
+.goals__cards {
+	grid-area: c;
+	display: flex;
+	flex-direction: column;
+	gap: 64px;
 }
 
 .goals__card {
-	display: flex;
-	align-items: center;
-	gap: var(--grid-gap);
+	display: grid;
+	grid-template-areas:
+			"n t"
+			". d";
+	grid-column-gap: 16px;
+	grid-row-gap: 32px;
+}
 
-	.goals__card-title,
-	.goals__card-description {
-		flex-basis: 0;
-		flex-shrink: 0;
-		flex-grow: 6;
-	}
+.goals__card-number {
+	grid-area: n;
+	font-size: 56px;
+	line-height: 72px;
+	letter-spacing: 0.01em;
+	-webkit-text-stroke: 1px $color-text-more-secondary;
+	color: transparent;
+}
+
+.goals__card-icon {
+	width: 92px;
+	height: 92px;
 }
 
 .goals__card-title {
+	grid-area: t;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+
 	font-weight: 500;
 	font-size: 56px;
 	line-height: 72px;
@@ -586,13 +658,9 @@
 }
 
 .goals__card-description {
+	grid-area: d;
 	font-size: 24px;
 	line-height: 36px;
-}
-
-.goals__divider {
-	border-bottom: 1px solid $color-text-more-secondary;
-	margin: 72px 0;
 }
 
 // ADAPTIVE
@@ -603,6 +671,7 @@
 
 	.promo {
 		padding-top: get-adaptive-value(112px, 24px, $desktop, $tablet);
+		padding-bottom: get-adaptive-value(173px, 32px);
 	}
 
 	.promo__img {
@@ -622,7 +691,7 @@
 	}
 
 	.promo__cards {
-		margin-top:  get-adaptive-value(124px, 56px, $desktop, $small-tablet);
+		margin-top:  get-adaptive-value(124px, 48px, $desktop, $small-tablet);
 	}
 
 	.promo__card {
@@ -723,16 +792,20 @@
 		line-height: get-adaptive-value(36px, 24px);
 	}
 
-	.launchpool__description p {
-		font-size: get-adaptive-value(20px, 16px);
-		line-height: get-adaptive-value(28px, 24px);
+	.launchpool__buttons {
+		margin-top: 40px;
 	}
 
 	// how
 
+	.how__steps {
+		grid-column-gap: get-adaptive-value(88px, 32px);
+		grid-row-gap: get-adaptive-value(132px, 64px);
+	}
+
 	.how__step-title {
-		font-size: get-adaptive-value(24px, 20px);
-		line-height: get-adaptive-value(36px, 28px);
+		font-size: get-adaptive-value(24px, 14px);
+		line-height: get-adaptive-value(36px, 20px);
 	}
 
 	// goals
@@ -741,16 +814,24 @@
 		margin-bottom: get-adaptive-value(88px, 32px);
 	}
 
+	.goals__cards {
+		gap: get-adaptive-value(64px, 32px);
+	}
+
 	.goals__card-title {
 		font-size: get-adaptive-value(56px, 28px);
 		line-height: get-adaptive-value(72px, 36px);
+	}
+
+	.goals__card-icon {
+		width: get-adaptive-value(92px, 40px);
+		height: get-adaptive-value(92px, 40px);
 	}
 
 	.goals__card-description {
 		font-size: get-adaptive-value(24px, 20px);
 		line-height: get-adaptive-value(36px, 28px);
 	}
-
 }
 
 @media (max-width: $laptop) {
@@ -767,6 +848,10 @@
 		width: calc(var(--grid-column-gap) * 3 - var(--grid-gap));
 	}
 
+	.goals {
+		grid-template-columns: repeat(12, minmax(0, 1fr));
+		grid-template-areas: "t t t t t c c c c c c c";
+	}
 }
 
 @media (max-width: $tablet) {
@@ -781,7 +866,7 @@
 	}
 
 	.promo__img {
-		top: get-adaptive-value(59px, 140px, $tablet, $small-tablet);
+		top: get-adaptive-value(59px, 90px, $tablet, $small-tablet);
 	}
 
 	.tariffs__card {
@@ -809,12 +894,85 @@
 		font-size: get-adaptive-value(24px, 16px);
 	}
 
-	.advantages__card.card-2 {
-		font-size: get-adaptive-value(36px, 10px);
+	// background ellipse
 
-		.small-text {
-			font-size: get-adaptive-value(36px, 18px);
+	.background-ellipse {
+		display: none;
+	}
+
+	// advantages
+
+	.advantages__cards.desktop {
+		display: none;
+	}
+
+	.advantages__cards.mobile {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		grid-gap: 8px;
+		grid-template-areas:
+			"a b"
+			"a b"
+			"c c"
+			"d e";
+
+		& > .advantages__card-group:nth-child(1) {
+			grid-area: a;
 		}
+
+		& > .advantages__card-group:nth-child(2) {
+			grid-area: b;
+		}
+
+		& > .advantages__card:nth-child(3) {
+			grid-area: c;
+		}
+
+		& > .advantages__card:nth-child(4) {
+			grid-area: d;
+		}
+
+		& > .advantages__card:nth-child(5) {
+			grid-area: e;
+		}
+	}
+
+	.advantages__card.card-7,
+	.advantages__card {
+		padding: get-adaptive-value(32px, 16px);
+		font-size: get-adaptive-value(36px, 14px);
+		line-height: get-adaptive-value(48px, 20px);
+		border-radius: 16px;
+
+		img {
+			width: get-adaptive-value(48px, 24px);
+			height: get-adaptive-value(48px, 24px);
+		}
+
+		img.big-icon {
+			width: get-adaptive-value(56px, 32px);
+			height: get-adaptive-value(56px, 32px);
+		}
+	}
+
+	.advantages__card-group {
+		gap: 8px;
+	}
+
+	.advantages__card.card-4 {
+		font-size: get-adaptive-value(36px, 16px);
+		line-height: get-adaptive-value(48px, 24px);
+	}
+
+	.advantages__card.with-title {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 16px;
+	}
+
+	.advantages__card.with-multiple-rows > * {
+		gap: 8px;
 	}
 
 	.launchpool__main-part {
@@ -822,7 +980,7 @@
 	}
 
 	.launchpool__description {
-		margin-top: 48px;
+		margin-top: 24px;
 
 		p {
 			margin: 0;
@@ -831,7 +989,7 @@
 	}
 
 	.launchpool__buttons {
-		margin-top: 48px;
+		margin-top: 24px;
 	}
 
 	.launchpool__cards {
@@ -840,25 +998,18 @@
 
 	.how__steps {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 
 	// goals
 
-	.goals__card {
+	.goals {
 		display: block;
-	}
 
-	.goals__card-title {
-		margin-bottom: 24px;
-	}
-
-	.goals__card-description {
-		color: $color-text-secondary
-	}
-
-	.goals__divider {
-		margin: 48px 0;
+		.title {
+			position: relative;
+			top: 0;
+		}
 	}
 }
 
@@ -883,18 +1034,40 @@
 	}
 
 	.promo__cards {
-		display: grid;
-		grid-template-columns: minmax(0, 1fr);
+		margin-top: 48px;
+		display: flex;
+		gap: 16px;
+		overflow-x: auto;
+
+		padding-left: get-adaptive-value($container-padding-desktop, $container-padding-mobile);
+		padding-right: get-adaptive-value($container-padding-desktop, $container-padding-mobile);
+		margin-left: get-adaptive-value(-$container-padding-desktop, -$container-padding-mobile);
+		margin-right: get-adaptive-value(-$container-padding-desktop, -$container-padding-mobile);
+
+		@media (hover: none) {
+			@include without-scrollbar;
+		}
 	}
 
 	.promo__card {
+		min-width: 280px;
 		font-size: get-adaptive-value(24px, 20px);
 		line-height: get-adaptive-value(36px, 28px);
+	}
+
+	.tariffs__tabs-menu {
+		display: flex;
+		gap: 8px;
+		margin-bottom: 32px;
 	}
 
 	.tariffs__card {
 		flex-basis: 100%;
 		flex-grow: 1;
+
+		&:not(.active) {
+			display: none;
+		}
 	}
 
 	.tariffs__card-ratio-number {
@@ -906,59 +1079,58 @@
 		font-size: get-adaptive-value(24px, 20px);
 	}
 
-	.advantages__card.card-2 {
-		font-size: get-adaptive-value(36px, 16px);
-		line-height: get-adaptive-value(48px, 24px);
-	}
-
-	.advantages__cards {
-		display: flex;
-		flex-direction: column;
-		gap: var(--grid-gap);
-	}
-
 	.video  {
 		height: auto;
 		padding: 47px 0;
 	}
 
-	.how__steps {
-		display: grid;
-		grid-template-columns: minmax(0, 1fr);
+	.launchpool__description {
+		margin-top: 24px;
+
+		p {
+			margin: 0;
+			max-width: 600px;
+		}
+	}
+
+	.launchpool__buttons {
+		margin-top: 24px;
+	}
+
+	.launchpool__cards {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-start;
+		gap: 16px;
+		overflow-x: auto;
+
+		margin-top: 64px;
+
+		padding-left: get-adaptive-value($container-padding-desktop, $container-padding-mobile);
+		padding-right: get-adaptive-value($container-padding-desktop, $container-padding-mobile);
+		margin-left: get-adaptive-value(-$container-padding-desktop, -$container-padding-mobile);
+		margin-right: get-adaptive-value(-$container-padding-desktop, -$container-padding-mobile);
+
+		@media (hover: none) {
+			@include without-scrollbar;
+		}
 	}
 
 	.launchpool__card {
-		width: calc(var(--grid-column-gap) * 4 - var(--grid-gap));
+		min-width: 148px;
 	}
+
+	// goals
 
 }
 
 @media (max-width: $mobile) {
 
-	// header
-
-	.header__wrapper {
-		height: $header-height-mobile;
-	}
-
-	.header__logo img.mobile {
-		display: block;
-		width: 40px;
-		height: 40px;
-	}
-
-	.header__logo .desktop {
-		display: none;
-	}
-
-	.menu__header {
-		height: $header-height-mobile;
-	}
-
 	// promo
 
 	.promo {
 		padding-top: 24px;
+		padding-bottom: 32px;
 	}
 
 	.promo__img {
@@ -986,8 +1158,11 @@
 	}
 
 	.promo__cards {
-		grid-template-columns: minmax(0, 1fr);
-		margin-top: 56px;
+		margin-top: 48px;
+		margin-left: -$container-padding-mobile;
+		margin-right: -$container-padding-mobile;
+		padding-left: $container-padding-mobile;
+		padding-right: $container-padding-mobile;
 	}
 
 	.promo__card {
@@ -1057,16 +1232,10 @@
 
 	// advantages
 
-	.advantages__cards {
-		display: flex;
-		flex-direction: column;
-		gap: var(--grid-gap);
-	}
-
-	.advantages__card.card-2,
+	.advantages__card.card-7,
 	.advantages__card {
-		font-size: 16px;
-		line-height: 24px;
+		font-size: 14px;
+		line-height: 20px;
 		padding: 16px;
 
 		.big-text {
@@ -1075,9 +1244,19 @@
 		}
 
 		img {
+			width: 24px;
+			height: 24px;
+		}
+
+		img.big-icon {
 			width: 32px;
 			height: 32px;
 		}
+	}
+
+	.advantages__card.card-4 {
+		font-size: 16px;
+		line-height: 24px;
 	}
 
 	.advantages__card-title {
@@ -1098,18 +1277,6 @@
 			font-size: 24px;
 			line-height: 36px;
 		}
-	}
-
-	.advantages__card.card-2 {
-		.advantages__card-title {
-			margin-right: 48px;
-		}
-	}
-
-	.advantages__card.card-7,
-	.advantages__card.card-6 {
-		font-size: 14px;
-		line-height: 20px;
 	}
 
 	// video
@@ -1162,11 +1329,22 @@
 	}
 
 	.launchpool__cards {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-start;
+		gap: 16px;
+		overflow-x: auto;
+
 		margin-top: 48px;
+		margin-left: -$container-padding-mobile;
+		margin-right: -$container-padding-mobile;
+		padding-left: $container-padding-mobile;
+		padding-right: $container-padding-mobile;
+
 	}
 
 	.launchpool__card {
-		width: calc(var(--grid-column-gap) * 6 - var(--grid-gap));
+		min-width: 148px;
 	}
 
 	.launchpool__card-badge {
@@ -1188,37 +1366,48 @@
 	// how
 
 	.how__steps {
-		display: flex;
-		flex-direction: column;
-		row-gap: 104px
-	}
-
-	.how__step {
-		flex: 1;
-		max-width: none;
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		grid-column-gap: 32px;
+		grid-row-gap: 64px;
 	}
 
 	.how__step-title {
-		font-size: 20px;
-		line-height: 28px;
+		font-size: 14px;
+		line-height: 20px;
 	}
 
 	// goals
 
 	.goals {
+		display: block;
+
 		.title {
 			margin-bottom: 32px;
 		}
+	}
+
+	.goals__card-number {
+		display: none;
 	}
 
 	.goals__card {
 		display: block;
 	}
 
+	.goals__cards {
+		gap: 32px;
+	}
+
 	.goals__card-title {
-		margin-bottom: 24px;
+		margin-bottom: 18px;
 		font-size: 28px;
 		line-height: 36px;
+	}
+
+	.goals__card-icon {
+		width: 40px;
+		height: 40px;
 	}
 
 	.goals__card-description {

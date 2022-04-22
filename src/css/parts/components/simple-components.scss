@@ -10,18 +10,27 @@
 	padding: 0 calc((100vw - (#{$desktop} - #{$container-padding-desktop * 2})) * 0.5);
 	margin: 0 auto;
 	position: relative;
-	overflow: visible;
+	overflow-y: visible;
+	overflow-x: hidden;
+
+	&.inverted {
+		background: $color-background-inverted;
+		color: $color-text-prime-inverted;
+	}
 }
 
 // block
 
 .block {
-	margin-top: 96px;
-	margin-bottom: 184px;
+	padding: 128px 0;
 
 	&.main {
-		margin-top: 80px;
-		margin-bottom: 0;
+		padding-top: 80px;
+	}
+
+	&.inverted {
+		background: $color-background-inverted;
+		color: $color-text-prime-inverted;
 	}
 }
 
@@ -34,6 +43,10 @@ h1.title {
 	font-size: 120px;
 	line-height: 128px;
 	letter-spacing: 0.01em;
+
+	&.inverted {
+		color: $color-text-prime-inverted;
+	}
 }
 
 h2.title {
@@ -47,6 +60,23 @@ h2.title {
 	letter-spacing: 0.01em;
 
 	margin-bottom: 64px;
+
+	&.inverted {
+		color: $color-text-prime-inverted;
+	}
+}
+
+.subtitle {
+	font-size: 24px;
+	line-height: 36px;
+
+	&.inverted {
+		color: $color-text-prime-inverted;
+	}
+}
+
+.title + .subtitle {
+	margin-top: 16px;
 }
 
 // link
@@ -120,6 +150,25 @@ h2.title {
 	}
 }
 
+// icon
+
+.icon {
+	display: inline-block;
+	font-size: 24px;
+	width: 1em;
+	height: 1em;
+	color: inherit;
+	fill: currentcolor;
+	vertical-align: middle;
+
+	use {
+		width: 1em;
+		height: 1em;
+		color: inherit;
+		fill: currentcolor;
+	}
+}
+
 // card
 
 .card {
@@ -149,11 +198,10 @@ h2.title {
 	}
 
 	.block {
-		margin-top: get-adaptive-value(184px, 56px);
-		margin-bottom: get-adaptive-value(184px, 56px);
+		padding: get-adaptive-value(128px, 32px) 0;
 
 		&.main {
-			margin-top: get-adaptive-value(80px, 24px);
+			padding-top: get-adaptive-value(80px, 24px);
 		}
 	}
 
@@ -166,6 +214,15 @@ h2.title {
 		font-size: get-adaptive-value(80px, 32px);
 		line-height: get-adaptive-value(104px, 40px);
 		margin-bottom: get-adaptive-value(64px, 32px);
+	}
+
+	.subtitle {
+		font-size: get-adaptive-value(24px, 14px);
+		line-height: get-adaptive-value(36px, 20px);
+	}
+
+	.title + .subtitle {
+		margin-top: get-adaptive-value(16px, 8px);
 	}
 
 	.text {
@@ -227,11 +284,10 @@ h2.title {
 @media (max-width: $mobile) {
 
 	.block {
-		margin-top: 56px;
-		margin-bottom: 56px;
+		padding: 32px 0;
 
 		&.main {
-			margin-top: 24px;
+			padding-top: 24px;
 		}
 	}
 
@@ -244,6 +300,15 @@ h2.title {
 		font-size: 32px;
 		line-height: 40px;
 		margin-bottom: 32px;
+	}
+
+	.subtitle {
+		font-size: 14px;
+		line-height: 20px;
+	}
+
+	.title + .subtitle {
+		margin-top: 8px;
 	}
 
 	.text {

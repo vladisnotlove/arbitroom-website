@@ -2,12 +2,6 @@
 @import "../mixins";
 
 
-body.modal-open {
-	overflow: hidden;
-	scroll-behavior: auto;
-	padding-right: $scrollbar-width;
-}
-
 .modal {
 	position: fixed;
 	top: 0;
@@ -85,7 +79,9 @@ body.modal-open {
 }
 
 .modal__dialog-actions {
-	text-align: center;
+	display: flex;
+	justify-content: center;
+	width: 100%;
 }
 
 .modal__dialog-sub-actions {

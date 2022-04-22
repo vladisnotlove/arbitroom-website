@@ -47,9 +47,14 @@
 	transition: background $animation-unhover;
 
 	&:hover {
-		background: $color-action-hover;
+		background: $color-background;
 		cursor: pointer;
 		transition: background $animation-hover;
+	}
+
+	&.selected {
+		background: $color-prime;
+		color: $color-prime-contrast
 	}
 }
 

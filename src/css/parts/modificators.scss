@@ -1,5 +1,14 @@
 @import "variables";
 
+body.disable-scroll {
+	overflow: hidden;
+	scroll-behavior: auto;
+	padding-right: $scrollbar-width;
+
+	@media (hover: none) {
+		padding-right: 0;
+	}
+}
 
 .color-prime {
 	color: $color-prime

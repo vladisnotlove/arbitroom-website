@@ -10,7 +10,13 @@ $color-light-background: #3a3a45;
 $color-text-prime: #fff;
 $color-text-secondary: rgba(255, 255, 255, 0.64);
 $color-text-more-secondary: rgba(255, 255, 255, 0.32);
-$color-action-hover: rgba(33, 33, 33, 0.48);
+
+
+$color-background-inverted: linear-gradient(0deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), #1E223A;
+$color-text-prime-inverted: rgba(0,0,0,0.92);
+$color-text-secondary-inverted: rgba(0,0,0,0.64);
+$color-text-more-secondary-inverted: rgba(0, 0, 0, 0.32);
+
 
 $color-error: #F44336;
 
@@ -34,7 +40,6 @@ $z-index-video-player: 500;
 $z-index-dropdown-overlay: 1000;
 $z-index-dropdown-menu: 1050;
 $z-index-modal: 1200;
-
 
 $scrollbar-width: 8px;
 

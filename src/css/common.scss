@@ -3,6 +3,13 @@
 @import "parts/mixins";
 
 @import "parts/reset";
+
+div, span, h1, h2, p  {
+	font-family: Golos, sans-serif;
+	font-style: normal;
+	color: $color-text-prime;
+}
+
 @import "parts/components/simple-components";
 @import "parts/components/btns";
 @import "parts/components/dropdown";
@@ -13,12 +20,6 @@
 @import "parts/components/link-copier";
 @import "parts/modificators";
 
-
-* {
-	font-family: Golos, sans-serif;
-	font-style: normal;
-	color: $color-text-prime;
-}
 
 html {
 	scroll-behavior: smooth;
@@ -190,11 +191,12 @@ $header-link: 10px;
 
 // menu
 
+$left-shift: 8px;
+
 .menu {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
-	gap: 40px;
+	justify-content: flex-start;
 
 	position: fixed;
 	top: 0;
@@ -232,15 +234,26 @@ $header-link: 10px;
 	}
 }
 
+.menu__logo {
+	max-width: 139px;
+	width: 139px;
+}
+
 .menu__overlay {
 	z-index: $z-index-header-menu-overlay;
 }
 
 .menu__header {
+	min-height: $header-height-desktop;
 	height: $header-height-desktop;
 	display: flex;
 	align-items: center;
 	flex-flow: row nowrap;
+}
+
+.menu__body {
+	margin-top: 20px;
+	margin-bottom: 32px;
 }
 
 .menu__close-btn {
@@ -250,29 +263,51 @@ $header-link: 10px;
 	cursor: pointer;
 }
 
-.menu__action {
-	margin-top: 21px;
-}
-
 .menu__nav {
 	display: flex;
 	flex-direction: column;
-	gap: 40px;
-	margin-top: 32px;
+	gap: 24px;
+	margin-top: 24px;
 
 	a {
 		font-size: 20px;
 		line-height: 28px;
+		padding: $left-shift;
+		text-decoration: none;
+		transition: color $animation-disappear;
+		cursor: pointer;
+
+		&:hover {
+			text-decoration: none;
+			color: $color-prime;
+			transition: color $animation-appear;
+		}
 	}
+}
+
+.menu__footer {
+	margin-top: auto;
+	padding-left: $left-shift;
 }
 
 .menu__social {
 	display: flex;
 	flex-flow: row wrap;
-	gap: 24px;
+	row-gap: 16px;
+	column-gap: 8px;
 	font-size: 14px;
 	line-height: 20px;
 	margin-bottom: 47px;
+
+	a {
+		padding: 8px 16px;
+		border-radius: 40px;
+		border: 1px solid $color-text-prime;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
 }
 
 .menu__other {
@@ -288,12 +323,7 @@ $header-link: 10px;
 }
 
 .menu__privacy-policy {
-	text-decoration: underline;
 
-	&:hover {
-		cursor: pointer;
-		text-decoration: none;
-	}
 }
 
 // footer
@@ -302,6 +332,8 @@ $header-link: 10px;
 	padding-top: 180px;
 	padding-bottom: 64px;
 	overflow: hidden;
+	background: $color-background-inverted;
+	color: $color-text-prime-inverted;
 
 	.container {
 		overflow: visible;
@@ -313,40 +345,46 @@ $header-link: 10px;
 	position: relative;
 
 	.title {
+		display: flex;
+		align-items: center;
 		margin-bottom: 128px;
 		font-size: 120px;
 		line-height: 128px;
 		letter-spacing: 0.01em;
 	}
+
+	span, div, p {
+		color: $color-text-prime-inverted;
+	}
+
+
+	.footer__copyright {
+		color: $color-text-more-secondary-inverted;
+	}
 }
 
 .footer__img {
-	position: absolute;
-	top: 0;
-	right: calc(var(--grid-column-gap) * 2);
-	z-index: -5;
-	width: 360px;
-	height: 360px;
+	position: relative;
+	width: 300px;
+	height: 300px;
+	background: $color-prime;
+	border-radius: 50%;
+	z-index: 1;
+	margin-left: 45px;
 
-	.shadow {
+	img {
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		width: 216%;
-		height: 216%;
+		width: 128px;
+		height: 128px;;
 		transform: translate(-50%, -50%);
-		z-index: -5;
-	}
-
-	& > img {
-		width: 100%;
-		height: 100%;
 	}
 }
 
 .footer__divider {
 	margin: 24px 0;
-	border-bottom: 1px solid $color-text-more-secondary;
+	border-bottom: 1px solid $color-text-more-secondary-inverted;
 }
 
 .footer__links {
@@ -362,12 +400,23 @@ $header-link: 10px;
 	display: flex;
 	flex-flow: row wrap;
 	column-gap: 32px;
-	row-gap: 24px;
+	row-gap: 16px;
 
 	a {
 		font-size: 20px;
 		line-height: 28px;
 		white-space: nowrap;
+		padding: 10px;
+		color: $color-text-prime-inverted;
+
+		.icon {
+			font-size: 24px;
+			color: $color-text-prime-inverted;
+
+			&:first-child {
+				margin-right: 8px;
+			}
+		}
 	}
 }
 
@@ -377,9 +426,6 @@ $header-link: 10px;
 	gap: 16px;
 }
 
-.footer__copyright {
-	color: $color-text-more-secondary;
-}
 
 .footer__privacy-policy {
 	text-decoration: underline;
@@ -401,6 +447,7 @@ $header-link: 10px;
 
 	.menu__header,
 	.header__wrapper {
+		min-height: get-adaptive-value($header-height-desktop, $header-height-mobile);
 		height: get-adaptive-value($header-height-desktop, $header-height-mobile);
 	}
 
@@ -421,8 +468,13 @@ $header-link: 10px;
 	}
 
 	.footer__img {
-		width: get-adaptive-value(360px, 70px);
-		height: get-adaptive-value(360px, 70px);
+		width: get-adaptive-value(300px, 62px);
+		height: get-adaptive-value(300px, 62px);
+
+		img {
+			width: get-adaptive-value(128px, 30px);
+			height: get-adaptive-value(128px, 30px);
+		}
 	}
 }
 
@@ -432,11 +484,33 @@ $header-link: 10px;
 }
 
 @media (max-width: $tablet) {
-
 }
 
 @media (max-width: $small-tablet) {
 
+	.footer__img {
+		background: transparent;
+	}
+
+	.footer__social {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 16px;
+
+		a {
+			padding: 8px 12px 8px 8px;
+			border-radius: 40px;
+
+			font-size: 16px;
+			line-height: 24px;
+			background: #CEE44A;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
 }
 
 @media (max-width: $mobile) {
@@ -457,8 +531,6 @@ $header-link: 10px;
 
 	.header__logo img.mobile {
 		display: block;
-		width: 40px;
-		height: 40px;
 	}
 
 	.header__logo .desktop {
@@ -466,6 +538,7 @@ $header-link: 10px;
 	}
 
 	.menu__header {
+		min-height: $header-height-mobile;
 		height: $header-height-mobile;
 	}
 
@@ -483,11 +556,12 @@ $header-link: 10px;
 	}
 
 	.footer__img {
-		position: absolute;
-		top: 49px - 24px;
+		top: 8px;
 		right: 0;
-		width: 70px;
-		height: 70px;
+		width: 30px;
+		height: 30px;
+		margin-left: 19px;
+		background: transparent;
 
 		img {
 			width: 100%;
@@ -507,14 +581,26 @@ $header-link: 10px;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		gap: 0;
 	}
 
 	.footer__social {
 		display: flex;
 		flex-direction: column;
-		gap: 24px;
-		margin-bottom: 32px;
+		align-items: flex-start;
+		gap: 16px;
+
+		a {
+			padding: 8px 12px 8px 8px;
+			border-radius: 40px;
+
+			font-size: 16px;
+			line-height: 24px;
+			background: #CEE44A;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
 	}
 
 	.footer__other {

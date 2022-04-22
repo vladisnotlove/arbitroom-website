@@ -401,46 +401,47 @@
 <!-- menu -->
 <div class="menu__overlay overlay" id="menuOverlay"></div>
 <div class="menu" id="menu">
-    <div>
-        <div class="menu__header">
-            <div class="menu__language language dropdown">
-                <div class="language__label dropdown__trigger">
-                    <span>Ru</span>
-                    <svg class="icon">
-                        <use href="img/icons/angle-down.svg#svg"/>
-                    </svg>
+    <div class="menu__header">
+        <div class="menu__logo">
+            <img src="img/logo-small.svg" alt="">
+        </div>
+        <div class="menu__language language dropdown">
+            <div class="language__label dropdown__trigger">
+                <span>Ru</span>
+                <svg class="icon">
+                    <use href="img/icons/angle-down.svg#svg"/>
+                </svg>
+            </div>
+            <div class="language__menu dropdown__menu">
+                <div class="language__menu-item dropdown__menu-item selected">
+                    <img src="img/flags/ru.svg" alt="">RU
                 </div>
-                <div class="language__menu dropdown__menu">
-                    <div class="language__menu-item dropdown__menu-item">
-                        <img src="img/flags/ru.svg" alt="">RU
-                    </div>
-                    <div class="language__menu-item dropdown__menu-item">
-                        <img src="img/flags/en.svg" alt="">EN
-                    </div>
-                    <div class="language__menu-item dropdown__menu-item">
-                        <img src="img/flags/fi.svg" alt="">FI
-                    </div>
-                    <div class="language__menu-item dropdown__menu-item">
-                        <img src="img/flags/kz.svg" alt="">KZ
-                    </div>
+                <div class="language__menu-item dropdown__menu-item">
+                    <img src="img/flags/en.svg" alt="">EN
+                </div>
+                <div class="language__menu-item dropdown__menu-item">
+                    <img src="img/flags/fi.svg" alt="">FI
+                </div>
+                <div class="language__menu-item dropdown__menu-item">
+                    <img src="img/flags/kz.svg" alt="">KZ
                 </div>
             </div>
-            <svg class="menu__close-btn icon">
-                <use href="img/icons/close.svg#svg"/>
-            </svg>
         </div>
-        <div class="menu__body">
-            <button class="btn btn-outlined menu__action" data-modal data-target="#loginModal">
-                Вход / Регистрация
-            </button>
-            <nav class="menu__nav">
-                <a href="about.html">О нас</a>
-                <a href="tariffs.html">Тарифы</a>
-                <a href="partners.html">Партнерам</a>
-                <a href="FAQ.html">FAQ</a>
-                <a href="contacts.html">Контакты</a>
-            </nav>
-        </div>
+        <svg class="menu__close-btn icon" viewBox="0 0 24 24">
+            <use href="img/icons/close.svg#svg"/>
+        </svg>
+    </div>
+    <div class="menu__body">
+        <button class="btn btn-outlined menu__action" data-modal data-target="#loginModal">
+            Вход / Регистрация
+        </button>
+        <nav class="menu__nav">
+            <a href="about.html">О нас</a>
+            <a href="tariffs.html">Тарифы</a>
+            <a href="partners.html">Партнерам</a>
+            <a href="FAQ.html">FAQ</a>
+            <a href="contacts.html">Контакты</a>
+        </nav>
     </div>
     <div class="menu__footer">
         <div class="menu__social">
@@ -450,9 +451,9 @@
             <a href="">YouTube</a>
         </div>
         <div class="menu__other">
-            <div class="menu__privacy-policy">
-                <a href="">Политика конфиденциальности</a>
-            </div>
+            <a class="menu__privacy-policy link" href="">
+                Политика конфиденциальности
+            </a>
             <div class="menu__copyright">
                 © 2022 Spectra. All rights reserved.
             </div>
@@ -483,7 +484,7 @@
                     </svg>
                 </div>
                 <div class="language__menu dropdown__menu">
-                    <div class="language__menu-item dropdown__menu-item">
+                    <div class="language__menu-item dropdown__menu-item selected">
                         <img src="img/flags/ru.svg" alt="">RU
                     </div>
                     <div class="language__menu-item dropdown__menu-item">
@@ -514,7 +515,7 @@
                     </svg>
                 </div>
                 <div class="language__menu dropdown__menu">
-                    <div class="language__menu-item dropdown__menu-item">
+                    <div class="language__menu-item dropdown__menu-item selected">
                         <img src="img/flags/ru.svg" alt="">RU
                     </div>
                     <div class="language__menu-item dropdown__menu-item">
@@ -528,7 +529,7 @@
                     </div>
                 </div>
             </div>
-            <svg class="header__burger icon">
+            <svg class="header__burger icon" viewBox="0 0 24 24">
                 <use href="img/icons/burger.svg#svg"/>
             </svg>
         </header>
@@ -543,7 +544,7 @@
         <img class="promo__img" src="img/promo-image.svg" alt="">
         <h1 class="title">Открой мир<br/> инвестиций<br/> заново</h1>
         <div class="promo__info">
-            Токен, обеспеченный реальными активами, с растущей выплатой ежедневного дохода в Bitcoin его владельцу
+            Платформа Spectra - это автоматизированный инструмент для извлечения максимальной прибыли с Launchpad и IDO площадок.
         </div>
         <div class="promo__buttons">
             <button class="btn btn_promo">Начать сейчас</button>
@@ -574,68 +575,86 @@
         </div>
     </section>
 
+</div>
+
+<div class="container inverted">
+
     <!-- tariffs -->
-    <section class="block tariffs">
-        <img class="background-ellipse" src="img/ellipse-1.png" alt=""/>
-        <h2 class="title">
+    <section class="block tariffs inverted">
+        <h2 class="title inverted">
             Тарифные планы
         </h2>
+        <div class="tariffs__tabs-menu">
+            <div class="tariffs__tabs-menu-item active">
+                Tier 1
+            </div>
+            <div class="tariffs__tabs-menu-item">
+                Tier 2
+            </div>
+            <div class="tariffs__tabs-menu-item">
+                Tier 3
+            </div>
+        </div>
         <div class="tariffs__cards">
-        <div class="tariffs__card" data-modal data-target="#calculatorModal">
-            <div>
-                <div class="tariffs__card-title">Tier 1</div>
-                <div class="tariffs__card-subtitle">
-                    от 100$<span class="separator">•</span>15 календарных дней
-                </div>
-                <div class="tariffs__card-ratio">
-                    <div class="tariffs__card-ratio-number">15%</div>
-                    <span class="tariffs__card-ratio-text">/ весь срок</span>
-                </div>
-            </div>
-            <button class="btn tariffs__btn">
-                Рассчитать доходность
-            </button>
-        </div>
-        <div class="tariffs__card" data-modal data-target="#calculatorModal">
-            <div>
-                <div class="tariffs__card-title">Tier 2</div>
-                <div class="tariffs__card-subtitle">
-                    от 100$<span class="separator">•</span>30 календарных дней
-                </div>
-                <div class="tariffs__card-ratio">
-                    <div class="tariffs__card-ratio-number">50%</div>
-                    <span class="tariffs__card-ratio-text">/ весь срок</span>
-                </div>
-            </div>
-            <button class="btn tariffs__btn">
-                Рассчитать доходность
-            </button>
-        </div>
-        <div class="tariffs__card" data-modal data-target="#calculatorModal">
-            <div>
-                <div class="tariffs__card-title">Tier 3</div>
-                <div class="tariffs__card-subtitle">
-                    от 100$<span class="separator">•</span>15 календарных дней
-                </div>
-                <div class="tariffs__card-numbers">
+            <div class="tariffs__card active" data-modal data-target="#calculatorModal">
+                <div>
+                    <div class="tariffs__card-title">Tier 1</div>
+                    <div class="tariffs__card-subtitle">
+                        от 100$<span class="separator">•</span>15 календарных дней
+                    </div>
                     <div class="tariffs__card-ratio">
-                        <div class="tariffs__card-ratio-number">100%</div>
+                        <div class="tariffs__card-ratio-number">15%</div>
                         <span class="tariffs__card-ratio-text">/ весь срок</span>
                     </div>
                 </div>
+                <button class="btn tariffs__btn without-hover">
+                    Рассчитать доходность
+                </button>
             </div>
-            <button class="btn tariffs__btn">
-                Рассчитать доходность
-            </button>
+            <div class="tariffs__card" data-modal data-target="#calculatorModal">
+                <div>
+                    <div class="tariffs__card-title">Tier 2</div>
+                    <div class="tariffs__card-subtitle">
+                        от 100$<span class="separator">•</span>30 календарных дней
+                    </div>
+                    <div class="tariffs__card-ratio">
+                        <div class="tariffs__card-ratio-number">50%</div>
+                        <span class="tariffs__card-ratio-text">/ весь срок</span>
+                    </div>
+                </div>
+                <button class="btn tariffs__btn without-hover">
+                    Рассчитать доходность
+                </button>
+            </div>
+            <div class="tariffs__card" data-modal data-target="#calculatorModal">
+                <div>
+                    <div class="tariffs__card-title">Tier 3</div>
+                    <div class="tariffs__card-subtitle">
+                        от 100$<span class="separator">•</span>45 календарных дней
+                    </div>
+                    <div class="tariffs__card-numbers">
+                        <div class="tariffs__card-ratio">
+                            <div class="tariffs__card-ratio-number">100%</div>
+                            <span class="tariffs__card-ratio-text">/ весь срок</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn tariffs__btn without-hover">
+                    Рассчитать доходность
+                </button>
+            </div>
         </div>
-    </div>
     </section>
+
+</div>
+
+<div class="container">
 
     <!-- advantages -->
     <section class="block advantages">
         <img class="background-ellipse" src="img/ellipse-1.png" alt=""/>
         <h2 class="title">Основные преимущества</h2>
-        <div class="advantages__cards">
+        <div class="advantages__cards desktop">
             <div class="advantages__card with-title card-1">
                 <div class="advantages__card-title">
                     <div>Более</div>
@@ -694,6 +713,66 @@
                 </div>
             </div>
         </div>
+        <div class="advantages__cards mobile">
+            <div class="advantages__card-group">
+                <div class="advantages__card with-title card-1">
+                    <div class="advantages__card-title">
+                        <div>Более</div>
+                        <div>200</div>
+                    </div>
+                    <span>
+                    удачных IDO проектов которые дали <span class="color-prime">свыше 500% прибыли</span>
+                </span>
+                </div>
+                <div class="advantages__card card-5">
+                    <span>
+                        <span class="color-prime">Диверсификация инвестиций</span> в IDO площадки
+                    </span>
+                </div>
+            </div>
+            <div class="advantages__card-group">
+                <div class="advantages__card with-title card-2">
+                    <div class="advantages__card-title">
+                        <div>Более</div>
+                        <div>3<span class="small-text">&nbsp;лет</span></div>
+                    </div>
+                    <span>
+                        опыта работы в индустрии
+                    </span>
+                </div>
+                <div class="advantages__card with-multiple-rows card-3">
+                    <div>
+                        <span>
+                            <span class="color-prime">Отсутствие рисков</span>
+                        </span>
+                        <img src="img/icons/guard.svg" alt=""/>
+                    </div>
+                    <div>
+                        связанных с удержанием токенов IDO площадки
+                    </div>
+                </div>
+            </div>
+            <div class="advantages__card with-multiple-rows  card-4">
+                <div>
+                    Закрытие сделок по максимальной цене при помощи
+                </div>
+                <div>
+                    <span class="big-text">Smart IDO Bot</span>
+                    <img class="big-icon" src="img/icons/chat-bot.svg" alt=""/>
+                </div>
+            </div>
+            <div class="advantages__card card-6">
+                <span>
+                    Предоставление <span class="color-prime">коротких инвестиционных планов</span> для
+                    партнеров
+                </span>
+            </div>
+            <div class="advantages__card card-7">
+                <span>
+                    Гарантированная прибыль за счет постепенных разлоков предыдущих проектов
+                </span>
+            </div>
+        </div>
     </section>
 </div>
 
@@ -721,7 +800,7 @@
     <iframe
             width="560"
             height="315"
-            src="https://www.youtube.com/embed/jNQXAC9IVRw"
+            data-src="https://www.youtube.com/embed/jNQXAC9IVRw"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -730,25 +809,26 @@
 </div>
 
 
-<div class="container">
+<div class="container inverted">
 
     <!-- launchpool -->
-    <section class="block launchpool">
-        <img class="background-ellipse" src="img/ellipse-2.png" alt=""/>
+    <section class="block launchpool inverted">
         <div class="launchpool__main-part">
-            <h2 class="title">Launchpool & Launchpad<br/> с любым депозитом</h2>
+            <div>
+                <h2 class="title inverted">
+                    Наши успешные проекты
+                </h2>
+                <div class="subtitle inverted">Февраль - Март 2022</div>
+            </div>
             <div class="launchpool__description">
                 <p>
-                    Задача платформы — сделать легким, доступным и выгодным участие в новых криптовалютных проектов
-                </p>
-                <p>
-                    Сейчас любой участник рынка может извлекать прибыль с минимальными вложениями.
+                    Задача платформы — сделать легким, доступным и выгодным участие в новых криптовалютных проектах
                 </p>
                 <div class="launchpool__buttons">
                     <button class="btn">
                         Начать сейчас
                     </button>
-                    <button class="btn btn-outlined">
+                    <button class="btn btn-outlined inverted">
                         Больше о нас
                     </button>
                 </div>
@@ -852,6 +932,10 @@
             </div>
         </div>
     </section>
+</div>
+
+
+<div class="container">
 
     <!-- how -->
     <section class="block how">
@@ -917,45 +1001,48 @@
 
     <!-- goals -->
     <section class="block goals">
-        <img class="background-ellipse small" src="img/ellipse-1.png"/>
-        <img class="background-ellipse big" src="img/ellipse-2.png"/>
         <h2 class="title">
             Цели компании
         </h2>
         <div class="goals__cards">
             <div class="goals__card">
+                <div class="goals__card-number">01</div>
                 <div class="goals__card-title">
-                    Упрощение
+                    <span>Упрощение</span>
+                    <img src="img/icons/simplify.svg" alt="" class="goals__card-icon">
                 </div>
                 <div class="goals__card-description">
                     Дать возможность каждому участнику рынка участвовать в Launchpad и Launchpool без регистраций,
                     верификаций, покупки монет и стейкинга.
                 </div>
             </div>
-            <div class="goals__divider"></div>
             <div class="goals__card">
+                <div class="goals__card-number">02</div>
                 <div class="goals__card-title">
-                    Независимость
+                    <span>Независимость</span>
+                    <img src="img/icons/independent.svg" alt="" class="goals__card-icon">
                 </div>
                 <div class="goals__card-description">
                     Для получения аллокации Spectra имеет в стейкинге на 2-4 года монеты бирж, что позволит участвовать
                     в Launchpad и Launchpool даже на медвежьем рынке.
                 </div>
             </div>
-            <div class="goals__divider"></div>
             <div class="goals__card">
+                <div class="goals__card-number">03</div>
                 <div class="goals__card-title">
-                    Прибыль
+                    <span>Прибыль</span>
+                    <img src="img/icons/profit.svg" alt="" class="goals__card-icon">
                 </div>
                 <div class="goals__card-description">
                     За счет программного обеспечения появилась возможность продавать новые монеты одними из первых по
                     самым высоким ценам.
                 </div>
             </div>
-            <div class="goals__divider"></div>
             <div class="goals__card">
+                <div class="goals__card-number">04</div>
                 <div class="goals__card-title">
-                    Комьюнити
+                    <span>Комьюнити</span>
+                    <img src="img/icons/community.svg" alt="" class="goals__card-icon">
                 </div>
                 <div class="goals__card-description">
                     Отбор самых перспективных проектов. Поддержка и удержание их монет. Отслеживание развития таких
@@ -970,18 +1057,19 @@
     <div class="container">
         <footer class="footer">
             <h2 class="title">
-                Начните<br/>
-                инвестировать<br/>
-                сегодня
+                <div>
+                    Начните<br/>
+                    инвестировать<br/>
+                    сегодня
+                </div>
+                <div class="footer__img">
+                    <img src="img/arrow.svg" alt=""/>
+                </div>
             </h2>
-            <div class="footer__img">
-                <img class="shadow" src="img/light-ellipse.png" alt=""/>
-                <img src="img/luminous-arrow.svg" alt=""/>
-            </div>
             <div class="footer__header header" id="footerHeader">
                 <a class="header__logo" href="index.html">
-                    <img class="desktop" src="img/logo.svg" alt="">
-                    <img class="mobile" src="img/logo-small.svg" alt="">
+                    <img class="desktop" src="img/logo-inverted.svg" alt="">
+                    <img class="mobile" src="img/logo-small-inverted.svg" alt="">
                 </a>
                 <nav class="header__nav"
                      data-toggle-class="inactive"
@@ -1002,7 +1090,7 @@
                         </svg>
                     </div>
                     <div class="language__menu dropdown__menu">
-                        <div class="language__menu-item dropdown__menu-item">
+                        <div class="language__menu-item dropdown__menu-item selected">
                             <img src="img/flags/ru.svg" alt="">RU
                         </div>
                         <div class="language__menu-item dropdown__menu-item">
@@ -1020,18 +1108,38 @@
             <div class="footer__divider"></div>
             <div class="footer__links">
                 <div class="footer__social">
-                    <a href="">Телеграм канал</a>
-                    <a href="">Телеграм чат</a>
-                    <a href="">Почта</a>
-                    <a href="">YouTube</a>
+                    <a href="">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <use href="img/icons/social-telegram.svg#svg" />
+                        </svg>
+                        Телеграм канал
+                    </a>
+                    <a href="">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <use href="img/icons/social-telegram.svg#svg" />
+                        </svg>
+                        Телеграм чат
+                    </a>
+                    <a href="">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <use href="img/icons/social-telegram.svg#svg" />
+                        </svg>
+                        Почта
+                    </a>
+                    <a href="">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <use href="img/icons/social-telegram.svg#svg" />
+                        </svg>
+                        YouTube
+                    </a>
                 </div>
                 <div class="footer__other">
                     <div class="footer__copyright">
                         © 2022 Spectra. All rights reserved.
                     </div>
-                    <div class="footer__privacy-policy">
-                        <a href="">Политика конфиденциальности</a>
-                    </div>
+                    <a class="footer__privacy-policy link" href="">
+                        Политика конфиденциальности
+                    </a>
                 </div>
             </div>
         </footer>

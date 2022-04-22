@@ -1,8 +1,11 @@
 import debounce from '../utils/debounce';
 import {checkElementsNotNull} from '../utils/log';
+import cssVars from '../styles/cssVars';
 
 
 window.addEventListener('load', () => {
+	const body = document.body;
+
 	const headerWrapper = document.getElementById("headerWrapper");
 	const header = headerWrapper.querySelector(".header:not(.variant-collapsed)");
 	const headerCollapsed = headerWrapper.querySelector(".header.variant-collapsed");
@@ -21,13 +24,21 @@ window.addEventListener('load', () => {
 	])
 	if (!elementsNotNull) return;
 
+
+	let bodyEnableScrollTimeout = -1;
 	const openMenu = () => {
+		clearTimeout(bodyEnableScrollTimeout);
 		menu.classList.add("open");
 		menuOverlay.classList.add("open");
+		body.classList.add("disable-scroll");
 	}
 	const closeMenu = () => {
+		clearTimeout(bodyEnableScrollTimeout);
 		menu.classList.remove("open");
 		menuOverlay.classList.remove("open");
+		bodyEnableScrollTimeout = setTimeout(() => {
+			body.classList.remove("disable-scroll");
+		}, cssVars.animationDisappear * 1000);
 	}
 	headerBurger.addEventListener("click", openMenu);
 	menuOverlay.addEventListener("click", closeMenu);
