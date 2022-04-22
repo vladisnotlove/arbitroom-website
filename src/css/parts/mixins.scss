@@ -65,3 +65,30 @@
 		transition: box-shadow $animation-appear;
 	}
 }
+
+@mixin with-horizontal-scrollbar-in-container-adaptive {
+	overflow-x: auto;
+
+	padding-left: get-adaptive-value($container-padding-desktop, $container-padding-mobile);
+	padding-right: get-adaptive-value($container-padding-desktop, $container-padding-mobile);
+	margin-left: get-adaptive-value(-$container-padding-desktop, -$container-padding-mobile);
+	margin-right: get-adaptive-value(-$container-padding-desktop, -$container-padding-mobile);
+
+	@media (hover: none) {
+		@include without-scrollbar;
+	}
+
+}
+
+@mixin with-horizontal-scrollbar-in-container-mobile {
+	overflow-x: auto;
+
+	padding-left: $container-padding-mobile;
+	padding-right: $container-padding-mobile;
+	margin-left: -$container-padding-mobile;
+	margin-right: -$container-padding-mobile;
+
+	@media (hover: none) {
+		@include without-scrollbar;
+	}
+}

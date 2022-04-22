@@ -408,15 +408,17 @@
 	right: 0;
 	bottom: 0;
 	padding: 64px 16px;
-	pointer-events: none;
-	opacity: 0;
-	transition: opacity $animation-disappear;
+
 	z-index: $z-index-video-player;
+
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity $animation-disappear;
 
 	&.open {
 		opacity: 1;
 		pointer-events: auto;
-		transition: opacity $animation-appear;
+		animation: fadeOut $animation-appear;
 	}
 }
 
@@ -1037,16 +1039,8 @@
 		margin-top: 48px;
 		display: flex;
 		gap: 16px;
-		overflow-x: auto;
 
-		padding-left: get-adaptive-value($container-padding-desktop, $container-padding-mobile);
-		padding-right: get-adaptive-value($container-padding-desktop, $container-padding-mobile);
-		margin-left: get-adaptive-value(-$container-padding-desktop, -$container-padding-mobile);
-		margin-right: get-adaptive-value(-$container-padding-desktop, -$container-padding-mobile);
-
-		@media (hover: none) {
-			@include without-scrollbar;
-		}
+		@include with-horizontal-scrollbar-in-container-adaptive;
 	}
 
 	.promo__card {
@@ -1102,18 +1096,9 @@
 		flex-flow: row nowrap;
 		justify-content: flex-start;
 		gap: 16px;
-		overflow-x: auto;
-
 		margin-top: 64px;
 
-		padding-left: get-adaptive-value($container-padding-desktop, $container-padding-mobile);
-		padding-right: get-adaptive-value($container-padding-desktop, $container-padding-mobile);
-		margin-left: get-adaptive-value(-$container-padding-desktop, -$container-padding-mobile);
-		margin-right: get-adaptive-value(-$container-padding-desktop, -$container-padding-mobile);
-
-		@media (hover: none) {
-			@include without-scrollbar;
-		}
+		@include with-horizontal-scrollbar-in-container-adaptive;
 	}
 
 	.launchpool__card {
@@ -1159,10 +1144,8 @@
 
 	.promo__cards {
 		margin-top: 48px;
-		margin-left: -$container-padding-mobile;
-		margin-right: -$container-padding-mobile;
-		padding-left: $container-padding-mobile;
-		padding-right: $container-padding-mobile;
+
+		@include with-horizontal-scrollbar-in-container-mobile;
 	}
 
 	.promo__card {
@@ -1333,14 +1316,9 @@
 		flex-flow: row nowrap;
 		justify-content: flex-start;
 		gap: 16px;
-		overflow-x: auto;
-
 		margin-top: 48px;
-		margin-left: -$container-padding-mobile;
-		margin-right: -$container-padding-mobile;
-		padding-left: $container-padding-mobile;
-		padding-right: $container-padding-mobile;
 
+		@include with-horizontal-scrollbar-in-container-mobile;
 	}
 
 	.launchpool__card {
