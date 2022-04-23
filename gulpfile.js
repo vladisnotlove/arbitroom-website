@@ -16,6 +16,10 @@ const paths = {
 	htmlSrc: scr + '*.html',
 	htmlDist: dist + "",
 
+	pdfSrcAll: scr + '*.pdf',
+	pdfSrc: scr + '*.pdf',
+	pdfDist: dist + "",
+
 	imgSrcAll: scr + 'img/**/*',
 	imgSrc: scr + 'img/**/*',
 	imgDist: dist + 'img/',
@@ -34,6 +38,10 @@ const paths = {
 }
 
 // builders
+
+const pdf = () => {
+	return src(paths.pdfSrc).pipe(dest(paths.pdfDist));
+};
 
 const html = () => {
 	return src(paths.htmlSrc).pipe(dest(paths.htmlDist));
@@ -78,9 +86,10 @@ const clean = (cb) => {
 	cb();
 };
 
-const build = series(clean, parallel(html, img, fonts, scss, js));
+const build = series(clean, parallel(pdf, html, img, fonts, scss, js));
 
 const watch = series(build, (cb) => {
+	gulpWatch(paths.pdfSrcAll, pdf);
 	gulpWatch(paths.htmlSrcAll, html);
 	gulpWatch(paths.imgSrcAll, img);
 	gulpWatch(paths.fontsSrcAll, fonts);
