@@ -79,8 +79,6 @@ window.addEventListener('load', () => {
 
 	// add arrows
 
-	console.log(LeaderLine);
-
 	LeaderLine.positionByWindowResize = false;
 
 	const getLineOptions = (start, end) => {
@@ -111,7 +109,6 @@ window.addEventListener('load', () => {
 	const fixLineStyles = () => {
 		document.querySelectorAll('.leader-line .leader-line-line-path:first-child').forEach(line => {
 			const radius = Math.min(arrowBorderRadius, line.getBoundingClientRect().height * 0.45);
-			console.log(radius);
 			const pathData = line.getAttribute('d');
 			line.setAttribute('d', addArc(pathData, radius));
 		});

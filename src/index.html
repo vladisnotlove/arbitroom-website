@@ -145,22 +145,38 @@
                     </svg>
                 </button>
             </div>
-            <form class="form">
+            <form class="form" data-form>
                 <div class="modal__dialog-content">
-
-                    <div class="textfield">
+                    <div class="textfield"
+                         data-form-field
+                         data-required
+                         data-required-message="Обязательное поле"
+                         data-email
+                         data-email-message="Укажите корректную почту"
+                    >
                         <div class="textfield__body">
                             <input class="textfield__input"
+                                   name="email"
                                    type="text"
-                                   placeholder="Ваш логин"
+                                   placeholder="Ваша почта"
                             >
                             <div class="textfield__line"></div>
                         </div>
+                        <div class="textfield__caption" data-form-field-message></div>
                     </div>
 
-                    <div class="textfield">
+                    <div class="textfield"
+                         data-form-field
+                         data-required
+                         data-required-message="Обязательное поле"
+                         data-min-max-length="6:32"
+                         data-min-max-length-message="Пароль должен содержать от 6 до 32 символов"
+                         data-regex="^[\!\&quot;\#\$\%\&\'\(\)\*\+\,\-\.\/\:\;\<\=\>\?\@\[\\\]\^\_\`\{\|\}\~a-zA-Z0-9]+$"
+                         data-regex-message="Пароль должен содержать латинские буквы, цифры и спец. символы, без пробелов"
+                    >
                         <div class="textfield__body">
                             <input class="textfield__input"
+                                   name="password"
                                    type="password"
                                    placeholder="Пароль"
                             >
@@ -171,6 +187,7 @@
                             </div>
                             <div class="textfield__line"></div>
                         </div>
+                        <div class="textfield__caption" data-form-field-message></div>
                     </div>
 
                 </div>

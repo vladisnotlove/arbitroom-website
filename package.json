@@ -16,7 +16,8 @@
   "author": "Vladislav",
   "dependencies": {
     "@popperjs/core": "^2.11.5",
-    "leader-line": "^1.0.7"
+    "leader-line": "^1.0.7",
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "concurrently": "^7.1.0",
