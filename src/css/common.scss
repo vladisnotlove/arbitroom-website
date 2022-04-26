@@ -303,9 +303,12 @@ $left-shift: 8px;
 		padding: 8px 16px;
 		border-radius: 40px;
 		border: 1px solid $color-text-prime;
+		transition: background-color $animation-unhover;
 
 		&:hover {
 			text-decoration: none;
+			background: change-color($color-prime, $alpha: 0.12);
+			transition: background-color $animation-hover;
 		}
 	}
 }
@@ -398,7 +401,7 @@ $left-shift: 8px;
 
 .footer__social {
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: row nowrap;
 	column-gap: 32px;
 	row-gap: 16px;
 	margin-left: -10px;
@@ -477,6 +480,13 @@ $left-shift: 8px;
 			height: get-adaptive-value(128px, 30px);
 		}
 	}
+
+	.footer__social {
+		column-gap: get-adaptive-value(32px, 16px);
+		a {
+			font-size: get-adaptive-value(20px, 16px);
+		}
+	}
 }
 
 @media (max-width: $laptop) {
@@ -485,6 +495,7 @@ $left-shift: 8px;
 }
 
 @media (max-width: $tablet) {
+
 }
 
 @media (max-width: $small-tablet) {
@@ -511,6 +522,8 @@ $left-shift: 8px;
 			&:hover {
 				text-decoration: none;
 			}
+
+			@include hover-shadow($color-prime);
 		}
 	}
 }
