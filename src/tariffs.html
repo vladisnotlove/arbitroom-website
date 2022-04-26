@@ -27,10 +27,22 @@
                     </svg>
                 </button>
             </div>
-            <form class="form registration-form">
+            <form class="form registration-form" data-form>
                 <div class="modal__dialog-content">
 
-                    <div class="textfield">
+                    <div class="textfield"
+                         data-form-field
+                         data-required
+                         data-required-message="Обязательное поле"
+                         data-min-max-length="3:24"
+                         data-min-max-length-message="Пароль должен содержать от 3 до 24 символов"
+                         data-regex-1="[a-zA-Z]"
+                         data-regex-message-1="Логин должен содержать латиницу"
+                         data-regex-2="^[\-\_a-zA-Z0-9]*$"
+                         data-regex-message-2="Логин не должен содержать спецсимволов кроме &quot;-&quot; и &quot;_&quot;"
+                         data-not-regex=" "
+                         data-not-regex-message="Логин не должен содержать пробелов"
+                    >
                         <div class="textfield__body">
                             <input class="textfield__input"
                                    type="text"
@@ -38,9 +50,20 @@
                             >
                             <div class="textfield__line"></div>
                         </div>
+                        <div class="textfield__caption" data-form-field-message></div>
                     </div>
 
-                    <div class="textfield">
+                    <div class="textfield"
+                         data-form-field
+                         data-max-word-count="5"
+                         data-max-word-count-message="Максимум 5 слов"
+                         data-word-min-max-length="3:24"
+                         data-word-min-max-length-message="Поле не должно превышать 3-24 символа на каждое слово"
+                         data-regex-1="[a-zA-Zа-яА-Я]"
+                         data-regex-message-1="Поле должно содержать латинские/кирилличные буквы"
+                         data-regex-2="^[ \-\_a-zA-Zа-яА-Я]*$"
+                         data-regex-message-2="Поле не должно содержать спец. символов кроме &quot;-&quot;"
+                    >
                         <div class="textfield__body">
                             <input class="textfield__input"
                                    type="text"
@@ -48,9 +71,16 @@
                             >
                             <div class="textfield__line"></div>
                         </div>
+                        <div class="textfield__caption" data-form-field-message></div>
                     </div>
 
-                    <div class="textfield">
+                    <div class="textfield"
+                         data-form-field
+                         data-required
+                         data-required-message="Обязательное поле"
+                         data-email
+                         data-email-message="Укажите корректную почту"
+                    >
                         <div class="textfield__body">
                             <input class="textfield__input"
                                    type="text"
@@ -58,9 +88,19 @@
                             >
                             <div class="textfield__line"></div>
                         </div>
+                        <div class="textfield__caption" data-form-field-message></div>
                     </div>
 
-                    <div class="textfield">
+                    <div class="textfield"
+                         id="registrationPasswordField"
+                         data-form-field
+                         data-required
+                         data-required-message="Обязательное поле"
+                         data-min-max-length="6:32"
+                         data-min-max-length-message="Пароль должен содержать от 6 до 32 символов"
+                         data-regex="^[\!\&quot;\#\$\%\&\'\(\)\*\+\,\-\.\/\:\;\<\=\>\?\@\[\\\]\^\_\`\{\|\}\~a-zA-Z0-9]+$"
+                         data-regex-message="Пароль должен содержать латинские буквы, цифры и спец. символы, без пробелов"
+                    >
                         <div class="textfield__body">
                             <input class="textfield__input"
                                    type="password"
@@ -68,9 +108,16 @@
                             >
                             <div class="textfield__line"></div>
                         </div>
+                        <div class="textfield__caption" data-form-field-message></div>
                     </div>
 
-                    <div class="textfield">
+                    <div class="textfield"
+                         data-form-field
+                         data-required
+                         data-required-message="Обязательное поле"
+                         data-confirm-password="#registrationPasswordField"
+                         data-confirm-password-message="Пароли не совпадают"
+                    >
                         <div class="textfield__body">
                             <input class="textfield__input"
                                    type="password"
@@ -78,6 +125,7 @@
                             >
                             <div class="textfield__line"></div>
                         </div>
+                        <div class="textfield__caption" data-form-field-message></div>
                     </div>
 
                     <label class="checkbox">
@@ -145,22 +193,38 @@
                     </svg>
                 </button>
             </div>
-            <form class="form">
+            <form class="form" data-form>
                 <div class="modal__dialog-content">
-
-                    <div class="textfield">
+                    <div class="textfield"
+                         data-form-field
+                         data-required
+                         data-required-message="Обязательное поле"
+                         data-email
+                         data-email-message="Укажите корректную почту"
+                    >
                         <div class="textfield__body">
                             <input class="textfield__input"
+                                   name="email"
                                    type="text"
-                                   placeholder="Ваш логин"
+                                   placeholder="Ваша почта"
                             >
                             <div class="textfield__line"></div>
                         </div>
+                        <div class="textfield__caption" data-form-field-message></div>
                     </div>
 
-                    <div class="textfield">
+                    <div class="textfield"
+                         data-form-field
+                         data-required
+                         data-required-message="Обязательное поле"
+                         data-min-max-length="6:32"
+                         data-min-max-length-message="Пароль должен содержать от 6 до 32 символов"
+                         data-regex="^[\!\&quot;\#\$\%\&\'\(\)\*\+\,\-\.\/\:\;\<\=\>\?\@\[\\\]\^\_\`\{\|\}\~a-zA-Z0-9]+$"
+                         data-regex-message="Пароль должен содержать латинские буквы, цифры и спец. символы, без пробелов"
+                    >
                         <div class="textfield__body">
                             <input class="textfield__input"
+                                   name="password"
                                    type="password"
                                    placeholder="Пароль"
                             >
@@ -171,6 +235,7 @@
                             </div>
                             <div class="textfield__line"></div>
                         </div>
+                        <div class="textfield__caption" data-form-field-message></div>
                     </div>
 
                 </div>
@@ -204,10 +269,16 @@
                     </svg>
                 </button>
             </div>
-            <form class="form">
+            <form class="form" data-form>
                 <div class="modal__dialog-content">
 
-                    <div class="textfield">
+                    <div class="textfield"
+                         data-form-field
+                         data-required
+                         data-required-message="Обязательное поле"
+                         data-email
+                         data-email-message="Укажите корректную почту"
+                    >
                         <div class="textfield__body">
                             <input class="textfield__input"
                                    type="text"
@@ -215,6 +286,7 @@
                             >
                             <div class="textfield__line"></div>
                         </div>
+                        <div class="textfield__caption" data-form-field-message></div>
                     </div>
 
                 </div>
