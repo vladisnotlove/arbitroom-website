@@ -154,17 +154,20 @@ window.addEventListener('load', () => {
 			isValid: false,
 		}
 
-		let fieldUpdaters = [];
-		const updateAllFields = () => {
-			fieldUpdaters.forEach(updateField => updateField());
-		}
-
-		let fieldTrimmers = [];
-		const trimAllFields = () => {
-			fieldTrimmers.forEach(trimField => trimField());
-		}
+		// let fieldUpdaters = [];
+		// const updateAllFields = () => {
+		// 	fieldUpdaters.forEach(updateField => updateField());
+		// }
+		//
+		// let fieldTrimmers = [];
+		// const trimAllFields = () => {
+		// 	fieldTrimmers.forEach(trimField => trimField());
+		// }
 
 		form.querySelectorAll("[data-form-field]").forEach(field => {
+			const fieldState = {
+				touched: false
+			}
 			const input = field.querySelector("input");
 			const messageContainer = field.querySelector("[data-form-field-message]");
 
@@ -181,25 +184,32 @@ window.addEventListener('load', () => {
 					if (messageContainer) messageContainer.textContent = "";
 				}
 			}
-			fieldUpdaters.push(updateField);
+			// fieldUpdaters.push(updateField);
+			//
+			// const trimField = () => {
+			// 	input.value = trim(input.value);
+			// }
+			// fieldTrimmers.push(trimField);
 
-			const trimField = () => {
+			input.addEventListener("blur", () => {
+				fieldState.touched = true;
+				updateField();
 				input.value = trim(input.value);
-			}
-			fieldTrimmers.push(trimField);
+			});
 
 			input.addEventListener("input", () => {
-				if (state.isSubmitted) updateField();
-			})
+				if (fieldState.touched) updateField();
+			});
+
 		});
 
-		form.addEventListener("submit", (e) => {
-			state.isSubmitted = true;
-			state.isValid = true;
-			updateAllFields();
-			if (state.isValid) trimAllFields();
-			if (!state.isValid) e.preventDefault();
-		});
+		// form.addEventListener("submit", (e) => {
+		// 	state.isSubmitted = true;
+		// 	state.isValid = true;
+		// 	updateAllFields();
+		// 	if (state.isValid) trimAllFields();
+		// 	if (!state.isValid) e.preventDefault();
+		// });
 
 	})
 
