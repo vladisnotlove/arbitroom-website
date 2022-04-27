@@ -64,6 +64,9 @@ const js = () => {
 		webpackSteam({
 			mode: isProduction ? "production" : "development",
 			devtool: isProduction ?  undefined : 'source-map',
+			output: {
+				filename: "main-13.js"
+			},
 			module: {
 				rules: [
 					{
