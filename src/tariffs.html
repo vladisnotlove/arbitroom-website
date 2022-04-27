@@ -314,14 +314,17 @@
                     </svg>
                 </button>
             </div>
-            <form class="form calc-form">
+            <form class="form calc-form" data-form>
                 <div class="modal__dialog-content">
 
                     <div class="text big">Сумма депозита:</div>
-                    <div class="textfield big">
+                    <div class="textfield big"
+                         data-form-field
+                         data-max="5000000"
+                    >
                         <div class="textfield__body">
                             <input class="textfield__input"
-                                   type="text"
+                                   type="number"
                                    placeholder="Ввести"
                             >
                             <div class="textfield__line"></div>

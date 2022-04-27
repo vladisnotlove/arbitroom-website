@@ -72,6 +72,19 @@ const validateField = (field, input) => {
 		}
 	}
 
+	if (field.dataset.max !== undefined) {
+		const message = field.dataset.maxMessage;
+		const max = parseFloat(field.dataset.max);
+		const num = parseFloat(value);
+
+		if (!isCheckbox && num > max) {
+			return {
+				isValid: false,
+				message: message,
+			}
+		}
+	}
+
 
 	for (let i = -1; i < 3; i++) {
 		let suffix = "-" + i;
