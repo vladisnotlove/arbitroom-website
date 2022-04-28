@@ -24,6 +24,10 @@
 
 	cursor: pointer;
 	@include hover-shadow;
+
+	&:hover {
+		text-decoration: none;
+	}
 }
 
 .btn-outlined {
