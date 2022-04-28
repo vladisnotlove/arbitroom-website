@@ -3,8 +3,11 @@ const del = require('del');
 const webpackSteam = require('webpack-stream');
 const sass = require('gulp-sass')(require('sass'));
 const yargs = require('yargs');
+const rename = require("gulp-rename");
+const replace = require('gulp-replace');
 
 const isProduction = (yargs.argv.production !== undefined);
+const version = process.env.npm_package_version;
 
 // config
 
@@ -44,7 +47,9 @@ const pdf = () => {
 };
 
 const html = () => {
-	return src(paths.htmlSrc).pipe(dest(paths.htmlDist));
+	return src(paths.htmlSrc)
+	.pipe(replace("{{version}}", version))
+	.pipe(dest(paths.htmlDist));
 };
 
 const img = () => {
@@ -56,17 +61,20 @@ const fonts = () => {
 };
 
 const scss = () => {
-	return src(paths.scssSrc).pipe(sass().on('error', sass.logError)).pipe(dest(paths.cssDist));
+	return src(paths.scssSrc)
+	.pipe(sass().on('error', sass.logError))
+	.pipe(rename({
+		suffix: "" + version,
+	}))
+	.pipe(dest(paths.cssDist));
 };
 
 const js = () => {
-	return src(paths.jsSrc).pipe(
+	return src(paths.jsSrc)
+	.pipe(
 		webpackSteam({
 			mode: isProduction ? "production" : "development",
 			devtool: isProduction ?  undefined : 'source-map',
-			output: {
-				filename: "main-13.js"
-			},
 			module: {
 				rules: [
 					{
@@ -79,7 +87,11 @@ const js = () => {
 				],
 			},
 		}),
-	).pipe(dest(paths.jsDist));
+	)
+	.pipe(rename({
+		suffix: "" + version,
+	}))
+	.pipe(dest(paths.jsDist));
 };
 
 // public
