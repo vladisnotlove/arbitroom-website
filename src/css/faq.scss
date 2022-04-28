@@ -74,6 +74,10 @@
 
 	font-size: 24px;
 	line-height: 36px;
+
+	cursor: pointer;
+
+	@include with-outer-collider(16px)
 }
 
 .faq__question-expand-btn {
@@ -89,6 +93,9 @@
 	}
 
 	.icon.minus:first-child {
+		position: absolute;
+		top: 0;
+		left: 0;
 		width: 24px;
 		height: 24px;
 		transition: transform $animation-appear;
@@ -98,12 +105,15 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 100%;
-		height: 100%;
+		width: 24px;
+		height: 24px;
 		transition: transform $animation-appear;
 	}
+}
 
-	&:not(.expanded) {
+.faq__question-title:not(.expanded) {
+
+	.faq__question-expand-btn {
 
 		.icon.minus:first-child {
 			transform: rotate(-180deg);
@@ -116,6 +126,7 @@
 		}
 
 	}
+
 }
 
 .faq__question-expand-btn-inner {
