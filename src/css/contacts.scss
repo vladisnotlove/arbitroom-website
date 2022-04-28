@@ -9,7 +9,7 @@
 	max-width: 100%;
 	display: grid;
 	grid-template-rows: auto minmax(0, 1fr);
-	grid-template-columns: minmax(0, auto) minmax(0, 1fr);
+	grid-template-columns: 1fr minmax(0, 1fr);
 	grid-template-areas:
 		"t t"
 		"c i";
