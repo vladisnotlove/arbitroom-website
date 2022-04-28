@@ -10,7 +10,7 @@ window.addEventListener("load", () => {
 		trigger.addEventListener("click", () => {
 			if (target) {
 				document.querySelectorAll(".modal").forEach(modal => modal.classList.remove("open"));
-				body.classList.add("disable-scroll");
+				body.classList.add("modal-open");
 				target.classList.add("open");
 			}
 		})
@@ -20,19 +20,30 @@ window.addEventListener("load", () => {
 
 	document.querySelectorAll(".modal").forEach(modal => {
 		const modalBtn = modal.querySelector(".modal__dialog-close-btn");
+		const modalOverlay = modal.querySelector(".modal__overlay");
 
 		if (!modalBtn) {
 			log.elementNotFound(".modal__dialog-close-btn");
 			return;
 		}
 
-		modalBtn.addEventListener("click", () => {
+		if (!modalOverlay) {
+			log.elementNotFound(".modal__overlay");
+			return;
+		}
+
+		const closeModal = () => {
 			clearTimeout(bodyRemoveClassTimeout);
 
 			modal.classList.remove("open");
 			bodyRemoveClassTimeout = setTimeout(() => {
-				body.classList.remove("disable-scroll");
+				body.classList.remove("modal-open");
 			}, cssVars.animationDisappear * 1000);
-		});
+		}
+
+		modalOverlay.addEventListener("click", closeModal);
+		modalBtn.addEventListener("click", closeModal);
+
+		modal.classList.add("ready");
 	})
 })

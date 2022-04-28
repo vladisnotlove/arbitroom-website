@@ -1,6 +1,15 @@
 @import "../variables";
 @import "../mixins";
 
+body.modal-open {
+	overflow: hidden;
+	scroll-behavior: auto;
+	padding-right: $scrollbar-width;
+
+	@media (hover: none) {
+		padding-right: 0;
+	}
+}
 
 .modal {
 	position: fixed;
@@ -19,12 +28,13 @@
 
 	background: $color-dark-background;
 
+	&:not(.ready) {
+		display: none;
+	}
+
 	@include with-custom-scrollbar ($z-index-modal + 1);
 }
 
-.modal__overlay {
-	z-index: 10;
-}
 
 .modal__content {
 	display: flex;
@@ -51,6 +61,15 @@
 
 }
 
+.modal__overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+
 .modal__dialog {
 	flex-shrink: 0;
 	padding: 48px;
@@ -59,6 +78,7 @@
 	min-width: 0;
 	max-width: 541px;
 	width: 100%;
+	z-index: 20;
 }
 
 .modal__dialog-title {
