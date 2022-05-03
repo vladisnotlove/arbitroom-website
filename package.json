@@ -1,6 +1,6 @@
 {
   "name": "spectra",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "Landing for spectra",
   "private": true,
   "scripts": {
@@ -17,7 +17,8 @@
   "dependencies": {
     "@popperjs/core": "^2.11.5",
     "leader-line": "^1.0.7",
-    "validator": "^13.7.0"
+    "validator": "^13.7.0",
+    "vanilla-lazyload": "^17.8.1"
   },
   "devDependencies": {
     "concurrently": "^7.1.0",

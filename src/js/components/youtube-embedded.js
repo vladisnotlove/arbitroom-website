@@ -6,11 +6,20 @@ window.addEventListener('load', () => {
 		iframe.src = iframe.src;
 	}
 
+	const setSrc = (iframe) => {
+		if (iframe.src !== iframe.dataset.src) {
+			iframe.src = iframe.dataset.src;
+		}
+	}
+
 	document.querySelectorAll("[data-youtube-embedded]").forEach(trigger => {
 		const target = document.querySelector(trigger.dataset.target);
 
 		trigger.addEventListener("click", () => {
 			if (target) {
+				const iframe = target.querySelector("iframe");
+				if (iframe) setSrc(iframe);
+
 				document.querySelectorAll(".youtube-embedded").forEach(other => {
 					other.classList.remove("open");
 					other.hidden = true;
@@ -25,7 +34,6 @@ window.addEventListener('load', () => {
 		const overlay = container.querySelector(".youtube-embedded__overlay");
 		const iframe = container.querySelector("iframe");
 
-		iframe.src = iframe.dataset.src;
 		container.hidden = true;
 
 		if (overlay) {
