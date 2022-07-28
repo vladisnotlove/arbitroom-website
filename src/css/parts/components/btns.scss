@@ -128,13 +128,11 @@
 
 // ADAPTIVE
 
-
-@media (max-width: $desktop) {
+@media (max-width: $laptop) {
 
 	.btn {
-		font-size: get-adaptive-value(1.5rem, 1rem);
+		font-size: 1.25rem;
 	}
-
 }
 
 
