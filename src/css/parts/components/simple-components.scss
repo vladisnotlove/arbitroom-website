@@ -7,7 +7,7 @@
 // container
 
 .container {
-	padding: 0 calc((100vw - 1560px) * 0.5);
+	padding: 0 calc((100vw - (#{$desktop} - #{$container-padding-desktop * 2})) * 0.5);
 	margin: 0 auto;
 	position: relative;
 	overflow-y: visible;
@@ -160,13 +160,22 @@ h2.title {
 
 @media (max-width: $desktop) and (min-width: $mobile + 1) {
 
+	// container
+
 	.container {
-		padding: 0 get-adaptive-value(11.25rem, 1.5rem);
+		padding: 0 $container-padding-adaptive;
 	}
 
 }
 
 @media (max-width: $mobile) {
+
+	// container
+
+	.container {
+		padding: 0 $container-padding-mobile;
+		max-width: 100%;
+	}
 
 	.block {
 		padding: 2rem 0;
@@ -232,9 +241,5 @@ h2.title {
 		padding: 2rem;
 	}
 
-	.container {
-		padding: 0 1.5rem;
-		max-width: 100%;
-	}
 
 }

@@ -12,6 +12,7 @@
 
 .promo {
 	position: relative;
+	padding-bottom: 11.25rem;
 }
 
 .promo__first-screen {
@@ -65,7 +66,7 @@
 }
 
 .promo__cards {
-	margin-top: 4rem;
+	padding-top: 4rem;
 	display: grid;
 	grid-template-columns: repeat(4, minmax(0, 1fr));
 	gap: 1rem;
@@ -75,16 +76,19 @@
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
-	border-radius: var(--border-radius);
-	padding: 2rem;
-	font-size: 1.5rem;
-	line-height: 2.25rem;
-	background: $color-dark-background;
-}
+	align-items: center;
+	gap: 1.5rem;
 
-.promo__card img {
-	margin-bottom: 1.5rem;
+
+	font-weight: 500;
+	font-size: 1.25rem;
+	line-height: 1.4;
+	text-align: center;
+
+	padding: 2rem 1rem;
+	background: transparent;
+	border-radius: 1rem;
+	border: 1px solid $color-prime-light;
 }
 
 // advantages
@@ -429,6 +433,10 @@
 
 	// promo
 
+	.promo {
+		padding-bottom: get-adaptive-value(11.25rem, 1.5rem);
+	}
+
 	.promo__title {
 		font-size: get-adaptive-value(7.5rem, 3.75rem, $desktop, $tablet);
 	}
@@ -441,10 +449,12 @@
 	.promo__buttons {
 		margin-top: get-adaptive-value(3.5rem, 2rem, $desktop, $tablet);
 	}
+
 }
 
 @media (max-width: $tablet) {
 
+	// promo
 
 	.promo__img {
 		width: 130%;
@@ -453,6 +463,37 @@
 
 	.promo__buttons {
 		gap: 1rem;
+	}
+
+
+	.promo__cards {
+		display: flex;
+		gap: 1rem;
+		overflow: auto;
+		flex-wrap: wrap;
+	}
+
+	.promo__card {
+		min-width: 0;
+		flex-basis: 304px;
+		flex-grow: 1;
+		align-items: flex-start;
+		text-align: left;
+		gap: 1rem;
+		padding: 2rem;
+	}
+
+	@media (hover: none) {
+
+		.promo__cards {
+			flex-wrap: nowrap;
+			@include with-horizontal-scrollbar-in-container-adaptive;
+		}
+
+		.promo__card {
+			min-width: 304px;
+			flex-grow: 0;
+		}
 	}
 }
 
@@ -497,6 +538,10 @@
 
 	// promo
 
+	.promo {
+		padding-bottom: 1.5rem;
+	}
+
 	.promo__img {
 		position: relative;
 		top: 0;
@@ -531,9 +576,7 @@
 	}
 
 	.promo__cards {
-		margin-top: 3rem;
-
-		@include with-horizontal-scrollbar-in-container-mobile;
+		padding-top: 3rem;
 	}
 
 	.promo__card {

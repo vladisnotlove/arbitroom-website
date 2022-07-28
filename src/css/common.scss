@@ -442,10 +442,6 @@ $left-shift: 0.5rem;
 // ADAPTIVE
 
 @media (max-width: $desktop) {
-	html {
-		font-size: 14px;
-		--rem: 14;
-	}
 
 	.header__logo img {
 		width: get-adaptive-value(12.25rem, 7.75rem)
@@ -454,6 +450,15 @@ $left-shift: 0.5rem;
 	.menu__logo img {
 		width: get-adaptive-value(12.25rem, 7.75rem)
 	}
+}
+
+@media (max-width: $laptop) {
+
+	html {
+		font-size: 14px;
+		--rem: 14;
+	}
+
 }
 
 @media (max-width: $mobile) {

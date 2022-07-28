@@ -26,7 +26,7 @@
 	}
 }
 
-@mixin with-custom-scrollbar ($z-index: 1, $collider: 0px) {
+@mixin with-custom-scrollbar ($z-index: 1) {
 	scrollbar-width: thin;
 	scrollbar-color: $color-prime-main transparent;
 
@@ -69,10 +69,10 @@
 @mixin with-horizontal-scrollbar-in-container-adaptive {
 	overflow-x: auto;
 
-	padding-left: $container-padding-desktop;
-	padding-right: $container-padding-desktop;
-	margin-left: $container-padding-desktop;
-	margin-right: $container-padding-desktop;
+	padding-left: $container-padding-adaptive;
+	padding-right: $container-padding-adaptive;
+	margin-left: calc(#{$container-padding-adaptive} * -1);
+	margin-right: calc(#{$container-padding-adaptive} * -1);
 
 	@media (hover: none) {
 		@include without-scrollbar;

@@ -54,8 +54,9 @@ $scrollbar-width: 0.5rem;
 $header-height-desktop: 5.5rem;
 $header-height-mobile: 4rem;
 
-$container-padding-mobile: 1.5rem;
 $container-padding-desktop: 11.25rem;
+$container-padding-mobile: 1.5rem;
+$container-padding-adaptive: get-adaptive-value($container-padding-desktop, $container-padding-mobile);
 
 
 
