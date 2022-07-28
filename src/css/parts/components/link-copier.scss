@@ -7,14 +7,14 @@
 .link-copier {
 	display: flex;
 	align-items: center;
-	gap: 16px;
-	padding: 16px;
-	border-radius: 8px;
+	gap: 1rem;
+	padding: 1rem;
+	border-radius: 0.5rem;
 
 	background: $color-dark-background;
 
 	* {
-		color: $color-prime;
+		color: $color-prime-main;
 	}
 }
 
@@ -22,8 +22,8 @@
 	min-width: 0;
 	flex-grow: 1;
 
-	font-size: 16px;
-	line-height: 24px;
+	font-size: 1rem;
+	line-height: 1.5rem;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
@@ -32,32 +32,11 @@
 
 // ADAPTIVE
 
-@media (max-width: $desktop) and (min-width: $mobile + 1) {
-
-	.link-copier__text {
-		font-size: get-adaptive-value(16px, 14px);
-		line-height: get-adaptive-value(24px, 20px);
-	}
-
-}
-
-@media (max-width: $laptop) {
-
-}
-
-@media (max-width: $tablet) {
-
-}
-
-@media (max-width: $small-tablet) {
-
-}
-
 @media (max-width: $mobile) {
 
 	.link-copier__text {
-		font-size: 14px;
-		line-height: 20px;
+		font-size: 0.875rem;
+		line-height: 1.25rem;
 	}
 
 }

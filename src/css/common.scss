@@ -22,9 +22,12 @@ div, span, h1, h2, p  {
 
 
 html {
+	font-size: 16px;
+	--rem: 16;
+
 	scroll-behavior: smooth;
 	scrollbar-width: thin;
-	scrollbar-color: $color-prime $color-background;
+	scrollbar-color: $color-prime-main $color-background;
 
 	&::-webkit-scrollbar {
 		width: $scrollbar-width;
@@ -32,18 +35,18 @@ html {
 	}
 
 	&::-webkit-scrollbar-thumb {
-		border-radius: $scrollbar-width / 2;
-		background: $color-prime;
+		border-radius: $scrollbar-width * 0.5;
+		background: $color-prime-main;
 	}
 
 	&::-webkit-scrollbar-track {
-		border-radius: $scrollbar-width / 2;
+		border-radius: $scrollbar-width * 0.5;
 		background: $color-background;
 	}
 }
 
 body {
-	background: #32333a;
+	background: $color-background;
 	position: relative;
 	overflow-x: hidden
 }
@@ -64,14 +67,14 @@ h1, h2, h3, label, p {
 
 .language__label {
 	.icon {
-		margin-left: 16px;
+		margin-left: 1rem;
 		transition: transform $animation-unhover;
 	}
 
 	&:hover {
 
 		.icon {
-			transform: translateY(2px);
+			transform: translateY(0.125rem);
 			transition: transform $animation-hover;
 		}
 	}
@@ -79,9 +82,9 @@ h1, h2, h3, label, p {
 
 .language__menu-item {
 	img {
-		width: 24px;
+		width: 1.5rem;
 		height: auto;
-		margin-right: 8px;
+		margin-right: 0.5rem;
 	}
 }
 
@@ -131,15 +134,11 @@ h1, h2, h3, label, p {
 }
 
 .header__logo img {
-	max-width: 160px;
-	width: 160px;
+	max-width: 12.25rem;
+	width: 12.25rem;
 }
 
-.header__logo img.mobile {
-	display: none;
-}
-
-$header-link: 10px;
+$header-link: 0.625rem;
 
 .header__nav {
 	flex-basis: 0;
@@ -147,9 +146,9 @@ $header-link: 10px;
 	overflow: hidden;
 	display: flex;
 	align-items: center;
-	column-gap: 40px - $header-link * 2;
-	margin-left: 49px - $header-link;
-	margin-right: 24px - $header-link;
+	column-gap: 2.5rem - $header-link * 2;
+	margin-left: 3.0625rem - $header-link;
+	margin-right: 1.5rem - $header-link;
 }
 
 .header__action,
@@ -157,8 +156,8 @@ $header-link: 10px;
 	font-family: Golos, sans-serif;
 	font-style: normal;
 	font-weight: 400;
-	font-size: 16px;
-	line-height: 24px;
+	font-size: 1rem;
+	line-height: 1.5;
 	padding: $header-link;
 
 	color: inherit;
@@ -169,20 +168,20 @@ $header-link: 10px;
 	transition: color $animation-appear;
 
 	&:hover {
-		color: $color-prime;
+		color: $color-prime-main;
 		transition: color $animation-disappear;
 	}
 }
 
 .header__action {
-	margin-left: 40px - $header-link;
+	margin-left: 2.5rem - $header-link;
 	margin-right: -$header-link;
 }
 
 .header__burger {
-	width: 32px;
-	height: 32px;
-	margin-left: 24px;
+	width: 2rem;
+	height: 2rem;
+	margin-left: 1.5rem;
 
 	&:hover {
 		cursor: pointer;
@@ -191,7 +190,7 @@ $header-link: 10px;
 
 // menu
 
-$left-shift: 8px;
+$left-shift: 0.5rem;
 
 .menu {
 	display: flex;
@@ -221,7 +220,7 @@ $left-shift: 8px;
 
 	z-index: $z-index-header-menu;
 
-	transform: translateX(32px);
+	transform: translateX(2rem);
 	opacity: 0;
 	pointer-events: none;
 	transition: all $animation-appear;
@@ -234,9 +233,9 @@ $left-shift: 8px;
 	}
 }
 
-.menu__logo {
-	max-width: 139px;
-	width: 139px;
+.menu__logo img {
+	max-width: 12.25rem;
+	width: 12.25rem;
 }
 
 .menu__overlay {
@@ -252,26 +251,26 @@ $left-shift: 8px;
 }
 
 .menu__body {
-	margin-top: 20px;
-	margin-bottom: 32px;
+	margin-top: 1.25rem;
+	margin-bottom: 2rem;
 }
 
 .menu__close-btn {
-	width: 32px;
-	height: 32px;
-	margin-left: 24px;
+	width: 2rem;
+	height: 2rem;
+	margin-left: 1.5rem;
 	cursor: pointer;
 }
 
 .menu__nav {
 	display: flex;
 	flex-direction: column;
-	gap: 24px;
-	margin-top: 24px;
+	gap: 1.5rem;
+	margin-top: 1.5rem;
 
 	a {
-		font-size: 20px;
-		line-height: 28px;
+		font-size: 1.25rem;
+		line-height: 1.75rem;
 		padding: $left-shift;
 		text-decoration: none;
 		transition: color $animation-disappear;
@@ -279,7 +278,7 @@ $left-shift: 8px;
 
 		&:hover {
 			text-decoration: none;
-			color: $color-prime;
+			color: $color-prime-main;
 			transition: color $animation-appear;
 		}
 	}
@@ -293,21 +292,21 @@ $left-shift: 8px;
 .menu__social {
 	display: flex;
 	flex-flow: row wrap;
-	row-gap: 16px;
-	column-gap: 8px;
-	font-size: 14px;
-	line-height: 20px;
+	row-gap: 1rem;
+	column-gap: 0.5rem;
+	font-size: 0.875rem;
+	line-height: 1.25rem;
 	margin-bottom: 47px;
 
 	a {
-		padding: 8px 16px;
-		border-radius: 40px;
+		padding: 0.5rem 1rem;
+		border-radius: 2.5rem;
 		border: 1px solid $color-text-prime;
 		transition: background-color $animation-unhover;
 
 		&:hover {
 			text-decoration: none;
-			background: change-color($color-prime, $alpha: 0.12);
+			background: change-color($color-prime-main, $alpha: 0.12);
 			transition: background-color $animation-hover;
 		}
 	}
@@ -316,9 +315,9 @@ $left-shift: 8px;
 .menu__other {
 	display: flex;
 	flex-direction: column;
-	gap: 8px;
-	font-size: 14px;
-	line-height: 20px;
+	gap: 0.5rem;
+	font-size: 0.875rem;
+	line-height: 1.25rem;
 }
 
 .menu__copyright {
@@ -332,8 +331,8 @@ $left-shift: 8px;
 // footer
 
 .footer__wrapper {
-	padding-top: 180px;
-	padding-bottom: 64px;
+	padding-top: 11.25rem;
+	padding-bottom: 4rem;
 	overflow: hidden;
 	background: $color-background-inverted;
 	color: $color-text-prime-inverted;
@@ -350,9 +349,9 @@ $left-shift: 8px;
 	.title {
 		display: flex;
 		align-items: center;
-		margin-bottom: 128px;
-		font-size: 120px;
-		line-height: 128px;
+		margin-bottom: 8rem;
+		font-size: 7.5rem;
+		line-height: 8rem;
 		letter-spacing: 0.01em;
 	}
 
@@ -368,9 +367,9 @@ $left-shift: 8px;
 
 .footer__img {
 	position: relative;
-	width: 300px;
-	height: 300px;
-	background: $color-prime;
+	width: 18.75rem;
+	height: 18.75rem;
+	background: $color-prime-main;
 	border-radius: 50%;
 	z-index: 1;
 	margin-left: 45px;
@@ -379,14 +378,14 @@ $left-shift: 8px;
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		width: 128px;
-		height: 128px;;
+		width: 8rem;
+		height: 8rem;;
 		transform: translate(-50%, -50%);
 	}
 }
 
 .footer__divider {
-	margin: 24px 0;
+	margin: 1.5rem 0;
 	border-bottom: 1px solid $color-text-more-secondary-inverted;
 }
 
@@ -396,29 +395,29 @@ $left-shift: 8px;
 	align-items: center;
 	justify-content: space-between;
 	column-gap: var(--grid-gap);
-	row-gap: 32px;
+	row-gap: 2rem;
 }
 
 .footer__social {
 	display: flex;
 	flex-flow: row nowrap;
-	column-gap: 32px;
-	row-gap: 16px;
-	margin-left: -10px;
+	column-gap: 2rem;
+	row-gap: 1rem;
+	margin-left: -0.625rem;
 
 	a {
-		font-size: 20px;
-		line-height: 28px;
+		font-size: 1.25rem;
+		line-height: 1.75rem;
 		white-space: nowrap;
-		padding: 10px;
+		padding: 0.625rem;
 		color: $color-text-prime-inverted;
 
 		.icon {
-			font-size: 24px;
+			font-size: 1.5rem;
 			color: $color-text-prime-inverted;
 
 			&:first-child {
-				margin-right: 8px;
+				margin-right: 0.5rem;
 			}
 		}
 	}
@@ -427,9 +426,8 @@ $left-shift: 8px;
 .footer__other {
 	display: flex;
 	flex-flow: row wrap;
-	gap: 16px;
+	gap: 1rem;
 }
-
 
 .footer__privacy-policy {
 	text-decoration: underline;
@@ -443,95 +441,27 @@ $left-shift: 8px;
 
 // ADAPTIVE
 
-@media (max-width: $desktop) and (min-width: $mobile + 1) {
-
-	.menu {
-		padding-right: get-adaptive-value($container-padding-desktop, $container-padding-mobile);
+@media (max-width: $desktop) {
+	html {
+		font-size: 14px;
+		--rem: 14;
 	}
 
-	.menu__header,
-	.header__wrapper {
-		min-height: get-adaptive-value($header-height-desktop, $header-height-mobile);
-		height: get-adaptive-value($header-height-desktop, $header-height-mobile);
+	.header__logo img {
+		width: get-adaptive-value(12.25rem, 7.75rem)
 	}
 
-	// footer
-
-	.footer__wrapper {
-		padding-top: get-adaptive-value(180px, 56px);
-	}
-
-	.footer {
-		position: relative;
-
-		.title {
-			font-size: get-adaptive-value(120px, 32px);
-			line-height: get-adaptive-value(128px, 40px);
-			margin-bottom: get-adaptive-value(128px, 48px);
-		}
-	}
-
-	.footer__img {
-		width: get-adaptive-value(300px, 62px);
-		height: get-adaptive-value(300px, 62px);
-
-		img {
-			width: get-adaptive-value(128px, 30px);
-			height: get-adaptive-value(128px, 30px);
-		}
-	}
-
-	.footer__social {
-		column-gap: get-adaptive-value(32px, 16px);
-		a {
-			font-size: get-adaptive-value(20px, 16px);
-		}
-	}
-}
-
-@media (max-width: $laptop) {
-
-
-}
-
-@media (max-width: $tablet) {
-
-}
-
-@media (max-width: $small-tablet) {
-
-	.footer__img {
-		background: transparent;
-	}
-
-	.footer__social {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		gap: 16px;
-		margin-left: 0;
-
-		a {
-			padding: 8px 12px 8px 8px;
-			border-radius: 40px;
-
-			font-size: 16px;
-			line-height: 24px;
-			background: #CEE44A;
-
-			&:hover {
-				text-decoration: none;
-			}
-
-			@include hover-shadow($color-prime);
-		}
+	.menu__logo img {
+		width: get-adaptive-value(12.25rem, 7.75rem)
 	}
 }
 
 @media (max-width: $mobile) {
 
 	html {
-		--border-radius: 16px;
+		font-size: 16px;
+		--rem: 16;
+		--border-radius: 1rem;
 	}
 
 	.background-ellipse {
@@ -544,14 +474,6 @@ $left-shift: 8px;
 		height: $header-height-mobile;
 	}
 
-	.header__logo img.mobile {
-		display: block;
-	}
-
-	.header__logo .desktop {
-		display: none;
-	}
-
 	.menu__header {
 		min-height: $header-height-mobile;
 		height: $header-height-mobile;
@@ -560,21 +482,21 @@ $left-shift: 8px;
 	// footer
 
 	.footer__wrapper {
-		padding: 24px 0;
+		padding: 1.5rem 0;
 	}
 
 	.footer .title {
-		font-size: 32px;
-		line-height: 40px;
-		margin-bottom: 32px;
+		font-size: 2rem;
+		line-height: 2.5rem;
+		margin-bottom: 2rem;
 		letter-spacing: 0.01em;
 	}
 
 	.footer__img {
-		top: 8px;
+		top: 0.5rem;
 		right: 0;
-		width: 30px;
-		height: 30px;
+		width: 1.875rem;
+		height: 1.875rem;
 		margin-left: 19px;
 		background: transparent;
 
@@ -602,15 +524,15 @@ $left-shift: 8px;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		gap: 16px;
+		gap: 1rem;
 
 		a {
-			padding: 8px 12px 8px 8px;
-			border-radius: 40px;
+			padding: 0.5rem 0.75rem 0.5rem 0.5rem;
+			border-radius: 2.5rem;
 
-			font-size: 16px;
-			line-height: 24px;
-			background: #CEE44A;
+			font-size: 1rem;
+			line-height: 1.5rem;
+			background: #FF6500;
 
 			&:hover {
 				text-decoration: none;
@@ -621,7 +543,7 @@ $left-shift: 8px;
 	.footer__other {
 		display: flex;
 		flex-direction: column;
-		gap: 16px;
+		gap: 1rem;
 	}
 
 	.footer__copyright {

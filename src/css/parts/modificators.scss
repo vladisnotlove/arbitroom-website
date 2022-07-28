@@ -11,7 +11,7 @@ body.disable-scroll {
 }
 
 .color-prime {
-	color: $color-prime
+	color: $color-prime-main
 }
 
 .color-text-secondary {
@@ -39,15 +39,15 @@ body.disable-scroll {
 }
 
 .mb30 {
-	margin-bottom: 30px
+	margin-bottom: 1.875rem
 }
 
 .round-arrow {
 	border-radius: 50%;
 	max-width: 243px;
 	max-height: 243px;
-	width: calc(182px + (61 + 61 * .25) * ((100vw - 375px) / 1920));
-	height: calc(182px + (61 + 61 * .25) * ((100vw - 375px) / 1920));
+	width: calc(11.375rem + (61 + 61 * .25) * ((100vw - 375px) / 1920));
+	height: calc(11.375rem + (61 + 61 * .25) * ((100vw - 375px) / 1920));
 	display: flex;
 	flex-shrink: 0;
 	align-items: center;

@@ -69,41 +69,6 @@
 
 // ADAPTIVE
 
-@media (max-width: $desktop) and (min-width: $mobile + 1) {
-
-	.about__logo-with-ellipse {
-		.about__logo {
-			width: get-adaptive-value(267px, 160px, $desktop, $small-tablet);
-		}
-	}
-
-}
-
-@media (max-width: $laptop) {
-
-}
-
-@media (max-width: $tablet) {
-	.about {
-		display: grid;
-		grid-template-columns: repeat(12, minmax(0, 1fr));
-		grid-template-areas:
-			"t t t t t t t t i i i i"
-			"a a a a a a a a i i i i";
-	}
-}
-
-@media (max-width: $small-tablet) {
-
-	.about {
-		display: block;
-	}
-
-	.about__logo-with-ellipse {
-		display: none;
-	}
-}
-
 @media (max-width: $mobile) {
 
 }

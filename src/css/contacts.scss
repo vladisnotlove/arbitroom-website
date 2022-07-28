@@ -13,7 +13,7 @@
 	grid-template-areas:
 		"t t"
 		"c i";
-	padding-bottom: 108px;
+	padding-bottom: 6.75rem;
 
 	.title {
 		grid-area: t;
@@ -25,32 +25,32 @@
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
-	gap: 32px;
+	gap: 2rem;
 	flex-grow: 1;
-	margin-right: 64px;
+	margin-right: 4rem;
 }
 
 .contacts__card {
 	background: $color-dark-background;
-	border-radius: 32px;
-	padding: 48px;
+	border-radius: 2rem;
+	padding: 3rem;
 
 	&:hover {
 		text-decoration: none;
 	}
 
-	@include hover-shadow($color-prime);
+	@include hover-shadow($color-prime-main);
 }
 
 .contacts__card-title {
-	font-size: 36px;
-	line-height: 48px;
-	margin-bottom: 8px;
+	font-size: 2.25rem;
+	line-height: 3rem;
+	margin-bottom: 0.5rem;
 }
 
 .contacts__card-subtitle {
-	font-size: 20px;
-	line-height: 28px;
+	font-size: 1.25rem;
+	line-height: 1.75rem;
 	color: $color-text-secondary;
 }
 
@@ -68,65 +68,10 @@
 
 // ADAPTIVE
 
-
-@media (max-width: $desktop) and (min-width: $mobile + 1) {
-
-	.contacts {
-		padding-bottom: get-adaptive-value(108px, 24px);
-	}
-
-	.contacts__cards {
-		margin-right: get-adaptive-value(64px, 0px);
-	}
-
-	.contacts__card {
-		padding: get-adaptive-value(48px, 32px);
-	}
-
-	.contacts__card-title {
-		font-size: get-adaptive-value(36px, 20px);
-		line-height: get-adaptive-value(48px, 28px);
-	}
-
-	.contacts__card-subtitle {
-		font-size: get-adaptive-value(20px, 14px);
-		line-height: get-adaptive-value(28px, 20px);
-	}
-}
-
-@media (max-width: $laptop) {
-
-}
-
-@media (max-width: $tablet) {
-	.contacts__cards {
-		gap: 16px;
-	}
-}
-
-@media (max-width: $small-tablet) {
-
-	.contacts {
-		grid-template-columns: minmax(0, 1fr);
-		grid-template-areas:
-			"i"
-			"t"
-			"c";
-	}
-
-	.contacts__img {
-		width: 100%;
-		max-width: $mobile;
-		height: auto;
-	}
-
-
-}
-
 @media (max-width: $mobile) {
 
 	.contacts {
-		padding-bottom: 24px;
+		padding-bottom: 1.5rem;
 		grid-template-columns: minmax(0, 1fr);
 		grid-template-areas:
 			"i"
@@ -135,23 +80,23 @@
 	}
 
 	.contacts__cards {
-		gap: 16px;
+		gap: 1rem;
 		margin-right: 0;
 	}
 
 	.contacts__card {
-		border-radius: 16px;
-		padding: 32px;
+		border-radius: 1rem;
+		padding: 2rem;
 	}
 
 	.contacts__card-title {
-		font-size: 20px;
-		line-height: 28px;
+		font-size: 1.25rem;
+		line-height: 1.75rem;
 	}
 
 	.contacts__card-subtitle {
-		font-size: 14px;
-		line-height: 20px;
+		font-size: 0.875rem;
+		line-height: 1.25rem;
 	}
 
 }

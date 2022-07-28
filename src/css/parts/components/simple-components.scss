@@ -7,76 +7,43 @@
 // container
 
 .container {
-	padding: 0 calc((100vw - (#{$desktop} - #{$container-padding-desktop * 2})) * 0.5);
+	padding: 0 calc((100vw - 1560px) * 0.5);
 	margin: 0 auto;
 	position: relative;
 	overflow-y: visible;
 	overflow-x: hidden;
-
-	&.inverted {
-		background: $color-background-inverted;
-		color: $color-text-prime-inverted;
-	}
 }
 
 // block
 
 .block {
-	padding: 128px 0;
+	padding: 8rem 0;
 
 	&.main {
-		padding-top: 80px;
+		padding-top: 5rem;
 	}
 
-	&.inverted {
-		background: $color-background-inverted;
-		color: $color-text-prime-inverted;
-	}
 }
 
 // title
-
-h1.title {
-	font-family: Golos, sans-serif;
-	font-style: normal;
-	font-weight: 500;
-	font-size: 120px;
-	line-height: 128px;
-	letter-spacing: 0.01em;
-
-	&.inverted {
-		color: $color-text-prime-inverted;
-	}
-}
 
 h2.title {
 	font-family: Golos, sans-serif;
 	font-style: normal;
 	font-weight: 500;
-	font-size: 80px;
-	line-height: 104px;
-	/* identical to box height, or 130% */
-
+	font-size: 5rem;
+	line-height: 1.3;
 	letter-spacing: 0.01em;
-
-	margin-bottom: 64px;
-
-	&.inverted {
-		color: $color-text-prime-inverted;
-	}
+	margin-bottom: 4rem;
 }
 
 .subtitle {
-	font-size: 24px;
-	line-height: 36px;
-
-	&.inverted {
-		color: $color-text-prime-inverted;
-	}
+	font-size: 1.5rem;
+	line-height: 2.25rem;
 }
 
 .title + .subtitle {
-	margin-top: 16px;
+	margin-top: 1rem;
 }
 
 // link
@@ -87,7 +54,7 @@ h2.title {
 	transition: color $animation-unhover;
 
 	&:hover {
-		color: $color-prime;
+		color: $color-prime-main;
 		text-decoration: none;
 		transition: color $animation-hover;
 	}
@@ -119,34 +86,34 @@ h2.title {
 	font-family: 'Golos';
 	font-style: normal;
 	font-weight: 400;
-	font-size: 24px;
-	line-height: 36px;
+	font-size: 1.5rem;
+	line-height: 2.25rem;
 
 	&.small {
-		font-size: 20px;
-		line-height: 28px;
+		font-size: 1.25rem;
+		line-height: 1.75rem;
 		color: $color-text-secondary;
 	}
 
 	&.big {
-		font-size: 36px;
-		line-height: 48px;
+		font-size: 2.25rem;
+		line-height: 3rem;
 	}
 
 	&.margin-bottom-small {
-		margin-bottom: 24px;
+		margin-bottom: 1.5rem;
 	}
 
 	&.margin-bottom-medium {
-		margin-bottom: 32px;
+		margin-bottom: 2rem;
 	}
 
 	&.margin-bottom-big {
-		margin-bottom: 48px;
+		margin-bottom: 3rem;
 	}
 
 	&.margin-top-big {
-		margin-top: 48px;
+		margin-top: 3rem;
 	}
 }
 
@@ -173,11 +140,11 @@ h2.title {
 
 .card {
 	background: $color-dark-background;
-	border-radius: 32px;
-	padding: 48px;
+	border-radius: 2rem;
+	padding: 3rem;
 
 	&.small {
-		padding: 24px;
+		padding: 1.5rem;
 	}
 }
 
@@ -194,161 +161,79 @@ h2.title {
 @media (max-width: $desktop) and (min-width: $mobile + 1) {
 
 	.container {
-		padding: 0 get-adaptive-value($container-padding-desktop, $container-padding-mobile);
+		padding: 0 get-adaptive-value(11.25rem, 1.5rem);
 	}
 
-	.block {
-		padding: get-adaptive-value(128px, 32px) 0;
-
-		&.main {
-			padding-top: get-adaptive-value(80px, 24px);
-		}
-	}
-
-	h1.title {
-		font-size: get-adaptive-value(120px, 64px, $desktop, $tablet);
-		line-height: get-adaptive-value(128px, 64px, $desktop, $tablet);
-	}
-
-	h2.title {
-		font-size: get-adaptive-value(80px, 32px);
-		line-height: get-adaptive-value(104px, 40px);
-		margin-bottom: get-adaptive-value(64px, 32px);
-	}
-
-	.subtitle {
-		font-size: get-adaptive-value(24px, 14px);
-		line-height: get-adaptive-value(36px, 20px);
-	}
-
-	.title + .subtitle {
-		margin-top: get-adaptive-value(16px, 8px);
-	}
-
-	.text {
-		font-size: get-adaptive-value(24px, 20px);
-		line-height: get-adaptive-value(36px, 28px);
-
-		&.small {
-			font-size: get-adaptive-value(20px, 16px);
-			line-height: get-adaptive-value(28px, 24px);
-		}
-
-		&.big {
-			font-size: get-adaptive-value(36px, 28px);
-			line-height: get-adaptive-value(48px, 36px);
-		}
-
-		&.margin-bottom-small {
-			margin-bottom: get-adaptive-value(24px, 32px);
-		}
-
-		&.margin-bottom-medium {
-			margin-bottom: 32px;
-		}
-
-		&.margin-bottom-big {
-			margin-bottom: get-adaptive-value(48px, 32px);
-		}
-
-		&.margin-top-big {
-			margin-top: get-adaptive-value(48px, 32px);
-		}
-	}
-
-	.card {
-		padding: get-adaptive-value(48px, 32px);
-	}
-}
-
-@media (max-width: $laptop) {
-
-}
-
-@media (max-width: $tablet) {
-
-	h1.title {
-		font-size: get-adaptive-value(120px, 48px);
-		line-height: get-adaptive-value(128px, 56px);
-	}
-
-}
-
-@media (max-width: $small-tablet) {
-	.card {
-		border-radius: 16px;
-		padding: 32px;
-	}
 }
 
 @media (max-width: $mobile) {
 
 	.block {
-		padding: 32px 0;
+		padding: 2rem 0;
 
 		&.main {
-			padding-top: 24px;
+			padding-top: 1.5rem;
 		}
 	}
 
 	h1.title {
-		font-size: 48px;
-		line-height: 56px;
+		font-size: 3rem;
+		line-height: 3.5rem;
 	}
 
 	h2.title {
-		font-size: 32px;
-		line-height: 40px;
-		margin-bottom: 32px;
+		font-size: 2rem;
+		line-height: 2.5rem;
+		margin-bottom: 2rem;
 	}
 
 	.subtitle {
-		font-size: 14px;
-		line-height: 20px;
+		font-size: 0.875rem;
+		line-height: 1.25rem;
 	}
 
 	.title + .subtitle {
-		margin-top: 8px;
+		margin-top: 0.5rem;
 	}
 
 	.text {
-		font-size: 20px;
-		line-height: 28px;
+		font-size: 1.25rem;
+		line-height: 1.75rem;
 
 		&.small {
-			font-size: 16px;
-			line-height: 24px;
+			font-size: 1rem;
+			line-height: 1.5rem;
 		}
 
 		&.big {
-			font-size: 28px;
-			line-height: 36px;
+			font-size: 1.75rem;
+			line-height: 2.25rem;
 		}
 
 		&.margin-bottom-small {
-			margin-bottom: 32px;
+			margin-bottom: 2rem;
 		}
 
 		&.margin-bottom-medium {
-			margin-bottom: 32px;
+			margin-bottom: 2rem;
 		}
 
 		&.margin-bottom-big {
-			margin-bottom: 32px;
+			margin-bottom: 2rem;
 		}
 
 		&.margin-top-big {
-			margin-top: 32px;
+			margin-top: 2rem;
 		}
 	}
 
 	.card {
-		border-radius: 16px;
-		padding: 32px;
+		border-radius: 1rem;
+		padding: 2rem;
 	}
 
 	.container {
-		padding: 0 24px;
+		padding: 0 1.5rem;
 		max-width: 100%;
 	}
 

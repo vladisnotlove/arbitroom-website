@@ -5,10 +5,10 @@
 // MAIN
 
 .textfield__label {
-	margin-bottom: 8px;
+	margin-bottom: 0.5rem;
 
-	font-size: 12px;
-	line-height: 16px;
+	font-size: 0.75rem;
+	line-height: 1rem;
 	letter-spacing: 0.4px;
 }
 
@@ -33,11 +33,11 @@
 }
 
 .textfield__caption {
-	margin-top: 8px;
+	margin-top: 0.5rem;
 
-	font-size: 12px;
-	line-height: 16px;
-	letter-spacing: 0.4px;
+	font-size: 0.75rem;
+	line-height: 1rem;
+	letter-spacing: 0.0.25rem;
 
 	&:empty {
 		display: none;
@@ -47,8 +47,8 @@
 
 .textfield__start-adornment,
 .textfield__end-adornment {
-	font-size: 20px;
-	line-height: 28px;
+	font-size: 1.25rem;
+	line-height: 1.75rem;
 	min-width: 1em;
 
 	.icon {
@@ -62,20 +62,20 @@
 	bottom: -1px;
 	left: 0;
 	width: 100%;
-	height: 2px;
+	height: 0.125rem;
 
 	border-bottom: 1px solid $color-text-secondary;
 }
 
 .textfield__input {
 	flex: 1;
-	padding: 12px 14px;
+	padding: 0.75rem 0.875rem;
 	border: none;
 	border-radius: 0;
 	outline: none;
 
-	font-size: 16px;
-	line-height: 24px;
+	font-size: 1rem;
+	line-height: 1.5rem;
 
 	background: transparent;
 	color: $color-text-prime;
@@ -88,7 +88,7 @@
 		outline: none;
 
 		& ~ .textfield__line {
-			border-color: $color-prime;
+			border-color: $color-prime-main;
 		}
 	}
 
@@ -139,37 +139,20 @@
 .textfield.big {
 
 	.textfield__input {
-		font-size: 20px;
-		line-height: 28px;
+		font-size: 1.25rem;
+		line-height: 1.75rem;
 	}
 }
 
 
 // ADAPTIVE
 
-@media (max-width: $desktop) and (min-width: $mobile + 1) {
-
-}
-
-@media (max-width: $laptop) {
-
-}
-
-@media (max-width: $tablet) {
-
-
-}
-
-@media (max-width: $small-tablet) {
-
-}
-
 @media (max-width: $mobile) {
 	.textfield.big {
 
 		.textfield__input {
-			font-size: 20px;
-			line-height: 28px;
+			font-size: 1.25rem;
+			line-height: 1.75rem;
 		}
 	}
 

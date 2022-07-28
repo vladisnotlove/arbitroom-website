@@ -16,13 +16,13 @@
 
 	.title {
 		grid-area: t;
-		margin-bottom: 32px;
+		margin-bottom: 2rem;
 	}
 }
 
 .faq__subtitle {
 	grid-area: s;
-	margin-bottom: 80px;
+	margin-bottom: 5rem;
 }
 
 .faq__sections {
@@ -30,7 +30,7 @@
 }
 
 .faq__section {
-	margin-bottom: 80px;
+	margin-bottom: 5rem;
 
 	&:last-child {
 		margin-bottom: 0;
@@ -38,14 +38,14 @@
 }
 
 .faq__section-title {
-	margin-bottom: 32px;
+	margin-bottom: 2rem;
 	font-weight: 500;
-	font-size: 56px;
-	line-height: 72px;
+	font-size: 3.5rem;
+	line-height: 4.5rem;
 	letter-spacing: 0.01em;
 
 	p {
-		margin-bottom: 16px;
+		margin-bottom: 1rem;
 	}
 	p:last-child {
 		margin-bottom: 0;
@@ -54,12 +54,12 @@
 
 .faq__questions {
 	.faq__questions-collapse > .collapse__content {
-		padding-bottom: 16px;
+		padding-bottom: 1rem;
 	}
 }
 
 .faq__question {
-	margin-bottom: 16px;
+	margin-bottom: 1rem;
 
 	&:last-child {
 		margin-bottom: 0;
@@ -70,34 +70,34 @@
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
-	gap: 16px;
+	gap: 1rem;
 
-	font-size: 24px;
-	line-height: 36px;
+	font-size: 1.5rem;
+	line-height: 2.25rem;
 
 	cursor: pointer;
 
-	@include with-outer-collider(16px)
+	@include with-outer-collider(1rem)
 }
 
 .faq__question-expand-btn {
-	width: 24px;
-	height: 24px;
+	width: 1.5rem;
+	height: 1.5rem;
 	line-height: 100%;
 	cursor: pointer;
 
-	@include with-outer-collider(16px);
+	@include with-outer-collider(1rem);
 
 	.icon {
-		color: $color-prime;
+		color: $color-prime-main;
 	}
 
 	.icon.minus:first-child {
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 24px;
-		height: 24px;
+		width: 1.5rem;
+		height: 1.5rem;
 		transition: transform $animation-appear;
 	}
 
@@ -105,8 +105,8 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 24px;
-		height: 24px;
+		width: 1.5rem;
+		height: 1.5rem;
 		transition: transform $animation-appear;
 	}
 }
@@ -134,13 +134,13 @@
 }
 
 .faq__question-answer {
-	font-size: 20px;
-	line-height: 28px;
+	font-size: 1.25rem;
+	line-height: 1.75rem;
 
 	&::before {
 		content: "";
 		display: block;
-		height: 16px;
+		height: 1rem;
 	}
 }
 
@@ -150,97 +150,35 @@
 
 // ADAPTIVE
 
-@media (max-width: $desktop) and (min-width: $mobile + 1) {
-	.faq {
-		.title {
-			margin-bottom: get-adaptive-value(32px, 16px);
-		}
-	}
-
-	.faq__section {
-		margin-bottom: get-adaptive-value(80px, 32px);
-	}
-
-	.faq__subtitle {
-		margin-bottom: get-adaptive-value(80px, 32px);
-	}
-
-	.faq__section-title {
-		font-size: get-adaptive-value(56px, 28px);
-		line-height: get-adaptive-value(72px, 36px);
-	}
-
-	.faq__question-title {
-		font-size: get-adaptive-value(24px, 16px);
-		line-height: get-adaptive-value(36px, 24px);
-	}
-
-	.faq__question-answer {
-		font-size: get-adaptive-value(20px, 14px);
-		line-height: get-adaptive-value(28px, 20px);
-	}
-}
-
-@media (max-width: $laptop) {
-
-}
-
-@media (max-width: $tablet) {
-
-	.faq {
-		grid-template-areas:
-			"t t t t t t t t t t t t"
-			"s s s s s s s s s . . ."
-			"m m m m m m m m m m . .";
-	}
-
-	.faq__section-title {
-		font-weight: 400;
-	}
-
-}
-
-@media (max-width: $small-tablet) {
-	.faq {
-		grid-template-columns: minmax(0, 1fr);
-		grid-template-areas:
-			"t"
-			"s"
-			"m";
-
-		padding-bottom: 40px;
-	}
-}
-
 @media (max-width: $mobile) {
 
 	.faq {
 		.title {
-			margin-bottom: 16px;
+			margin-bottom: 1rem;
 		}
 
 	}
 
 	.faq__section {
-		margin-bottom: 32px;
+		margin-bottom: 2rem;
 	}
 
 	.faq__subtitle {
-		margin-bottom: 32px;
+		margin-bottom: 2rem;
 	}
 
 	.faq__section-title {
-		font-size: 28px;
-		line-height: 36px;
+		font-size: 1.75rem;
+		line-height: 2.25rem;
 	}
 
 	.faq__question-title {
-		font-size: 16px;
-		line-height: 24px;
+		font-size: 1rem;
+		line-height: 1.5rem;
 	}
 
 	.faq__question-answer {
-		font-size: 14px;
-		line-height: 20px;
+		font-size: 0.875rem;
+		line-height: 1.25rem;
 	}
 }

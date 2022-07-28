@@ -7,10 +7,10 @@
 .checkbox {
 	display: flex;
 	align-items: center;
-	gap: 16px;
+	gap: 1rem;
 
-	font-size: 16px;
-	line-height: 24px;
+	font-size: 1rem;
+	line-height: 1.5rem;
 }
 
 .checkbox__mark {
@@ -18,13 +18,13 @@
 	align-items: center;
 	justify-content: center;
 
-	width: 32px;
-	height: 32px;
+	width: 2rem;
+	height: 2rem;
 }
 
 .checkbox__mark-unchecked-icon {
-	width: 20px;
-	height: 20px;
+	width: 1.25rem;
+	height: 1.25rem;
 	color: $color-text-secondary;
 	transition: color $animation-unhover;
 }
@@ -32,10 +32,10 @@
 .checkbox__mark-checked-icon {
 	display: none;
 
-	width: 20px;
-	height: 20px;
+	width: 1.25rem;
+	height: 1.25rem;
 
-	color: $color-prime;
+	color: $color-prime-main;
 }
 
 .checkbox__input {
@@ -62,36 +62,16 @@
 	cursor: pointer;
 
 	.checkbox__mark-unchecked-icon {
-		color: $color-prime;
+		color: $color-prime-main;
 		transition: color $animation-hover;
 	}
 }
 
 // ADAPTIVE
 
-@media (max-width: $desktop) and (min-width: $mobile + 1) {
-	.checkbox {
-		font-size: get-adaptive-value(16px, 14px);
-		line-height: get-adaptive-value(24px, 20px);
-	}
-}
-
-@media (max-width: $laptop) {
-
-}
-
-@media (max-width: $tablet) {
-
-
-}
-
-@media (max-width: $small-tablet) {
-
-}
-
 @media (max-width: $mobile) {
 	.checkbox {
-		font-size: 14px;
-		line-height: 20px;
+		font-size: 0.875rem;
+		line-height: 1.25rem;
 	}
 }

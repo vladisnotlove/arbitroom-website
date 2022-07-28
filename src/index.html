@@ -13,6 +13,9 @@
 
 <div id="dropdownOverlay"></div>
 
+
+<!-- MODALS -->
+
 <!-- registration modal -->
 <div class="modal" id="registrationModal">
     <div class="modal__content">
@@ -455,12 +458,15 @@
     </div>
 </div>
 
+
+<!-- HEADER -->
+
 <!-- menu -->
 <div class="menu__overlay overlay" id="menuOverlay"></div>
 <div class="menu" id="menu">
     <div class="menu__header">
         <div class="menu__logo">
-            <img src="img/logo-small.svg" alt="">
+            <img src="img/logo.svg" alt="">
         </div>
         <div class="menu__language language dropdown">
             <div class="language__label dropdown__trigger">
@@ -494,7 +500,7 @@
         </button>
         <nav class="menu__nav">
             <a href="about.html">О нас</a>
-            <a href="tariffs.html">Тарифы</a>
+            <a href="pool.html">Пул ликвидности</a>
             <a href="partners.html">Партнерам</a>
             <a href="FAQ.html">FAQ</a>
             <a href="contacts.html">Контакты</a>
@@ -523,12 +529,11 @@
     <div class="container">
         <header class="header hidden">
             <a class="header__logo" href="index.html">
-                <img class="desktop" src="img/logo.svg" alt="">
-                <img class="mobile" src="img/logo-small.svg" alt="">
+                <img src="img/logo.svg" alt="">
             </a>
             <nav class="header__nav">
                 <a href="about.html">О нас</a>
-                <a href="tariffs.html">Тарифы</a>
+                <a href="pool.html">Пул ликвидности</a>
                 <a href="partners.html">Партнерам</a>
                 <a href="FAQ.html">FAQ</a>
                 <a href="contacts.html">Контакты</a>
@@ -561,8 +566,7 @@
         </header>
         <header class="header hidden variant-collapsed">
             <a class="header__logo" href="index.html">
-                <img class="desktop" src="img/logo.svg" alt="">
-                <img class="mobile" src="img/logo-small.svg" alt="">
+                <img src="img/logo.svg" alt="">
             </a>
             <div class="header__language language dropdown">
                 <div class="language__label dropdown__trigger">
@@ -594,24 +598,36 @@
 </div>
 
 
+<!-- MAIN -->
+
 <div class="container">
 
     <!-- promo -->
     <section class="promo">
-        <img class="promo__img" src="img/promo.svg" alt="">
-        <h1 class="title">Открой мир<br/> инвестиций<br/> заново</h1>
-        <div class="promo__info">
-            Платформа Spectra - это автоматизированный инструмент для извлечения максимальной прибыли с Launchpad и IDO площадок.
+
+        <div class="promo__first-screen">
+            <div class="promo__img-container">
+                <img class="promo__img" src="img/promo.png" alt="">
+            </div>
+            <div class="promo__main">
+                <h1 class="promo__title">
+                    Прибыльный<br />арбитраж<br />криптовалют
+                </h1>
+                <div class="promo__info">
+                    Arbitroom — платформа, которая использует для работы автоматизированных ботов для получения максимальной прибыли с арбитражной торговли.
+                </div>
+                <div class="promo__buttons">
+                    <button class="btn btn_promo" data-modal data-target="#registrationModal">Начать сейчас</button>
+                    <button class="btn btn-outlined" data-youtube-embedded data-target="#mainYoutubeVideo">
+                        <svg class="icon">
+                            <use href="img/icons/play.svg#svg"/>
+                        </svg>
+                        Как это работает
+                    </button>
+                </div>
+            </div>
         </div>
-        <div class="promo__buttons">
-            <button class="btn btn_promo" data-modal data-target="#registrationModal">Начать сейчас</button>
-            <button class="btn btn-outlined" data-youtube-embedded data-target="#mainYoutubeVideo">
-                <svg class="icon">
-                    <use href="img/icons/play.svg#svg"/>
-                </svg>
-                Как это работает
-            </button>
-        </div>
+
         <div class="promo__cards">
             <div class="promo__card">
                 <div><img src="img/icons/card.svg" alt=""></div>
@@ -634,74 +650,9 @@
 
 </div>
 
-<div class="container inverted">
+<div class="container dark">
 
-    <!-- tariffs -->
-    <section class="block tariffs inverted">
-        <h2 class="title inverted">
-            Тарифные планы
-        </h2>
-        <div class="tariffs__tabs-menu">
-            <div class="tariffs__tabs-menu-item active">
-                Tier 1
-            </div>
-            <div class="tariffs__tabs-menu-item">
-                Tier 2
-            </div>
-            <div class="tariffs__tabs-menu-item">
-                Tier 3
-            </div>
-        </div>
-        <div class="tariffs__cards">
-            <div class="tariffs__card active" data-modal data-target="#calculatorModal">
-                <div>
-                    <div class="tariffs__card-title">Tier 1</div>
-                    <div class="tariffs__card-subtitle">
-                        от 100$<span class="separator">•</span>15 календарных дней
-                    </div>
-                    <div class="tariffs__card-ratio">
-                        <div class="tariffs__card-ratio-number">15%</div>
-                        <span class="tariffs__card-ratio-text">/ весь срок</span>
-                    </div>
-                </div>
-                <button class="btn tariffs__btn without-hover">
-                    Рассчитать доходность
-                </button>
-            </div>
-            <div class="tariffs__card" data-modal data-target="#calculatorModal">
-                <div>
-                    <div class="tariffs__card-title">Tier 2</div>
-                    <div class="tariffs__card-subtitle">
-                        от 1000$<span class="separator">•</span>30 календарных дней
-                    </div>
-                    <div class="tariffs__card-ratio">
-                        <div class="tariffs__card-ratio-number">50%</div>
-                        <span class="tariffs__card-ratio-text">/ весь срок</span>
-                    </div>
-                </div>
-                <button class="btn tariffs__btn without-hover">
-                    Рассчитать доходность
-                </button>
-            </div>
-            <div class="tariffs__card" data-modal data-target="#calculatorModal">
-                <div>
-                    <div class="tariffs__card-title">Tier 3</div>
-                    <div class="tariffs__card-subtitle">
-                        от 2000$<span class="separator">•</span>45 календарных дней
-                    </div>
-                    <div class="tariffs__card-numbers">
-                        <div class="tariffs__card-ratio">
-                            <div class="tariffs__card-ratio-number">100%</div>
-                            <span class="tariffs__card-ratio-text">/ весь срок</span>
-                        </div>
-                    </div>
-                </div>
-                <button class="btn tariffs__btn without-hover">
-                    Рассчитать доходность
-                </button>
-            </div>
-        </div>
-    </section>
+    empty
 
 </div>
 
@@ -831,6 +782,7 @@
             </div>
         </div>
     </section>
+
 </div>
 
 <!-- video -->
@@ -865,196 +817,7 @@
     ></iframe>
 </div>
 
-
-<div class="container inverted">
-
-    <!-- launchpool -->
-    <section class="block launchpool inverted">
-        <div class="launchpool__main-part">
-            <div>
-                <h2 class="title inverted">
-                    Наши успешные проекты
-                </h2>
-                <div class="subtitle inverted">Февраль - Март 2022</div>
-            </div>
-            <div class="launchpool__description">
-                <p>
-                    Задача платформы — сделать легким, доступным и выгодным участие в новых криптовалютных проектах
-                </p>
-                <div class="launchpool__buttons">
-                    <button class="btn" data-modal data-target="#registrationModal">
-                        Начать сейчас
-                    </button>
-                    <a class="btn btn-outlined inverted" href="./about.html">
-                        Больше о нас
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="launchpool__cards">
-            <div class="launchpool__card">
-                <div class="launchpool__card-icon">
-                    <img class="launchpool__card-logo lazy" data-src="img/logos/outer-ring.webp" alt=""/>
-                </div>
-
-                <div class="launchpool__card-badge">
-                    <div class="shadow"></div>
-                    <img src="img/luminous-circle.svg" alt=""/>
-                    <span>11x</span>
-                </div>
-
-                <div class="launchpool__card-title">
-                    Outer Ring MMO [EXO]
-                </div>
-            </div>
-
-            <div class="launchpool__card">
-                <div class="launchpool__card-icon">
-                    <img class="launchpool__card-logo lazy" data-src="img/logos/world-of-cryptoids.webp" alt=""/>
-                </div>
-
-                <div class="launchpool__card-badge">
-                    <div class="shadow"></div>
-                    <img src="img/luminous-circle.svg" alt=""/>
-                    <span>109x</span>
-                </div>
-
-                <div class="launchpool__card-title">
-                    Cryptoids [CAC]
-                </div>
-            </div>
-
-            <div class="launchpool__card">
-                <div class="launchpool__card-icon">
-                    <img class="launchpool__card-logo lazy" data-src="img/logos/metarun.webp" alt=""/>
-                </div>
-
-                <div class="launchpool__card-badge">
-                    <div class="shadow"></div>
-                    <img src="img/luminous-circle.svg" alt=""/>
-                    <span>14x</span>
-                </div>
-
-                <div class="launchpool__card-title">
-                    Metarun [MRUN]
-                </div>
-            </div>
-
-            <div class="launchpool__card">
-                <div class="launchpool__card-icon">
-                    <img class="launchpool__card-logo lazy" data-src="img/logos/stern.webp" alt=""/>
-                </div>
-
-                <div class="launchpool__card-badge">
-                    <div class="shadow"></div>
-                    <img src="img/luminous-circle.svg" alt=""/>
-                    <span>229x</span>
-                </div>
-
-                <div class="launchpool__card-title">
-                    STEPN [GMT]
-                </div>
-            </div>
-
-            <div class="launchpool__card">
-                <div class="launchpool__card-icon">
-                    <img class="launchpool__card-logo lazy" data-src="img/logos/rebelbots.webp" alt=""/>
-                </div>
-
-                <div class="launchpool__card-badge">
-                    <div class="shadow"></div>
-                    <img src="img/luminous-circle.svg" alt=""/>
-                    <span>22x</span>
-                </div>
-
-                <div class="launchpool__card-title">
-                    Rebelbots [RBLS]
-                </div>
-            </div>
-
-            <div class="launchpool__card">
-                <div class="launchpool__card-icon">
-                    <img class="launchpool__card-logo lazy" data-src="img/logos/harmony-launcher.webp" alt=""/>
-                </div>
-
-                <div class="launchpool__card-badge">
-                    <div class="shadow"></div>
-                    <img src="img/luminous-circle.svg" alt=""/>
-                    <span>46x</span>
-                </div>
-
-                <div class="launchpool__card-title">
-                    HarmonyLauncher [HARL]
-                </div>
-            </div>
-        </div>
-    </section>
-</div>
-
-
 <div class="container">
-
-    <!-- how -->
-    <section class="block how">
-        <h2 class="title">
-            Как это работает
-        </h2>
-        <div class="how__steps">
-            <div class="how__step">
-                <div class="how__step-icon">
-                    <img src="img/icons/check-list.svg" alt=""/>
-                </div>
-                <div class="how__step-title">
-                    Пройти регистрацию
-                </div>
-            </div>
-
-            <div class="how__step">
-                <div class="how__step-icon">
-                    <img src="img/icons/cards.svg" alt=""/>
-                </div>
-                <div class="how__step-title">
-                    Выбрать подходящий тарифный план
-                </div>
-            </div>
-
-            <div class="how__step">
-                <div class="how__step-icon">
-                    <img src="img/icons/coins.svg" alt=""/>
-                </div>
-                <div class="how__step-title">
-                    Пополнить баланс кабинета
-                </div>
-            </div>
-
-            <div class="how__step">
-                <div class="how__step-icon">
-                    <img src="img/icons/check-box.svg" alt=""/>
-                </div>
-                <div class="how__step-title">
-                    Отметить необходимую опцию автопродление/капитализация
-                </div>
-            </div>
-
-            <div class="how__step">
-                <div class="how__step-icon">
-                    <img src="img/icons/hand-coin.svg" alt=""/>
-                </div>
-                <div class="how__step-title">
-                    Получать проценты и при необходимости выводить
-                </div>
-            </div>
-
-            <div class="how__step">
-                <div class="how__step-icon">
-                    <img src="img/icons/check-list.svg" alt=""/>
-                </div>
-                <div class="how__step-title">
-                    После окончания срока работы депозита вывести его или продлить
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- goals -->
     <section class="block goals">
