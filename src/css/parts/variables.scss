@@ -30,9 +30,34 @@ $color-text-more-secondary-inverted: rgba(0, 0, 0, 0.32);  // delete
 $color-error: #F44336;
 
 
-$typography-h3-font-weight: 400;
+$typography-h2-font-weight: 500;
+$typography-h2-font-size: 5rem;
+$typography-h2-line-height: 1.25;
+$typography-h2-letter-spacing: 0.01em;
+
+@mixin typography-h2 {
+	font-weight: $typography-h2-font-weight;
+	font-size: $typography-h2-font-size;
+	line-height: $typography-h2-line-height;
+	letter-spacing: $typography-h2-letter-spacing;
+}
+
+$typography-h2-adaptive-font-weight: 500;
+$typography-h2-adaptive-font-size: 2rem;
+$typography-h2-adaptive-line-height: 1.25;
+$typography-h2-adaptive-letter-spacing: 0.01em;
+
+@mixin typography-h2-adaptive {
+	font-weight: $typography-h2-adaptive-font-weight;
+	font-size: $typography-h2-adaptive-font-size;
+	line-height: $typography-h2-adaptive-line-height;
+	letter-spacing: $typography-h2-adaptive-letter-spacing;
+}
+
+
+$typography-h3-font-weight: 500;
 $typography-h3-font-size: 3.5rem;
-$typography-h3-line-height: 4.5rem;
+$typography-h3-line-height: 1.28571428571;
 
 @mixin typography-h3 {
 	font-weight: $typography-h3-font-weight;
@@ -62,7 +87,7 @@ $typography-h4-adaptive-line-height: 1.75rem;
 
 $typography-h5-font-weight: 500;
 $typography-h5-font-size: 1.5rem;
-$typography-h5-line-height: 2.25rem;
+$typography-h5-line-height: 1.5;
 
 @mixin typography-h5 {
 	font-weight: $typography-h5-font-weight;

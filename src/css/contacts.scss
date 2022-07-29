@@ -39,7 +39,7 @@
 		text-decoration: none;
 	}
 
-	@include hover-shadow($color-prime-main);
+	@include shadow-hovering($color-prime-main);
 }
 
 .contacts__card-title {

@@ -652,8 +652,8 @@
 
 <div class="container dark">
 
-    <section class="block pool">
-        <h2 class="title">
+    <section class="page-block pool">
+        <h2 class="page-block__title">
             Пул ликвидности
         </h2>
         <div class="pool__content">
@@ -956,9 +956,9 @@
 <div class="container">
 
     <!-- advantages -->
-    <section class="block advantages">
+    <section class="page-block advantages">
         <img class="background-ellipse lazy" data-src="img/ellipse-1.webp" alt=""/>
-        <h2 class="title">Основные преимущества</h2>
+        <h2 class="page-block__title">Основные преимущества</h2>
         <div class="advantages__cards desktop">
             <div class="advantages__card with-title card-1">
                 <div class="advantages__card-title">
@@ -1083,21 +1083,32 @@
 </div>
 
 <!-- video -->
-<section class="video">
-    <div class="video__preview">
-        <img src="img/video-preview.jpg" alt="">
-    </div>
+<section class="container">
+    <div class="page-block video">
 
-    <div class="video__play"
-         data-youtube-embedded
-         data-target="#mainYoutubeVideo"
-    >
-        <div class="video__play-circle">
-            <svg class="icon" viewBox="0 0 24 24">
-                <use href="img/icons/play.svg#svg"/>
-            </svg>
+        <div class="video__preview">
+            <img src="img/video-preview.jpg" alt="">
+            <div class="video__play"
+                 data-youtube-embedded
+                 data-target="#mainYoutubeVideo"
+            >
+                <div class="video__play-circle">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <use href="img/icons/play.svg#svg"/>
+                    </svg>
+                </div>
+                <p class="video__play-text">Смотреть видео</p>
+            </div>
         </div>
-        <p class="video__play-text">Смотреть видео</p>
+
+        <div class="video__description">
+            <div class="video__description-title">Мы делаем сложное — простым</div>
+            <div class="video__description-text">
+                Платформа Arbitroom - это автоматизированная площадка как для внутрибиржевой, так и межбиржевой торговли.<br /><br />
+                Используя наши инструменты появилась возможность зарабатывать на арбитраже криптовалют с минимальными рисками и экономией личного времени.
+            </div>
+        </div>
+
     </div>
 </section>
 
@@ -1117,8 +1128,8 @@
 <div class="container">
 
     <!-- goals -->
-    <section class="block goals">
-        <h2 class="title">
+    <section class="page-block goals">
+        <h2 class="page-block__title">
             Цели компании
         </h2>
         <div class="goals__cards">
@@ -1173,7 +1184,7 @@
 <div class="footer__wrapper">
     <div class="container">
         <footer class="footer">
-            <h2 class="title">
+            <h2 class="page-block__title">
                 <div>
                     Начните<br/>
                     инвестировать<br/>

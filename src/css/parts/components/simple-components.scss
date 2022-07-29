@@ -18,9 +18,9 @@
 	}
 }
 
-// block
+// page-block
 
-.block {
+.page-block {
 	padding: 8rem 0;
 
 	&.main {
@@ -29,25 +29,13 @@
 
 }
 
-// title
-
-h2.title {
+.page-block__title {
 	font-family: Golos, sans-serif;
 	font-style: normal;
-	font-weight: 500;
-	font-size: 5rem;
-	line-height: 1.25;
-	letter-spacing: 0.01em;
+
+	@include typography-h2;
+
 	margin-bottom: 4rem;
-}
-
-.subtitle {
-	font-size: 1.5rem;
-	line-height: 2.25rem;
-}
-
-.title + .subtitle {
-	margin-top: 1rem;
 }
 
 // link
@@ -178,13 +166,56 @@ h2.title {
 		padding: 0 $container-padding-adaptive;
 	}
 
-	h2.title {
-		font-size: get-adaptive-value(5rem, 2rem);
+	// page-block
+
+	.page-block {
+		padding: get-adaptive-value(8rem, 2rem) 0;
+	}
+
+	.page-block__title {
 		margin-bottom: get-adaptive-value(4rem, 2rem);
 	}
 
-	.block {
-		padding: get-adaptive-value(8rem, 2rem) 0;
+}
+
+
+@media (max-width: 1650px) {
+
+	// page-block
+
+	.page-block__title {
+		font-size: 4.5rem;
+	}
+
+}
+
+@media (max-width: $laptop) {
+
+	// page-block
+
+	.page-block__title {
+		font-size: 4rem;
+	}
+
+}
+
+@media (max-width: 1280px) {
+
+	// page-block
+
+	.page-block__title {
+		font-size: 3.5rem;
+	}
+
+}
+
+
+@media (max-width: $tablet) {
+
+	// page-block
+
+	.page-block__title {
+		font-size: 3rem;
 	}
 
 }
@@ -198,7 +229,9 @@ h2.title {
 		max-width: 100%;
 	}
 
-	.block {
+	// page-block
+
+	.page-block {
 		padding: 2rem 0;
 
 		&.main {
@@ -206,19 +239,12 @@ h2.title {
 		}
 	}
 
-	h2.title {
+	.page-block__title {
 		font-size: 2rem;
 		margin-bottom: 2rem;
 	}
 
-	.subtitle {
-		font-size: 0.875rem;
-		line-height: 1.25rem;
-	}
-
-	.title + .subtitle {
-		margin-top: 0.5rem;
-	}
+	// text
 
 	.text {
 		font-size: 1.25rem;

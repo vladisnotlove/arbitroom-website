@@ -23,7 +23,7 @@
 	background: $color-prime-main;
 
 	cursor: pointer;
-	@include hover-shadow;
+	@include shadow-hovering;
 
 	.icon {
 		margin-top: -50%;
