@@ -5,6 +5,8 @@
 
 @import "common";
 
+@import "parts/blocks/pool";
+
 
 // MAIN
 
@@ -88,7 +90,7 @@
 	padding: 2rem 1rem;
 	background: transparent;
 	border-radius: 1rem;
-	border: 1px solid $color-prime-light;
+	border: 2px solid $color-prime-light;
 }
 
 // advantages
@@ -465,7 +467,6 @@
 		gap: 1rem;
 	}
 
-
 	.promo__cards {
 		display: flex;
 		gap: 1rem;
@@ -479,6 +480,7 @@
 		flex-grow: 1;
 		align-items: flex-start;
 		text-align: left;
+		font-weight: normal;
 		gap: 1rem;
 		padding: 2rem;
 	}
@@ -577,71 +579,6 @@
 
 	.promo__cards {
 		padding-top: 3rem;
-	}
-
-	.promo__card {
-		width: 100%;
-		border-radius: 1rem;
-		font-size: 1.25rem;
-		line-height: 1.75rem;
-	}
-
-	// tariffs
-
-	.tariffs{
-		&.main {
-			margin-bottom: 1.5rem;
-		}
-	}
-
-	.tariffs__card {
-		width: 100%;
-	}
-
-	.tariffs__card-title {
-		font-size: 1.75rem;
-		line-height: 2.25rem;
-	}
-
-	.tariffs__card-subtitle {
-		font-size: 1.25rem;
-		line-height: 1.75rem;
-		margin-bottom: 1rem;
-
-		.separator {
-			display: block;
-			opacity: 0;
-			width: 1px;
-			height: 0.5rem;
-		}
-	}
-
-	.tariffs__card-ratio {
-		gap: 0.25rem
-	}
-
-	.tariffs__card-ratio-number {
-		font-size: 3.5rem;
-		line-height: 5rem;
-	}
-
-	.tariffs__card-ratio-text {
-		font-size: 1.25rem;
-		line-height: 1.75rem;
-	}
-
-	.tariffs__card-list {
-		gap: 0.5rem;
-		margin-top: 1rem;
-	}
-
-	.tariffs__card-list-item {
-		font-size: 1rem;
-		line-height: 1.5rem;
-	}
-
-	.tariffs__btn {
-		margin-top: 1.5rem;
 	}
 
 	// advantages

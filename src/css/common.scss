@@ -18,12 +18,20 @@ div, span, h1, h2, p  {
 @import "parts/components/checkbox";
 @import "parts/components/forms";
 @import "parts/components/link-copier";
+@import "parts/components/table";
 @import "parts/modificators";
-
 
 html {
 	font-size: 16px;
 	--rem: 16;
+
+
+	// CSS VARIABLES
+
+	--grid-gap: 1rem;
+	--grid-column: calc((100% - var(--grid-gap) * #{$grid-columns - 1}) / #{$grid-columns});
+	--grid-column-gap: calc(var(--grid-gap) + var(--grid-column));
+	--border-radius: 2rem;
 
 	scroll-behavior: smooth;
 	scrollbar-width: thin;

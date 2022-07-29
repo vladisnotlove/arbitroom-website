@@ -12,6 +12,10 @@
 	position: relative;
 	overflow-y: visible;
 	overflow-x: hidden;
+
+	&.dark {
+		background: $color-background-lower1;
+	}
 }
 
 // block
@@ -32,7 +36,7 @@ h2.title {
 	font-style: normal;
 	font-weight: 500;
 	font-size: 5rem;
-	line-height: 1.3;
+	line-height: 1.25;
 	letter-spacing: 0.01em;
 	margin-bottom: 4rem;
 }
@@ -117,6 +121,14 @@ h2.title {
 	}
 }
 
+.subtitle1 {
+	@include typography-subtitle1;
+}
+
+.h5 {
+	@include typography-h5;
+}
+
 // icon
 
 .icon {
@@ -158,12 +170,21 @@ h2.title {
 
 // ADAPTIVE
 
-@media (max-width: $desktop) and (min-width: $mobile + 1) {
+@media (max-width: $desktop) {
 
 	// container
 
 	.container {
 		padding: 0 $container-padding-adaptive;
+	}
+
+	h2.title {
+		font-size: get-adaptive-value(5rem, 2rem);
+		margin-bottom: get-adaptive-value(4rem, 2rem);
+	}
+
+	.block {
+		padding: get-adaptive-value(8rem, 2rem) 0;
 	}
 
 }
@@ -185,14 +206,8 @@ h2.title {
 		}
 	}
 
-	h1.title {
-		font-size: 3rem;
-		line-height: 3.5rem;
-	}
-
 	h2.title {
 		font-size: 2rem;
-		line-height: 2.5rem;
 		margin-bottom: 2rem;
 	}
 

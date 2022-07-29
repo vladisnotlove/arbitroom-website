@@ -92,3 +92,9 @@
 		@include without-scrollbar;
 	}
 }
+
+@mixin paper {
+	background: $color-background-upper1;
+	color: $color-text-prime;
+	border-radius: 1rem;
+}
