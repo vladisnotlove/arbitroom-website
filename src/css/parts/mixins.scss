@@ -74,11 +74,14 @@
 	}
 }
 
-@mixin with-horizontal-scrollbar-in-container-adaptive {
+@mixin with-horizontal-scrollbar-in-container-adaptive($without-padding: false) {
 	overflow-x: auto;
 
-	padding-left: $container-padding-adaptive;
-	padding-right: $container-padding-adaptive;
+	@if ($without-padding ) {
+
+		padding-left: $container-padding-adaptive;
+		padding-right: $container-padding-adaptive;
+	}
 	margin-left: calc(#{$container-padding-adaptive} * -1);
 	margin-right: calc(#{$container-padding-adaptive} * -1);
 

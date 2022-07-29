@@ -17,6 +17,7 @@
   "dependencies": {
     "@popperjs/core": "^2.11.5",
     "leader-line": "^1.0.7",
+    "scrollbooster": "^3.0.2",
     "validator": "^13.7.0",
     "vanilla-lazyload": "^17.8.1"
   },

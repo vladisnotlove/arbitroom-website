@@ -61,8 +61,12 @@
   gap: 1.5rem
 }
 
-.promo__cards {
+.promo__cards-container {
   padding-top: 4rem;
+  box-sizing: content-box;
+}
+
+.promo__cards {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
@@ -136,16 +140,29 @@
     gap: 1rem;
   }
 
+  .promo__cards-container {
+    overflow: auto;
+    margin-left: calc(#{$container-padding-adaptive} * -1);
+    margin-right: calc(#{$container-padding-adaptive} * -1);
+    @include without-scrollbar;
+    cursor: grab;
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+
   .promo__cards {
     display: flex;
     gap: 1rem;
-    overflow: auto;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    padding-left: $container-padding-adaptive;
+    padding-right: $container-padding-adaptive;
+    width: fit-content;
   }
 
   .promo__card {
-    min-width: 0;
-    flex-basis: 304px;
+    min-width: 304px;
     flex-grow: 1;
     align-items: flex-start;
     text-align: left;
@@ -154,18 +171,6 @@
     padding: 2rem;
   }
 
-  @media (hover: none) {
-
-    .promo__cards {
-      flex-wrap: nowrap;
-      @include with-horizontal-scrollbar-in-container-adaptive;
-    }
-
-    .promo__card {
-      min-width: 304px;
-      flex-grow: 0;
-    }
-  }
 }
 
 @media (max-width: $small-tablet) {
@@ -246,8 +251,15 @@
     }
   }
 
-  .promo__cards {
+  .promo__cards-container {
     padding-top: 3rem;
+    margin-left: calc(#{$container-padding-mobile} * -1);
+    margin-right: calc(#{$container-padding-mobile} * -1);
+  }
+
+  .promo__cards {
+    padding-left: $container-padding-mobile;
+    padding-right: $container-padding-mobile;
   }
 
 }
