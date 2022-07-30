@@ -6,6 +6,34 @@
 @import "common";
 
 
+// partners
+
+.partners {
+  padding-bottom: 5rem;
+}
+
+.partners__title {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-areas:
+    "i i i i i i i i i i i i"
+    "su su su su su . . . st st st st";
+}
+
+.partners__title-inner {
+  grid-area: i;
+}
+
+.partners__subtitle {
+  grid-area: su;
+}
+
+.partners__structure-btn {
+  grid-area: st;
+  align-self: flex-end;
+  justify-self: flex-end;
+}
+
 
 // programs
 
@@ -84,8 +112,9 @@
 .program__cell-conditions {
   width: 0;
 
-  .button {
-    margin-right: -0.75rem;
+  .btn  {
+    margin-right: -1.5rem;
+    margin-left: -1.5rem;
   }
 }
 .program__cell-income,
@@ -143,6 +172,10 @@
 
 // structure turn
 
+.structure-turn__wrapper {
+  padding: 0.5rem;
+}
+
 .structure-turn {
   max-width: calc(100vw - 2rem);
 }
@@ -159,6 +192,7 @@
 }
 
 .structure-turn__body {
+  width: 100%;
   display: table-row-group;
 
   .structure-turn__row:last-child {
@@ -187,3 +221,212 @@
   color: $color-text-more-secondary;
   border-bottom: 1px solid $color-divider;
 }
+
+
+
+// ADAPTIVE
+
+@media (max-width: $small-laptop) {
+  .partners__title {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-areas:
+      "i i i i i i i i i i i i"
+      "su su su su su su . st st st st st";
+  }
+}
+
+
+@media screen and (max-width: $small-tablet) {
+
+  .partners__title {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "i"
+      "su"
+      "st";
+  }
+
+  .partners__subtitle {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    max-width: $mobile;
+  }
+
+  .partners__structure-btn {
+    align-self: flex-start;
+    justify-self: flex-start;
+  }
+
+  // programs
+
+  .programs {
+
+    &.expand {
+
+      .program {
+        display: grid;
+      }
+    }
+
+  }
+
+  .programs__table {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    @include paper;
+  }
+
+  .programs__expand-btn,
+  .programs__collapse-btn {
+    margin-top: 0.5rem;
+  }
+
+  .program {
+    display: block;
+    position: relative;
+    columns: 2 1rem;
+    padding: 1rem 1.5rem;
+    @include disable-paper;
+
+    &:not(:first-child) {
+      border-top: 1px solid $color-divider;
+    }
+  }
+
+  .program__cell {
+    display: block;
+    padding: 0.375rem 0 !important;
+  }
+  .program__cell-status .program__value {
+    @include typography-body2-text;
+  }
+
+  .program__label {
+    color: $color-text-more-secondary;
+    margin-bottom: 0.25rem;
+  }
+
+  .program__cell-conditions {
+
+    .button {
+      margin-left: -0.75rem;
+      @include button-small;
+    }
+  }
+
+  // structure turn
+
+  .structure-turn {
+    width: 312px;
+  }
+
+  .structure-turn__title {
+    padding: 0.5rem 1rem;
+  }
+
+  .structure-turn__header {
+    display: none;
+  }
+
+  .structure-turn__body {
+    display: table;
+    padding: 1.125rem;
+  }
+
+  .structure-turn__cell {
+    padding: 0.375rem;
+    border: none;
+    @include typography-body2-text;
+
+    &:first-child {
+      color: $color-text-more-secondary;
+    }
+
+    &:not(:first-child) {
+      color: $color-text-prime;
+    }
+  }
+
+
+}
+
+
+@media screen and (max-width: $mobile) {
+
+
+  .partners__structure-btn {
+    width: 100%;
+    .btn {
+      width: 100%;
+    }
+  }
+
+  // programs
+
+  .programs {
+
+    &.expand {
+
+      .program {
+        display: flex;
+      }
+    }
+
+  }
+
+  .programs__table {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    @include paper;
+  }
+
+  .programs__expand-btn,
+  .programs__collapse-btn {
+    margin-top: 0.5rem;
+  }
+
+  .program {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+    @include disable-paper;
+
+    &:not(:first-child) {
+      border-top: 1px solid $color-divider;
+    }
+  }
+
+  .program__cell {
+    padding: 0.375rem 0 !important;
+  }
+  .program__cell-status .program__value {
+    @include typography-body2-text;
+  }
+
+  .program__label {
+    color: $color-text-more-secondary;
+    margin-bottom: 0.25rem;
+  }
+
+  .program__cell-conditions {
+
+    .btn {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      margin-right: -0.75rem;
+      margin-left: -0.75rem;
+      @include button-small;
+    }
+  }
+
+
+}
+
+
+

@@ -13,7 +13,7 @@ $tooltip-left-icon: "%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height=
           "c"
           "p";
   box-sizing: border-box;
-  max-width: calc(100vh - 1rem);
+  max-width: calc(100vw - 1rem);
   cursor: pointer;
   animation: $animation-fast fade-in;
   z-index: $z-index-tooltip;
@@ -80,6 +80,8 @@ $tooltip-left-icon: "%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height=
   text-align: left;
   background: $color-text-prime;
   color: $color-background-upper1;
+  min-width: 0;
+  white-space: normal;
 }
 
 // with-tooltip
@@ -101,141 +103,4 @@ $tooltip-left-icon: "%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height=
     display: none;
     opacity: 0;
   };
-}
-
-
-@media screen and (max-width: $small-tablet) {
-
-  // programs
-
-  .programs {
-
-    &.expand {
-
-      .program {
-        display: grid;
-      }
-    }
-
-  }
-
-  .programs__table {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    @include paper;
-  }
-
-  .programs__expand-btn,
-  .programs__collapse-btn {
-    margin-top: 0.5rem;
-  }
-
-  .program {
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 1rem;
-    padding: 1rem 1.5rem;
-    @include disable-paper;
-
-    &:not(:first-child) {
-      border-top: 1px solid $color-divider;
-    }
-  }
-
-  .program__cell {
-    padding: 0.375rem 0 !important;
-  }
-  .program__cell-status .program__value {
-    @include typography-body2-text;
-  }
-
-  .program__label {
-    color: $color-text-more-secondary;
-    margin-bottom: 0.25rem;
-  }
-
-  .program__cell-conditions {
-
-    .button {
-      margin-left: -0.75rem;
-      @include button-small;
-    }
-  }
-}
-
-@media screen and (max-width: $mobile) {
-
-  // senior
-
-  .senior-block__socials {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .senior-block__other-socials {
-    display: flex;
-    gap: 1.25rem;
-  }
-
-  // programs
-
-  .programs {
-
-    &.expand {
-
-      .program {
-        display: flex;
-      }
-    }
-
-  }
-
-  .programs__table {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    @include paper;
-  }
-
-  .programs__expand-btn,
-  .programs__collapse-btn {
-    margin-top: 0.5rem;
-  }
-
-  .program {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    padding: 1rem 1.5rem;
-    @include disable-paper;
-
-    &:not(:first-child) {
-      border-top: 1px solid $color-divider;
-    }
-  }
-
-  .program__cell {
-    padding: 0.375rem 0 !important;
-  }
-  .program__cell-status .program__value {
-    @include typography-body2-text;
-  }
-
-  .program__label {
-    color: $color-text-more-secondary;
-    margin-bottom: 0.25rem;
-  }
-
-  .program__cell-conditions {
-
-    .button {
-      position: absolute;
-      top: 1.5rem;
-      right: 1.5rem;
-      @include button-small;
-    }
-  }
 }

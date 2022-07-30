@@ -23,11 +23,11 @@ window.addEventListener('load', () => {
 			clearTimeout(closingTimeout);
 
 			if (!popper) popper = createPopper(currentAnchorElement, popperMenu, {
-				strategy: "fixed"
+				strategy: "fixed",
 			});
 
 			if (!options.disableOverlay) {
-				overlay = document.createElement("<div>")
+				overlay = document.createElement("div")
 				overlay.classList.add("popper-overlay");
 				overlay.addEventListener("click", closePopper);
 				document.body.prepend(overlay);

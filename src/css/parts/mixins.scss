@@ -112,6 +112,10 @@
 	border-radius: 1rem;
 }
 
+@mixin paper-elevation1 {
+	box-shadow: 0 .5rem 0.75rem rgba(51, 20, 0, 0.08);
+}
+
 @mixin paper-top {
 	background: $color-background-upper1;
 	color: $color-text-prime;
