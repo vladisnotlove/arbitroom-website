@@ -35,24 +35,7 @@ html {
 	--grid-column-gap: calc(var(--grid-gap) + var(--grid-column));
 	--border-radius: 2rem;
 
-	//scroll-behavior: smooth;
-	//scrollbar-width: thin;
-	//scrollbar-color: $color-prime-main $color-background;
-	//
-	//&::-webkit-scrollbar {
-	//	width: $scrollbar-width;
-	//	height: $scrollbar-width;
-	//}
-	//
-	//&::-webkit-scrollbar-thumb {
-	//	border-radius: $scrollbar-width * 0.5;
-	//	background: $color-prime-main;
-	//}
-	//
-	//&::-webkit-scrollbar-track {
-	//	border-radius: $scrollbar-width * 0.5;
-	//	background: $color-background;
-	//}
+	@include with-custom-scrollbar;
 }
 
 body {

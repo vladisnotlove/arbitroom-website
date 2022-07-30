@@ -13,7 +13,7 @@
 	grid-template-areas:
 		"t t"
 		"c i";
-	padding-bottom: 6.75rem;
+	padding-bottom: 6.75rem !important;
 
 	.title {
 		grid-area: t;
@@ -31,7 +31,7 @@
 }
 
 .contacts__card {
-	background: $color-dark-background;
+	@include paper;
 	border-radius: 2rem;
 	padding: 3rem;
 
@@ -43,14 +43,11 @@
 }
 
 .contacts__card-title {
-	font-size: 2.25rem;
-	line-height: 3rem;
-	margin-bottom: 0.5rem;
+	@include typography-h4;
 }
 
 .contacts__card-subtitle {
-	font-size: 1.25rem;
-	line-height: 1.75rem;
+	@include typography-body1;
 	color: $color-text-secondary;
 }
 
@@ -58,6 +55,7 @@
 	grid-area: i;
 	justify-self: center;
 	align-self: center;
+	object-fit: contain;
 
 	height: 0;
 	min-height: 100%;
@@ -67,6 +65,71 @@
 
 
 // ADAPTIVE
+
+@media (max-width: $small-desktop) {
+
+	.contacts__card-title {
+		font-size: 2rem;
+	}
+
+	.contacts__cards {
+		gap: 1.5rem;
+	}
+
+	.contacts__card {
+		padding: 2.5rem;
+	}
+}
+
+@media (max-width: $laptop) {
+
+	.contacts__card-title {
+		font-size: 1.5rem;
+	}
+
+	.contacts__card-subtitle {
+		@include typography-body2;
+	}
+
+	.contacts__cards {
+		gap: 1.25rem;
+	}
+
+	.contacts__card {
+		padding: 2rem;
+	}
+}
+
+@media (max-width: $small-laptop) {
+
+	.contacts__card-title {
+		font-size: 1.25rem;
+	}
+
+	.contacts__card-subtitle {
+		@include typography-body2;
+	}
+
+	.contacts__cards {
+		gap: 1rem;
+	}
+
+	.contacts__card {
+		padding: 1.5rem;
+	}
+}
+
+
+@media (max-width: $small-tablet) {
+
+	.contacts {
+		display: block;
+	}
+
+	.contacts__img {
+		display: none;
+	}
+}
 
 @media (max-width: $mobile) {
 
@@ -85,18 +148,19 @@
 	}
 
 	.contacts__card {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
 		border-radius: 1rem;
 		padding: 2rem;
 	}
 
 	.contacts__card-title {
-		font-size: 1.25rem;
-		line-height: 1.75rem;
+		@include typography-h4-adaptive;
 	}
 
 	.contacts__card-subtitle {
-		font-size: 0.875rem;
-		line-height: 1.25rem;
+		@include typography-body2-adaptive;
 	}
 
 }

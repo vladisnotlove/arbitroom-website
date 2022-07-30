@@ -193,6 +193,10 @@
 
 	.page-block {
 		padding: get-adaptive-value(8rem, 2rem) 0;
+
+		&.main {
+			padding-top: get-adaptive-value(5rem, 1.5rem);
+		}
 	}
 
 	.page-block__title {

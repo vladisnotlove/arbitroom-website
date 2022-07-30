@@ -13,6 +13,9 @@
 
 <div id="dropdownOverlay"></div>
 
+
+<!-- MODALS -->
+
 <!-- registration modal -->
 <div class="modal" id="registrationModal">
     <div class="modal__content">
@@ -24,7 +27,7 @@
                 </span>
                 <button class="modal__dialog-close-btn icon-btn rounded small">
                     <svg class="icon" viewBox="0 0 20 20">
-                        <use href="img/icons/close-rounded.svg#svg" />
+                        <use href="img/icons/close-rounded.svg#svg"/>
                     </svg>
                 </button>
             </div>
@@ -191,7 +194,7 @@
                 </span>
                 <button class="modal__dialog-close-btn icon-btn rounded small">
                     <svg class="icon" viewBox="0 0 20 20">
-                        <use href="img/icons/close-rounded.svg#svg" />
+                        <use href="img/icons/close-rounded.svg#svg"/>
                     </svg>
                 </button>
             </div>
@@ -268,7 +271,7 @@
                 </span>
                 <button class="modal__dialog-close-btn icon-btn rounded small">
                     <svg class="icon" viewBox="0 0 20 20">
-                        <use href="img/icons/close-rounded.svg#svg" />
+                        <use href="img/icons/close-rounded.svg#svg"/>
                     </svg>
                 </button>
             </div>
@@ -314,7 +317,7 @@
                 </span>
                 <button class="modal__dialog-close-btn icon-btn rounded small">
                     <svg class="icon" viewBox="0 0 20 20">
-                        <use href="img/icons/close-rounded.svg#svg" />
+                        <use href="img/icons/close-rounded.svg#svg"/>
                     </svg>
                 </button>
             </div>
@@ -416,14 +419,14 @@
                 </span>
                 <button class="modal__dialog-close-btn icon-btn rounded small">
                     <svg class="icon" viewBox="0 0 20 20">
-                        <use href="img/icons/close-rounded.svg#svg" />
+                        <use href="img/icons/close-rounded.svg#svg"/>
                     </svg>
                 </button>
             </div>
             <form class="form balance-form">
                 <div class="modal__dialog-content">
                     <div class="balance-form__qr">
-                        <img src="img/qrcode.png" />
+                        <img src="img/qrcode.png"/>
                     </div>
                     <div class="balance-form__qr-hint">
                         Для пополнения баланса, переведите сумму USDT на этот адрес:
@@ -434,7 +437,7 @@
                         </div>
                         <div class="link-copier__icon-container">
                             <svg class="icon" viewBox="0 0 24 24">
-                                <use href="img/icons/copy.svg#svg" />
+                                <use href="img/icons/copy.svg#svg"/>
                             </svg>
                         </div>
                     </div>
@@ -455,12 +458,15 @@
     </div>
 </div>
 
+
+<!-- HEADER -->
+
 <!-- menu -->
 <div class="menu__overlay overlay" id="menuOverlay"></div>
 <div class="menu" id="menu">
     <div class="menu__header">
         <div class="menu__logo">
-            <img src="img/logo-small.svg" alt="">
+            <img src="img/logo.svg" alt="">
         </div>
         <div class="menu__language language dropdown">
             <div class="language__label dropdown__trigger">
@@ -494,7 +500,7 @@
         </button>
         <nav class="menu__nav">
             <a href="about.html">О нас</a>
-            <a href="tariffs.html">Тарифы</a>
+            <a href="pool.html">Пул ликвидности</a>
             <a href="partners.html">Партнерам</a>
             <a href="FAQ.html">FAQ</a>
             <a href="contacts.html">Контакты</a>
@@ -523,12 +529,11 @@
     <div class="container">
         <header class="header hidden">
             <a class="header__logo" href="index.html">
-                <img class="desktop" src="img/logo.svg" alt="">
-                <img class="mobile" src="img/logo-small.svg" alt="">
+                <img src="img/logo.svg" alt="">
             </a>
             <nav class="header__nav">
                 <a href="about.html">О нас</a>
-                <a href="tariffs.html">Тарифы</a>
+                <a href="pool.html">Пул ликвидности</a>
                 <a href="partners.html">Партнерам</a>
                 <a href="FAQ.html">FAQ</a>
                 <a href="contacts.html">Контакты</a>
@@ -561,8 +566,7 @@
         </header>
         <header class="header hidden variant-collapsed">
             <a class="header__logo" href="index.html">
-                <img class="desktop" src="img/logo.svg" alt="">
-                <img class="mobile" src="img/logo-small.svg" alt="">
+                <img src="img/logo.svg" alt="">
             </a>
             <div class="header__language language dropdown">
                 <div class="language__label dropdown__trigger">
@@ -594,14 +598,16 @@
 </div>
 
 
+<!-- MAIN -->
+
 <div class="container">
 
     <!-- contacts -->
-    <section class="block main contacts">
-        <h2 class="title">
+    <section class="page-block contacts">
+        <h2 class="page-block__title">
             Контакты
         </h2>
-        <img class="contacts__img" src="img/contacts.svg" />
+        <img class="contacts__img" src="img/contacts-background.png" />
         <div class="contacts__cards">
             <a class="contacts__card" href="mailto:support@spectra.cash" target="_blank">
                 <div class="contacts__card-title">
@@ -632,97 +638,94 @@
 
 </div>
 
-<div class="footer__wrapper">
-    <div class="container">
-        <footer class="footer">
-            <h2 class="title">
-                <div>
-                    Начните<br/>
-                    инвестировать<br/>
-                    сегодня
-                </div>
-                <div class="footer__img">
-                    <img src="img/arrow.svg" alt=""/>
-                </div>
+
+<!-- FOOTER-->
+
+<div class="container dark">
+    <footer class="footer">
+        <div class="footer__main">
+            <h2 class="footer__title">
+                Заработайте<br>
+                сейчас независимо от&nbsp;тренда
             </h2>
-            <div class="footer__header header" id="footerHeader">
-                <a class="header__logo" href="index.html">
-                    <img class="desktop" src="img/logo-inverted.svg" alt="">
-                    <img class="mobile" src="img/logo-small-inverted.svg" alt="">
+            <img class="footer__background" src="img/footer-background.png" alt="">
+        </div>
+        <div class="footer__header header" id="footerHeader">
+            <a class="header__logo" href="index.html">
+                <img class="desktop" src="img/logo.svg" alt="">
+            </a>
+            <nav class="header__nav"
+                 data-toggle-class="inactive"
+                 data-target="!self"
+                 data-reason="collapsed-hor"
+            >
+                <a href="about.html">О нас</a>
+                <a href="pool.html">Пул ликвидности</a>
+                <a href="partners.html">Партнерам</a>
+                <a href="FAQ.html">FAQ</a>
+                <a href="contacts.html">Контакты</a>
+            </nav>
+            <div class="header__language language dropdown">
+                <div class="language__label dropdown__trigger">
+                    <span>Ru</span>
+                    <svg class="icon">
+                        <use href="img/icons/angle-down.svg#svg"/>
+                    </svg>
+                </div>
+                <div class="language__menu dropdown__menu">
+                    <div class="language__menu-item dropdown__menu-item selected">
+                        <img src="img/flags/ru.svg" alt="">RU
+                    </div>
+                    <div class="language__menu-item dropdown__menu-item">
+                        <img src="img/flags/en.svg" alt="">EN
+                    </div>
+                    <div class="language__menu-item dropdown__menu-item">
+                        <img src="img/flags/fi.svg" alt="">FI
+                    </div>
+                    <div class="language__menu-item dropdown__menu-item">
+                        <img src="img/flags/kz.svg" alt="">KZ
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__divider"></div>
+        <div class="footer__links">
+            <div class="footer__social">
+                <a href="https://t.me/IDOSmart" target="_blank">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <use href="img/icons/social-telegram.svg#svg"/>
+                    </svg>
+                    Телеграм канал
                 </a>
-                <nav class="header__nav"
-                     data-toggle-class="inactive"
-                     data-target="!self"
-                     data-reason="collapsed-hor"
-                >
-                    <a href="about.html">О нас</a>
-                    <a href="tariffs.html">Тарифы</a>
-                    <a href="partners.html">Партнерам</a>
-                    <a href="FAQ.html">FAQ</a>
-                    <a href="contacts.html">Контакты</a>
-                </nav>
-                <div class="header__language language dropdown">
-                    <div class="language__label dropdown__trigger">
-                        <span>Ru</span>
-                        <svg class="icon">
-                            <use href="img/icons/angle-down.svg#svg"/>
-                        </svg>
-                    </div>
-                    <div class="language__menu dropdown__menu">
-                        <div class="language__menu-item dropdown__menu-item selected">
-                            <img src="img/flags/ru.svg" alt="">RU
-                        </div>
-                        <div class="language__menu-item dropdown__menu-item">
-                            <img src="img/flags/en.svg" alt="">EN
-                        </div>
-                        <div class="language__menu-item dropdown__menu-item">
-                            <img src="img/flags/fi.svg" alt="">FI
-                        </div>
-                        <div class="language__menu-item dropdown__menu-item">
-                            <img src="img/flags/kz.svg" alt="">KZ
-                        </div>
-                    </div>
-                </div>
+                <a href="https://t.me/IDOSmartchat" target="_blank">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <use href="img/icons/social-telegram.svg#svg"/>
+                    </svg>
+                    Телеграм чат
+                </a>
+                <a href="mailto:support@spectra.cash" target="_blank">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <use href="img/icons/social-mail.svg#svg"/>
+                    </svg>
+                    Почта
+                </a>
+                <a href="https://www.youtube.com/channel/UCW43vzZd-iD_eXoW3tj-WxQ" target="_blank">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <use href="img/icons/social-youtube.svg#svg"/>
+                    </svg>
+                    YouTube
+                </a>
             </div>
-            <div class="footer__divider"></div>
-            <div class="footer__links">
-                <div class="footer__social">
-                    <a href="https://t.me/IDOSmart" target="_blank">
-                        <svg class="icon" viewBox="0 0 24 24">
-                            <use href="img/icons/social-telegram.svg#svg" />
-                        </svg>
-                        Телеграм канал
-                    </a>
-                    <a href="https://t.me/IDOSmartchat" target="_blank">
-                        <svg class="icon" viewBox="0 0 24 24">
-                            <use href="img/icons/social-telegram.svg#svg" />
-                        </svg>
-                        Телеграм чат
-                    </a>
-                    <a href="mailto:support@spectra.cash" target="_blank">
-                        <svg class="icon" viewBox="0 0 24 24">
-                            <use href="img/icons/social-mail.svg#svg" />
-                        </svg>
-                        Почта
-                    </a>
-                    <a href="https://www.youtube.com/channel/UCW43vzZd-iD_eXoW3tj-WxQ" target="_blank">
-                        <svg class="icon" viewBox="0 0 24 24">
-                            <use href="img/icons/social-youtube.svg#svg" />
-                        </svg>
-                        YouTube
-                    </a>
+            <div class="footer__other">
+                <div class="footer__copyright">
+                    © 2022 Spectra. All rights reserved.
                 </div>
-                <div class="footer__other">
-                    <div class="footer__copyright">
-                        © 2022 Spectra. All rights reserved.
-                    </div>
-                    <a class="footer__privacy-policy link" href="./Privacy-Policy.pdf" target="_blank">
-                        Политика конфиденциальности
-                    </a>
-                </div>
+                <a class="footer__privacy-policy link" href="./Privacy-Policy.pdf" target="_blank">
+                    Политика конфиденциальности
+                </a>
             </div>
-        </footer>
-    </div>
+        </div>
+    </footer>
 </div>
 
 
