@@ -1,0 +1,46 @@
+@import "../variables";
+@import "../mixins";
+
+
+// youtube embedded
+
+.youtube-embedded {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 4rem 1rem;
+
+  z-index: $z-index-video-player;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity $animation-disappear;
+
+  &.open {
+    opacity: 1;
+    pointer-events: auto;
+    animation: fadeOut $animation-appear;
+  }
+}
+
+.youtube-embedded__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $color-dark-background;
+  z-index: 2;
+}
+
+.youtube-embedded iframe {
+  max-width: 100%;
+  max-height: 100%;
+  position: relative;
+  z-index: 20;
+}
