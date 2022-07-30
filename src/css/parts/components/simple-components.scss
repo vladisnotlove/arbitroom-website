@@ -11,7 +11,7 @@
 	margin: 0 auto;
 	position: relative;
 	overflow-y: visible;
-	overflow-x: hidden;
+	overflow-x: visible;
 
 	&.dark {
 		background: $color-background-lower1;

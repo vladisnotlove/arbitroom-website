@@ -56,7 +56,8 @@ html {
 body {
 	background: $color-background;
 	position: relative;
-	overflow-x: hidden
+	overflow-x: visible;
+	max-width: 100vw;
 }
 
 h1, h2, h3, label, p {
