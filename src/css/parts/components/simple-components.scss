@@ -4,14 +4,6 @@
 
 // MAIN
 
-.paper {
-	@include paper;
-
-	&.elevation1 {
-		@include paper-elevation1;
-	}
-}
-
 // container
 
 .container {

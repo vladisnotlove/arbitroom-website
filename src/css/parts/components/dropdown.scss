@@ -22,8 +22,8 @@
 	opacity: 1;
 
 	padding: 0.5rem 0;
-	border-radius: 0.5rem;
-	background: $color-light-background;
+	@include paper;
+	@include paper-elevation1;
 	transition: opacity $animation-normal;
 
 	&:not(.ready) {
@@ -38,23 +38,28 @@
 }
 
 .dropdown__menu-item {
-	padding: 0.875rem 1.5rem;
-
-	font-size: 1.5rem;
-	line-height: 2.25rem;
+	position: relative;
+	padding: 0.625rem 1rem;
+	@include typography-body2;
 	white-space: nowrap;
-
 	transition: background $animation-normal;
+	cursor: pointer;
 
 	&:hover {
-		background: $color-background;
-		cursor: pointer;
+		background: $color-action-hover;
 		transition: background $animation-fast;
 	}
 
-	&.selected {
-		background: $color-prime-main;
-		color: $color-prime-contrast
+	&.selected::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: change-color($color-prime-main, $alpha: 0.08);
+		transition: background $animation-fast;
+		z-index: -1;
 	}
 }
 
