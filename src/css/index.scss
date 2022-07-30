@@ -9,6 +9,7 @@
 @import "parts/page-blocks/promo";
 @import "parts/page-blocks/video";
 @import "parts/page-blocks/exchange";
+@import "parts/page-blocks/how";
 
 
 // MAIN
@@ -177,37 +178,6 @@
 	z-index: 20;
 }
 
-// how
-
-.how {
-}
-
-.how__steps {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-row-gap: 8.25rem;
-	grid-column-gap: 5.5rem;
-	text-align: center;
-}
-
-.how__step-icon {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	img {
-		height: 10.25rem;
-		object-fit: cover;
-	}
-}
-
-.how__step-title {
-	font-size: 1.5rem;
-	line-height: 2.25rem;
-	text-align: center;
-	padding-bottom: 1rem;
-}
-
 // goals
 
 .goals {
@@ -328,71 +298,6 @@
 			font-size: 1.5rem;
 			line-height: 2.25rem;
 		}
-	}
-
-	// launchpool
-
-	.launchpool__main-part {
-		display: block;
-	}
-
-	.launchpool__description {
-		margin-top: 1.5rem;
-
-		p {
-			font-size: 1rem;
-			line-height: 1.5rem;
-			margin: 0;
-		}
-	}
-
-	.launchpool__buttons {
-		margin-top: 1.5rem;
-		gap: 0.5rem
-	}
-
-	.launchpool__cards {
-		display: flex;
-		flex-flow: row nowrap;
-		justify-content: flex-start;
-		gap: 1rem;
-		margin-top: 3rem;
-
-		@include with-horizontal-scrollbar-in-container-mobile;
-	}
-
-	.launchpool__card {
-		min-width: 9.25rem;
-	}
-
-	.launchpool__card-badge {
-		width: 61px;
-		height: 61px;
-
-		span {
-			font-size: 0.875rem;
-			line-height: 1.25rem;
-		}
-	}
-
-	.launchpool__card-title {
-		margin-top: 1.5rem;
-		font-size: 1rem;
-		line-height: 1.5rem;
-	}
-
-	// how
-
-	.how__steps {
-		display: grid;
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-		grid-column-gap: 2rem;
-		grid-row-gap: 4rem;
-	}
-
-	.how__step-title {
-		font-size: 0.875rem;
-		line-height: 1.25rem;
 	}
 
 	// goals

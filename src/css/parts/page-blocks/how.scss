@@ -1,0 +1,99 @@
+@import "../variables";
+@import "../mixins";
+
+// how
+
+.how__content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-areas:
+    "s s s s s s s i i i i i";
+  gap: 1rem;
+}
+
+.how__steps {
+  grid-area: s;
+}
+
+.how__img {
+  grid-area: i;
+}
+
+
+
+.how__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.how__step {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  @include typography-h5;
+
+  img {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+}
+
+.how__img {
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+
+
+// ADAPTIVE
+
+@media (max-width: $laptop) {
+
+  .how__step {
+    font-size: 1.25rem;
+
+    img {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+}
+
+@media (max-width: $tablet) {
+
+  .how__content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+    "s s s s s s i i i i i i";
+  }
+
+
+  .how__step {
+    @include typography-h4-adaptive;
+
+    img {
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+  }
+
+}
+
+@media (max-width: $small-tablet) {
+
+  .how__content {
+    display: block;
+  }
+
+  .how__img {
+    display: none;
+  }
+
+}
