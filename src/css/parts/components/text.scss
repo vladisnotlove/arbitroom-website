@@ -28,6 +28,10 @@
     margin-bottom: 3rem;
   }
 
+  &.margin-top-medium {
+    margin-top: 2rem;
+  }
+
 }
 
 @media (max-width: $laptop) {
@@ -57,7 +61,11 @@
       margin-bottom: 2.5rem;
     }
 
+    &.margin-top-medium {
+      margin-top: 1.75rem;
+    }
   }
+
 }
 
 @media (max-width: $mobile) {
@@ -86,7 +94,9 @@
       margin-bottom: 2rem;
     }
 
+    &.margin-top-medium {
+      margin-top: 2rem;
+    }
   }
-
 
 }

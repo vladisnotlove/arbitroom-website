@@ -22,6 +22,7 @@ window.addEventListener('load', () => {
 			let collapseTimeout = -1;
 
 			trigger.addEventListener("click", () => {
+
 				const contentHeight = content.getBoundingClientRect().height;
 				const animationTime = Math.sqrt(contentHeight) / 8 * cssVars.animationAppear;
 

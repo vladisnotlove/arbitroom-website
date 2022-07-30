@@ -57,11 +57,13 @@ $typography-h2-adaptive-letter-spacing: 0.01em;
 $typography-h3-font-weight: 500;
 $typography-h3-font-size: 3.5rem;
 $typography-h3-line-height: 1.28571428571;
+$typography-h3-letter-spacing: 0.01em;
 
 @mixin typography-h3 {
 	font-weight: $typography-h3-font-weight;
 	font-size: $typography-h3-font-size;
 	line-height: $typography-h3-line-height;
+	letter-spacing: $typography-h3-letter-spacing;
 }
 
 $typography-h3-adaptive-font-weight: 400;

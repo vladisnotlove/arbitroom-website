@@ -11,22 +11,19 @@
 	grid-template-columns: repeat(12, minmax(0, 1fr));
 	grid-template-areas:
 		"t t t t t t t t t t t t"
-		"s s s s s s s s . . . ."
-		"m m m m m m m m m . . .";
+		"s s s s s s s s s . . ."
+}
 
-	.title {
-		grid-area: t;
-		margin-bottom: 2rem;
-	}
+.faq__title {
+	grid-area: t;
 }
 
 .faq__subtitle {
-	grid-area: s;
-	margin-bottom: 5rem;
+	max-width: 60%;
 }
 
 .faq__sections {
-	grid-area: m;
+	grid-area: s;
 }
 
 .faq__section {
@@ -39,10 +36,7 @@
 
 .faq__section-title {
 	margin-bottom: 2rem;
-	font-weight: 500;
-	font-size: 3.5rem;
-	line-height: 4.5rem;
-	letter-spacing: 0.01em;
+	@include typography-h3;
 
 	p {
 		margin-bottom: 1rem;
@@ -60,6 +54,8 @@
 
 .faq__question {
 	margin-bottom: 1rem;
+	@include paper;
+	padding: 1.5rem;
 
 	&:last-child {
 		margin-bottom: 0;
@@ -72,8 +68,7 @@
 	justify-content: space-between;
 	gap: 1rem;
 
-	font-size: 1.5rem;
-	line-height: 2.25rem;
+	@include typography-h5;
 
 	cursor: pointer;
 
@@ -81,6 +76,7 @@
 }
 
 .faq__question-expand-btn {
+	flex-shrink: 0;
 	width: 1.5rem;
 	height: 1.5rem;
 	line-height: 100%;
@@ -150,35 +146,81 @@
 
 // ADAPTIVE
 
-@media (max-width: $mobile) {
+@media (max-width: $laptop) {
 
-	.faq {
-		.title {
-			margin-bottom: 1rem;
-		}
-
+	.faq__section-title {
+		font-size: 3rem;
 	}
+
+	.faq__question-title {
+		font-size: 1.375rem;
+	}
+
+}
+
+@media (max-width: $small-laptop) {
+
+	.faq__section-title {
+		font-size: 2.5rem;
+	}
+
+
+	.faq__question-title {
+		font-size: 1.25rem;
+	}
+
+
+	.faq__question-answer {
+		font-size: 1.125rem;
+	}
+}
+
+
+@media (max-width: $tablet) {
+
+	.faq__subtitle {
+		max-width: $mobile;
+	}
+
+	.faq__section-title {
+		font-size: 2.25rem;
+	}
+
+	.faq__question-title {
+		font-size: 1.125rem;
+	}
+
+	.faq__question-answer {
+		font-size: 1rem;
+	}
+
+}
+
+@media (max-width: $small-tablet) {
+	.faq {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"t"
+			"s";
+	}
+}
+
+@media (max-width: $mobile) {
 
 	.faq__section {
 		margin-bottom: 2rem;
 	}
 
-	.faq__subtitle {
-		margin-bottom: 2rem;
-	}
-
 	.faq__section-title {
-		font-size: 1.75rem;
-		line-height: 2.25rem;
+		@include typography-h3-adaptive;
 	}
 
 	.faq__question-title {
-		font-size: 1rem;
-		line-height: 1.5rem;
+		@include typography-body1-adaptive;
 	}
 
 	.faq__question-answer {
-		font-size: 0.875rem;
-		line-height: 1.25rem;
+		@include typography-body2-adaptive;
 	}
 }

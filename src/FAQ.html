@@ -13,6 +13,9 @@
 
 <div id="dropdownOverlay"></div>
 
+
+<!-- MODALS -->
+
 <!-- registration modal -->
 <div class="modal" id="registrationModal">
     <div class="modal__content">
@@ -24,7 +27,7 @@
                 </span>
                 <button class="modal__dialog-close-btn icon-btn rounded small">
                     <svg class="icon" viewBox="0 0 20 20">
-                        <use href="img/icons/close-rounded.svg#svg" />
+                        <use href="img/icons/close-rounded.svg#svg"/>
                     </svg>
                 </button>
             </div>
@@ -191,7 +194,7 @@
                 </span>
                 <button class="modal__dialog-close-btn icon-btn rounded small">
                     <svg class="icon" viewBox="0 0 20 20">
-                        <use href="img/icons/close-rounded.svg#svg" />
+                        <use href="img/icons/close-rounded.svg#svg"/>
                     </svg>
                 </button>
             </div>
@@ -268,7 +271,7 @@
                 </span>
                 <button class="modal__dialog-close-btn icon-btn rounded small">
                     <svg class="icon" viewBox="0 0 20 20">
-                        <use href="img/icons/close-rounded.svg#svg" />
+                        <use href="img/icons/close-rounded.svg#svg"/>
                     </svg>
                 </button>
             </div>
@@ -314,7 +317,7 @@
                 </span>
                 <button class="modal__dialog-close-btn icon-btn rounded small">
                     <svg class="icon" viewBox="0 0 20 20">
-                        <use href="img/icons/close-rounded.svg#svg" />
+                        <use href="img/icons/close-rounded.svg#svg"/>
                     </svg>
                 </button>
             </div>
@@ -416,14 +419,14 @@
                 </span>
                 <button class="modal__dialog-close-btn icon-btn rounded small">
                     <svg class="icon" viewBox="0 0 20 20">
-                        <use href="img/icons/close-rounded.svg#svg" />
+                        <use href="img/icons/close-rounded.svg#svg"/>
                     </svg>
                 </button>
             </div>
             <form class="form balance-form">
                 <div class="modal__dialog-content">
                     <div class="balance-form__qr">
-                        <img src="img/qrcode.png" />
+                        <img src="img/qrcode.png"/>
                     </div>
                     <div class="balance-form__qr-hint">
                         Для пополнения баланса, переведите сумму USDT на этот адрес:
@@ -434,7 +437,7 @@
                         </div>
                         <div class="link-copier__icon-container">
                             <svg class="icon" viewBox="0 0 24 24">
-                                <use href="img/icons/copy.svg#svg" />
+                                <use href="img/icons/copy.svg#svg"/>
                             </svg>
                         </div>
                     </div>
@@ -455,12 +458,15 @@
     </div>
 </div>
 
+
+<!-- HEADER -->
+
 <!-- menu -->
 <div class="menu__overlay overlay" id="menuOverlay"></div>
 <div class="menu" id="menu">
     <div class="menu__header">
         <div class="menu__logo">
-            <img src="img/logo-small.svg" alt="">
+            <img src="img/logo.svg" alt="">
         </div>
         <div class="menu__language language dropdown">
             <div class="language__label dropdown__trigger">
@@ -494,7 +500,7 @@
         </button>
         <nav class="menu__nav">
             <a href="about.html">О нас</a>
-            <a href="tariffs.html">Тарифы</a>
+            <a href="pool.html">Пул ликвидности</a>
             <a href="partners.html">Партнерам</a>
             <a href="FAQ.html">FAQ</a>
             <a href="contacts.html">Контакты</a>
@@ -523,12 +529,11 @@
     <div class="container">
         <header class="header hidden">
             <a class="header__logo" href="index.html">
-                <img class="desktop" src="img/logo.svg" alt="">
-                <img class="mobile" src="img/logo-small.svg" alt="">
+                <img src="img/logo.svg" alt="">
             </a>
             <nav class="header__nav">
                 <a href="about.html">О нас</a>
-                <a href="tariffs.html">Тарифы</a>
+                <a href="pool.html">Пул ликвидности</a>
                 <a href="partners.html">Партнерам</a>
                 <a href="FAQ.html">FAQ</a>
                 <a href="contacts.html">Контакты</a>
@@ -561,8 +566,7 @@
         </header>
         <header class="header hidden variant-collapsed">
             <a class="header__logo" href="index.html">
-                <img class="desktop" src="img/logo.svg" alt="">
-                <img class="mobile" src="img/logo-small.svg" alt="">
+                <img src="img/logo.svg" alt="">
             </a>
             <div class="header__language language dropdown">
                 <div class="language__label dropdown__trigger">
@@ -594,442 +598,401 @@
 </div>
 
 
+<!-- MAIN -->
+
 <div class="container">
 
     <!-- FAQ -->
-    <section class="block main faq">
-        <h2 class="title">
+    <section class="page-block main faq">
+        <h2 class="page-block__title faq__title">
             Часто задаваемые вопросы
+            <div class="faq__subtitle text small margin-top-medium">
+                Здесь вы найдете ответы на большинство главных вопросов по работе платформы.<br><br>
+                Если какой то из вопросов остался без внимания - напишите его в службу онлайн поддержки, наша команда с радостью ответит вам.
+            </div>
         </h2>
-        <div class="faq__subtitle">
-            <p class="text small">
-                Здесь вы найдете ответы на большинство главных вопросов по работе платформы.
-            </p>
-            <p class="text small">
-                Если какой то из вопросов остался без внимания - напишите его в службу онлайн поддержки, наша команда с
-                радостью ответит вам.
-            </p>
-        </div>
         <div class="faq__sections">
 
             <div class="faq__section">
-                <div class="faq__section-title">Общие вопросы</div>
+                <div class="faq__section-title">Общие</div>
                 <div class="faq__questions">
 
-                    <div class="faq__question card small">
-                        <div class="faq__question-title" data-collapse data-target="#question-1-1">
-                            Что такое Spectra.cash?
+
+                    <div class="faq__question">
+
+                        <div class="faq__question-title" data-collapse data-target="#question-0-1">
+                            Что такое Arbitroom.io?
                             <div class="faq__question-expand-btn">
                                 <div class="faq__question-expand-btn-inner">
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse" id="question-1-1">
+
+                        <div class="collapse" id="question-0-1">
                             <div class="collapse__content faq__question-answer">
-                                Spectra.cash - это агрегатор ликвидности для участия в IDO и Launchpad.
+                                Arbitroom.io - это это автоматизированная площадка арбитража криптовалют.
                             </div>
                         </div>
+
                     </div>
 
-                    <div class="faq__question card small">
-                        <div class="faq__question-title" data-collapse data-target="#question-2">
-                            Что конкретно делает Spectra?
+
+                    <div class="faq__question">
+
+                        <div class="faq__question-title" data-collapse data-target="#question-0-2">
+                            Какие виды арбитража использует Arbitroom?
                             <div class="faq__question-expand-btn">
                                 <div class="faq__question-expand-btn-inner">
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse" id="question-2">
+
+                        <div class="collapse" id="question-0-2">
                             <div class="collapse__content faq__question-answer">
-                                Spectra участвует в запусках криптовалютных проектов и предоставляет выгодные
-                                условия,
-                                которые доступны для всех участников платформы.
+                                В большенстве случаев Arbitroom использует межбиржевой и внутребиржевой арбитраж.
                             </div>
                         </div>
+
                     </div>
 
-                    <div class="faq__question card small">
-                        <div class="faq__question-title" data-collapse data-target="#question-3">
-                            Кто руководитель, какая команда проекта?
-                            <div class="faq__question-expand-btn">
-                                <div class="faq__question-expand-btn-inner">
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="collapse" id="question-3">
-                            <div class="collapse__content faq__question-answer">
-                                Идейным основателем является Петерис Балодис, гражданин Латвии, с большим опытом в
-                                сфере
-                                криптовалютных проектов.
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="faq__question card small">
-                        <div class="faq__question-title" data-collapse data-target="#question-4">
+                    <div class="faq__question">
+
+                        <div class="faq__question-title" data-collapse data-target="#question-0-3">
                             Когда вы начали работать?
                             <div class="faq__question-expand-btn">
                                 <div class="faq__question-expand-btn-inner">
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse" id="question-4">
+
+                        <div class="collapse" id="question-0-3">
                             <div class="collapse__content faq__question-answer">
-                                Официальной датой публичной деятельности платформы Spectra считается 11.11.2021 года.
+                                Платформа работает с 2021 года
                             </div>
                         </div>
+
                     </div>
 
-                    <div class="faq__question card small">
-                        <div class="faq__question-title" data-collapse data-target="#question-5">
+
+                    <div class="faq__question">
+
+                        <div class="faq__question-title" data-collapse data-target="#question-0-4">
                             Что нужно для начала работы?
                             <div class="faq__question-expand-btn">
                                 <div class="faq__question-expand-btn-inner">
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse" id="question-5">
+
+                        <div class="collapse" id="question-0-4">
                             <div class="collapse__content faq__question-answer">
-                                Для начала работы вам необходимо ознакомиться с условиями и принять правила
-                                пользования,
-                                после чего пройти регистрацию на платформе.
+                                Для начала работы вам необходимо ознакомиться с условиями и принять правила пользования сайтом, после чего пройти регистрацию на платформе.
                             </div>
                         </div>
+
                     </div>
 
-                    <div class="faq__questions-collapse collapse" id="collapsedQuestionsInSection-1">
+
+                    <div class="faq__question">
+
+                        <div class="faq__question-title" data-collapse data-target="#question-0-5">
+                            Что нужно для регистрации?
+                            <div class="faq__question-expand-btn">
+                                <div class="faq__question-expand-btn-inner">
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="collapse" id="question-0-5">
+                            <div class="collapse__content faq__question-answer">
+                                Для регистрации вам потребуется рабочая почта и надежный пароль.
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="faq__questions-collapse collapse" id="collapsedQuestionsInSection-0">
 
                         <div class="collapse__content">
 
-                            <div class="faq__question card small">
-                                <div class="faq__question-title" data-collapse data-target="#question-6">
-                                    Что нужно для регистрации?
-                                    <div class="faq__question-expand-btn">
-                                        <div class="faq__question-expand-btn-inner">
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="collapse" id="question-6">
-                                    <div class="collapse__content faq__question-answer">
-                                        Для регистрации вам потребуется рабочая почта и надежный пароль.
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="faq__question card small">
-                                <div class="faq__question-title" data-collapse data-target="#question-7">
+                            <div class="faq__question">
+
+                                <div class="faq__question-title" data-collapse data-target="#question-0-6">
                                     Кто может инвестировать в компанию?
                                     <div class="faq__question-expand-btn">
                                         <div class="faq__question-expand-btn-inner">
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="collapse" id="question-7">
+
+                                <div class="collapse" id="question-0-6">
                                     <div class="collapse__content faq__question-answer">
                                         Инвестировать могут только совершеннолетние пользователи платформы.
                                     </div>
                                 </div>
+
                             </div>
 
-                            <div class="faq__question card small">
-                                <div class="faq__question-title" data-collapse data-target="#question-8">
-                                    Хочу инвестировать, но нет кошелька для криптовалют.
+
+                            <div class="faq__question">
+
+                                <div class="faq__question-title" data-collapse data-target="#question-0-7">
+                                    Хочу инвестировать, но нет кошелька для криптовалют...
                                     <div class="faq__question-expand-btn">
                                         <div class="faq__question-expand-btn-inner">
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="collapse" id="question-8">
+
+                                <div class="collapse" id="question-0-7">
                                     <div class="collapse__content faq__question-answer">
-                                        Если у вас нет кошелька, вы можете зарегистрироваться на криптовалютной бирже или в
-                                        любом другом сервисе, который поддерживает криптовалютные кошельки. Рекомендуем
-                                        использовать популярные кошельки, как Metamask или известные биржи, как Binance.
+                                        Если у вас нет кошелька, вы можете зарегистрироваться на криптовалютной бирже или в любом другом сервисе, который поддерживает криптовалютные кошельки. Рекомендуем использовать популярные кошельки, как Metamask или известные биржи, как Binance.
                                     </div>
                                 </div>
+
                             </div>
 
-                            <div class="faq__question card small">
-                                <div class="faq__question-title" data-collapse data-target="#question-9">
+
+                            <div class="faq__question">
+
+                                <div class="faq__question-title" data-collapse data-target="#question-0-8">
                                     Какие гарантии?
                                     <div class="faq__question-expand-btn">
                                         <div class="faq__question-expand-btn-inner">
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="collapse" id="question-9">
+
+                                <div class="collapse" id="question-0-8">
                                     <div class="collapse__content faq__question-answer">
-                                        Spectra гарантирует, что ваши инвестиции защищены от волатильности, так как покупку
-                                        токенов для стейкинга на биржах, платформа осуществляет за свой счет. Инвестиции
-                                        принимаются эквивалентно USDT и выплачиваются аналогично в USDT, согласно выбранному
-                                        тарифу.
+                                        Arbitroom гарантирует, что ваши инвестиции используются исключительно в арбитражных сделках. Весь маркетинг платформа оплачивает только с прибыли, полученной от успешных сделок. Инвестиции принимаются эквивалентно USDT и выплачиваются аналогично в USDT, согласно стартовым вознаграждениям.
                                     </div>
                                 </div>
+
                             </div>
 
-                            <div class="faq__question card small">
-                                <div class="faq__question-title" data-collapse data-target="#question-1-10">
+
+                            <div class="faq__question">
+
+                                <div class="faq__question-title" data-collapse data-target="#question-0-9">
                                     Нужно ли платить налоги?
                                     <div class="faq__question-expand-btn">
                                         <div class="faq__question-expand-btn-inner">
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="collapse" id="question-1-10">
+
+                                <div class="collapse" id="question-0-9">
                                     <div class="collapse__content faq__question-answer">
-                                        Spectra не является вашим налоговым агентом, поэтому платить налоги вам необходимо
-                                        самостоятельно, согласно законодательству той страны, резидентом которой вы
-                                        являетесь.
+                                        Платформа Arbitroom не является вашим налоговым агентом, поэтому платить налоги вам необходимо самостоятельно, согласно законодательству той страны, резидентом которой вы являетесь.
                                     </div>
                                 </div>
+
                             </div>
 
-                            <div class="faq__question card small">
-                                <div class="faq__question-title" data-collapse data-target="#question-1-11">
+
+                            <div class="faq__question">
+
+                                <div class="faq__question-title" data-collapse data-target="#question-0-10">
                                     Что мне делать если у меня нет средств для инвестирования?
                                     <div class="faq__question-expand-btn">
                                         <div class="faq__question-expand-btn-inner">
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="collapse" id="question-1-11">
+
+                                <div class="collapse" id="question-0-10">
                                     <div class="collapse__content faq__question-answer">
-                                        Вы можете участвовать в промоакциях платформы и получить тариф Giveaway в качестве
-                                        награды. А так же можно использовать партнерскую программу для заработка без
-                                        вложений.
+                                        Если у вас нет средств для инвестирования - вам лучше начать откладывать их с поступлений, которые у вас уже есть. Arbitroom.io настоятельно не рекомендует вкладывать заемные средства в инвестиции, так как любые инвестиции, так или иначе, связаны с риском, даже банковские вклады
                                     </div>
                                 </div>
+
                             </div>
 
-                            <div class="faq__question card small">
-                                <div class="faq__question-title" data-collapse data-target="#question-1-12">
+
+                            <div class="faq__question">
+
+                                <div class="faq__question-title" data-collapse data-target="#question-0-11">
                                     Есть ли у вас социальные сети?
                                     <div class="faq__question-expand-btn">
                                         <div class="faq__question-expand-btn-inner">
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="collapse" id="question-1-12">
+
+                                <div class="collapse" id="question-0-11">
                                     <div class="collapse__content faq__question-answer">
-                                        Да, вы можете найти их в футере сайта. Подписывайтесь на социальные сети и
-                                        поддерживайте
-                                        развитие платформы, в свою очередь мы будем это поощрять.
+                                        Да, вы можете найти их в футере сайта. Подписывайтесь на социальные сети и поддерживайте развитие платформы, в свою очередь мы будем это поощрять.
                                     </div>
                                 </div>
+
                             </div>
 
-                            <div class="faq__question card small">
-                                <div class="faq__question-title" data-collapse data-target="#question-1-13">
+
+                            <div class="faq__question">
+
+                                <div class="faq__question-title" data-collapse data-target="#question-0-12">
                                     Есть ли у вас презентация компании?
                                     <div class="faq__question-expand-btn">
                                         <div class="faq__question-expand-btn-inner">
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="collapse" id="question-1-13">
+
+                                <div class="collapse" id="question-0-12">
                                     <div class="collapse__content faq__question-answer">
                                         Да, презентация компании есть на английском и русском языках в формате PDF слайдов.
                                     </div>
                                 </div>
+
                             </div>
 
-                            <div class="faq__question card small">
-                                <div class="faq__question-title" data-collapse data-target="#question-1-14">
+
+                            <div class="faq__question">
+
+                                <div class="faq__question-title" data-collapse data-target="#question-0-13">
                                     Где можно посмотреть отзывы о проекте?
                                     <div class="faq__question-expand-btn">
                                         <div class="faq__question-expand-btn-inner">
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="collapse" id="question-1-14">
+
+                                <div class="collapse" id="question-0-13">
                                     <div class="collapse__content faq__question-answer">
-                                        Отзывы клиентов можно найти в наших социальных сетях или на страничках партнеров.
-                                        Также
-                                        вы можете оставлять свои отзывы для развития платформы, за что мы будем вас
-                                        поощрять.
+                                        Отзывы клиентов можно найти в наших социальных сетях или на страничках партнеров. Также вы можете оставлять свои отзывы для развития платформы, мы очень ценим вашу обратную связь.
                                     </div>
                                 </div>
+
                             </div>
 
-                            <div class="faq__question card small">
-                                <div class="faq__question-title" data-collapse data-target="#question-1-15">
+
+                            <div class="faq__question">
+
+                                <div class="faq__question-title" data-collapse data-target="#question-0-14">
                                     Есть ли у вас какие то акции, конкурсы, розыгрыши?
                                     <div class="faq__question-expand-btn">
                                         <div class="faq__question-expand-btn-inner">
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="collapse" id="question-1-15">
+
+                                <div class="collapse" id="question-0-14">
                                     <div class="collapse__content faq__question-answer">
-                                        Да, на платформе Spectra.cash проводятся регулярные розыгрыши и акции,
-                                        подписывайтесь на
-                                        социальные сети, чтобы быть в курсе актуальных событий.
+                                        Да, на платформе Arbitroom.io проводятся регулярные розыгрыши и акции, подписывайтесь на социальные сети, чтобы быть в курсе актуальных событий.
                                     </div>
                                 </div>
+
                             </div>
 
-                            <div class="faq__question card small">
-                                <div class="faq__question-title" data-collapse data-target="#question-1-16">
+
+                            <div class="faq__question">
+
+                                <div class="faq__question-title" data-collapse data-target="#question-0-15">
                                     Могу ли я иметь несколько учетных записей?
                                     <div class="faq__question-expand-btn">
                                         <div class="faq__question-expand-btn-inner">
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="collapse" id="question-1-16">
+
+                                <div class="collapse" id="question-0-15">
                                     <div class="collapse__content faq__question-answer">
                                         Мультиаккаунты запрещены нашими правилами.
                                     </div>
                                 </div>
+
                             </div>
 
-                            <div class="faq__question card small">
-                                <div class="faq__question-title" data-collapse data-target="#question-1-17">
+
+                            <div class="faq__question">
+
+                                <div class="faq__question-title" data-collapse data-target="#question-0-16">
                                     Регламент работы поддержки?
                                     <div class="faq__question-expand-btn">
                                         <div class="faq__question-expand-btn-inner">
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="collapse" id="question-1-17">
+
+                                <div class="collapse" id="question-0-16">
                                     <div class="collapse__content faq__question-answer">
                                         Поддержка работает круглосуточно 24/7
                                     </div>
                                 </div>
+
                             </div>
 
-                            <div class="faq__question card small">
-                                <div class="faq__question-title" data-collapse data-target="#question-1-18">
+
+                            <div class="faq__question">
+
+                                <div class="faq__question-title" data-collapse data-target="#question-0-17">
                                     Где получить дополнительную информацию, если не нашел ответ?
                                     <div class="faq__question-expand-btn">
                                         <div class="faq__question-expand-btn-inner">
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="collapse" id="question-1-18">
+
+                                <div class="collapse" id="question-0-17">
                                     <div class="collapse__content faq__question-answer">
                                         Если вы не нашли ответ - задайте вопрос нашей службе онлайн поддержки клиентов.
                                     </div>
                                 </div>
+
                             </div>
+
+
+
                         </div>
 
                     </div>
 
-                    <button class="faq__question-more-btn more-btn btn btn-text" data-collapse data-target="#collapsedQuestionsInSection-1">
-                        <span class="more-btn__show-more">
-                            Показать больше <svg class="icon" viewBox="0 0 24 24"><use href="img/icons/angle-down-small.svg#svg"></use></svg>
-                        </span>
+                    <button class="faq__question-more-btn more-btn btn btn-text" data-collapse data-target="#collapsedQuestionsInSection-0">
+					<span class="more-btn__show-more">
+						Показать больше
+					</span>
                         <span class="more-btn__hide">
-                            Показать меньше <svg class="icon" viewBox="0 0 24 24"><use href="img/icons/angle-up-small.svg#svg"></use></svg>
-                        </span>
+						Скрыть
+					</span>
                     </button>
 
                 </div>
@@ -1039,542 +1002,494 @@
                 <div class="faq__section-title">Технические</div>
                 <div class="faq__questions">
 
-                    <div class="faq__question card small">
-                        <div class="faq__question-title" data-collapse data-target="#question-2-1">
-                            Насколько безопасно инвестировать в Spectra?
+
+                    <div class="faq__question">
+
+                        <div class="faq__question-title" data-collapse data-target="#question-1-1">
+                            Насколько безопасно инвестировать на платформе Arbitroom
                             <div class="faq__question-expand-btn">
                                 <div class="faq__question-expand-btn-inner">
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse" id="question-2-1">
+
+                        <div class="collapse" id="question-1-1">
                             <div class="collapse__content faq__question-answer">
-                                Инвестирование, особенно в криптовалюту, всегда связано с большими рисками, команда
-                                Spectra.cash минимизировала их за счет того, что монеты бирж для фарминга токенов
-                                покупаются исключительно за счет личных средств платформы Spectra.
+                                Инвестирование, особенно в криптовалютную тематику, всегда связано с большими рисками, наша команда минимизирует риски за счет быстрых сделок в арбитражных ситуациях. Оборотная ликвидность всегда под контролем и не задерживается на биржах дольше, чем этого требует конкретная сделка.
                             </div>
                         </div>
+
                     </div>
 
-                    <div class="faq__question card small">
-                        <div class="faq__question-title" data-collapse data-target="#question-2-2">
+
+                    <div class="faq__question">
+
+                        <div class="faq__question-title" data-collapse data-target="#question-1-2">
                             Какие риски потери средств?
                             <div class="faq__question-expand-btn">
                                 <div class="faq__question-expand-btn-inner">
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse" id="question-2-2">
+
+                        <div class="collapse" id="question-1-2">
                             <div class="collapse__content faq__question-answer">
-                                Вы рискуете потерять средства только в том случае, если все новые криптовалютные проекты
-                                будут убыточные. Учитывая комьюнити и капиталовложения, которые концентрируются в новых
-                                криптопроектах - такой риск сведет практически к нулю.
+                                Вы рискуете потерять средства только в том случае, если криптовалюта перестанет существовать или ее нельзя будет обналичивать.
                             </div>
                         </div>
+
                     </div>
 
-                    <div class="faq__question card small">
-                        <div class="faq__question-title" data-collapse data-target="#question-2-3">
+
+                    <div class="faq__question">
+
+                        <div class="faq__question-title" data-collapse data-target="#question-1-3">
                             Как восстановить пароль?
                             <div class="faq__question-expand-btn">
                                 <div class="faq__question-expand-btn-inner">
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse" id="question-2-3">
+
+                        <div class="collapse" id="question-1-3">
                             <div class="collapse__content faq__question-answer">
                                 Вам необходимо воспользоваться формой восстановления пароля.
                             </div>
                         </div>
+
                     </div>
 
-                    <div class="faq__question card small">
-                        <div class="faq__question-title" data-collapse data-target="#question-2-4">
+
+                    <div class="faq__question">
+
+                        <div class="faq__question-title" data-collapse data-target="#question-1-4">
                             Как защитить аккаунт от взлома?
                             <div class="faq__question-expand-btn">
                                 <div class="faq__question-expand-btn-inner">
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse" id="question-2-4">
+
+                        <div class="collapse" id="question-1-4">
                             <div class="collapse__content faq__question-answer">
-                                Делайте уникальные и сложные пароли для каждой новой регистрации в различных сервисах.
-                                Пароль от почты должен отличаться от пароля на платформе Spectra. Храните пароли в
-                                надежном месте. Также рекомендуем включить все доступные способы защиты в личном
-                                кабинете Spectra.
+                                Делайте уникальные и сложные пароли для каждой новой регистрации в различных сервисах. Пароль от почты должен отличаться от пароля на нашей платформе. Храните пароли в надежном месте. Также рекомендуем включить все доступные способы защиты в личном кабинете.
                             </div>
                         </div>
+
                     </div>
 
-                    <div class="faq__question card small">
-                        <div class="faq__question-title" data-collapse data-target="#question-2-5">
+
+                    <div class="faq__question">
+
+                        <div class="faq__question-title" data-collapse data-target="#question-1-5">
                             Есть ли верификация?
                             <div class="faq__question-expand-btn">
                                 <div class="faq__question-expand-btn-inner">
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse" id="question-2-5">
+
+                        <div class="collapse" id="question-1-5">
                             <div class="collapse__content faq__question-answer">
-                                Верификация личности на платформе Spectra не предусмотрена.
+                                Верификация личности на платформе Arbitroom не предусмотрена.
                             </div>
                         </div>
+
                     </div>
 
-                    <div class="faq__questions-collapse collapse" id="collapsedQuestionsInSection-2">
+
+
+                    <div class="faq__questions-collapse collapse" id="collapsedQuestionsInSection-1">
+
                         <div class="collapse__content">
 
-                            <div class="faq__question card small">
-                                <div class="faq__question-title" data-collapse data-target="#question-2-6">
+
+                            <div class="faq__question">
+
+                                <div class="faq__question-title" data-collapse data-target="#question-1-6">
                                     Есть ли у вас 2fa?
                                     <div class="faq__question-expand-btn">
                                         <div class="faq__question-expand-btn-inner">
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="collapse" id="question-2-6">
+
+                                <div class="collapse" id="question-1-6">
                                     <div class="collapse__content faq__question-answer">
                                         Да, данная опция реализована в личном кабинете.
                                     </div>
                                 </div>
+
                             </div>
 
-                            <div class="faq__question card small">
-                                <div class="faq__question-title" data-collapse data-target="#question-2-7">
+
+                            <div class="faq__question">
+
+                                <div class="faq__question-title" data-collapse data-target="#question-1-7">
                                     Могу ли я пользоваться другой программой 2fa?
                                     <div class="faq__question-expand-btn">
                                         <div class="faq__question-expand-btn-inner">
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="collapse" id="question-2-7">
+
+                                <div class="collapse" id="question-1-7">
                                     <div class="collapse__content faq__question-answer">
-                                        Конечно, помимо всем известного Google Authenticator, можно использовать, как
-                                        минимум три других приложения для этого: Microsoft Authenticator, Authy,
-                                        Яндекс.Ключ.
+                                        Конечно, помимо всем известного Google Authenticator, можно использовать, как минимум три других приложения для этого: Microsoft Authenticator, Authy, Яндекс.Ключ.
                                     </div>
                                 </div>
+
                             </div>
 
+
+
                         </div>
+
                     </div>
 
-                    <button class="faq__question-more-btn more-btn btn btn-text" data-collapse data-target="#collapsedQuestionsInSection-2">
-                        <span class="more-btn__show-more">
-                            Показать больше <svg class="icon" viewBox="0 0 24 24"><use href="img/icons/angle-down-small.svg#svg"></use></svg>
-                        </span>
+                    <button class="faq__question-more-btn more-btn btn btn-text" data-collapse data-target="#collapsedQuestionsInSection-1">
+					<span class="more-btn__show-more">
+						Показать больше
+					</span>
                         <span class="more-btn__hide">
-                            Показать меньше <svg class="icon" viewBox="0 0 24 24"><use href="img/icons/angle-up-small.svg#svg"></use></svg>
-                        </span>
+						Скрыть
+					</span>
                     </button>
 
                 </div>
             </div>
 
             <div class="faq__section">
-                <div class="faq__section-title">Инвестиции и тарифы</div>
+                <div class="faq__section-title">Инвестиции</div>
                 <div class="faq__questions">
 
-                    <div class="faq__question card small">
-                        <div class="faq__question-title" data-collapse data-target="#question-3-1">
+
+                    <div class="faq__question">
+
+                        <div class="faq__question-title" data-collapse data-target="#question-2-1">
                             Как здесь инвестировать?
                             <div class="faq__question-expand-btn">
                                 <div class="faq__question-expand-btn-inner">
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse" id="question-3-1">
+
+                        <div class="collapse" id="question-2-1">
                             <div class="collapse__content faq__question-answer">
-                                Для начала необходимо пройти регистрацию, после чего пополнить личный баланс, выбрать
-                                понравившийся тариф и инвестировать в него.
+                                Для начала необходимо пройти регистрацию, после чего пополнить личный баланс и инвестировать пул ликвидности.
                             </div>
                         </div>
+
                     </div>
 
-                    <div class="faq__question card small">
-                        <div class="faq__question-title" data-collapse data-target="#question-3-2">
+
+                    <div class="faq__question">
+
+                        <div class="faq__question-title" data-collapse data-target="#question-2-2">
                             Какая минимальная сумма пополнения баланса?
                             <div class="faq__question-expand-btn">
                                 <div class="faq__question-expand-btn-inner">
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse" id="question-3-2">
+
+                        <div class="collapse" id="question-2-2">
                             <div class="collapse__content faq__question-answer">
-                                Вы можете пополнить баланс минимум на 1 USDT, но для первоначального пополнения тарифа
-                                минимальная сумма составляет 100 USDT
+                                Вы можете пополнить баланс минимум на 10 USDT, но для первоначального депозита минимальная сумма составляет 100 USDT
                             </div>
                         </div>
+
                     </div>
 
-                    <div class="faq__question card small">
-                        <div class="faq__question-title" data-collapse data-target="#question-3-3">
-                            На какую сумму могу пополнить тарифный план?
+
+                    <div class="faq__question">
+
+                        <div class="faq__question-title" data-collapse data-target="#question-2-3">
+                            На какую сумму могу пополнить?
                             <div class="faq__question-expand-btn">
                                 <div class="faq__question-expand-btn-inner">
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse" id="question-3-3">
+
+                        <div class="collapse" id="question-2-3">
                             <div class="collapse__content faq__question-answer">
-                                Первоначальное пополнения в зависимости от тарифа составляет 100 USDT, 1000 USDT или
-                                2000 USDT. После открытия тарифа - можно пополнять его минимум на 1 USDT.
+                                Минимальная инвестиция составляет 100 USDT. Вы можете пополнять ее в любое время на любую сумму.
                             </div>
                         </div>
+
                     </div>
 
-                    <div class="faq__question card small">
-                        <div class="faq__question-title" data-collapse data-target="#question-3-4">
+
+                    <div class="faq__question">
+
+                        <div class="faq__question-title" data-collapse data-target="#question-2-4">
                             С какими валютами вы работаете?
                             <div class="faq__question-expand-btn">
                                 <div class="faq__question-expand-btn-inner">
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse" id="question-3-4">
+
+                        <div class="collapse" id="question-2-4">
                             <div class="collapse__content faq__question-answer">
                                 На данный момент мы работаем со стейбл коином USDT TRC-20
                             </div>
                         </div>
+
                     </div>
 
-                    <div class="faq__question card small">
-                        <div class="faq__question-title" data-collapse data-target="#question-3-5">
+
+                    <div class="faq__question">
+
+                        <div class="faq__question-title" data-collapse data-target="#question-2-5">
                             Могу ли я пополнить с карты?
                             <div class="faq__question-expand-btn">
                                 <div class="faq__question-expand-btn-inner">
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse" id="question-3-5">
+
+                        <div class="collapse" id="question-2-5">
                             <div class="collapse__content faq__question-answer">
                                 Нет, мы используем исключительно криптовалюту и стейблкоины во избежания разницы курсов.
                             </div>
                         </div>
+
                     </div>
 
-                    <div class="faq__questions-collapse collapse" id="collapsedQuestionsInSection-3">
+
+
+                    <div class="faq__questions-collapse collapse" id="collapsedQuestionsInSection-2">
+
                         <div class="collapse__content">
 
-                            <div class="faq__question card small">
-                                <div class="faq__question-title" data-collapse data-target="#question-3-6">
+
+                            <div class="faq__question">
+
+                                <div class="faq__question-title" data-collapse data-target="#question-2-6">
                                     Какой регламент пополнения средств?
                                     <div class="faq__question-expand-btn">
                                         <div class="faq__question-expand-btn-inner">
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="collapse" id="question-3-6">
+
+                                <div class="collapse" id="question-2-6">
                                     <div class="collapse__content faq__question-answer">
-                                        Обычно средства зачисляются в течении минуты, за редкими исключениями этот
-                                        процесс может занять до 30 мин. Если зачисление по какой либо причине не
-                                        произошло, просим вас обратится к службе онлайн поддержки.
+                                        Обычно средства зачисляются в течении минуты, за редкими исключениями этот процесс может занять до 30 мин. Если зачисление по какой либо причине не произошло, просим вас обратится к службе онлайн поддержки.
                                     </div>
                                 </div>
+
                             </div>
 
-                            <div class="faq__question card small">
-                                <div class="faq__question-title" data-collapse data-target="#question-3-7">
+
+                            <div class="faq__question">
+
+                                <div class="faq__question-title" data-collapse data-target="#question-2-7">
                                     Как мне пополнить если у меня нет USDT?
                                     <div class="faq__question-expand-btn">
                                         <div class="faq__question-expand-btn-inner">
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="collapse" id="question-3-7">
+
+                                <div class="collapse" id="question-2-7">
                                     <div class="collapse__content faq__question-answer">
-                                        Вы можете воспользоваться сервисами обмена
+                                        Для этих целей вы можете воспользоваться сервисами обмена
                                     </div>
                                 </div>
+
                             </div>
 
-                            <div class="faq__question card small">
-                                <div class="faq__question-title" data-collapse data-target="#question-3-8">
-                                    Можно ли пополнить действующий тариф?
+
+                            <div class="faq__question">
+
+                                <div class="faq__question-title" data-collapse data-target="#question-2-8">
+                                    Можно ли пополнить действующий депозит?
                                     <div class="faq__question-expand-btn">
                                         <div class="faq__question-expand-btn-inner">
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="collapse" id="question-3-8">
+
+                                <div class="collapse" id="question-2-8">
                                     <div class="collapse__content faq__question-answer">
-                                        Да, эта функция доступна. Минимальная сумма 1 USDT.
+                                        Да, эта функция доступна. Минимальная сумма пополнения 1 USDT.
                                     </div>
                                 </div>
+
                             </div>
 
-                            <div class="faq__question card small">
-                                <div class="faq__question-title" data-collapse data-target="#question-3-9">
-                                    Могу ли пополнить тариф с внутреннего баланса?
+
+                            <div class="faq__question">
+
+                                <div class="faq__question-title" data-collapse data-target="#question-2-9">
+                                    Могу ли пополнить депозит с внутреннего баланса?
                                     <div class="faq__question-expand-btn">
                                         <div class="faq__question-expand-btn-inner">
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="collapse" id="question-3-9">
+
+                                <div class="collapse" id="question-2-9">
                                     <div class="collapse__content faq__question-answer">
-                                        Да, пополнение тарифа происходит исключительно с личного баланса.
+                                        Да, пополнение происходит исключительно с личного баланса.
                                     </div>
                                 </div>
+
                             </div>
 
-                            <div class="faq__question card small">
-                                <div class="faq__question-title" data-collapse data-target="#question-3-10">
-                                    Могу ли я перейти на другой тарифный план?
+
+                            <div class="faq__question">
+
+                                <div class="faq__question-title" data-collapse data-target="#question-2-10">
+                                    Когда начинает работать моя инвестиция?
                                     <div class="faq__question-expand-btn">
                                         <div class="faq__question-expand-btn-inner">
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="collapse" id="question-3-10">
+
+                                <div class="collapse" id="question-2-10">
                                     <div class="collapse__content faq__question-answer">
-                                        Нет. Но вы можете дополнительно открыть другой тарифный план.
+                                        Инвестиция начинает работу сразу после активации.
                                     </div>
                                 </div>
+
                             </div>
 
-                            <div class="faq__question card small">
-                                <div class="faq__question-title" data-collapse data-target="#question-3-11">
-                                    Сколько тарифов я могу купить одновременно?
-                                    <div class="faq__question-expand-btn">
-                                        <div class="faq__question-expand-btn-inner">
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="collapse" id="question-3-11">
-                                    <div class="collapse__content faq__question-answer">
-                                        Одновременно вы можете иметь 3 активных тарифа, соответственно это Tier 1, Tier
-                                        2 и Tier 3.
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="faq__question card small">
-                                <div class="faq__question-title" data-collapse data-target="#question-3-12">
-                                    Когда начинает работать тарифный план?
-                                    <div class="faq__question-expand-btn">
-                                        <div class="faq__question-expand-btn-inner">
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="collapse" id="question-3-12">
-                                    <div class="collapse__content faq__question-answer">
-                                        Тарифный план начинает работу сразу после его активации.
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="faq__question">
 
-                            <div class="faq__question card small">
-                                <div class="faq__question-title" data-collapse data-target="#question-3-13">
+                                <div class="faq__question-title" data-collapse data-target="#question-2-11">
                                     Включен ли депозит в прибыль?
                                     <div class="faq__question-expand-btn">
                                         <div class="faq__question-expand-btn-inner">
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="collapse" id="question-3-13">
+
+                                <div class="collapse" id="question-2-11">
                                     <div class="collapse__content faq__question-answer">
-                                        Нет. Вы получаете заявленные проценты, а инвестиция возвращается в конце срока
-                                        работы тарифа.
+                                        Нет. Вы получаете заявленные проценты, а инвестиция возвращаются по предварительной заявке о закрытии депозита.
                                     </div>
                                 </div>
+
                             </div>
 
-                            <div class="faq__question card small">
-                                <div class="faq__question-title" data-collapse data-target="#question-3-14">
-                                    Что такое капитализация?
-                                    <div class="faq__question-expand-btn">
-                                        <div class="faq__question-expand-btn-inner">
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="collapse" id="question-3-14">
-                                    <div class="collapse__content faq__question-answer">
-                                        Капитализация - это автоматическое добавление процентов к телу вашей инвестиции
-                                        для увеличения прибыли в конце срока работы тарифа.
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="faq__question card small">
-                                <div class="faq__question-title" data-collapse data-target="#question-3-15">
-                                    Что такое автопродление?
-                                    <div class="faq__question-expand-btn">
-                                        <div class="faq__question-expand-btn-inner">
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="collapse" id="question-3-15">
-                                    <div class="collapse__content faq__question-answer">
-                                        Автопродление - это опция для автоматического продления вашего тарифа на новый
-                                        срок на прежних условиях.
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="faq__question">
 
-                            <div class="faq__question card small">
-                                <div class="faq__question-title" data-collapse data-target="#question-3-16">
+                                <div class="faq__question-title" data-collapse data-target="#question-2-12">
                                     Начисления ежедневные?
                                     <div class="faq__question-expand-btn">
                                         <div class="faq__question-expand-btn-inner">
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="collapse" id="question-3-16">
+
+                                <div class="collapse" id="question-2-12">
                                     <div class="collapse__content faq__question-answer">
                                         Начисление процентов происходят ежедневно.
                                     </div>
                                 </div>
+
                             </div>
 
+
+                            <div class="faq__question">
+
+                                <div class="faq__question-title" data-collapse data-target="#question-2-13">
+                                    Что такое процент за удержание депозита и процентов?
+                                    <div class="faq__question-expand-btn">
+                                        <div class="faq__question-expand-btn-inner">
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="collapse" id="question-2-13">
+                                    <div class="collapse__content faq__question-answer">
+                                        Имеется в виду ситуация, при которой вы не выводите проценты с баланса и не закрываете депозит. При соблюдении этих условий, вы будете наращивать процент прибыли еженедельно.
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="faq__question">
+
+                                <div class="faq__question-title" data-collapse data-target="#question-2-14">
+                                    Что будет если я захочу вывести накопленные проценты?
+                                    <div class="faq__question-expand-btn">
+                                        <div class="faq__question-expand-btn-inner">
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="collapse" id="question-2-14">
+                                    <div class="collapse__content faq__question-answer">
+                                        Вы можете это сделать и будете получать базовую ставку как раньше, а все дополнительные проценты будут сброшены.
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
                         </div>
+
                     </div>
 
-                    <button class="faq__question-more-btn more-btn btn btn-text" data-collapse data-target="#collapsedQuestionsInSection-3">
-                        <span class="more-btn__show-more">
-                            Показать больше <svg class="icon" viewBox="0 0 24 24"><use href="img/icons/angle-down-small.svg#svg"></use></svg>
-                        </span>
+                    <button class="faq__question-more-btn more-btn btn btn-text" data-collapse data-target="#collapsedQuestionsInSection-2">
+					<span class="more-btn__show-more">
+						Показать больше
+					</span>
                         <span class="more-btn__hide">
-                            Показать меньше <svg class="icon" viewBox="0 0 24 24"><use href="img/icons/angle-up-small.svg#svg"></use></svg>
-                        </span>
+						Скрыть
+					</span>
                     </button>
 
                 </div>
@@ -1584,175 +1499,173 @@
                 <div class="faq__section-title">Вывод средств</div>
                 <div class="faq__questions">
 
-                    <div class="faq__question card small">
-                        <div class="faq__question-title" data-collapse data-target="#question-4-1">
+
+                    <div class="faq__question">
+
+                        <div class="faq__question-title" data-collapse data-target="#question-3-1">
                             Как вывести средства?
                             <div class="faq__question-expand-btn">
                                 <div class="faq__question-expand-btn-inner">
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse" id="question-4-1">
+
+                        <div class="collapse" id="question-3-1">
                             <div class="collapse__content faq__question-answer">
                                 Для вывода средств - вам необходимо оформить заявку в соответствующем разделе.
                             </div>
                         </div>
+
                     </div>
 
-                    <div class="faq__question card small">
-                        <div class="faq__question-title" data-collapse data-target="#question-4-2">
+
+                    <div class="faq__question">
+
+                        <div class="faq__question-title" data-collapse data-target="#question-3-2">
                             Какой регламент вывода средств?
                             <div class="faq__question-expand-btn">
                                 <div class="faq__question-expand-btn-inner">
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse" id="question-4-2">
+
+                        <div class="collapse" id="question-3-2">
                             <div class="collapse__content faq__question-answer">
-                                Регламент вывода 24 часа. Мы стараемся обрабатывать заявки как можно быстрее.
+                                Регламент вывода 72 часа. Мы стараемся обрабатывать заявки как можно быстрее.
                             </div>
                         </div>
+
                     </div>
 
-                    <div class="faq__question card small">
-                        <div class="faq__question-title" data-collapse data-target="#question-4-3">
-                            Как часто я могу отправлять заявки на вывод?
+
+                    <div class="faq__question">
+
+                        <div class="faq__question-title" data-collapse data-target="#question-3-3">
+                            Какой регламент вывода депозита?
                             <div class="faq__question-expand-btn">
                                 <div class="faq__question-expand-btn-inner">
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse" id="question-4-3">
+
+                        <div class="collapse" id="question-3-3">
                             <div class="collapse__content faq__question-answer">
-                                Вы можете иметь только одну активную заявку на вывод с личного баланса и одну с
-                                партнерского. Как только статус заявки будет "Выполнена", после этого можно оформить
-                                следующую.
+                                Депозит возвращается в любое время, срок вывода 21 день
                             </div>
                         </div>
+
                     </div>
 
-                    <div class="faq__question card small">
-                        <div class="faq__question-title" data-collapse data-target="#question-4-4">
+
+                    <div class="faq__question">
+
+                        <div class="faq__question-title" data-collapse data-target="#question-3-4">
                             Какая минимальная сумма к выводу?
                             <div class="faq__question-expand-btn">
                                 <div class="faq__question-expand-btn-inner">
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse" id="question-4-4">
+
+                        <div class="collapse" id="question-3-4">
                             <div class="collapse__content faq__question-answer">
                                 Минимальная сумма к выводу составляет 5 USDT
                             </div>
                         </div>
+
                     </div>
 
-                    <div class="faq__question card small">
-                        <div class="faq__question-title" data-collapse data-target="#question-4-5">
+
+                    <div class="faq__question">
+
+                        <div class="faq__question-title" data-collapse data-target="#question-3-5">
                             Есть ли комиссия на вывод?
                             <div class="faq__question-expand-btn">
                                 <div class="faq__question-expand-btn-inner">
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse" id="question-4-5">
+
+                        <div class="collapse" id="question-3-5">
                             <div class="collapse__content faq__question-answer">
-                                Комиссию по выводу средств Spetcra берет на себя.
+                                Комиссия на вывод составляет 5%
                             </div>
                         </div>
+
                     </div>
 
-                    <div class="faq__question card small">
-                        <div class="faq__question-title" data-collapse data-target="#question-4-6">
-                            Есть ли скрытые комиссии?
-                            <div class="faq__question-expand-btn">
-                                <div class="faq__question-expand-btn-inner">
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
+
+
+                    <div class="faq__questions-collapse collapse" id="collapsedQuestionsInSection-3">
+
+                        <div class="collapse__content">
+
+
+                            <div class="faq__question">
+
+                                <div class="faq__question-title" data-collapse data-target="#question-3-6">
+                                    Есть ли скрытые комиссии?
+                                    <div class="faq__question-expand-btn">
+                                        <div class="faq__question-expand-btn-inner">
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                        </div>
+                                    </div>
                                 </div>
+
+                                <div class="collapse" id="question-3-6">
+                                    <div class="collapse__content faq__question-answer">
+                                        Скрытых комиссий нет. Arbitroom предлагает прозрачные условия для всех участников.
+                                    </div>
+                                </div>
+
                             </div>
-                        </div>
-                        <div class="collapse" id="question-4-6">
-                            <div class="collapse__content faq__question-answer">
-                                Скрытых комиссий нет. Spetcra предлагает прозрачные условия для всех участников.
+
+
+                            <div class="faq__question">
+
+                                <div class="faq__question-title" data-collapse data-target="#question-3-7">
+                                    Где посмотреть свой статус заявки на вывод?
+                                    <div class="faq__question-expand-btn">
+                                        <div class="faq__question-expand-btn-inner">
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="collapse" id="question-3-7">
+                                    <div class="collapse__content faq__question-answer">
+                                        Вы можете это сделать в разделе "История операций" в личном кабинете.
+                                    </div>
+                                </div>
+
                             </div>
+
+
+
                         </div>
+
                     </div>
 
-                    <div class="faq__question card small">
-                        <div class="faq__question-title" data-collapse data-target="#question-4-7">
-                            Предусмотрен ли возврат первоначального депозита?
-                            <div class="faq__question-expand-btn">
-                                <div class="faq__question-expand-btn-inner">
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="collapse" id="question-4-7">
-                            <div class="collapse__content faq__question-answer">
-                                Да, первоначальная инвестиция возвращается в конце срока работы тарифа.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="faq__question card small">
-                        <div class="faq__question-title" data-collapse data-target="#question-4-8">
-                            Где посмотреть свой статус заявки на вывод?
-                            <div class="faq__question-expand-btn">
-                                <div class="faq__question-expand-btn-inner">
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="collapse" id="question-4-8">
-                            <div class="collapse__content faq__question-answer">
-                                Вы можете это сделать в разделе "История операций" в личном кабинете.
-                            </div>
-                        </div>
-                    </div>
+                    <button class="faq__question-more-btn more-btn btn btn-text" data-collapse data-target="#collapsedQuestionsInSection-3">
+					<span class="more-btn__show-more">
+						Показать больше
+					</span>
+                        <span class="more-btn__hide">
+						Скрыть
+					</span>
+                    </button>
 
                 </div>
             </div>
@@ -1761,321 +1674,214 @@
                 <div class="faq__section-title">Партнерские</div>
                 <div class="faq__questions">
 
-                    <div class="faq__question card small">
-                        <div class="faq__question-title" data-collapse data-target="#question-5-1">
+
+                    <div class="faq__question">
+
+                        <div class="faq__question-title" data-collapse data-target="#question-4-1">
                             Есть ли партнерская программа?
                             <div class="faq__question-expand-btn">
                                 <div class="faq__question-expand-btn-inner">
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse" id="question-5-1">
+
+                        <div class="collapse" id="question-4-1">
                             <div class="collapse__content faq__question-answer">
-                                Да, Spetcra предусмотрела обширную партнерскую программу, смотрите раздел "Партнерские
-                                материалы" - вкладка PDF. Или воспользуйтесь прямой ссылкой на презентацию.
+                                Да, платформа Arbitroom предусмотрела обширную партнерскую программу, смотрите раздел "Партнерские материалы" или воспользуйтесь прямой ссылкой на презентацию.
                             </div>
                         </div>
+
                     </div>
 
-                    <div class="faq__question card small">
-                        <div class="faq__question-title" data-collapse data-target="#question-5-2">
+
+                    <div class="faq__question">
+
+                        <div class="faq__question-title" data-collapse data-target="#question-4-2">
                             Какие возможности партнерской программы?
                             <div class="faq__question-expand-btn">
                                 <div class="faq__question-expand-btn-inner">
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse" id="question-5-2">
+
+                        <div class="collapse" id="question-4-2">
                             <div class="collapse__content faq__question-answer">
-                                Партнерская программа предусматривает получение дохода от пополнения тарифов
-                                привлеченных вами клиентов и составляет 21 уровень в глубину в зависимости от
-                                партнерского статуса.
+                                Партнерская программа предусматривает получение дохода от инвестиций привлеченных вами клиентов и от их прибыли. 5 уровеней в глубину в зависимости от партнерского статуса.
                             </div>
                         </div>
+
                     </div>
 
-                    <div class="faq__question card small">
-                        <div class="faq__question-title" data-collapse data-target="#question-5-3">
+
+                    <div class="faq__question">
+
+                        <div class="faq__question-title" data-collapse data-target="#question-4-3">
                             Как пригласить партнера?
                             <div class="faq__question-expand-btn">
                                 <div class="faq__question-expand-btn-inner">
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse" id="question-5-3">
+
+                        <div class="collapse" id="question-4-3">
                             <div class="collapse__content faq__question-answer">
-                                Вам необходимо передать будущему партнеру вашу партнерскую ссылку, которую можно найти в
-                                разделе "Мои партнеры".
+                                Вам необходимо передать будущему партнеру вашу партнерскую ссылку, которую можно найти в разделе "Мои партнеры".
                             </div>
                         </div>
+
                     </div>
 
-                    <div class="faq__question card small">
-                        <div class="faq__question-title" data-collapse data-target="#question-5-4">
-                            Можно ли зарабатывать без вложений?
+
+                    <div class="faq__question">
+
+                        <div class="faq__question-title" data-collapse data-target="#question-4-4">
+                            Почему партнерские средства зачисляются на другой баланс?
                             <div class="faq__question-expand-btn">
                                 <div class="faq__question-expand-btn-inner">
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse" id="question-5-4">
+
+                        <div class="collapse" id="question-4-4">
                             <div class="collapse__content faq__question-answer">
-                                Вы можете заработать без вложений, участвуя в наших регулярных конкурсах и промоакциях.
-                                А так же приглашая новых партнеров.
+                                Это сделано для удобства отслеживания прибыли от приглашенных партнеров.
                             </div>
                         </div>
+
                     </div>
 
-                    <div class="faq__question card small">
-                        <div class="faq__question-title" data-collapse data-target="#question-5-5">
-                            Как начисляются бонусы?
+
+                    <div class="faq__question">
+
+                        <div class="faq__question-title" data-collapse data-target="#question-4-5">
+                            Какая минимальная сумма к выводу партнерских начислений
                             <div class="faq__question-expand-btn">
                                 <div class="faq__question-expand-btn-inner">
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
-                                    <svg class="icon minus" viewBox="0 0 24 24">
-                                        <use href="/img/icons/minus.svg#svg"></use>
-                                    </svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                    <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse" id="question-5-5">
+
+                        <div class="collapse" id="question-4-5">
                             <div class="collapse__content faq__question-answer">
-                                Бонусы за привлечение партнеров начисляются на ваш отдельный партнерский счет и они
-                                доступны к выводу моментально.
+                                Минимальная сумма к выводу составляет 5 USDT
                             </div>
                         </div>
+
                     </div>
 
-                    <div class="faq__questions-collapse collapse" id="collapsedQuestionsInSection-5">
+
+
+                    <div class="faq__questions-collapse collapse" id="collapsedQuestionsInSection-4">
+
                         <div class="collapse__content">
 
-                            <div class="faq__question card small">
-                                <div class="faq__question-title" data-collapse data-target="#question-5-6">
-                                    Почему партнерские средства зачисляются на другой баланс?
-                                    <div class="faq__question-expand-btn">
-                                        <div class="faq__question-expand-btn-inner">
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="collapse" id="question-5-6">
-                                    <div class="collapse__content faq__question-answer">
-                                        Это сделано для удобства отслеживания прибыли от приглашенных партнеров.
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="faq__question card small">
-                                <div class="faq__question-title" data-collapse data-target="#question-5-7">
-                                    Какая минимальная сумма к выводу партнерских начислений?
-                                    <div class="faq__question-expand-btn">
-                                        <div class="faq__question-expand-btn-inner">
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="collapse" id="question-5-7">
-                                    <div class="collapse__content faq__question-answer">
-                                        Минимальная сумма к выводу составляет 5 USDT
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="faq__question">
 
-                            <div class="faq__question card small">
-                                <div class="faq__question-title" data-collapse data-target="#question-5-8">
+                                <div class="faq__question-title" data-collapse data-target="#question-4-6">
                                     Какой регламент вывода партнерских средств?
                                     <div class="faq__question-expand-btn">
                                         <div class="faq__question-expand-btn-inner">
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="collapse" id="question-5-8">
+
+                                <div class="collapse" id="question-4-6">
                                     <div class="collapse__content faq__question-answer">
-                                        Регламент вывода партнерских средств составляет 24 часа. Мы стараемся
-                                        обрабатывать заявки как можно быстрее.
+                                        Регламент вывода партнерских средств составляет 72 часа. Мы стараемся обрабатывать заявки как можно быстрее.
                                     </div>
                                 </div>
+
                             </div>
 
-                            <div class="faq__question card small">
-                                <div class="faq__question-title" data-collapse data-target="#question-5-9">
+
+                            <div class="faq__question">
+
+                                <div class="faq__question-title" data-collapse data-target="#question-4-7">
                                     Есть ли комиссия на вывод партнерских начислений?
                                     <div class="faq__question-expand-btn">
                                         <div class="faq__question-expand-btn-inner">
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="collapse" id="question-5-9">
+
+                                <div class="collapse" id="question-4-7">
                                     <div class="collapse__content faq__question-answer">
-                                        Комиссии на вывод не предусмотрены.
+                                        Предусмотрена стандартная комиссия на любой вывод средств в размере 5%
                                     </div>
                                 </div>
+
                             </div>
 
-                            <div class="faq__question card small">
-                                <div class="faq__question-title" data-collapse data-target="#question-5-10">
+
+                            <div class="faq__question">
+
+                                <div class="faq__question-title" data-collapse data-target="#question-4-8">
                                     Где я могу увидеть количество своих партнеров и партнерские начисления?
                                     <div class="faq__question-expand-btn">
                                         <div class="faq__question-expand-btn-inner">
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="collapse" id="question-5-10">
+
+                                <div class="collapse" id="question-4-8">
                                     <div class="collapse__content faq__question-answer">
                                         Эта информация уже доступна в разделе "Мои партнеры".
                                     </div>
                                 </div>
+
                             </div>
 
-                            <div class="faq__question card small">
-                                <div class="faq__question-title" data-collapse data-target="#question-5-11">
-                                    Получаю ли я проценты за автопродление тарифа моим партнером?
+
+                            <div class="faq__question">
+
+                                <div class="faq__question-title" data-collapse data-target="#question-4-9">
+                                    Получаю ли я проценты за открытие депозита моим партнером
                                     <div class="faq__question-expand-btn">
                                         <div class="faq__question-expand-btn-inner">
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
+                                            <svg class="icon minus" viewBox="0 0 24 24"><use href="/img/icons/minus.svg#svg"/></svg>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="collapse" id="question-5-11">
+
+                                <div class="collapse" id="question-4-9">
                                     <div class="collapse__content faq__question-answer">
-                                        Да, вы получаете проценты за автопродление тарифа.
+                                        Да, вы получаете проценты за открытие депозита вашим партнером.
                                     </div>
                                 </div>
+
                             </div>
 
-                            <div class="faq__question card small">
-                                <div class="faq__question-title" data-collapse data-target="#question-5-12">
-                                    Получаю ли я проценты за пополнение тарифа моим партнером?
-                                    <div class="faq__question-expand-btn">
-                                        <div class="faq__question-expand-btn-inner">
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="collapse" id="question-5-12">
-                                    <div class="collapse__content faq__question-answer">
-                                        Да, вы получаете проценты от пополнения тарифа вашим партнером.
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="faq__question card small">
-                                <div class="faq__question-title" data-collapse data-target="#question-5-13">
-                                    Если партнер пополнил с баланса - получаю ли я прибыль?
-                                    <div class="faq__question-expand-btn">
-                                        <div class="faq__question-expand-btn-inner">
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="collapse" id="question-5-13">
-                                    <div class="collapse__content faq__question-answer">
-                                        Да, если партнер пополнил с баланса - вы получаете партнерские проценты.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="faq__question card small">
-                                <div class="faq__question-title" data-collapse data-target="#question-5-14">
-                                    Получаю ли я проценты за капитализацию тарифа моим партнером?
-                                    <div class="faq__question-expand-btn">
-                                        <div class="faq__question-expand-btn-inner">
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                            <svg class="icon minus" viewBox="0 0 24 24">
-                                                <use href="/img/icons/minus.svg#svg"></use>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="collapse" id="question-5-14">
-                                    <div class="collapse__content faq__question-answer">
-                                        Если ваш партнер пользуется капитализацией процентов, дополнительная партнерская
-                                        прибыль не начисляется.
-                                    </div>
-                                </div>
-                            </div>
 
                         </div>
+
                     </div>
 
-                    <button class="faq__question-more-btn more-btn btn btn-text" data-collapse data-target="#collapsedQuestionsInSection-5">
-                        <span class="more-btn__show-more">
-                            Показать больше <svg class="icon" viewBox="0 0 24 24"><use href="img/icons/angle-down-small.svg#svg"></use></svg>
-                        </span>
+                    <button class="faq__question-more-btn more-btn btn btn-text" data-collapse data-target="#collapsedQuestionsInSection-4">
+					<span class="more-btn__show-more">
+						Показать больше
+					</span>
                         <span class="more-btn__hide">
-                            Показать меньше <svg class="icon" viewBox="0 0 24 24"><use href="img/icons/angle-up-small.svg#svg"></use></svg>
-                        </span>
+						Скрыть
+					</span>
                     </button>
 
                 </div>
@@ -2086,97 +1892,94 @@
 
 </div>
 
-<div class="footer__wrapper">
-    <div class="container">
-        <footer class="footer">
-            <h2 class="title">
-                <div>
-                    Начните<br/>
-                    инвестировать<br/>
-                    сегодня
-                </div>
-                <div class="footer__img">
-                    <img src="img/arrow.svg" alt=""/>
-                </div>
+
+<!-- FOOTER-->
+
+<div class="container dark">
+    <footer class="footer">
+        <div class="footer__main">
+            <h2 class="footer__title">
+                Заработайте<br>
+                сейчас независимо от&nbsp;тренда
             </h2>
-            <div class="footer__header header" id="footerHeader">
-                <a class="header__logo" href="index.html">
-                    <img class="desktop" src="img/logo-inverted.svg" alt="">
-                    <img class="mobile" src="img/logo-small-inverted.svg" alt="">
+            <img class="footer__background" src="img/footer-background.png" alt="">
+        </div>
+        <div class="footer__header header" id="footerHeader">
+            <a class="header__logo" href="index.html">
+                <img class="desktop" src="img/logo.svg" alt="">
+            </a>
+            <nav class="header__nav"
+                 data-toggle-class="inactive"
+                 data-target="!self"
+                 data-reason="collapsed-hor"
+            >
+                <a href="about.html">О нас</a>
+                <a href="pool.html">Пул ликвидности</a>
+                <a href="partners.html">Партнерам</a>
+                <a href="FAQ.html">FAQ</a>
+                <a href="contacts.html">Контакты</a>
+            </nav>
+            <div class="header__language language dropdown">
+                <div class="language__label dropdown__trigger">
+                    <span>Ru</span>
+                    <svg class="icon">
+                        <use href="img/icons/angle-down.svg#svg"/>
+                    </svg>
+                </div>
+                <div class="language__menu dropdown__menu">
+                    <div class="language__menu-item dropdown__menu-item selected">
+                        <img src="img/flags/ru.svg" alt="">RU
+                    </div>
+                    <div class="language__menu-item dropdown__menu-item">
+                        <img src="img/flags/en.svg" alt="">EN
+                    </div>
+                    <div class="language__menu-item dropdown__menu-item">
+                        <img src="img/flags/fi.svg" alt="">FI
+                    </div>
+                    <div class="language__menu-item dropdown__menu-item">
+                        <img src="img/flags/kz.svg" alt="">KZ
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__divider"></div>
+        <div class="footer__links">
+            <div class="footer__social">
+                <a href="https://t.me/IDOSmart" target="_blank">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <use href="img/icons/social-telegram.svg#svg"/>
+                    </svg>
+                    Телеграм канал
                 </a>
-                <nav class="header__nav"
-                     data-toggle-class="inactive"
-                     data-target="!self"
-                     data-reason="collapsed-hor"
-                >
-                    <a href="about.html">О нас</a>
-                    <a href="tariffs.html">Тарифы</a>
-                    <a href="partners.html">Партнерам</a>
-                    <a href="FAQ.html">FAQ</a>
-                    <a href="contacts.html">Контакты</a>
-                </nav>
-                <div class="header__language language dropdown">
-                    <div class="language__label dropdown__trigger">
-                        <span>Ru</span>
-                        <svg class="icon">
-                            <use href="img/icons/angle-down.svg#svg"/>
-                        </svg>
-                    </div>
-                    <div class="language__menu dropdown__menu">
-                        <div class="language__menu-item dropdown__menu-item selected">
-                            <img src="img/flags/ru.svg" alt="">RU
-                        </div>
-                        <div class="language__menu-item dropdown__menu-item">
-                            <img src="img/flags/en.svg" alt="">EN
-                        </div>
-                        <div class="language__menu-item dropdown__menu-item">
-                            <img src="img/flags/fi.svg" alt="">FI
-                        </div>
-                        <div class="language__menu-item dropdown__menu-item">
-                            <img src="img/flags/kz.svg" alt="">KZ
-                        </div>
-                    </div>
-                </div>
+                <a href="https://t.me/IDOSmartchat" target="_blank">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <use href="img/icons/social-telegram.svg#svg"/>
+                    </svg>
+                    Телеграм чат
+                </a>
+                <a href="mailto:support@spectra.cash" target="_blank">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <use href="img/icons/social-mail.svg#svg"/>
+                    </svg>
+                    Почта
+                </a>
+                <a href="https://www.youtube.com/channel/UCW43vzZd-iD_eXoW3tj-WxQ" target="_blank">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <use href="img/icons/social-youtube.svg#svg"/>
+                    </svg>
+                    YouTube
+                </a>
             </div>
-            <div class="footer__divider"></div>
-            <div class="footer__links">
-                <div class="footer__social">
-                    <a href="https://t.me/IDOSmart" target="_blank">
-                        <svg class="icon" viewBox="0 0 24 24">
-                            <use href="img/icons/social-telegram.svg#svg" />
-                        </svg>
-                        Телеграм канал
-                    </a>
-                    <a href="https://t.me/IDOSmartchat" target="_blank">
-                        <svg class="icon" viewBox="0 0 24 24">
-                            <use href="img/icons/social-telegram.svg#svg" />
-                        </svg>
-                        Телеграм чат
-                    </a>
-                    <a href="mailto:support@spectra.cash" target="_blank">
-                        <svg class="icon" viewBox="0 0 24 24">
-                            <use href="img/icons/social-mail.svg#svg" />
-                        </svg>
-                        Почта
-                    </a>
-                    <a href="https://www.youtube.com/channel/UCW43vzZd-iD_eXoW3tj-WxQ" target="_blank">
-                        <svg class="icon" viewBox="0 0 24 24">
-                            <use href="img/icons/social-youtube.svg#svg" />
-                        </svg>
-                        YouTube
-                    </a>
+            <div class="footer__other">
+                <div class="footer__copyright">
+                    © 2022 Spectra. All rights reserved.
                 </div>
-                <div class="footer__other">
-                    <div class="footer__copyright">
-                        © 2022 Spectra. All rights reserved.
-                    </div>
-                    <a class="footer__privacy-policy link" href="./Privacy-Policy.pdf" target="_blank">
-                        Политика конфиденциальности
-                    </a>
-                </div>
+                <a class="footer__privacy-policy link" href="./Privacy-Policy.pdf" target="_blank">
+                    Политика конфиденциальности
+                </a>
             </div>
-        </footer>
-    </div>
+        </div>
+    </footer>
 </div>
 
 
