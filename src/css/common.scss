@@ -25,6 +25,7 @@ div, span, h1, h2, p  {
 html {
 	font-size: 16px;
 	--rem: 16;
+	overflow-x: hidden;
 
 
 	// CSS VARIABLES
@@ -459,6 +460,14 @@ $left-shift: 0.5rem;
 
 	.menu__logo img {
 		width: get-adaptive-value(12.25rem, 7.75rem)
+	}
+}
+
+@media (max-width: 1700px) {
+
+	html {
+		font-size: 15px;
+		--rem: 15;
 	}
 }
 
