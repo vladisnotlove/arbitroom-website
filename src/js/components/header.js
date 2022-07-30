@@ -30,14 +30,14 @@ window.addEventListener('load', () => {
 		clearTimeout(bodyEnableScrollTimeout);
 		menu.classList.add("open");
 		menuOverlay.classList.add("open");
-		body.classList.add("disable-scroll");
+		document.documentElement.classList.add("disable-scroll");
 	}
 	const closeMenu = () => {
 		clearTimeout(bodyEnableScrollTimeout);
 		menu.classList.remove("open");
 		menuOverlay.classList.remove("open");
 		bodyEnableScrollTimeout = setTimeout(() => {
-			body.classList.remove("disable-scroll");
+			document.documentElement.classList.remove("disable-scroll");
 		}, cssVars.animationDisappear * 1000);
 	}
 	headerBurger.addEventListener("click", openMenu);

@@ -43,12 +43,12 @@
 .link {
 	cursor: pointer;
 	text-decoration: underline;
-	transition: color $animation-unhover;
+	transition: color $animation-normal;
 
 	&:hover {
 		color: $color-prime-main;
 		text-decoration: none;
-		transition: color $animation-hover;
+		transition: color $animation-fast;
 	}
 }
 
@@ -63,12 +63,12 @@
 	background: $color-dark-background;
 	opacity: 0;
 	pointer-events: none;
-	transition: opacity $animation-disappear;
+	transition: opacity $animation-slow;
 
 	&.open {
 		opacity: 1;
 		pointer-events: auto;
-		transition: opacity $animation-appear;
+		transition: opacity $animation-normal;
 	}
 }
 

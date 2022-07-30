@@ -19,12 +19,12 @@
 
   opacity: 0;
   pointer-events: none;
-  transition: opacity $animation-disappear;
+  transition: opacity $animation-slow;
 
   &.open {
     opacity: 1;
     pointer-events: auto;
-    animation: fadeOut $animation-appear;
+    animation: fadeOut $animation-normal;
   }
 }
 

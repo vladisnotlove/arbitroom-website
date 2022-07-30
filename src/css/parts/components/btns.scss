@@ -39,7 +39,7 @@
 	background: 0 0;
 	border: 1px solid $color-prime-main;
 	color: $color-text-prime;
-	transition: background $animation-unhover;
+	transition: background $animation-normal;
 	box-shadow: none;
 
 	.icon {
@@ -49,7 +49,7 @@
 	&:hover:not(.without-hover) {
 		box-shadow: none;
 		background: $color-action-hover;
-		transition: background $animation-hover;
+		transition: background $animation-fast;
 	}
 }
 

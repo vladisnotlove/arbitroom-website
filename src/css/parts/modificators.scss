@@ -1,6 +1,6 @@
 @import "variables";
 
-body.disable-scroll {
+html.disable-scroll {
 	overflow: hidden;
 	scroll-behavior: auto;
 	padding-right: $scrollbar-width;

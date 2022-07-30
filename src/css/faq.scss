@@ -98,7 +98,7 @@
 		left: 0;
 		width: 1.5rem;
 		height: 1.5rem;
-		transition: transform $animation-appear;
+		transition: transform $animation-normal;
 	}
 
 	.icon.minus:last-child {
@@ -107,7 +107,7 @@
 		left: 0;
 		width: 1.5rem;
 		height: 1.5rem;
-		transition: transform $animation-appear;
+		transition: transform $animation-normal;
 	}
 }
 
@@ -117,12 +117,12 @@
 
 		.icon.minus:first-child {
 			transform: rotate(-180deg);
-			transition: transform $animation-appear;
+			transition: transform $animation-normal;
 		}
 
 		.icon.minus:last-child {
 			transform: rotate(-270deg);
-			transition: transform $animation-appear;
+			transition: transform $animation-normal;
 		}
 
 	}
