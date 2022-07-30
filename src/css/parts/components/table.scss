@@ -1,4 +1,5 @@
 @import "../variables";
+@import "../mixins";
 
 
 // table
@@ -121,6 +122,90 @@
 }
 
 
+// vert table
+
+.ver-table {
+  display: table;
+  width: 100%;
+  max-width: 100%;
+  @include paper;
+}
+
+.ver-table__header {
+  display: table-header-group;
+
+  .ver-table__cell {
+    color: $color-text-more-secondary;
+    border-bottom: 1px solid $color-divider;
+    border-top: none;
+  }
+}
+
+.ver-table__body {
+  display: table-row-group;
+
+  .ver-table__row:first-child {
+    .ver-table__cell {
+      border-top: none;
+    }
+  }
+
+  .ver-table__cell {
+    color: $color-text-prime;
+  }
+}
+
+.ver-table__footer {
+  border-top: 1px solid $color-divider;
+  padding: 1rem;
+  width: 100%;
+}
+
+.ver-table__row {
+  display: table-row;
+  width: 100%;
+}
+
+.ver-table__row {
+
+  &.selected {
+    color: $color-text-prime;
+    background: change-color($color-prime-main, $alpha: 0.08);
+  }
+
+}
+
+.ver-table__cell {
+  display: table-cell;
+  padding: 0.75rem 1rem;
+  border-top: 1px solid $color-divider;
+  @include typography-body2;
+  color: $color-text-more-secondary;
+  text-align: left;
+  vertical-align: middle;
+
+  &.align-left {
+    text-align: left;
+  }
+
+  &.align-right {
+    text-align: right;
+  }
+
+  &.align-center {
+    text-align: center;
+  }
+}
+
+.ver-table__cell-value {
+  display: inline-block;
+}
+
+.ver-table__cell-label {
+  display: none;
+}
+
+
 @media screen and (max-width: $small-tablet) {
 
   // table
@@ -220,6 +305,58 @@
     display: block;
     margin-top: 0.5rem;
     margin-left: -0.75rem;
+  }
+
+  // vert table
+
+  .ver-table {
+    table-layout: fixed;
+    @include disable-paper;
+    border-spacing: 0.5rem 0;
+    margin: 0 -0.5rem;
+  }
+
+  .ver-table__header > .ver-table__row > .ver-table__cell {
+    @include paper-top;
+  }
+
+  .ver-table__body > .ver-table__row > .ver-table__cell {
+    @include paper-middle;
+  }
+
+  .ver-table__body > .ver-table__row:last-child > .ver-table__cell {
+    @include paper-bottom;
+  }
+
+
+  .ver-table__cell {
+    width: calc(#{$mobile} - #{$container-padding-adaptive} * 2);
+    max-width: calc(100vwv - #{$container-padding-adaptive} * 2);
+    border: none !important;
+
+    &:first-child {
+      display: none;
+    }
+  }
+
+  .ver-table__cell-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .ver-table__cell-label {
+    display: block;
+  }
+
+}
+
+@media (max-width: $mobile) {
+
+  .ver-table__cell {
+    width: calc(#{$mobile} - #{$container-padding-mobile * 2});
+    max-width: calc(100vw - #{$container-padding-mobile * 2});
   }
 
 }

@@ -77,11 +77,8 @@
 @mixin with-horizontal-scrollbar-in-container-adaptive($without-padding: false) {
 	overflow-x: auto;
 
-	@if ($without-padding ) {
-
-		padding-left: $container-padding-adaptive;
-		padding-right: $container-padding-adaptive;
-	}
+	padding-left: $container-padding-adaptive;
+	padding-right: $container-padding-adaptive;
 	margin-left: calc(#{$container-padding-adaptive} * -1);
 	margin-right: calc(#{$container-padding-adaptive} * -1);
 
@@ -113,4 +110,37 @@
 	background: $color-background-upper1;
 	color: $color-text-prime;
 	border-radius: 1rem;
+}
+
+@mixin paper-top {
+	background: $color-background-upper1;
+	color: $color-text-prime;
+	border-radius: 1rem 1rem 0 0;
+}
+
+@mixin paper-middle {
+	background: $color-background-upper1;
+	color: $color-text-prime;
+	border-radius: 0;
+}
+
+@mixin paper-bottom {
+	background: $color-background-upper1;
+	color: $color-text-prime;
+	border-radius: 0 0 1rem 1rem;
+}
+
+
+@mixin disable-paper {
+	background: initial;
+	color: initial;
+	border-radius: initial;
+}
+
+@mixin cursor-grab {
+	cursor: grab;
+
+	&:active {
+		cursor: grabbing;
+	}
 }

@@ -146,7 +146,7 @@
 
 // ADAPTIVE
 
-@media (max-width: 1280px) {
+@media (max-width: $small-laptop) {
   .pool__table-percent-cell {
     width: 25%;
   }

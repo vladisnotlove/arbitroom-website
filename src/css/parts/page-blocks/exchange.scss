@@ -1,0 +1,186 @@
+@import "../variables";
+@import "../mixins";
+
+// exchange
+
+.exchange {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "title title d "
+    "table table table";
+  column-gap: 1rem;
+}
+
+.exchange__title {
+  grid-area: title;
+  align-self: center;
+  margin-bottom: 5.875rem;
+}
+
+.exchange__description {
+  grid-area: d;
+  align-self: center;
+  margin-bottom: 5.875rem;
+}
+
+.exchange__table-container {
+  grid-area: table;
+  overflow: auto;
+}
+
+
+.exchange__subtitle {
+  @include typography-subtitle1;
+  margin-top: 1rem;
+}
+
+.exchange__description-text {
+  @include typography-body1;
+  margin-bottom: 2.5rem;
+}
+
+.exchange__description-buttons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+
+.exchange__table-container {
+  @include paper;
+  overflow: auto;
+  @include with-custom-scrollbar;
+
+  .ver-table {
+    @include disable-paper;
+  }
+}
+
+.exchange__exchange-token {
+  @include typography-h6;
+  color: $color-text-more-secondary;
+}
+
+.exchange__exchange {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  @include typography-h6;
+}
+
+.exchange__token {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.exchange__token-full {
+  @include typography-h6;
+}
+
+.exchange__token-short {
+  @include typography-subtitle2;
+  color: $color-text-more-secondary;
+}
+
+
+
+// ADAPTIVE
+
+@media (max-width: $desktop) {
+
+  .exchange__title {
+    margin-bottom: get-adaptive-value(5.875rem, 1.5rem);
+  }
+
+  .exchange__description {
+    margin-bottom: get-adaptive-value(5.875rem, 1.5rem);
+  }
+
+}
+
+@media (max-width: $laptop) {
+
+  .exchange {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "title title d "
+      "table table table";
+  }
+
+  .exchange__description-text {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+  }
+
+}
+
+@media (max-width: $small-laptop) {
+
+  .exchange__description-buttons {
+    gap: 1rem;
+  }
+
+}
+
+@media (max-width: $tablet) {
+
+  .exchange {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "d"
+      "table";
+  }
+
+  .exchange__title {
+    margin-bottom: 2rem;
+  }
+
+  .exchange__subtitle {
+    @include typography-body2-text;
+    color: $color-text-secondary;
+  }
+
+  .exchange__description-text {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+}
+
+@media (max-width: $small-tablet) {
+
+  .exchange__table-container {
+    @include disable-paper;
+    @include without-scrollbar;
+    margin-left: calc(#{$container-padding-adaptive} * -1);
+    margin-right: calc(#{$container-padding-adaptive} * -1);
+  }
+
+
+  .exchange__table {
+    width: fit-content;
+    padding-left: $container-padding-adaptive;
+    padding-right: $container-padding-adaptive;
+    @include cursor-grab;
+  }
+
+  .exchange__token {
+    padding-left: 0.5rem;
+    padding-top: 0.25rem;
+  }
+
+  .exchange__token-full {
+    @include typography-h5;
+  }
+
+}
+
+@media (max-width: $mobile) {
+
+  .exchange__description-text {
+    @include typography-body1-adaptive;
+  }
+}

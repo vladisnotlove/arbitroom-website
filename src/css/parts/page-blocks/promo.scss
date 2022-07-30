@@ -115,7 +115,7 @@
 
 }
 
-@media (max-width: 1200px) {
+@media (max-width: $small-laptop) {
 
   .promo__info {
     font-size: 1.25rem;
@@ -145,11 +145,7 @@
     margin-left: calc(#{$container-padding-adaptive} * -1);
     margin-right: calc(#{$container-padding-adaptive} * -1);
     @include without-scrollbar;
-    cursor: grab;
-
-    &:active {
-      cursor: grabbing;
-    }
+    @include cursor-grab;
   }
 
   .promo__cards {
