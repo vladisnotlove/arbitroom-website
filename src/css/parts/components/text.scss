@@ -1,0 +1,92 @@
+@import "../variables";
+@import "../mixins";
+
+
+.text {
+  font-family: 'Golos', serif;
+  font-style: normal;
+  @include typography-h5;
+
+  &.small {
+    @include typography-body1;
+    color: $color-text-secondary;
+  }
+
+  &.big {
+    @include typography-h4;
+  }
+
+  &.margin-bottom-small {
+    margin-bottom: 1.5rem;
+  }
+
+  &.margin-bottom-medium {
+    margin-bottom: 2rem;
+  }
+
+  &.margin-bottom-big {
+    margin-bottom: 3rem;
+  }
+
+}
+
+@media (max-width: $laptop) {
+
+  .text {
+    font-family: 'Golos', serif;
+    font-style: normal;
+    font-size: 1.25rem;
+
+    &.small {
+      font-size: 1rem;
+    }
+
+    &.big {
+      font-size: 1.75rem;
+    }
+
+    &.margin-bottom-small {
+      margin-bottom: 1.25rem;
+    }
+
+    &.margin-bottom-medium {
+      margin-bottom: 1.75rem;
+    }
+
+    &.margin-bottom-big {
+      margin-bottom: 2.5rem;
+    }
+
+  }
+}
+
+@media (max-width: $mobile) {
+
+  .text {
+    font-family: 'Golos', serif;
+    @include typography-h4-adaptive;
+
+    &.small {
+      @include typography-body1-adaptive;
+    }
+
+    &.big {
+      @include typography-h3-adaptive;
+    }
+
+    &.margin-bottom-small {
+      margin-bottom: 2rem;
+    }
+
+    &.margin-bottom-medium {
+      margin-bottom: 2rem;
+    }
+
+    &.margin-bottom-big {
+      margin-bottom: 2rem;
+    }
+
+  }
+
+
+}

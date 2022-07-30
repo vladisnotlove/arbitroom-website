@@ -12,8 +12,10 @@
 <body>
 
 
-
 <div id="dropdownOverlay"></div>
+
+
+<!-- MODALS -->
 
 <!-- registration modal -->
 <div class="modal" id="registrationModal">
@@ -26,7 +28,7 @@
                 </span>
                 <button class="modal__dialog-close-btn icon-btn rounded small">
                     <svg class="icon" viewBox="0 0 20 20">
-                        <use href="img/icons/close-rounded.svg#svg" />
+                        <use href="img/icons/close-rounded.svg#svg"/>
                     </svg>
                 </button>
             </div>
@@ -193,7 +195,7 @@
                 </span>
                 <button class="modal__dialog-close-btn icon-btn rounded small">
                     <svg class="icon" viewBox="0 0 20 20">
-                        <use href="img/icons/close-rounded.svg#svg" />
+                        <use href="img/icons/close-rounded.svg#svg"/>
                     </svg>
                 </button>
             </div>
@@ -270,7 +272,7 @@
                 </span>
                 <button class="modal__dialog-close-btn icon-btn rounded small">
                     <svg class="icon" viewBox="0 0 20 20">
-                        <use href="img/icons/close-rounded.svg#svg" />
+                        <use href="img/icons/close-rounded.svg#svg"/>
                     </svg>
                 </button>
             </div>
@@ -316,7 +318,7 @@
                 </span>
                 <button class="modal__dialog-close-btn icon-btn rounded small">
                     <svg class="icon" viewBox="0 0 20 20">
-                        <use href="img/icons/close-rounded.svg#svg" />
+                        <use href="img/icons/close-rounded.svg#svg"/>
                     </svg>
                 </button>
             </div>
@@ -418,14 +420,14 @@
                 </span>
                 <button class="modal__dialog-close-btn icon-btn rounded small">
                     <svg class="icon" viewBox="0 0 20 20">
-                        <use href="img/icons/close-rounded.svg#svg" />
+                        <use href="img/icons/close-rounded.svg#svg"/>
                     </svg>
                 </button>
             </div>
             <form class="form balance-form">
                 <div class="modal__dialog-content">
                     <div class="balance-form__qr">
-                        <img src="img/qrcode.png" />
+                        <img src="img/qrcode.png"/>
                     </div>
                     <div class="balance-form__qr-hint">
                         Для пополнения баланса, переведите сумму USDT на этот адрес:
@@ -436,7 +438,7 @@
                         </div>
                         <div class="link-copier__icon-container">
                             <svg class="icon" viewBox="0 0 24 24">
-                                <use href="img/icons/copy.svg#svg" />
+                                <use href="img/icons/copy.svg#svg"/>
                             </svg>
                         </div>
                     </div>
@@ -457,12 +459,15 @@
     </div>
 </div>
 
+
+<!-- HEADER -->
+
 <!-- menu -->
 <div class="menu__overlay overlay" id="menuOverlay"></div>
 <div class="menu" id="menu">
     <div class="menu__header">
         <div class="menu__logo">
-            <img src="img/logo-small.svg" alt="">
+            <img src="img/logo.svg" alt="">
         </div>
         <div class="menu__language language dropdown">
             <div class="language__label dropdown__trigger">
@@ -496,7 +501,7 @@
         </button>
         <nav class="menu__nav">
             <a href="about.html">О нас</a>
-            <a href="tariffs.html">Тарифы</a>
+            <a href="pool.html">Пул ликвидности</a>
             <a href="partners.html">Партнерам</a>
             <a href="FAQ.html">FAQ</a>
             <a href="contacts.html">Контакты</a>
@@ -525,12 +530,11 @@
     <div class="container">
         <header class="header hidden">
             <a class="header__logo" href="index.html">
-                <img class="desktop" src="img/logo.svg" alt="">
-                <img class="mobile" src="img/logo-small.svg" alt="">
+                <img src="img/logo.svg" alt="">
             </a>
             <nav class="header__nav">
                 <a href="about.html">О нас</a>
-                <a href="tariffs.html">Тарифы</a>
+                <a href="pool.html">Пул ликвидности</a>
                 <a href="partners.html">Партнерам</a>
                 <a href="FAQ.html">FAQ</a>
                 <a href="contacts.html">Контакты</a>
@@ -563,8 +567,7 @@
         </header>
         <header class="header hidden variant-collapsed">
             <a class="header__logo" href="index.html">
-                <img class="desktop" src="img/logo.svg" alt="">
-                <img class="mobile" src="img/logo-small.svg" alt="">
+                <img src="img/logo.svg" alt="">
             </a>
             <div class="header__language language dropdown">
                 <div class="language__label dropdown__trigger">
@@ -596,142 +599,173 @@
 </div>
 
 
-<div class="container">
+<!-- MAIN -->
+
+<div class="container about__container">
 
     <!-- about -->
-    <section class="block main about">
-        <h2 class="title">
+    <section class="page-block main about">
+        <h2 class="page-block__title about__title">
             О нас
         </h2>
-        <div class="about__logo-with-ellipse">
+        <div class="about__logo-container">
             <img class="about__logo" src="img/logo-big-vertical.svg" alt="">
-            <img class="about__ellipse" src="img/ellipse-3.png" alt="">
         </div>
         <div class="about__article">
+
             <p class="text big margin-bottom-medium">
-                Платформа Spectra Cash - это агрегатор ликвидности для участия в IDO и Launchpad
+                Платформа Arbitroom - это автоматизированная площадка как для внутрибиржевой, так и межбиржевой торговли
             </p>
             <p class="text medium margin-bottom-big">
-                Задача платформы - сделать легким, доступным и выгодным участие в запусках новых криптовалютных проектов. Сейчас любой участник рынка может извлекать прибыль с минимальными вложениями.
+                С нами у каждого клиента появится возможность зарабатывать на арбитраже криптовалют с минимум затраченных усилий и экономией  личного времени.
             </p>
             <p class="text small margin-bottom-big">
-                Криптовалютный рынок стал настолько обширным, что многие недооценивают доступные всем инструменты или вовсе о них не знают. Наша команда более 3 лет генерирует прибыль на популярных биржах и децентрализованных платформ таких как Binance, OKEx, FTX, Gamefi, RedKite, BullPerks, BSCPad и множество других, за счет участия в IDO и Launchpad. Этот тип инвестиций оптимальный с учетом риск менеджмента, так как мы не рискуем внутренними монетами бирж для фарминга новых токенов. А своевременная продажа этих токенов позволяет получить 200%, 500%, 1 000%, 5 000%, а иногда и более 10 000% прибыли от их первоначальной стоимости. Также большую роль играет скорость покупки и продажи новых активов, в чем очень помогает наш IDO бот.
+                Мы используем 2 вида арбитража:<br>
+                • Межбиржевой арбитраж<br>
+                • Внутрибиржевой арбитраж
             </p>
-            <p class="text small margin-bottom-big">
-                Любой участник рынка, который уже пробовал использовать такого рода инструменты, сталкивался с проблемой выбора в каком именно IDO или Launchpad участвовать. Предложений на рынке огромное количество и в каждом есть строгие правила по минимальному и максимальному вложению, по обязательному стейкингу монеты биржи или стейкинге других активов на определенный срок, а также множество других факторов. Самое главное после получения аллокации – это ее своевременный выкуп и продажа в момент листинга.
-            </p>
+
+
             <p class="text medium margin-bottom-small">
-                С платформой Spectra Cash участие в IDO или Launchpad стало доступным для каждого
+                МЕЖБИРЖЕВОЙ АРБИТРАЖ
             </p>
             <p class="text small margin-bottom-big">
-                Клиенту не потребуется регистрироваться на десятках сайтов или бирж, проходить верификацию, ждать подходящую цену внутренней монеты, размещать монету в стейкинг для получения аллокации. Наша команда уже позаботилась об этом. Мы имеем верифицированные аккаунты на каждой из бирж и платформ по запуску проектов, приобрели внутренние монеты по выгодным ценам и стейкаем их для получения аллокации, чтобы участвовать в IDO или Launchpad. А нашу личную разработку Smart IDO Bot мы используем для получения максимального профита.
+                МЕЖБИРЖЕВОЙ АРБИТРАЖ - это когда трейдер покупает криптовалютный актив в одном месте и сразу же продает его в другом по более высокому курсу, используя разницу в цене для получения прибыли.
             </p>
-            <div class="about__scheme-with-ellipse">
-                <img class="about__scheme" src="img/spectra-scheme.svg" alt="">
-                <img class="about__ellipse" src="img/ellipse-4.png" alt="">
-            </div>
-            <p class="text small margin-bottom-big margin-top-big">
-                Учитывая наш опыт и ориентируясь на собственные результаты, которые мы получаем от участия в IDO и Launchpad, было принято решение, создать понятную и в тоже время высокодоходную платформу, которая позволит любому клиенту всего в пару кликов использовать вместе с нами такого рода финансовый инструмент. Очень важно для понимания, что средства наших клиентов не подвержены рискам их уменьшения за счет волатильности монет биржи, так как в стейкинге для получения аллокации участвуют только монеты Spectra Cash.
+            <p class="text small margin-bottom-big">
+                Например, на бирже #1 токен продаётся за 95$, тогда как тот же токен на бирже #2 стоит 100$, то вы можете купить 20 токенов на бирже #1 и продать их на бирже #2, заработав 100$ чистой прибыли.  Главное здесь - это скорость, так как курсы валют меняются очень быстро.
             </p>
-            <p class="text medium">
-                Грамотно проработанный маркетинг в справедливой и равной форме распределяет прибыль между участниками и платформой, придерживаясь концепции Win-Win в которой все стороны, так или иначе, выигрывают.
+
+
+            <p class="text margin-bottom-big">
+                <img class="about__article-img" src="img/about-img-1.png" alt="Принцип межбиржевого арбитража криптовалют">
             </p>
+
+
+            <p class="text medium margin-bottom-small">
+                ВНУТРИБИРЖЕВОЙ АБИТРАЖ КРИПТОВАЛЮТ
+            </p>
+            <p class="text small margin-bottom-big">
+                Этот тип арбитража криптовалют предполагает покупку одного актива, перевод его в другой, который затем переводят обратно в первый актив.
+            </p>
+            <p class="text small margin-bottom-big">
+                Такой подход более сложный, поскольку здесь нужно связывать курсы сразу нескольких активов.
+            </p>
+            <p class="text small margin-bottom-big">
+                Однако, если трейдер остается в рамках одной криптобиржи устраняется необходимость платить комиссию за ввод/вывод криптовалюты.
+            </p>
+
+
+            <p class="text margin-bottom-big">
+                <img class="about__article-img" src="img/about-img-2.png" alt="Принцип межбиржевого арбитража криптовалют">
+            </p>
+
+            <p class="text medium margin-bottom-small">
+                С НАМИ:
+            </p>
+            <p class="text small margin-bottom-big">
+                Клиенту не понадобится проводить большое количество часов за монитором и регистрироваться на десятках бирж, платить, настраивать программное обеспечение, проходить сложное обучение и еще сталкиваться с множеством подводных камней.
+            </p>
+            <p class="text small margin-bottom-big">
+                Платформа Arbitroom уже позаботились об этом. Мы имеем верифицированные аккаунты на каждой из бирж, кошельках и обменниках. Свой собственный софт (ArbitroomBot), который имеет интеграцию с основными криптовалютными биржами такими как Binance, ByBit, KuCoin, Kraken, Bitfinex, Huobi и т.д а также децентрализированными площадками, агрегаторами и кошельками для быстрого перемещения активов.
+            </p>
+            <p class="text small margin-bottom-big">
+                Учитывая наш опыт и ориентируясь на собственные результаты, которые мы получаем на протяжении 2 лет было принято решение, создать понятную и в то же время высокодоходную платформу, которая позволит любому клиенту всего в пару кликов использовать вместе с нами такого рода финансовый инструмент. Очень важно для понимания, что средства наших клиентов не подвержены рискам, поскольку большую часть времени они хранятся на холодных или гарячих кошельках в стейблкоинах и используются для совершения сделок только в качестве транзитной ликвидности.
+            </p>
+
         </div>
     </section>
 
 </div>
 
-<div class="footer__wrapper">
-    <div class="container">
-        <footer class="footer">
-            <h2 class="title">
-                <div>
-                    Начните<br/>
-                    инвестировать<br/>
-                    сегодня
-                </div>
-                <div class="footer__img">
-                    <img src="img/arrow.svg" alt=""/>
-                </div>
+
+<!-- FOOTER-->
+
+<div class="container dark">
+    <footer class="footer">
+        <div class="footer__main">
+            <h2 class="footer__title">
+                Заработайте<br>
+                сейчас независимо от&nbsp;тренда
             </h2>
-            <div class="footer__header header" id="footerHeader">
-                <a class="header__logo" href="index.html">
-                    <img class="desktop" src="img/logo-inverted.svg" alt="">
-                    <img class="mobile" src="img/logo-small-inverted.svg" alt="">
+            <img class="footer__background" src="img/footer-background.png" alt="">
+        </div>
+        <div class="footer__header header" id="footerHeader">
+            <a class="header__logo" href="index.html">
+                <img class="desktop" src="img/logo.svg" alt="">
+            </a>
+            <nav class="header__nav"
+                 data-toggle-class="inactive"
+                 data-target="!self"
+                 data-reason="collapsed-hor"
+            >
+                <a href="about.html">О нас</a>
+                <a href="pool.html">Пул ликвидности</a>
+                <a href="partners.html">Партнерам</a>
+                <a href="FAQ.html">FAQ</a>
+                <a href="contacts.html">Контакты</a>
+            </nav>
+            <div class="header__language language dropdown">
+                <div class="language__label dropdown__trigger">
+                    <span>Ru</span>
+                    <svg class="icon">
+                        <use href="img/icons/angle-down.svg#svg"/>
+                    </svg>
+                </div>
+                <div class="language__menu dropdown__menu">
+                    <div class="language__menu-item dropdown__menu-item selected">
+                        <img src="img/flags/ru.svg" alt="">RU
+                    </div>
+                    <div class="language__menu-item dropdown__menu-item">
+                        <img src="img/flags/en.svg" alt="">EN
+                    </div>
+                    <div class="language__menu-item dropdown__menu-item">
+                        <img src="img/flags/fi.svg" alt="">FI
+                    </div>
+                    <div class="language__menu-item dropdown__menu-item">
+                        <img src="img/flags/kz.svg" alt="">KZ
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__divider"></div>
+        <div class="footer__links">
+            <div class="footer__social">
+                <a href="https://t.me/IDOSmart" target="_blank">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <use href="img/icons/social-telegram.svg#svg"/>
+                    </svg>
+                    Телеграм канал
                 </a>
-                <nav class="header__nav"
-                     data-toggle-class="inactive"
-                     data-target="!self"
-                     data-reason="collapsed-hor"
-                >
-                    <a href="about.html">О нас</a>
-                    <a href="tariffs.html">Тарифы</a>
-                    <a href="partners.html">Партнерам</a>
-                    <a href="FAQ.html">FAQ</a>
-                    <a href="contacts.html">Контакты</a>
-                </nav>
-                <div class="header__language language dropdown">
-                    <div class="language__label dropdown__trigger">
-                        <span>Ru</span>
-                        <svg class="icon">
-                            <use href="img/icons/angle-down.svg#svg"/>
-                        </svg>
-                    </div>
-                    <div class="language__menu dropdown__menu">
-                        <div class="language__menu-item dropdown__menu-item selected">
-                            <img src="img/flags/ru.svg" alt="">RU
-                        </div>
-                        <div class="language__menu-item dropdown__menu-item">
-                            <img src="img/flags/en.svg" alt="">EN
-                        </div>
-                        <div class="language__menu-item dropdown__menu-item">
-                            <img src="img/flags/fi.svg" alt="">FI
-                        </div>
-                        <div class="language__menu-item dropdown__menu-item">
-                            <img src="img/flags/kz.svg" alt="">KZ
-                        </div>
-                    </div>
-                </div>
+                <a href="https://t.me/IDOSmartchat" target="_blank">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <use href="img/icons/social-telegram.svg#svg"/>
+                    </svg>
+                    Телеграм чат
+                </a>
+                <a href="mailto:support@spectra.cash" target="_blank">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <use href="img/icons/social-mail.svg#svg"/>
+                    </svg>
+                    Почта
+                </a>
+                <a href="https://www.youtube.com/channel/UCW43vzZd-iD_eXoW3tj-WxQ" target="_blank">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <use href="img/icons/social-youtube.svg#svg"/>
+                    </svg>
+                    YouTube
+                </a>
             </div>
-            <div class="footer__divider"></div>
-            <div class="footer__links">
-                <div class="footer__social">
-                    <a href="https://t.me/IDOSmart" target="_blank">
-                        <svg class="icon" viewBox="0 0 24 24">
-                            <use href="img/icons/social-telegram.svg#svg" />
-                        </svg>
-                        Телеграм канал
-                    </a>
-                    <a href="https://t.me/IDOSmartchat" target="_blank">
-                        <svg class="icon" viewBox="0 0 24 24">
-                            <use href="img/icons/social-telegram.svg#svg" />
-                        </svg>
-                        Телеграм чат
-                    </a>
-                    <a href="mailto:support@spectra.cash" target="_blank">
-                        <svg class="icon" viewBox="0 0 24 24">
-                            <use href="img/icons/social-mail.svg#svg" />
-                        </svg>
-                        Почта
-                    </a>
-                    <a href="https://www.youtube.com/channel/UCW43vzZd-iD_eXoW3tj-WxQ" target="_blank">
-                        <svg class="icon" viewBox="0 0 24 24">
-                            <use href="img/icons/social-youtube.svg#svg" />
-                        </svg>
-                        YouTube
-                    </a>
+            <div class="footer__other">
+                <div class="footer__copyright">
+                    © 2022 Spectra. All rights reserved.
                 </div>
-                <div class="footer__other">
-                    <div class="footer__copyright">
-                        © 2022 Spectra. All rights reserved.
-                    </div>
-                    <a class="footer__privacy-policy link" href="./Privacy-Policy.pdf" target="_blank">
-                        Политика конфиденциальности
-                    </a>
-                </div>
+                <a class="footer__privacy-policy link" href="./Privacy-Policy.pdf" target="_blank">
+                    Политика конфиденциальности
+                </a>
             </div>
-        </footer>
-    </div>
+        </div>
+    </footer>
 </div>
 
 

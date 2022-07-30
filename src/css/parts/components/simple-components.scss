@@ -72,42 +72,7 @@
 	}
 }
 
-// text
-
-.text {
-	font-family: 'Golos';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 1.5rem;
-	line-height: 2.25rem;
-
-	&.small {
-		font-size: 1.25rem;
-		line-height: 1.75rem;
-		color: $color-text-secondary;
-	}
-
-	&.big {
-		font-size: 2.25rem;
-		line-height: 3rem;
-	}
-
-	&.margin-bottom-small {
-		margin-bottom: 1.5rem;
-	}
-
-	&.margin-bottom-medium {
-		margin-bottom: 2rem;
-	}
-
-	&.margin-bottom-big {
-		margin-bottom: 3rem;
-	}
-
-	&.margin-top-big {
-		margin-top: 3rem;
-	}
-}
+// texts
 
 .subtitle1 {
 	@include typography-subtitle1;
@@ -273,37 +238,6 @@
 
 	// text
 
-	.text {
-		font-size: 1.25rem;
-		line-height: 1.75rem;
-
-		&.small {
-			font-size: 1rem;
-			line-height: 1.5rem;
-		}
-
-		&.big {
-			font-size: 1.75rem;
-			line-height: 2.25rem;
-		}
-
-		&.margin-bottom-small {
-			margin-bottom: 2rem;
-		}
-
-		&.margin-bottom-medium {
-			margin-bottom: 2rem;
-		}
-
-		&.margin-bottom-big {
-			margin-bottom: 2rem;
-		}
-
-		&.margin-top-big {
-			margin-top: 2rem;
-		}
-	}
-
 	.card {
 		border-radius: 1rem;
 		padding: 2rem;
@@ -311,3 +245,4 @@
 
 
 }
+
