@@ -9,3 +9,5 @@ import "./components/form";
 import "./components/lazyLoad";
 import "./components/table";
 import "./components/dragScroll";
+import "./components/popper";
+import "./components/tooltip";

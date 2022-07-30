@@ -1,0 +1,241 @@
+@import "../variables";
+@import "../mixins";
+
+
+// tooltip
+
+$tooltip-bottom-icon: "%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='8' viewBox='0 0 24 8' fill='none'%3E%3Cpath d='M11.9996 8C14.6907 8 17.4621 0.000228741 24 0H0C6.53691 0.000558008 9.30842 8 11.9996 8Z' fill='" + to-rgba($color-text-prime) + "'/%3E%3C/svg%3E";
+$tooltip-left-icon: "%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='24' viewBox='0 0 8 24' fill='none'%3E%3Cpath d='M0 11.9996C-1.84602e-07 14.6907 7.99977 17.4621 8 24L8 0C7.99944 6.53691 1.84602e-07 9.30842 0 11.9996Z' fill='" + to-rgba($color-text-prime) + "'/%3E%3C/svg%3E";
+
+.tooltip {
+  display: grid;
+  grid-template-areas:
+          "c"
+          "p";
+  box-sizing: border-box;
+  max-width: calc(100vh - 1rem);
+  cursor: pointer;
+  animation: $animation-fast fade-in;
+  z-index: $z-index-tooltip;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -0.5rem;
+    left: -0.5rem;
+    width: calc(100% + 1rem);
+    height: calc(100% + 1rem);
+  }
+
+  &::before {
+    content: "";
+    width: 1.5rem;
+    height: 0.5rem;
+    grid-area: p;
+    align-self: center;
+    justify-self: center;
+    background: url("data:image/svg+xml," + $tooltip-bottom-icon);
+  }
+
+  // default: top
+
+  &.bottom {
+    grid-template-areas:
+          "p"
+          "c";
+    &::before {
+      transform: rotate(180deg);
+    }
+  }
+
+  &.right {
+    grid-template-areas:
+          "p c";
+
+    &::before {
+      width: 0.5rem;
+      height: 1.5rem;
+      background: url("data:image/svg+xml," + $tooltip-left-icon);
+    }
+  }
+
+  &.left {
+    grid-template-areas:
+          "c p";
+
+    &::before {
+      width: 0.5rem;
+      height: 1.5rem;
+      transform: rotate(180deg);
+      background: url("data:image/svg+xml," + $tooltip-left-icon);
+    }
+  }
+}
+
+.tooltip__content {
+  grid-area: c;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  @include typography-body2;
+  text-align: left;
+  background: $color-text-prime;
+  color: $color-background-upper1;
+}
+
+// with-tooltip
+
+.with-tooltip {
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -0.25rem;
+    left: -0.25rem;
+    width: calc(100% + 0.5rem);
+    height: calc(100% + 0.5rem);
+  }
+
+  .tooltip:not(.show) {
+    display: none;
+    opacity: 0;
+  };
+}
+
+
+@media screen and (max-width: $small-tablet) {
+
+  // programs
+
+  .programs {
+
+    &.expand {
+
+      .program {
+        display: grid;
+      }
+    }
+
+  }
+
+  .programs__table {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    @include paper;
+  }
+
+  .programs__expand-btn,
+  .programs__collapse-btn {
+    margin-top: 0.5rem;
+  }
+
+  .program {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+    padding: 1rem 1.5rem;
+    @include disable-paper;
+
+    &:not(:first-child) {
+      border-top: 1px solid $color-divider;
+    }
+  }
+
+  .program__cell {
+    padding: 0.375rem 0 !important;
+  }
+  .program__cell-status .program__value {
+    @include typography-body2-text;
+  }
+
+  .program__label {
+    color: $color-text-more-secondary;
+    margin-bottom: 0.25rem;
+  }
+
+  .program__cell-conditions {
+
+    .button {
+      margin-left: -0.75rem;
+      @include button-small;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+
+  // senior
+
+  .senior-block__socials {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .senior-block__other-socials {
+    display: flex;
+    gap: 1.25rem;
+  }
+
+  // programs
+
+  .programs {
+
+    &.expand {
+
+      .program {
+        display: flex;
+      }
+    }
+
+  }
+
+  .programs__table {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    @include paper;
+  }
+
+  .programs__expand-btn,
+  .programs__collapse-btn {
+    margin-top: 0.5rem;
+  }
+
+  .program {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+    @include disable-paper;
+
+    &:not(:first-child) {
+      border-top: 1px solid $color-divider;
+    }
+  }
+
+  .program__cell {
+    padding: 0.375rem 0 !important;
+  }
+  .program__cell-status .program__value {
+    @include typography-body2-text;
+  }
+
+  .program__label {
+    color: $color-text-more-secondary;
+    margin-bottom: 0.25rem;
+  }
+
+  .program__cell-conditions {
+
+    .button {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      @include button-small;
+    }
+  }
+}

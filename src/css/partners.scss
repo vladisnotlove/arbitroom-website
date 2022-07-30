@@ -1,0 +1,189 @@
+@import "parts/reset";
+@import "parts/variables";
+@import "parts/fonts";
+@import "parts/mixins";
+
+@import "common";
+
+
+
+// programs
+
+.programs {
+
+  &.expand {
+    .programs__expand-btn {
+      display: none;
+    }
+
+    .programs__collapse-btn {
+      display: inline-block;
+    }
+
+    .program {
+      display: table-row;
+    }
+  }
+
+}
+
+.programs__table {
+  display: table;
+  border-collapse: separate;
+  border-spacing: 0 0.5rem;
+  margin-top: -0.5rem;
+  margin-bottom: -0.5rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.programs__collapse-btn {
+  display: none;
+  margin-left: -0.75rem;
+  margin-top: 0.5rem;
+}
+.programs__expand-btn {
+  margin-left: -0.75rem;
+  margin-top: 0.5rem;
+}
+
+.program:not(.visible) {
+  display: none;
+}
+
+.program {
+  display: table-row;
+  @include paper;
+
+  &.selected {
+    background-image: mono-gradient(change-color($color-prime-main, $alpha: 0.08));
+
+    .program__info {
+      display: inline-block;
+    }
+  }
+}
+
+.program__cell {
+  display: table-cell;
+  padding: 1rem 0.75rem;
+  vertical-align: middle;
+
+  &:first-child {
+    padding-left: 1.5rem;
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+  }
+
+  &:last-child {
+    padding-right: 1.5rem;
+    border-top-right-radius: inherit;
+    border-bottom-right-radius: inherit;
+  }
+}
+.program__cell-conditions {
+  width: 0;
+
+  .button {
+    margin-right: -0.75rem;
+  }
+}
+.program__cell-income,
+.program__cell-invest {
+
+  .program__value {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+}
+
+.program__label {
+  margin-bottom: 0.5rem;
+  @include typography-caption;
+  color: $color-text-secondary;
+}
+.program__cell-status .program__label {
+  margin-bottom: 0.25rem;
+}
+.program__cell-structure .program__label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.program__value {
+  @include typography-body2-text;
+}
+.program__cell-status .program__value {
+  @include typography-h6;
+}
+
+.program__info {
+  display: none;
+  margin: -0.125rem 0;
+
+  svg {
+    fill: $color-prime-main;
+  }
+}
+
+.program__percent {
+  display: inline-block;
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  @include typography-body2-text;
+  letter-spacing: 0.15px;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.93), rgba(255, 255, 255, 0.93)), #281E1C;
+
+  &:hover {
+    background: change-color($color-prime-main, $alpha: 0.08);
+  }
+}
+
+// structure turn
+
+.structure-turn {
+  max-width: calc(100vw - 2rem);
+}
+
+.structure-turn__title {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid $color-divider;
+  @include typography-subtitle1;
+  text-align: center;
+}
+
+.structure-turn__header {
+  display: table-row-group;
+}
+
+.structure-turn__body {
+  display: table-row-group;
+
+  .structure-turn__row:last-child {
+    .structure-turn__cell {
+      border-bottom: none;
+    }
+  }
+
+}
+
+.structure-turn__row {
+  display: table-row;
+
+  &.selected {
+    .structure-turn__cell {
+      background: change-color($color-prime-main, $alpha: 0.08);
+      color: $color-text-prime;
+    }
+  }
+}
+
+.structure-turn__cell {
+  display: table-cell;
+  padding: 0.625rem 1rem;
+  @include typography-subtitle2;
+  color: $color-text-more-secondary;
+  border-bottom: 1px solid $color-divider;
+}

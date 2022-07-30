@@ -10,6 +10,8 @@ div, span, h1, h2, p  {
 	color: $color-text-prime;
 }
 
+@import "parts/animations";
+
 @import "parts/components/simple-components";
 @import "parts/components/btns";
 @import "parts/components/dropdown";
@@ -21,6 +23,7 @@ div, span, h1, h2, p  {
 @import "parts/components/table";
 @import "parts/components/youtube-embedded";
 @import "parts/components/text";
+@import "parts/components/tooltip";
 @import "parts/modificators";
 
 html {

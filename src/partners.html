@@ -13,6 +13,9 @@
 
 <div id="dropdownOverlay"></div>
 
+
+<!-- MODALS -->
+
 <!-- registration modal -->
 <div class="modal" id="registrationModal">
     <div class="modal__content">
@@ -24,7 +27,7 @@
                 </span>
                 <button class="modal__dialog-close-btn icon-btn rounded small">
                     <svg class="icon" viewBox="0 0 20 20">
-                        <use href="img/icons/close-rounded.svg#svg" />
+                        <use href="img/icons/close-rounded.svg#svg"/>
                     </svg>
                 </button>
             </div>
@@ -191,7 +194,7 @@
                 </span>
                 <button class="modal__dialog-close-btn icon-btn rounded small">
                     <svg class="icon" viewBox="0 0 20 20">
-                        <use href="img/icons/close-rounded.svg#svg" />
+                        <use href="img/icons/close-rounded.svg#svg"/>
                     </svg>
                 </button>
             </div>
@@ -268,7 +271,7 @@
                 </span>
                 <button class="modal__dialog-close-btn icon-btn rounded small">
                     <svg class="icon" viewBox="0 0 20 20">
-                        <use href="img/icons/close-rounded.svg#svg" />
+                        <use href="img/icons/close-rounded.svg#svg"/>
                     </svg>
                 </button>
             </div>
@@ -314,7 +317,7 @@
                 </span>
                 <button class="modal__dialog-close-btn icon-btn rounded small">
                     <svg class="icon" viewBox="0 0 20 20">
-                        <use href="img/icons/close-rounded.svg#svg" />
+                        <use href="img/icons/close-rounded.svg#svg"/>
                     </svg>
                 </button>
             </div>
@@ -416,14 +419,14 @@
                 </span>
                 <button class="modal__dialog-close-btn icon-btn rounded small">
                     <svg class="icon" viewBox="0 0 20 20">
-                        <use href="img/icons/close-rounded.svg#svg" />
+                        <use href="img/icons/close-rounded.svg#svg"/>
                     </svg>
                 </button>
             </div>
             <form class="form balance-form">
                 <div class="modal__dialog-content">
                     <div class="balance-form__qr">
-                        <img src="img/qrcode.png" />
+                        <img src="img/qrcode.png"/>
                     </div>
                     <div class="balance-form__qr-hint">
                         Для пополнения баланса, переведите сумму USDT на этот адрес:
@@ -434,7 +437,7 @@
                         </div>
                         <div class="link-copier__icon-container">
                             <svg class="icon" viewBox="0 0 24 24">
-                                <use href="img/icons/copy.svg#svg" />
+                                <use href="img/icons/copy.svg#svg"/>
                             </svg>
                         </div>
                     </div>
@@ -455,12 +458,79 @@
     </div>
 </div>
 
+
+<!-- TOOLTIPS -->
+
+<!-- Оборот структуры -->
+<div class="structure-turn paper elevation1 popper"
+     data-popper-anchor-element=".program__cell-structure .program__info"
+     data-popper-on-hover
+>
+    <div class="structure-turn__title">Как считается оборот</div>
+    <div class="structure-turn__header">
+        <div class="structure-turn__row">
+            <div class="structure-turn__cell">
+                Все инвестиции партнеров
+            </div>
+            <div class="structure-turn__cell">
+                Процент зачета оборота
+            </div>
+        </div>
+    </div>
+    <div class="structure-turn__body">
+        <div class="structure-turn__row">
+            <div class="structure-turn__cell">
+                Уровень 1
+            </div>
+            <div class="structure-turn__cell">
+                100%
+            </div>
+        </div>
+        <div class="structure-turn__row">
+            <div class="structure-turn__cell">
+                Уровень 2
+            </div>
+            <div class="structure-turn__cell">
+                50%
+            </div>
+        </div>
+        <div class="structure-turn__row">
+            <div class="structure-turn__cell">
+                Уровень 3
+            </div>
+            <div class="structure-turn__cell">
+                30%
+            </div>
+        </div>
+        <div class="structure-turn__row selected">
+            <div class="structure-turn__cell">
+                Уровень 4
+            </div>
+            <div class="structure-turn__cell">
+                10%
+            </div>
+        </div>
+        <div class="structure-turn__row">
+            <div class="structure-turn__cell">
+                Уровень 5
+            </div>
+            <div class="structure-turn__cell">
+                5%
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- HEADER -->
+
 <!-- menu -->
 <div class="menu__overlay overlay" id="menuOverlay"></div>
 <div class="menu" id="menu">
     <div class="menu__header">
         <div class="menu__logo">
-            <img src="img/logo-small.svg" alt="">
+            <img src="img/logo.svg" alt="">
         </div>
         <div class="menu__language language dropdown">
             <div class="language__label dropdown__trigger">
@@ -494,7 +564,7 @@
         </button>
         <nav class="menu__nav">
             <a href="about.html">О нас</a>
-            <a href="tariffs.html">Тарифы</a>
+            <a href="pool.html">Пул ликвидности</a>
             <a href="partners.html">Партнерам</a>
             <a href="FAQ.html">FAQ</a>
             <a href="contacts.html">Контакты</a>
@@ -523,12 +593,11 @@
     <div class="container">
         <header class="header hidden">
             <a class="header__logo" href="index.html">
-                <img class="desktop" src="img/logo.svg" alt="">
-                <img class="mobile" src="img/logo-small.svg" alt="">
+                <img src="img/logo.svg" alt="">
             </a>
             <nav class="header__nav">
                 <a href="about.html">О нас</a>
-                <a href="tariffs.html">Тарифы</a>
+                <a href="pool.html">Пул ликвидности</a>
                 <a href="partners.html">Партнерам</a>
                 <a href="FAQ.html">FAQ</a>
                 <a href="contacts.html">Контакты</a>
@@ -561,8 +630,7 @@
         </header>
         <header class="header hidden variant-collapsed">
             <a class="header__logo" href="index.html">
-                <img class="desktop" src="img/logo.svg" alt="">
-                <img class="mobile" src="img/logo-small.svg" alt="">
+                <img src="img/logo.svg" alt="">
             </a>
             <div class="header__language language dropdown">
                 <div class="language__label dropdown__trigger">
@@ -594,202 +662,1022 @@
 </div>
 
 
+<!-- MAIN -->
+
 <div class="container">
 
-    <!-- about -->
-    <section class="block main partners">
-        <h2 class="title">
+    <!-- partners -->
+    <section class="page-block main partners">
+        <h2 class="page-block__title partners__title">
             Партнерам
+            <div class="partners__subtitle text small margin-top-medium">
+                Arbitroom предоставляет своим партнерам возможность построения команды для дополнительного заработка
+            </div>
         </h2>
-        <div class="text small partners__subtitle">
-            Spectra предоставляет обширную партнерскую программу для заработка вплоть до 21 линии в глубину
+        <div class="partners__structure-btn">
+            <button class="btn btn-outlined">
+                Как считается оборот?
+            </button>
         </div>
-        <div class="partners__cards">
-            <div class="partners__card">
-                <div class="partners__card-title">Partner</div>
-                <div class="partners__card-description">
-                    После регистрации пользователь получает статус Partner, после чего может выбрать подходящий тарифный план и инвестировать в него
-                </div>
-            </div>
-            <div class="partners__card">
-                <div class="partners__card-title">Level 1</div>
-                <div class="partners__card-terms">
-                    <div class="partners__card-terms-title">Условия:</div>
-                    <ul class="partners__card-terms-list">
-                        <li class="partners__card-terms-list-item">Тариф Tier 1 или выше
-                    </ul>
-                </div>
-                <div class="partners__card-income">
-                    <div class="partners__card-income-title">Доход с продаж:</div>
-                    <ul class="partners__card-income-list">
-                        <li class="partners__card-income-list-item">1 линия - 5%
-                    </ul>
-                </div>
-            </div>
-            <div class="partners__card">
-                <div class="partners__card-title">Level 2</div>
-                <div class="partners__card-terms">
-                    <div class="partners__card-terms-title">Условия:</div>
-                    <ul class="partners__card-terms-list">
-                        <li class="partners__card-terms-list-item">Тариф Tier 1 или выше
-                        <li class="partners__card-terms-list-item">3 лично приглашенных партнера в первую линию, с активными тарифами на сумму 1 500 USDT
-                    </ul>
-                </div>
-                <div class="partners__card-income">
-                    <div class="partners__card-income-title">Доход с продаж:</div>
-                    <ul class="partners__card-income-list">
-                        <li class="partners__card-income-list-item">1 линия - 5%
-                        <li class="partners__card-income-list-item">2 линия - 2%
-                        <li class="partners__card-income-list-item">3 линия - 1%
-                        <li class="partners__card-income-list-item">4 линия - 1%
-                        <li class="partners__card-income-list-item">5 линия - 0.5%
-                    </ul>
-                </div>
-            </div>
-            <div class="partners__card">
-                <div class="partners__card-title">Level 3</div>
-                <div class="partners__card-terms">
-                    <div class="partners__card-terms-title">Условия:</div>
-                    <ul class="partners__card-terms-list">
-                        <li class="partners__card-terms-list-item">Тариф Tier 2 или выше
-                        <li class="partners__card-terms-list-item">Оборот по 5 линиям = 50 000 USDT
-                    </ul>
-                </div>
-                <div class="partners__card-income">
-                    <div class="partners__card-income-title">Доход с продаж:</div>
-                    <ul class="partners__card-income-list">
-                        <li class="partners__card-income-list-item">1 линия - 5.5%
-                        <li class="partners__card-income-list-item">2 линия - 3%
-                        <li class="partners__card-income-list-item">3 линия - 2%
-                        <li class="partners__card-income-list-item">4 линия - 1%
-                        <li class="partners__card-income-list-item">5 линия - 1%
-                        <li class="partners__card-income-list-item">6 линия - 0.5%
-                        <li class="partners__card-income-list-item">7 линия - 0.5%
-                        <li class="partners__card-income-list-item">8 линия - 0.5%
-                    </ul>
-                </div>
-            </div>
-            <div class="partners__card">
-                <div class="partners__card-title">Level 4</div>
-                <div class="partners__card-terms">
-                    <div class="partners__card-terms-title">Условия:</div>
-                    <ul class="partners__card-terms-list">
-                        <li class="partners__card-terms-list-item">Тариф Tier 3
-                        <li class="partners__card-terms-list-item">Оборот по 8 линиям = 100 000 USDT
-                    </ul>
-                </div>
-                <div class="partners__card-income">
-                    <div class="partners__card-income-title">Доход с продаж:</div>
-                    <ul class="partners__card-income-list">
-                        <li class="partners__card-income-list-item">1 линия - 6%
-                        <li class="partners__card-income-list-item">2 линия - 4%
-                        <li class="partners__card-income-list-item">3 линия - 2%
-                        <li class="partners__card-income-list-item">4 линия - 2%
-                        <li class="partners__card-income-list-item">5 линия - 2%
-                        <li class="partners__card-income-list-item">6 линия - 1%
-                        <li class="partners__card-income-list-item">7 линия - 1%
-                        <li class="partners__card-income-list-item">8 линия - 1 %
-                        <li class="partners__card-income-list-item">9 линия - 0.5%
-                        <li class="partners__card-income-list-item">10 линия - 0.5%
-                        <li class="partners__card-income-list-item">11 линия - 0.5%
-                    </ul>
-                </div>
-            </div>
-            <div class="partners__card">
-                <div class="partners__card-title">Level 5</div>
-                <div class="partners__card-terms">
-                    <div class="partners__card-terms-title">Условия:</div>
-                    <ul class="partners__card-terms-list">
-                        <li class="partners__card-terms-list-item">Тариф Tier 3 + депозит от 3 000 USDT
-                        <li class="partners__card-terms-list-item">Оборот по 11 линиям = 500 000 USDT
-                    </ul>
-                </div>
-                <div class="partners__card-income">
-                    <div class="partners__card-income-title">Доход с продаж:</div>
-                    <ul class="partners__card-income-list">
-                        <li class="partners__card-income-list-item">1 линия - 7%
-                        <li class="partners__card-income-list-item">2 линия - 4.5%
-                        <li class="partners__card-income-list-item">3 линия - 2%
-                        <li class="partners__card-income-list-item">4 линия - 2%
-                        <li class="partners__card-income-list-item">5 линия - 2%
-                        <li class="partners__card-income-list-item">6 линия - 1%
-                        <li class="partners__card-income-list-item">7 линия - 1%
-                        <li class="partners__card-income-list-item">8 линия - 1 %
-                        <li class="partners__card-income-list-item">9 линия - 0.5%
-                        <li class="partners__card-income-list-item">10 линия - 0.5%
-                        <li class="partners__card-income-list-item">11 линия - 0.5%
-                        <li class="partners__card-income-list-item">12 линия - 0.5%
-                        <li class="partners__card-income-list-item">13 линия - 0.5%
-                        <li class="partners__card-income-list-item">14 линия - 0.5%
-                    </ul>
-                </div>
-            </div>
-            <div class="partners__card">
-                <div class="partners__card-title">Level 6</div>
-                <div class="partners__card-terms">
-                    <div class="partners__card-terms-title">Условия:</div>
-                    <ul class="partners__card-terms-list">
-                        <li class="partners__card-terms-list-item">Тариф Tier 3 + депозит от 5 000 USDT
-                        <li class="partners__card-terms-list-item">Оборот по 14 линиям = 1 000 000 USDT
-                    </ul>
-                </div>
-                <div class="partners__card-income">
-                    <div class="partners__card-income-title">Доход с продаж:</div>
-                    <ul class="partners__card-income-list">
-                        <li class="partners__card-income-list-item">1 линия - 8%
-                        <li class="partners__card-income-list-item">2 линия - 5%
-                        <li class="partners__card-income-list-item">3 линия - 2%
-                        <li class="partners__card-income-list-item">4 линия - 2%
-                        <li class="partners__card-income-list-item">5 линия - 2%
-                        <li class="partners__card-income-list-item">6 линия - 1%
-                        <li class="partners__card-income-list-item">7 линия - 1%
-                        <li class="partners__card-income-list-item">8 линия - 1 %
-                        <li class="partners__card-income-list-item">9 линия - 1 %
-                        <li class="partners__card-income-list-item">10 линия - 0.5%
-                        <li class="partners__card-income-list-item">11 линия - 0.5%
-                        <li class="partners__card-income-list-item">12 линия - 0.5%
-                        <li class="partners__card-income-list-item">13 линия - 0.5%
-                        <li class="partners__card-income-list-item">14 линия - 0.5%
-                        <li class="partners__card-income-list-item">15 линия - 0.5%
-                        <li class="partners__card-income-list-item">16 линия - 0.5%
-                        <li class="partners__card-income-list-item">17 линия - 0.5%
-                    </ul>
-                </div>
-            </div>
-            <div class="partners__card">
-                <div class="partners__card-title">Level 7</div>
-                <div class="partners__card-terms">
-                    <div class="partners__card-terms-title">Условия:</div>
-                    <ul class="partners__card-terms-list">
-                        <li class="partners__card-terms-list-item">Тариф Tier 3 + депозит от 10 000 USDT
-                        <li class="partners__card-terms-list-item">Оборот по 17 линиям = 3 000 000 USDT
-                    </ul>
-                </div>
-                <div class="partners__card-income">
-                    <div class="partners__card-income-title">Доход с продаж:</div>
-                    <ul class="partners__card-income-list">
-                        <li class="partners__card-income-list-item">1 линия - 9%
-                        <li class="partners__card-income-list-item">2 линия - 6%
-                        <li class="partners__card-income-list-item">3 линия - 3%
-                        <li class="partners__card-income-list-item">4 линия - 3%
-                        <li class="partners__card-income-list-item">5 линия - 3%
-                        <li class="partners__card-income-list-item">6 линия - 2%
-                        <li class="partners__card-income-list-item">7 линия - 2%
-                        <li class="partners__card-income-list-item">8 линия - 2 %
-                        <li class="partners__card-income-list-item">9 линия - 2 %
-                        <li class="partners__card-income-list-item">10 линия - 1%
-                        <li class="partners__card-income-list-item">11 линия - 1%
-                        <li class="partners__card-income-list-item">12 линия - 1 %
-                        <li class="partners__card-income-list-item">13 линия - 1%
-                        <li class="partners__card-income-list-item">14 линия - 1%
-                        <li class="partners__card-income-list-item">15 линия - 0.5%
-                        <li class="partners__card-income-list-item">16 линия - 0.5%
-                        <li class="partners__card-income-list-item">17 линия - 0.5%
-                        <li class="partners__card-income-list-item">18 линия - 0.5%
-                        <li class="partners__card-income-list-item">19 линия - 0.5%
-                        <li class="partners__card-income-list-item">20 линия - 0.5%
-                        <li class="partners__card-income-list-item">21 линия - 0.5%
-                    </ul>
+        <div class="partners__table scroll-container">
+            <div class="scroll-container__inner">
+                <div class="programs__table">
+                    <div class="program visible selected">
+                        <div class="program__cell program__cell-status">
+                            <div class="program__label">
+                                Статус
+                            </div>
+                            <div class="program__value">
+                                Base
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-personal-invest">
+                            <div class="program__label">
+                                Личн. инвест-ии
+                            </div>
+                            <div class="program__value">
+                                0$
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-structure">
+                            <div class="program__label">
+                                Об-т структуры
+                                <div class="program__info icon small ">
+                                    <!-- icon: info -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                         viewBox="0 0 24 24">
+                                        <path d="M11.9996 1.99902C17.5233 1.99902 22.0011 6.47687 22.0011 12.0006C22.0011 17.5243 17.5233 22.0021 11.9996 22.0021C6.47589 22.0021 1.99805 17.5243 1.99805 12.0006C1.99805 6.47687 6.47589 1.99902 11.9996 1.99902ZM11.9958 10.2496C11.483 10.2499 11.0605 10.6363 11.0031 11.1336L10.9964 11.2503L11 16.7519L11.0068 16.8685C11.0649 17.3658 11.4879 17.7515 12.0007 17.7512C12.5135 17.7509 12.936 17.3645 12.9934 16.8672L13 16.7505L12.9964 11.249L12.9896 11.1323C12.9316 10.635 12.5086 10.2493 11.9958 10.2496ZM12 6.50006C11.3089 6.50006 10.7485 7.06038 10.7485 7.75158C10.7485 8.44277 11.3089 9.0031 12 9.0031C12.6912 9.0031 13.2516 8.44277 13.2516 7.75158C13.2516 7.06038 12.6912 6.50006 12 6.50006Z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="program__value">
+                                0
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-invest">
+                            <div class="program__label">
+                                Реф, от инвестиций
+                            </div>
+                            <div class="program__value">
+                                <div class="program__percent with-tooltip">
+                                    0%
+                                    <div class="tooltip"><div class="tooltip__content">Первая линия</div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-income">
+                            <div class="program__label">
+                                Реф, от дохода
+                            </div>
+                            <div class="program__value">
+                                <div class="program__percent with-tooltip">
+                                    0%
+                                    <div class="tooltip"><div class="tooltip__content">Первая линия</div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-premium">
+                            <div class="program__label">
+                                Премия&nbsp;1&nbsp;%
+                            </div>
+                            <div class="program__value">
+                                0
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-conditions">
+                            <button class="button text with-tooltip" data-with-tooltip-placement="left">
+                                <!-- icon: info -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                     viewBox="0 0 24 24">
+                                    <path d="M11.9996 1.99902C17.5233 1.99902 22.0011 6.47687 22.0011 12.0006C22.0011 17.5243 17.5233 22.0021 11.9996 22.0021C6.47589 22.0021 1.99805 17.5243 1.99805 12.0006C1.99805 6.47687 6.47589 1.99902 11.9996 1.99902ZM11.9958 10.2496C11.483 10.2499 11.0605 10.6363 11.0031 11.1336L10.9964 11.2503L11 16.7519L11.0068 16.8685C11.0649 17.3658 11.4879 17.7515 12.0007 17.7512C12.5135 17.7509 12.936 17.3645 12.9934 16.8672L13 16.7505L12.9964 11.249L12.9896 11.1323C12.9316 10.635 12.5086 10.2493 11.9958 10.2496ZM12 6.50006C11.3089 6.50006 10.7485 7.06038 10.7485 7.75158C10.7485 8.44277 11.3089 9.0031 12 9.0031C12.6912 9.0031 13.2516 8.44277 13.2516 7.75158C13.2516 7.06038 12.6912 6.50006 12 6.50006Z"/>
+                                </svg>
+                                <div class="tooltip">
+                                    <div class="tooltip__content">
+                                        Доп условия по линиям<br/>
+                                        Первая линяя: 0
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="program visible">
+                        <div class="program__cell program__cell-status">
+                            <div class="program__label">
+                                Статус
+                            </div>
+                            <div class="program__value">
+                                A1
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-personal-invest">
+                            <div class="program__label">
+                                Личн. инвест-ии
+                            </div>
+                            <div class="program__value">
+                                от 100$
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-structure">
+                            <div class="program__label">
+                                Об-т структуры
+                                <div class="program__info icon small ">
+                                    <!-- icon: info -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                         viewBox="0 0 24 24">
+                                        <path d="M11.9996 1.99902C17.5233 1.99902 22.0011 6.47687 22.0011 12.0006C22.0011 17.5243 17.5233 22.0021 11.9996 22.0021C6.47589 22.0021 1.99805 17.5243 1.99805 12.0006C1.99805 6.47687 6.47589 1.99902 11.9996 1.99902ZM11.9958 10.2496C11.483 10.2499 11.0605 10.6363 11.0031 11.1336L10.9964 11.2503L11 16.7519L11.0068 16.8685C11.0649 17.3658 11.4879 17.7515 12.0007 17.7512C12.5135 17.7509 12.936 17.3645 12.9934 16.8672L13 16.7505L12.9964 11.249L12.9896 11.1323C12.9316 10.635 12.5086 10.2493 11.9958 10.2496ZM12 6.50006C11.3089 6.50006 10.7485 7.06038 10.7485 7.75158C10.7485 8.44277 11.3089 9.0031 12 9.0031C12.6912 9.0031 13.2516 8.44277 13.2516 7.75158C13.2516 7.06038 12.6912 6.50006 12 6.50006Z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="program__value">
+                                0
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-invest">
+                            <div class="program__label">
+                                Реф, от инвестиций
+                            </div>
+                            <div class="program__value">
+                                <div class="program__percent with-tooltip">
+                                    3,0%
+                                    <div class="tooltip"><div class="tooltip__content">Первая линия</div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-income">
+                            <div class="program__label">
+                                Реф, от дохода
+                            </div>
+                            <div class="program__value">
+                                <div class="program__percent with-tooltip">
+                                    1,50%
+                                    <div class="tooltip"><div class="tooltip__content">Первая линия</div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-premium">
+                            <div class="program__label">
+                                Премия&nbsp;1&nbsp;%
+                            </div>
+                            <div class="program__value">
+                                0
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-conditions">
+                            <button class="button text with-tooltip"
+                                    data-with-tooltip-placement="left">
+                                <!-- icon: info -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                     viewBox="0 0 24 24">
+                                    <path d="M11.9996 1.99902C17.5233 1.99902 22.0011 6.47687 22.0011 12.0006C22.0011 17.5243 17.5233 22.0021 11.9996 22.0021C6.47589 22.0021 1.99805 17.5243 1.99805 12.0006C1.99805 6.47687 6.47589 1.99902 11.9996 1.99902ZM11.9958 10.2496C11.483 10.2499 11.0605 10.6363 11.0031 11.1336L10.9964 11.2503L11 16.7519L11.0068 16.8685C11.0649 17.3658 11.4879 17.7515 12.0007 17.7512C12.5135 17.7509 12.936 17.3645 12.9934 16.8672L13 16.7505L12.9964 11.249L12.9896 11.1323C12.9316 10.635 12.5086 10.2493 11.9958 10.2496ZM12 6.50006C11.3089 6.50006 10.7485 7.06038 10.7485 7.75158C10.7485 8.44277 11.3089 9.0031 12 9.0031C12.6912 9.0031 13.2516 8.44277 13.2516 7.75158C13.2516 7.06038 12.6912 6.50006 12 6.50006Z"/>
+                                </svg>
+                                <div class="tooltip">
+                                    <div class="tooltip__content">
+                                        Доп условия по линиям<br/>
+                                        Первая линяя: 0
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="program">
+                        <div class="program__cell program__cell-status">
+                            <div class="program__label">
+                                Статус
+                            </div>
+                            <div class="program__value">
+                                A2
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-personal-invest">
+                            <div class="program__label">
+                                Личн. инвест-ии
+                            </div>
+                            <div class="program__value">
+                                от 500$
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-structure">
+                            <div class="program__label">
+                                Об-т структуры
+                                <div class="program__info icon small ">
+                                    <!-- icon: info -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                         viewBox="0 0 24 24">
+                                        <path d="M11.9996 1.99902C17.5233 1.99902 22.0011 6.47687 22.0011 12.0006C22.0011 17.5243 17.5233 22.0021 11.9996 22.0021C6.47589 22.0021 1.99805 17.5243 1.99805 12.0006C1.99805 6.47687 6.47589 1.99902 11.9996 1.99902ZM11.9958 10.2496C11.483 10.2499 11.0605 10.6363 11.0031 11.1336L10.9964 11.2503L11 16.7519L11.0068 16.8685C11.0649 17.3658 11.4879 17.7515 12.0007 17.7512C12.5135 17.7509 12.936 17.3645 12.9934 16.8672L13 16.7505L12.9964 11.249L12.9896 11.1323C12.9316 10.635 12.5086 10.2493 11.9958 10.2496ZM12 6.50006C11.3089 6.50006 10.7485 7.06038 10.7485 7.75158C10.7485 8.44277 11.3089 9.0031 12 9.0031C12.6912 9.0031 13.2516 8.44277 13.2516 7.75158C13.2516 7.06038 12.6912 6.50006 12 6.50006Z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="program__value">
+                                3 000$
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-invest">
+                            <div class="program__label">
+                                Реф, от инвестиций
+                            </div>
+                            <div class="program__value">
+                                <div class="program__percent with-tooltip">
+                                    4,0%
+                                    <div class="tooltip"><div class="tooltip__content">Первая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    2,0%
+                                    <div class="tooltip"><div class="tooltip__content">Вторая линия</div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-income">
+                            <div class="program__label">
+                                Реф, от дохода
+                            </div>
+                            <div class="program__value">
+                                <div class="program__percent with-tooltip">
+                                    2,0%
+                                    <div class="tooltip"><div class="tooltip__content">Первая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    1,0%
+                                    <div class="tooltip"><div class="tooltip__content">Вторая линия</div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-premium">
+                            <div class="program__label">
+                                Премия&nbsp;1&nbsp;%
+                            </div>
+                            <div class="program__value">
+                                50$
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-conditions">
+                            <button class="button text with-tooltip"
+                                    data-with-tooltip-placement="left">
+                                <!-- icon: info -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                     viewBox="0 0 24 24">
+                                    <path d="M11.9996 1.99902C17.5233 1.99902 22.0011 6.47687 22.0011 12.0006C22.0011 17.5243 17.5233 22.0021 11.9996 22.0021C6.47589 22.0021 1.99805 17.5243 1.99805 12.0006C1.99805 6.47687 6.47589 1.99902 11.9996 1.99902ZM11.9958 10.2496C11.483 10.2499 11.0605 10.6363 11.0031 11.1336L10.9964 11.2503L11 16.7519L11.0068 16.8685C11.0649 17.3658 11.4879 17.7515 12.0007 17.7512C12.5135 17.7509 12.936 17.3645 12.9934 16.8672L13 16.7505L12.9964 11.249L12.9896 11.1323C12.9316 10.635 12.5086 10.2493 11.9958 10.2496ZM12 6.50006C11.3089 6.50006 10.7485 7.06038 10.7485 7.75158C10.7485 8.44277 11.3089 9.0031 12 9.0031C12.6912 9.0031 13.2516 8.44277 13.2516 7.75158C13.2516 7.06038 12.6912 6.50006 12 6.50006Z"/>
+                                </svg>
+                                <div class="tooltip">
+                                    <div class="tooltip__content">
+                                        Доп условия по линиям<br/>
+                                        Первая линяя: 3 партнера от 500$
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="program">
+                        <div class="program__cell program__cell-status">
+                            <div class="program__label">
+                                Статус
+                            </div>
+                            <div class="program__value">
+                                A3
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-personal-invest">
+                            <div class="program__label">
+                                Личн. инвест-ии
+                            </div>
+                            <div class="program__value">от 1000$
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-structure">
+                            <div class="program__label">
+                                Об-т структуры
+                                <div class="program__info icon small ">
+                                    <!-- icon: info -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                         viewBox="0 0 24 24">
+                                        <path d="M11.9996 1.99902C17.5233 1.99902 22.0011 6.47687 22.0011 12.0006C22.0011 17.5243 17.5233 22.0021 11.9996 22.0021C6.47589 22.0021 1.99805 17.5243 1.99805 12.0006C1.99805 6.47687 6.47589 1.99902 11.9996 1.99902ZM11.9958 10.2496C11.483 10.2499 11.0605 10.6363 11.0031 11.1336L10.9964 11.2503L11 16.7519L11.0068 16.8685C11.0649 17.3658 11.4879 17.7515 12.0007 17.7512C12.5135 17.7509 12.936 17.3645 12.9934 16.8672L13 16.7505L12.9964 11.249L12.9896 11.1323C12.9316 10.635 12.5086 10.2493 11.9958 10.2496ZM12 6.50006C11.3089 6.50006 10.7485 7.06038 10.7485 7.75158C10.7485 8.44277 11.3089 9.0031 12 9.0031C12.6912 9.0031 13.2516 8.44277 13.2516 7.75158C13.2516 7.06038 12.6912 6.50006 12 6.50006Z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="program__value">
+                                10 000$
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-invest">
+                            <div class="program__label">
+                                Реф, от инвестиций
+                            </div>
+                            <div class="program__value">
+                                <div class="program__percent with-tooltip">
+                                    5,0%
+                                    <div class="tooltip"><div class="tooltip__content">Первая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    2,5%
+                                    <div class="tooltip"><div class="tooltip__content">Вторая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    1,00%
+                                    <div class="tooltip"><div class="tooltip__content">Третья линия</div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-income">
+                            <div class="program__label">
+                                Реф, от дохода
+                            </div>
+                            <div class="program__value">
+                                <div class="program__percent with-tooltip">
+                                    2,5%
+                                    <div class="tooltip"><div class="tooltip__content">Первая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    1,25%
+                                    <div class="tooltip"><div class="tooltip__content">Вторая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    0,50%
+                                    <div class="tooltip"><div class="tooltip__content">Третья линия</div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-premium">
+                            <div class="program__label">
+                                Премия&nbsp;1&nbsp;%
+                            </div>
+                            <div class="program__value">
+                                100$
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-conditions">
+                            <button class="button text with-tooltip"
+                                    data-with-tooltip-placement="left">
+                                <!-- icon: info -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                     viewBox="0 0 24 24">
+                                    <path d="M11.9996 1.99902C17.5233 1.99902 22.0011 6.47687 22.0011 12.0006C22.0011 17.5243 17.5233 22.0021 11.9996 22.0021C6.47589 22.0021 1.99805 17.5243 1.99805 12.0006C1.99805 6.47687 6.47589 1.99902 11.9996 1.99902ZM11.9958 10.2496C11.483 10.2499 11.0605 10.6363 11.0031 11.1336L10.9964 11.2503L11 16.7519L11.0068 16.8685C11.0649 17.3658 11.4879 17.7515 12.0007 17.7512C12.5135 17.7509 12.936 17.3645 12.9934 16.8672L13 16.7505L12.9964 11.249L12.9896 11.1323C12.9316 10.635 12.5086 10.2493 11.9958 10.2496ZM12 6.50006C11.3089 6.50006 10.7485 7.06038 10.7485 7.75158C10.7485 8.44277 11.3089 9.0031 12 9.0031C12.6912 9.0031 13.2516 8.44277 13.2516 7.75158C13.2516 7.06038 12.6912 6.50006 12 6.50006Z"/>
+                                </svg>
+                                <div class="tooltip">
+                                    <div class="tooltip__content">
+                                        Доп условия по линиям<br/>
+                                        Первая линяя: 3 партнера от 1 000$
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="program">
+                        <div class="program__cell program__cell-status">
+                            <div class="program__label">
+                                Статус
+                            </div>
+                            <div class="program__value">
+                                B1
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-personal-invest">
+                            <div class="program__label">
+                                Личн. инвест-ии
+                            </div>
+                            <div class="program__value">
+                                от 1 500$
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-structure">
+                            <div class="program__label">
+                                Об-т структуры
+                                <div class="program__info icon small ">
+                                    <!-- icon: info -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                         viewBox="0 0 24 24">
+                                        <path d="M11.9996 1.99902C17.5233 1.99902 22.0011 6.47687 22.0011 12.0006C22.0011 17.5243 17.5233 22.0021 11.9996 22.0021C6.47589 22.0021 1.99805 17.5243 1.99805 12.0006C1.99805 6.47687 6.47589 1.99902 11.9996 1.99902ZM11.9958 10.2496C11.483 10.2499 11.0605 10.6363 11.0031 11.1336L10.9964 11.2503L11 16.7519L11.0068 16.8685C11.0649 17.3658 11.4879 17.7515 12.0007 17.7512C12.5135 17.7509 12.936 17.3645 12.9934 16.8672L13 16.7505L12.9964 11.249L12.9896 11.1323C12.9316 10.635 12.5086 10.2493 11.9958 10.2496ZM12 6.50006C11.3089 6.50006 10.7485 7.06038 10.7485 7.75158C10.7485 8.44277 11.3089 9.0031 12 9.0031C12.6912 9.0031 13.2516 8.44277 13.2516 7.75158C13.2516 7.06038 12.6912 6.50006 12 6.50006Z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="program__value">
+                                20 000$
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-invest">
+                            <div class="program__label">
+                                Реф, от инвестиций
+                            </div>
+                            <div class="program__value">
+                                <div class="program__percent with-tooltip">
+                                    5,0%
+                                    <div class="tooltip"><div class="tooltip__content">Первая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    3,0%
+                                    <div class="tooltip"><div class="tooltip__content">Вторая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    1,50%
+                                    <div class="tooltip"><div class="tooltip__content">Третья линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    0,50%
+                                    <div class="tooltip"><div class="tooltip__content">Четвертая линия</div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-income">
+                            <div class="program__label">
+                                Реф, от дохода
+                            </div>
+                            <div class="program__value">
+                                <div class="program__percent with-tooltip">
+                                    3,0%
+                                    <div class="tooltip"><div class="tooltip__content">Первая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    1,50%
+                                    <div class="tooltip"><div class="tooltip__content">Вторая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    0,75%
+                                    <div class="tooltip"><div class="tooltip__content">Третья линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    0,25%
+                                    <div class="tooltip"><div class="tooltip__content">Четвертая линия</div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-premium">
+                            <div class="program__label">
+                                Премия&nbsp;1&nbsp;%
+                            </div>
+                            <div class="program__value">
+                                200$
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-conditions">
+                            <button class="button text with-tooltip"
+                                    data-with-tooltip-placement="left">
+                                <!-- icon: info -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                     viewBox="0 0 24 24">
+                                    <path d="M11.9996 1.99902C17.5233 1.99902 22.0011 6.47687 22.0011 12.0006C22.0011 17.5243 17.5233 22.0021 11.9996 22.0021C6.47589 22.0021 1.99805 17.5243 1.99805 12.0006C1.99805 6.47687 6.47589 1.99902 11.9996 1.99902ZM11.9958 10.2496C11.483 10.2499 11.0605 10.6363 11.0031 11.1336L10.9964 11.2503L11 16.7519L11.0068 16.8685C11.0649 17.3658 11.4879 17.7515 12.0007 17.7512C12.5135 17.7509 12.936 17.3645 12.9934 16.8672L13 16.7505L12.9964 11.249L12.9896 11.1323C12.9316 10.635 12.5086 10.2493 11.9958 10.2496ZM12 6.50006C11.3089 6.50006 10.7485 7.06038 10.7485 7.75158C10.7485 8.44277 11.3089 9.0031 12 9.0031C12.6912 9.0031 13.2516 8.44277 13.2516 7.75158C13.2516 7.06038 12.6912 6.50006 12 6.50006Z"/>
+                                </svg>
+                                <div class="tooltip">
+                                    <div class="tooltip__content">
+                                        Доп условия по линиям<br/>
+                                        Первая линяя: 1 партнер 3*
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="program">
+                        <div class="program__cell program__cell-status">
+                            <div class="program__label">
+                                Статус
+                            </div>
+                            <div class="program__value">
+                                B2
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-personal-invest">
+                            <div class="program__label">
+                                Личн. инвест-ии
+                            </div>
+                            <div class="program__value">
+                                от 2 500$
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-structure">
+                            <div class="program__label">
+                                Об-т структуры
+                                <div class="program__info icon small ">
+                                    <!-- icon: info -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                         viewBox="0 0 24 24">
+                                        <path d="M11.9996 1.99902C17.5233 1.99902 22.0011 6.47687 22.0011 12.0006C22.0011 17.5243 17.5233 22.0021 11.9996 22.0021C6.47589 22.0021 1.99805 17.5243 1.99805 12.0006C1.99805 6.47687 6.47589 1.99902 11.9996 1.99902ZM11.9958 10.2496C11.483 10.2499 11.0605 10.6363 11.0031 11.1336L10.9964 11.2503L11 16.7519L11.0068 16.8685C11.0649 17.3658 11.4879 17.7515 12.0007 17.7512C12.5135 17.7509 12.936 17.3645 12.9934 16.8672L13 16.7505L12.9964 11.249L12.9896 11.1323C12.9316 10.635 12.5086 10.2493 11.9958 10.2496ZM12 6.50006C11.3089 6.50006 10.7485 7.06038 10.7485 7.75158C10.7485 8.44277 11.3089 9.0031 12 9.0031C12.6912 9.0031 13.2516 8.44277 13.2516 7.75158C13.2516 7.06038 12.6912 6.50006 12 6.50006Z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="program__value">
+                                50 000$
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-invest">
+                            <div class="program__label">
+                                Реф, от инвестиций
+                            </div>
+                            <div class="program__value">
+                                <div class="program__percent with-tooltip">
+                                    5,0%
+                                    <div class="tooltip"><div class="tooltip__content">Первая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    3,5%
+                                    <div class="tooltip"><div class="tooltip__content">Вторая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    1,75%
+                                    <div class="tooltip"><div class="tooltip__content">Третья линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    0,75%
+                                    <div class="tooltip"><div class="tooltip__content">Четвертая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    0,20%
+                                    <div class="tooltip"><div class="tooltip__content">Пятая линия</div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-income">
+                            <div class="program__label">
+                                Реф, от дохода
+                            </div>
+                            <div class="program__value">
+                                <div class="program__percent with-tooltip">
+                                    3,5%
+                                    <div class="tooltip"><div class="tooltip__content">Первая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    1,75%
+                                    <div class="tooltip"><div class="tooltip__content">Вторая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    0,75%
+                                    <div class="tooltip"><div class="tooltip__content">Третья линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    0,25%
+                                    <div class="tooltip"><div class="tooltip__content">Четвертая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    0,10%
+                                    <div class="tooltip"><div class="tooltip__content">Пятая линия</div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-premium">
+                            <div class="program__label">
+                                Премия&nbsp;1&nbsp;%
+                            </div>
+                            <div class="program__value">
+                                500$
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-conditions">
+                            <button class="button text with-tooltip"
+                                    data-with-tooltip-placement="left">
+                                <!-- icon: info -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                     viewBox="0 0 24 24">
+                                    <path d="M11.9996 1.99902C17.5233 1.99902 22.0011 6.47687 22.0011 12.0006C22.0011 17.5243 17.5233 22.0021 11.9996 22.0021C6.47589 22.0021 1.99805 17.5243 1.99805 12.0006C1.99805 6.47687 6.47589 1.99902 11.9996 1.99902ZM11.9958 10.2496C11.483 10.2499 11.0605 10.6363 11.0031 11.1336L10.9964 11.2503L11 16.7519L11.0068 16.8685C11.0649 17.3658 11.4879 17.7515 12.0007 17.7512C12.5135 17.7509 12.936 17.3645 12.9934 16.8672L13 16.7505L12.9964 11.249L12.9896 11.1323C12.9316 10.635 12.5086 10.2493 11.9958 10.2496ZM12 6.50006C11.3089 6.50006 10.7485 7.06038 10.7485 7.75158C10.7485 8.44277 11.3089 9.0031 12 9.0031C12.6912 9.0031 13.2516 8.44277 13.2516 7.75158C13.2516 7.06038 12.6912 6.50006 12 6.50006Z"/>
+                                </svg>
+                                <div class="tooltip">
+                                    <div class="tooltip__content">
+                                        Доп условия по линиям<br/>
+                                        Первая линяя: 1 партнер 4*, 1 партнер 3
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="program">
+                        <div class="program__cell program__cell-status">
+                            <div class="program__label">
+                                Статус
+                            </div>
+                            <div class="program__value">
+                                B3
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-personal-invest">
+                            <div class="program__label">
+                                Личн. инвест-ии
+                            </div>
+                            <div class="program__value">
+                                от 5 000$
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-structure">
+                            <div class="program__label">
+                                Об-т структуры
+                                <div class="program__info icon small ">
+                                    <!-- icon: info -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                         viewBox="0 0 24 24">
+                                        <path d="M11.9996 1.99902C17.5233 1.99902 22.0011 6.47687 22.0011 12.0006C22.0011 17.5243 17.5233 22.0021 11.9996 22.0021C6.47589 22.0021 1.99805 17.5243 1.99805 12.0006C1.99805 6.47687 6.47589 1.99902 11.9996 1.99902ZM11.9958 10.2496C11.483 10.2499 11.0605 10.6363 11.0031 11.1336L10.9964 11.2503L11 16.7519L11.0068 16.8685C11.0649 17.3658 11.4879 17.7515 12.0007 17.7512C12.5135 17.7509 12.936 17.3645 12.9934 16.8672L13 16.7505L12.9964 11.249L12.9896 11.1323C12.9316 10.635 12.5086 10.2493 11.9958 10.2496ZM12 6.50006C11.3089 6.50006 10.7485 7.06038 10.7485 7.75158C10.7485 8.44277 11.3089 9.0031 12 9.0031C12.6912 9.0031 13.2516 8.44277 13.2516 7.75158C13.2516 7.06038 12.6912 6.50006 12 6.50006Z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="program__value">
+                                100 000$
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-invest">
+                            <div class="program__label">
+                                Реф, от инвестиций
+                            </div>
+                            <div class="program__value">
+                                <div class="program__percent with-tooltip">
+                                    6,0%
+                                    <div class="tooltip"><div class="tooltip__content">Первая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    4,0%
+                                    <div class="tooltip"><div class="tooltip__content">Вторая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    2,00%
+                                    <div class="tooltip"><div class="tooltip__content">Третья линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    1,00%
+                                    <div class="tooltip"><div class="tooltip__content">Четвертая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    0,40%
+                                    <div class="tooltip"><div class="tooltip__content">Пятая линия</div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-income">
+                            <div class="program__label">
+                                Реф, от дохода
+                            </div>
+                            <div class="program__value">
+                                <div class="program__percent with-tooltip">
+                                    4,0%
+                                    <div class="tooltip"><div class="tooltip__content">Первая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    2,00%
+                                    <div class="tooltip"><div class="tooltip__content">Вторая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    1,00%
+                                    <div class="tooltip"><div class="tooltip__content">Третья линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    0,50%
+                                    <div class="tooltip"><div class="tooltip__content">Четвертая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    0,20%
+                                    <div class="tooltip"><div class="tooltip__content">Пятая линия</div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-premium">
+                            <div class="program__label">
+                                Премия&nbsp;1&nbsp;%
+                            </div>
+                            <div class="program__value">
+                                1 000$
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-conditions">
+                            <button class="button text with-tooltip"
+                                    data-with-tooltip-placement="left">
+                                <!-- icon: info -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                     viewBox="0 0 24 24">
+                                    <path d="M11.9996 1.99902C17.5233 1.99902 22.0011 6.47687 22.0011 12.0006C22.0011 17.5243 17.5233 22.0021 11.9996 22.0021C6.47589 22.0021 1.99805 17.5243 1.99805 12.0006C1.99805 6.47687 6.47589 1.99902 11.9996 1.99902ZM11.9958 10.2496C11.483 10.2499 11.0605 10.6363 11.0031 11.1336L10.9964 11.2503L11 16.7519L11.0068 16.8685C11.0649 17.3658 11.4879 17.7515 12.0007 17.7512C12.5135 17.7509 12.936 17.3645 12.9934 16.8672L13 16.7505L12.9964 11.249L12.9896 11.1323C12.9316 10.635 12.5086 10.2493 11.9958 10.2496ZM12 6.50006C11.3089 6.50006 10.7485 7.06038 10.7485 7.75158C10.7485 8.44277 11.3089 9.0031 12 9.0031C12.6912 9.0031 13.2516 8.44277 13.2516 7.75158C13.2516 7.06038 12.6912 6.50006 12 6.50006Z"/>
+                                </svg>
+                                <div class="tooltip">
+                                    <div class="tooltip__content">
+                                        Доп условия по линиям<br/>
+                                        Первая линяя: 1 партнер 5*, 1 партнер 4*, 1 партнер 3*
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="program">
+                        <div class="program__cell program__cell-status">
+                            <div class="program__label">
+                                Статус
+                            </div>
+                            <div class="program__value">
+                                C1
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-personal-invest">
+                            <div class="program__label">
+                                Личн. инвест-ии
+                            </div>
+                            <div class="program__value">
+                                от 10 000$
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-structure">
+                            <div class="program__label">
+                                Об-т структуры
+                                <div class="program__info icon small ">
+                                    <!-- icon: info -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                         viewBox="0 0 24 24">
+                                        <path d="M11.9996 1.99902C17.5233 1.99902 22.0011 6.47687 22.0011 12.0006C22.0011 17.5243 17.5233 22.0021 11.9996 22.0021C6.47589 22.0021 1.99805 17.5243 1.99805 12.0006C1.99805 6.47687 6.47589 1.99902 11.9996 1.99902ZM11.9958 10.2496C11.483 10.2499 11.0605 10.6363 11.0031 11.1336L10.9964 11.2503L11 16.7519L11.0068 16.8685C11.0649 17.3658 11.4879 17.7515 12.0007 17.7512C12.5135 17.7509 12.936 17.3645 12.9934 16.8672L13 16.7505L12.9964 11.249L12.9896 11.1323C12.9316 10.635 12.5086 10.2493 11.9958 10.2496ZM12 6.50006C11.3089 6.50006 10.7485 7.06038 10.7485 7.75158C10.7485 8.44277 11.3089 9.0031 12 9.0031C12.6912 9.0031 13.2516 8.44277 13.2516 7.75158C13.2516 7.06038 12.6912 6.50006 12 6.50006Z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="program__value">
+                                500 000$
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-invest">
+                            <div class="program__label">
+                                Реф, от инвестиций
+                            </div>
+                            <div class="program__value">
+                                <div class="program__percent with-tooltip">
+                                    9,0%
+                                    <div class="tooltip"><div class="tooltip__content">Первая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    4,5%
+                                    <div class="tooltip"><div class="tooltip__content">Вторая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    2,25%
+                                    <div class="tooltip"><div class="tooltip__content">Третья линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    1,25%
+                                    <div class="tooltip"><div class="tooltip__content">Четвертая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    0,60%
+                                    <div class="tooltip"><div class="tooltip__content">Пятая линия</div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-income">
+                            <div class="program__label">
+                                Реф, от дохода
+                            </div>
+                            <div class="program__value">
+                                <div class="program__percent with-tooltip">
+                                    4,5%
+                                    <div class="tooltip"><div class="tooltip__content">Первая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    2,25%
+                                    <div class="tooltip"><div class="tooltip__content">Вторая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    1,25%
+                                    <div class="tooltip"><div class="tooltip__content">Третья линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    0,75%
+                                    <div class="tooltip"><div class="tooltip__content">Четвертая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    0,30%
+                                    <div class="tooltip"><div class="tooltip__content">Пятая линия</div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-premium">
+                            <div class="program__label">
+                                Премия&nbsp;1&nbsp;%
+                            </div>
+                            <div class="program__value">
+                                5 000$
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-conditions">
+                            <button class="button text with-tooltip"
+                                    data-with-tooltip-placement="left">
+                                <!-- icon: info -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                     viewBox="0 0 24 24">
+                                    <path d="M11.9996 1.99902C17.5233 1.99902 22.0011 6.47687 22.0011 12.0006C22.0011 17.5243 17.5233 22.0021 11.9996 22.0021C6.47589 22.0021 1.99805 17.5243 1.99805 12.0006C1.99805 6.47687 6.47589 1.99902 11.9996 1.99902ZM11.9958 10.2496C11.483 10.2499 11.0605 10.6363 11.0031 11.1336L10.9964 11.2503L11 16.7519L11.0068 16.8685C11.0649 17.3658 11.4879 17.7515 12.0007 17.7512C12.5135 17.7509 12.936 17.3645 12.9934 16.8672L13 16.7505L12.9964 11.249L12.9896 11.1323C12.9316 10.635 12.5086 10.2493 11.9958 10.2496ZM12 6.50006C11.3089 6.50006 10.7485 7.06038 10.7485 7.75158C10.7485 8.44277 11.3089 9.0031 12 9.0031C12.6912 9.0031 13.2516 8.44277 13.2516 7.75158C13.2516 7.06038 12.6912 6.50006 12 6.50006Z"/>
+                                </svg>
+                                <div class="tooltip">
+                                    <div class="tooltip__content">
+                                        Доп условия по линиям<br/>
+                                        Первая линяя: 1 партнер 6*, 1 партнер 5*, 1 партнер 4*
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="program">
+                        <div class="program__cell program__cell-status">
+                            <div class="program__label">
+                                Статус
+                            </div>
+                            <div class="program__value">
+                                C2
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-personal-invest">
+                            <div class="program__label">
+                                Личн. инвест-ии
+                            </div>
+                            <div class="program__value">
+                                от 20 000$
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-structure">
+                            <div class="program__label">
+                                Об-т структуры
+                                <div class="program__info icon small ">
+                                    <!-- icon: info -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                         viewBox="0 0 24 24">
+                                        <path d="M11.9996 1.99902C17.5233 1.99902 22.0011 6.47687 22.0011 12.0006C22.0011 17.5243 17.5233 22.0021 11.9996 22.0021C6.47589 22.0021 1.99805 17.5243 1.99805 12.0006C1.99805 6.47687 6.47589 1.99902 11.9996 1.99902ZM11.9958 10.2496C11.483 10.2499 11.0605 10.6363 11.0031 11.1336L10.9964 11.2503L11 16.7519L11.0068 16.8685C11.0649 17.3658 11.4879 17.7515 12.0007 17.7512C12.5135 17.7509 12.936 17.3645 12.9934 16.8672L13 16.7505L12.9964 11.249L12.9896 11.1323C12.9316 10.635 12.5086 10.2493 11.9958 10.2496ZM12 6.50006C11.3089 6.50006 10.7485 7.06038 10.7485 7.75158C10.7485 8.44277 11.3089 9.0031 12 9.0031C12.6912 9.0031 13.2516 8.44277 13.2516 7.75158C13.2516 7.06038 12.6912 6.50006 12 6.50006Z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="program__value">
+                                1 000 000$
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-invest">
+                            <div class="program__label">
+                                Реф, от инвестиций
+                            </div>
+                            <div class="program__value">
+                                <div class="program__percent with-tooltip">
+                                    10,0%
+                                    <div class="tooltip"><div class="tooltip__content">Первая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    5,0%
+                                    <div class="tooltip"><div class="tooltip__content">Вторая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    2,50%
+                                    <div class="tooltip"><div class="tooltip__content">Третья линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    1,50%
+                                    <div class="tooltip"><div class="tooltip__content">Четвертая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    0,80%
+                                    <div class="tooltip"><div class="tooltip__content">Пятая линия</div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-income">
+                            <div class="program__label">
+                                Реф, от дохода
+                            </div>
+                            <div class="program__value">
+                                <div class="program__percent with-tooltip">
+                                    5,0%
+                                    <div class="tooltip"><div class="tooltip__content">Первая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    2,50%
+                                    <div class="tooltip"><div class="tooltip__content">Вторая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    1,25%
+                                    <div class="tooltip"><div class="tooltip__content">Третья линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    0,75%
+                                    <div class="tooltip"><div class="tooltip__content">Четвертая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    0,40%
+                                    <div class="tooltip"><div class="tooltip__content">Пятая линия</div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-premium">
+                            <div class="program__label">
+                                Премия&nbsp;1&nbsp;%
+                            </div>
+                            <div class="program__value">
+                                10 000$
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-conditions">
+                            <button class="button text with-tooltip"
+                                    data-with-tooltip-placement="left">
+                                <!-- icon: info -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                     viewBox="0 0 24 24">
+                                    <path d="M11.9996 1.99902C17.5233 1.99902 22.0011 6.47687 22.0011 12.0006C22.0011 17.5243 17.5233 22.0021 11.9996 22.0021C6.47589 22.0021 1.99805 17.5243 1.99805 12.0006C1.99805 6.47687 6.47589 1.99902 11.9996 1.99902ZM11.9958 10.2496C11.483 10.2499 11.0605 10.6363 11.0031 11.1336L10.9964 11.2503L11 16.7519L11.0068 16.8685C11.0649 17.3658 11.4879 17.7515 12.0007 17.7512C12.5135 17.7509 12.936 17.3645 12.9934 16.8672L13 16.7505L12.9964 11.249L12.9896 11.1323C12.9316 10.635 12.5086 10.2493 11.9958 10.2496ZM12 6.50006C11.3089 6.50006 10.7485 7.06038 10.7485 7.75158C10.7485 8.44277 11.3089 9.0031 12 9.0031C12.6912 9.0031 13.2516 8.44277 13.2516 7.75158C13.2516 7.06038 12.6912 6.50006 12 6.50006Z"/>
+                                </svg>
+                                <div class="tooltip">
+                                    <div class="tooltip__content">
+                                        Доп условия по линиям<br/>
+                                        Первая линяя: 1 партнер 7*, 1 партнер 6*, 1 партнер 5*
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="program">
+                        <div class="program__cell program__cell-status">
+                            <div class="program__label">
+                                Статус
+                            </div>
+                            <div class="program__value">
+                                C3
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-personal-invest">
+                            <div class="program__label">
+                                Личн. инвест-ии
+                            </div>
+                            <div class="program__value">
+                                от 30 000$
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-structure">
+                            <div class="program__label">
+                                Об-т структуры
+                                <div class="program__info icon small ">
+                                    <!-- icon: info -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                         viewBox="0 0 24 24">
+                                        <path d="M11.9996 1.99902C17.5233 1.99902 22.0011 6.47687 22.0011 12.0006C22.0011 17.5243 17.5233 22.0021 11.9996 22.0021C6.47589 22.0021 1.99805 17.5243 1.99805 12.0006C1.99805 6.47687 6.47589 1.99902 11.9996 1.99902ZM11.9958 10.2496C11.483 10.2499 11.0605 10.6363 11.0031 11.1336L10.9964 11.2503L11 16.7519L11.0068 16.8685C11.0649 17.3658 11.4879 17.7515 12.0007 17.7512C12.5135 17.7509 12.936 17.3645 12.9934 16.8672L13 16.7505L12.9964 11.249L12.9896 11.1323C12.9316 10.635 12.5086 10.2493 11.9958 10.2496ZM12 6.50006C11.3089 6.50006 10.7485 7.06038 10.7485 7.75158C10.7485 8.44277 11.3089 9.0031 12 9.0031C12.6912 9.0031 13.2516 8.44277 13.2516 7.75158C13.2516 7.06038 12.6912 6.50006 12 6.50006Z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="program__value">
+                                3 000 000$
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-invest">
+                            <div class="program__label">
+                                Реф, от инвестиций
+                            </div>
+                            <div class="program__value">
+                                <div class="program__percent with-tooltip">
+                                    10%
+                                    <div class="tooltip"><div class="tooltip__content">Первая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    5,5%
+                                    <div class="tooltip"><div class="tooltip__content">Вторая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    2,75%
+                                    <div class="tooltip"><div class="tooltip__content">Третья линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    1,75%
+                                    <div class="tooltip"><div class="tooltip__content">Четвертая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    1,00%
+                                    <div class="tooltip"><div class="tooltip__content">Пятая линия</div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-income">
+                            <div class="program__label">
+                                Реф, от дохода
+                            </div>
+                            <div class="program__value">
+                                <div class="program__percent with-tooltip">
+                                    5,0%
+                                    <div class="tooltip"><div class="tooltip__content">Первая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    2,75%
+                                    <div class="tooltip"><div class="tooltip__content">Вторая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    1,25%
+                                    <div class="tooltip"><div class="tooltip__content">Третья линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    0,75%
+                                    <div class="tooltip"><div class="tooltip__content">Четвертая линия</div></div>
+                                </div>
+                                <div class="program__percent with-tooltip">
+                                    0,50%
+                                    <div class="tooltip"><div class="tooltip__content">Пятая линия</div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-premium">
+                            <div class="program__label">
+                                Премия&nbsp;1&nbsp;%
+                            </div>
+                            <div class="program__value">
+                                30 000$
+                            </div>
+                        </div>
+                        <div class="program__cell program__cell-conditions">
+                            <button class="button text with-tooltip"
+                                    data-with-tooltip-placement="left">
+                                <!-- icon: info -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                     viewBox="0 0 24 24">
+                                    <path d="M11.9996 1.99902C17.5233 1.99902 22.0011 6.47687 22.0011 12.0006C22.0011 17.5243 17.5233 22.0021 11.9996 22.0021C6.47589 22.0021 1.99805 17.5243 1.99805 12.0006C1.99805 6.47687 6.47589 1.99902 11.9996 1.99902ZM11.9958 10.2496C11.483 10.2499 11.0605 10.6363 11.0031 11.1336L10.9964 11.2503L11 16.7519L11.0068 16.8685C11.0649 17.3658 11.4879 17.7515 12.0007 17.7512C12.5135 17.7509 12.936 17.3645 12.9934 16.8672L13 16.7505L12.9964 11.249L12.9896 11.1323C12.9316 10.635 12.5086 10.2493 11.9958 10.2496ZM12 6.50006C11.3089 6.50006 10.7485 7.06038 10.7485 7.75158C10.7485 8.44277 11.3089 9.0031 12 9.0031C12.6912 9.0031 13.2516 8.44277 13.2516 7.75158C13.2516 7.06038 12.6912 6.50006 12 6.50006Z"/>
+                                </svg>
+                                <div class="tooltip">
+                                    <div class="tooltip__content">
+                                        Доп условия по линиям<br/>
+                                        Первая линяя: 1 партнер 8*, 1 партнер 7*, 1 партнер 6*
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -797,97 +1685,94 @@
 
 </div>
 
-<div class="footer__wrapper">
-    <div class="container">
-        <footer class="footer">
-            <h2 class="title">
-                <div>
-                    Начните<br/>
-                    инвестировать<br/>
-                    сегодня
-                </div>
-                <div class="footer__img">
-                    <img src="img/arrow.svg" alt=""/>
-                </div>
+
+<!-- FOOTER-->
+
+<div class="container dark">
+    <footer class="footer">
+        <div class="footer__main">
+            <h2 class="footer__title">
+                Заработайте<br>
+                сейчас независимо от&nbsp;тренда
             </h2>
-            <div class="footer__header header" id="footerHeader">
-                <a class="header__logo" href="index.html">
-                    <img class="desktop" src="img/logo-inverted.svg" alt="">
-                    <img class="mobile" src="img/logo-small-inverted.svg" alt="">
+            <img class="footer__background" src="img/footer-background.png" alt="">
+        </div>
+        <div class="footer__header header" id="footerHeader">
+            <a class="header__logo" href="index.html">
+                <img class="desktop" src="img/logo.svg" alt="">
+            </a>
+            <nav class="header__nav"
+                 data-toggle-class="inactive"
+                 data-target="!self"
+                 data-reason="collapsed-hor"
+            >
+                <a href="about.html">О нас</a>
+                <a href="pool.html">Пул ликвидности</a>
+                <a href="partners.html">Партнерам</a>
+                <a href="FAQ.html">FAQ</a>
+                <a href="contacts.html">Контакты</a>
+            </nav>
+            <div class="header__language language dropdown">
+                <div class="language__label dropdown__trigger">
+                    <span>Ru</span>
+                    <svg class="icon">
+                        <use href="img/icons/angle-down.svg#svg"/>
+                    </svg>
+                </div>
+                <div class="language__menu dropdown__menu">
+                    <div class="language__menu-item dropdown__menu-item selected">
+                        <img src="img/flags/ru.svg" alt="">RU
+                    </div>
+                    <div class="language__menu-item dropdown__menu-item">
+                        <img src="img/flags/en.svg" alt="">EN
+                    </div>
+                    <div class="language__menu-item dropdown__menu-item">
+                        <img src="img/flags/fi.svg" alt="">FI
+                    </div>
+                    <div class="language__menu-item dropdown__menu-item">
+                        <img src="img/flags/kz.svg" alt="">KZ
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__divider"></div>
+        <div class="footer__links">
+            <div class="footer__social">
+                <a href="https://t.me/IDOSmart" target="_blank">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <use href="img/icons/social-telegram.svg#svg"/>
+                    </svg>
+                    Телеграм канал
                 </a>
-                <nav class="header__nav"
-                     data-toggle-class="inactive"
-                     data-target="!self"
-                     data-reason="collapsed-hor"
-                >
-                    <a href="about.html">О нас</a>
-                    <a href="tariffs.html">Тарифы</a>
-                    <a href="partners.html">Партнерам</a>
-                    <a href="FAQ.html">FAQ</a>
-                    <a href="contacts.html">Контакты</a>
-                </nav>
-                <div class="header__language language dropdown">
-                    <div class="language__label dropdown__trigger">
-                        <span>Ru</span>
-                        <svg class="icon">
-                            <use href="img/icons/angle-down.svg#svg"/>
-                        </svg>
-                    </div>
-                    <div class="language__menu dropdown__menu">
-                        <div class="language__menu-item dropdown__menu-item selected">
-                            <img src="img/flags/ru.svg" alt="">RU
-                        </div>
-                        <div class="language__menu-item dropdown__menu-item">
-                            <img src="img/flags/en.svg" alt="">EN
-                        </div>
-                        <div class="language__menu-item dropdown__menu-item">
-                            <img src="img/flags/fi.svg" alt="">FI
-                        </div>
-                        <div class="language__menu-item dropdown__menu-item">
-                            <img src="img/flags/kz.svg" alt="">KZ
-                        </div>
-                    </div>
-                </div>
+                <a href="https://t.me/IDOSmartchat" target="_blank">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <use href="img/icons/social-telegram.svg#svg"/>
+                    </svg>
+                    Телеграм чат
+                </a>
+                <a href="mailto:support@spectra.cash" target="_blank">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <use href="img/icons/social-mail.svg#svg"/>
+                    </svg>
+                    Почта
+                </a>
+                <a href="https://www.youtube.com/channel/UCW43vzZd-iD_eXoW3tj-WxQ" target="_blank">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <use href="img/icons/social-youtube.svg#svg"/>
+                    </svg>
+                    YouTube
+                </a>
             </div>
-            <div class="footer__divider"></div>
-            <div class="footer__links">
-                <div class="footer__social">
-                    <a href="https://t.me/IDOSmart" target="_blank">
-                        <svg class="icon" viewBox="0 0 24 24">
-                            <use href="img/icons/social-telegram.svg#svg" />
-                        </svg>
-                        Телеграм канал
-                    </a>
-                    <a href="https://t.me/IDOSmartchat" target="_blank">
-                        <svg class="icon" viewBox="0 0 24 24">
-                            <use href="img/icons/social-telegram.svg#svg" />
-                        </svg>
-                        Телеграм чат
-                    </a>
-                    <a href="mailto:support@spectra.cash" target="_blank">
-                        <svg class="icon" viewBox="0 0 24 24">
-                            <use href="img/icons/social-mail.svg#svg" />
-                        </svg>
-                        Почта
-                    </a>
-                    <a href="https://www.youtube.com/channel/UCW43vzZd-iD_eXoW3tj-WxQ" target="_blank">
-                        <svg class="icon" viewBox="0 0 24 24">
-                            <use href="img/icons/social-youtube.svg#svg" />
-                        </svg>
-                        YouTube
-                    </a>
+            <div class="footer__other">
+                <div class="footer__copyright">
+                    © 2022 Spectra. All rights reserved.
                 </div>
-                <div class="footer__other">
-                    <div class="footer__copyright">
-                        © 2022 Spectra. All rights reserved.
-                    </div>
-                    <a class="footer__privacy-policy link" href="./Privacy-Policy.pdf" target="_blank">
-                        Политика конфиденциальности
-                    </a>
-                </div>
+                <a class="footer__privacy-policy link" href="./Privacy-Policy.pdf" target="_blank">
+                    Политика конфиденциальности
+                </a>
             </div>
-        </footer>
-    </div>
+        </div>
+    </footer>
 </div>
 
 

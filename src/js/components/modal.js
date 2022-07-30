@@ -38,7 +38,7 @@ window.addEventListener("load", () => {
 			modal.classList.remove("open");
 			bodyRemoveClassTimeout = setTimeout(() => {
 				body.classList.remove("modal-open");
-			}, cssVars.animationDisappear * 1000);
+			}, cssVars.animationSlow * 1000);
 		}
 
 		modalOverlay.addEventListener("click", closeModal);

@@ -38,7 +38,7 @@ window.addEventListener('load', () => {
 		menuOverlay.classList.remove("open");
 		bodyEnableScrollTimeout = setTimeout(() => {
 			document.documentElement.classList.remove("disable-scroll");
-		}, cssVars.animationDisappear * 1000);
+		}, cssVars.animationSlow * 1000);
 	}
 	headerBurger.addEventListener("click", openMenu);
 	menuOverlay.addEventListener("click", closeMenu);

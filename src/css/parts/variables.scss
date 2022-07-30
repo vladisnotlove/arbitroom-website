@@ -1,7 +1,8 @@
+@use "sass:color";
+@use "sass:math";
+
 
 // VARIABLES
-
-@use "sass:math";
 
 $color-prime-main: #FF6500;
 $color-prime-light: #FFD1B2;
@@ -215,9 +216,11 @@ $z-index-header: 100;
 $z-index-header-menu-overlay: 200;
 $z-index-header-menu: 250;
 $z-index-video-player: 500;
-$z-index-dropdown-overlay: 1000;
-$z-index-dropdown-menu: 1050;
-$z-index-modal: 1200;
+$z-index-modal: 1000;
+$z-index-dropdown-overlay: 1200;
+$z-index-dropdown-menu: 1250;
+$z-index-popper: 1400;
+$z-index-tooltip: 1600;
 
 $scrollbar-width: 0.5rem;
 
@@ -257,6 +260,17 @@ $container-padding-adaptive: get-adaptive-value($container-padding-desktop, $con
 @function get-column-width($max-columns, $gap, $columns) {
 	@return calc(((100% - #{$gap} * #{$max-columns - 1}) / #{$max-columns} + #{$gap}) * #{$columns} - #{$gap});
 }
+
+@function to-rgba($color) {
+	$result: rgba(color.red($color), color.green($color), color.blue($color), color.alpha($color));
+	@return $result;
+}
+
+@function mono-gradient($color) {
+	$result: linear-gradient(to right, $color, $color);
+	@return $result;
+}
+
 
 // ANIMATIONS
 

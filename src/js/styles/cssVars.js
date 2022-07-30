@@ -1,8 +1,8 @@
 const cssVars = {
 	colorPrime: '#FF6500',
 	arrowBorderRadius: 40,
-	animationAppear: 0.25,  // s
-	animationDisappear: 0.5,
+	animationNormal: 0.25,  // s
+	animationSlow: 0.5,
 	headerHeight: 88,
 }
 

@@ -67,3 +67,8 @@ html.disable-scroll {
 .full-width {
 	width: 100%;
 }
+
+.fade-out-slow {
+	opacity: 0;
+	animation: $animation-slow fade-out;
+}

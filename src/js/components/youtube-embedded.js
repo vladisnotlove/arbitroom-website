@@ -45,7 +45,7 @@ window.addEventListener('load', () => {
 
 				hiddenTimeout = setTimeout(() => {
 					container.hidden = true;
-				}, cssVars.animationDisappear * 1000);
+				}, cssVars.animationSlow * 1000);
 			})
 		}
 	})
