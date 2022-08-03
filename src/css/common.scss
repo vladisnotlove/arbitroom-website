@@ -80,10 +80,20 @@ h1, h2, h3, label, p {
 }
 
 .language__menu-item {
+	color: $color-text-more-secondary;
+
 	img {
 		width: 1.5rem;
 		height: auto;
 		margin-right: 0.5rem;
+	}
+
+	&:hover {
+		color: $color-text-prime;
+	}
+
+	&.selected {
+		color: $color-text-prime;
 	}
 }
 
