@@ -23,6 +23,10 @@ const paths = {
 	pdfSrc: scr + '*.pdf',
 	pdfDist: dist + "",
 
+	faviconSrcAll: scr + 'favicon/**/*',
+	faviconSrc: scr + 'favicon/**/*',
+	faviconDist: dist + '/',
+
 	imgSrcAll: scr + 'img/**/*',
 	imgSrc: scr + 'img/**/*',
 	imgDist: dist + 'img/',
@@ -42,14 +46,18 @@ const paths = {
 
 // builders
 
-const pdf = () => {
-	return src(paths.pdfSrc).pipe(dest(paths.pdfDist));
-};
-
 const html = () => {
 	return src(paths.htmlSrc)
 	.pipe(replace("{{version}}", version))
 	.pipe(dest(paths.htmlDist));
+};
+
+const pdf = () => {
+	return src(paths.pdfSrc).pipe(dest(paths.pdfDist));
+};
+
+const favicon = () => {
+	return src(paths.faviconSrc).pipe(dest(paths.faviconDist));
 };
 
 const img = () => {
@@ -101,7 +109,7 @@ const clean = (cb) => {
 	cb();
 };
 
-const build = series(clean, parallel(pdf, html, img, fonts, scss, js));
+const build = series(clean, parallel(html, pdf, favicon, img, fonts, scss, js));
 
 const watch = series(build, (cb) => {
 	gulpWatch(paths.pdfSrcAll, pdf);
