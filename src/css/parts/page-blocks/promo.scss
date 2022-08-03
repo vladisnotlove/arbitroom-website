@@ -6,6 +6,10 @@
 
 // promo
 
+.promo__container {
+  overflow: hidden;
+}
+
 .promo {
   position: relative;
   padding-bottom: 11.25rem;
@@ -27,7 +31,6 @@
 
 .promo__img-container {
   grid-area: i;
-  overflow: hidden;
 }
 
 .promo__img {
