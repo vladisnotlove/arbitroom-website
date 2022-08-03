@@ -93,6 +93,15 @@
   background: transparent;
   border-radius: 1rem;
   border: 2px solid $color-prime-light;
+  cursor: pointer;
+
+  transition: all $animation-slow;
+
+  &:hover {
+    background: $color-action-hover;
+    transition: all $animation-slow;
+  }
+
 }
 
 // ADAPTIVE
