@@ -176,6 +176,7 @@ $header-link: 0.625rem;
 	cursor: pointer;
 	transition: color $animation-normal;
 
+	&.active,
 	&:hover {
 		color: $color-prime-main;
 		transition: color $animation-slow;
@@ -284,6 +285,7 @@ $left-shift: 0.5rem;
 		transition: color $animation-slow;
 		cursor: pointer;
 
+		&.active,
 		&:hover {
 			text-decoration: none;
 			color: $color-prime-main;
