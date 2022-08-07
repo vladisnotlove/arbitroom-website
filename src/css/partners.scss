@@ -1,9 +1,5 @@
-@import "parts/reset";
 @import "parts/variables";
-@import "parts/fonts";
 @import "parts/mixins";
-
-@import "common";
 
 
 // partners
@@ -88,7 +84,7 @@
 .program {
   display: table-row;
   @include paper;
-  transition: background $animation-normal, transform $animation-normal;
+  transition: background $animation-slow, transform $animation-slow;
   cursor: pointer;
 
   &.selected {
@@ -100,8 +96,8 @@
   }
 
   &:hover {
-    background-image: mono-gradient($color-background-upper1) !important;
-    transition: background $animation-fast, transform $animation-fast;
+    background: $color-background-upper1 !important;
+    transition: background $animation-normal, transform $animation-normal;
   }
 }
 
