@@ -174,12 +174,12 @@ $header-link: 0.625rem;
 	white-space: nowrap;
 
 	cursor: pointer;
-	transition: color $animation-normal;
+	transition: color $animation-slow;
 
 	&.active,
 	&:hover {
 		color: $color-prime-main;
-		transition: color $animation-slow;
+		transition: color $animation-normal;
 	}
 }
 

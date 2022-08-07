@@ -11,3 +11,4 @@ import "./components/table";
 import "./components/dragScroll";
 import "./components/popper";
 import "./components/tooltip";
+import "./components/animations";

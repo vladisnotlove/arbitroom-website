@@ -15,10 +15,27 @@
 .pool__invest-pool {
   grid-area: f;
   min-width: 15rem;
+
+  & > .invest-pool {
+    height: 100%;
+  }
 }
 
 .pool__table {
   grid-area: t;
+
+  display: flex;
+  flex-direction: column;
+
+
+  & .collapse-table {
+    flex-grow: 1;
+  }
+
+  & .scroll-container__inner,
+  & .table {
+    height: 100%;
+  }
 }
 
 .pool__table-title {
@@ -29,6 +46,7 @@
   grid-area: c;
   @include paper;
   padding: 1.5rem;
+  min-width: 16.5rem;
 }
 
 .pool__conditions-title {
@@ -146,7 +164,20 @@
 
 // ADAPTIVE
 
+@media (max-width: $small-desktop) {
+
+  .pool__conditions-body {
+    gap: 0.5rem;
+  }
+
+}
+
 @media (max-width: $small-laptop) {
+
+  .pool__conditions-body {
+    gap: 0.25rem;
+  }
+
   .pool__table-percent-cell {
     width: 25%;
   }
@@ -172,6 +203,7 @@
     display: block;
     columns: 2 auto;
     margin-bottom: -1rem;
+    column-gap: 1.5rem;
   }
 
   .pool__condition {
