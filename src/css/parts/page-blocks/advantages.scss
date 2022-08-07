@@ -103,11 +103,8 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  justify-content: flex-start;
-  gap: 3rem;
-}
-.advantages__card.card-7 {
-  @include typography-h5;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
 
@@ -151,6 +148,7 @@
   justify-content: space-between;
   gap: 1rem;
   @include typography-h2;
+  margin-bottom: 3rem;
 }
 
 
@@ -197,9 +195,6 @@
   .advantages__card.card-2 {
     gap: 2rem;
   }
-  .advantages__card.card-7 {
-    font-size: 1.25rem;
-  }
 
   .advantages__card-bot {
     font-size: 3rem;
@@ -232,9 +227,6 @@
   .advantages__card.card-2 {
     gap: 1.5rem;
   }
-  .advantages__card.card-7 {
-    font-size: 1rem;
-  }
 
   .advantages__card-bot {
     font-size: 2rem;
@@ -254,6 +246,18 @@
 
 @media (max-width: $tablet) {
 
+  .advantages__cards {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+    "a a a a a a a b b b b b"
+    "c c c c c c d d d d d d"
+    "c c c c c c e e e e e e"
+    "f f f f f f e e e e e e"
+    "f f f f f f e e e e e e"
+    "g g g g g g g g g g g g";
+  }
+
   .advantages__card.card-1,
   .advantages__card.card-2 {
     flex-wrap: wrap;
@@ -264,6 +268,9 @@
     }
   }
 
+  .advantages__card-bot {
+    margin: 0;
+  }
 }
 
 @media (max-width: $small-tablet) {
