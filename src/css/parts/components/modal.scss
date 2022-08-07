@@ -1,7 +1,7 @@
 @import "../variables";
 @import "../mixins";
 
-body.modal-open {
+html.modal-open {
 	overflow: hidden;
 	scroll-behavior: auto;
 	padding-right: $scrollbar-width;

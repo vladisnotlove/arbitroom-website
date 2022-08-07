@@ -10,7 +10,7 @@ window.addEventListener("load", () => {
 		trigger.addEventListener("click", () => {
 			if (target) {
 				document.querySelectorAll(".modal").forEach(modal => modal.classList.remove("open"));
-				body.classList.add("modal-open");
+				document.documentElement.classList.add("modal-open");
 				target.classList.add("open");
 			}
 		})
@@ -37,7 +37,7 @@ window.addEventListener("load", () => {
 
 			modal.classList.remove("open");
 			bodyRemoveClassTimeout = setTimeout(() => {
-				body.classList.remove("modal-open");
+				document.documentElement.classList.remove("modal-open");
 			}, cssVars.animationSlow * 1000);
 		}
 
