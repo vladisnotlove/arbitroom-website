@@ -17,7 +17,7 @@
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-template-areas:
     "i i i i i i i i i i i i"
-    "su su su su su . . . st st st st";
+    "su su su su su su . . st st st st";
 }
 
 .partners__title-inner {
@@ -233,6 +233,17 @@
     grid-template-areas:
       "i i i i i i i i i i i i"
       "su su su su su su . st st st st st";
+  }
+}
+
+
+@media (max-width: $tablet) {
+  .partners__title {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-areas:
+      "i i i i i i i i i i i i"
+      "su su su su su su su su st st st st";
   }
 }
 
