@@ -4,8 +4,12 @@
 
 // advantages
 
-.advantages {
+.advantages__container {
   position: relative;
+  overflow: visible;
+}
+
+.advantages {
   overflow: visible;
 }
 
@@ -15,9 +19,9 @@
   justify-content: center;
 
   position: absolute;
-  top: 23%;
+  top: 45%;
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -50%);
 
   width: 27vw;
   height: 27vw;
@@ -25,8 +29,8 @@
   z-index: -1;
 
   img {
-    width: 249%;
-    height: 249%;
+    width: 260%;
+    height: 260%;
     max-width: 100vw;
   }
 }
