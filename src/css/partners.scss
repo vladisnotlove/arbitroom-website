@@ -63,6 +63,12 @@
   margin-bottom: -0.5rem;
   width: 100%;
   overflow: hidden;
+
+  &:hover {
+    .program {
+      background: $color-background-lower1;
+    }
+  }
 }
 
 .programs__collapse-btn {
@@ -82,13 +88,20 @@
 .program {
   display: table-row;
   @include paper;
+  transition: background $animation-normal, transform $animation-normal;
+  cursor: pointer;
 
   &.selected {
-    background-image: mono-gradient(change-color($color-prime-main, $alpha: 0.08));
+    background: $color-background-upper1;
 
     .program__info {
       display: inline-block;
     }
+  }
+
+  &:hover {
+    background-image: mono-gradient($color-background-upper1) !important;
+    transition: background $animation-fast, transform $animation-fast;
   }
 }
 

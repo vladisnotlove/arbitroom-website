@@ -20,7 +20,8 @@ $color-text-prime: rgba(40, 30, 28, 0.92);
 $color-text-secondary: rgba(40, 30, 28, 0.64);
 $color-text-more-secondary: rgba(40, 30, 28, 0.32);
 
-$color-action-hover: rgba(52, 20, 0, 0.06);
+$color-action-hover-opacity: 0.06;
+$color-action-hover: rgba(52, 20, 0, $color-action-hover-opacity);
 $color-divider: rgba(40, 30, 28, 0.08);
 
 $color-background-inverted: linear-gradient(0deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), #1E223A;  // delete
