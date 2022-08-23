@@ -36,7 +36,7 @@ const paths = {
 	fontsDist: dist + 'fonts/',
 
 	scssSrcAll: scr + 'css/**/*.scss',
-	scssSrc: scr + 'css/*.scss',
+	scssSrc: scr + 'css/styles.scss',
 	cssDist: dist + 'css/',
 
 	jsSrcAll: scr + 'js/**/*.js',
