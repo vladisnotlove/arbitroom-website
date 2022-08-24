@@ -31,6 +31,10 @@ const paths = {
 	imgSrc: scr + 'img/**/*',
 	imgDist: dist + 'img/',
 
+	videoSrcAll: scr + 'video/**/*',
+	videoSrc: scr + 'video/**/*',
+	videoDist: dist + 'video/',
+
 	fontsSrcAll: scr + 'fonts/**/*',
 	fontsSrc: scr + 'fonts/**/*',
 	fontsDist: dist + 'fonts/',
@@ -62,6 +66,10 @@ const favicon = () => {
 
 const img = () => {
 	return src(paths.imgSrc).pipe(dest(paths.imgDist));
+};
+
+const video = () => {
+	return src(paths.videoSrc).pipe(dest(paths.videoDist));
 };
 
 const fonts = () => {
@@ -109,12 +117,13 @@ const clean = (cb) => {
 	cb();
 };
 
-const build = series(clean, parallel(html, pdf, favicon, img, fonts, scss, js));
+const build = series(clean, parallel(html, pdf, favicon, img, video, fonts, scss, js));
 
 const watch = series(build, (cb) => {
 	gulpWatch(paths.pdfSrcAll, pdf);
 	gulpWatch(paths.htmlSrcAll, html);
 	gulpWatch(paths.imgSrcAll, img);
+	gulpWatch(paths.videoSrcAll, video);
 	gulpWatch(paths.fontsSrcAll, fonts);
 	gulpWatch(paths.scssSrcAll, scss);
 	gulpWatch(paths.jsSrcAll, js);
