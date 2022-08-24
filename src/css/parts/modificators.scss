@@ -18,6 +18,10 @@ html.disable-scroll {
 	color: $color-text-secondary
 }
 
+.color-secondary {
+	color: $color-secondary-main
+}
+
 .hide-on-desktop {
 	@media screen and (min-width: $mobile + 1) {
 		display: none !important;

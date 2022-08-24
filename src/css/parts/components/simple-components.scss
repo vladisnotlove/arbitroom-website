@@ -38,10 +38,9 @@
 }
 
 .page-block__title {
-	font-family: Golos, sans-serif;
-	font-style: normal;
+	text-shadow: 0 0 48px rgba(125, 251, 248, 0.6);
 
-	@include typography-h2;
+	@include typography-h3;
 
 	margin-bottom: 4rem;
 }
@@ -207,7 +206,7 @@
 	// page-block
 
 	.page-block__title {
-		font-size: 4.5rem;
+		font-size: 3.125rem;
 	}
 
 }
@@ -217,7 +216,7 @@
 	// page-block
 
 	.page-block__title {
-		font-size: 4rem;
+		font-size: 2.75rem;
 	}
 
 }
@@ -227,7 +226,7 @@
 	// page-block
 
 	.page-block__title {
-		font-size: 3.5rem;
+		font-size: 2.25rem;
 	}
 
 }
@@ -238,7 +237,7 @@
 	// page-block
 
 	.page-block__title {
-		font-size: 3rem;
+		font-size: 2rem;
 	}
 
 }
@@ -263,8 +262,8 @@
 	}
 
 	.page-block__title {
-		font-size: 2rem;
-		margin-bottom: 2rem;
+		@include typography-h3-adaptive;
+		margin-bottom: 1.5rem;
 	}
 
 	// text
