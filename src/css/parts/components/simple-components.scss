@@ -210,10 +210,10 @@
 	// page-block
 
 	.page-block__title {
-		font-size: 3.125rem;
+		font-size: 4.5rem;
 
 		&.small {
-			font-size: 2.5rem;
+			font-size: 3.125rem;
 		}
 	}
 
@@ -224,10 +224,10 @@
 	// page-block
 
 	.page-block__title {
-		font-size: 2.75rem;
+		font-size: 4rem;
 
 		&.small {
-			font-size: 2rem;
+			font-size: 2.75rem;
 		}
 	}
 
@@ -238,10 +238,10 @@
 	// page-block
 
 	.page-block__title {
-		font-size: 2.25rem;
+		font-size: 3rem;
 
 		&.small {
-			font-size: 1.75rem;
+			font-size: 2.25rem;
 		}
 	}
 
@@ -254,6 +254,10 @@
 
 	.page-block__title {
 		font-size: 2rem;
+
+		&.small {
+			font-size: 2rem;
+		}
 	}
 
 }
@@ -280,6 +284,10 @@
 	.page-block__title {
 		@include typography-h3-adaptive;
 		margin-bottom: 1.5rem;
+		
+		&.small {
+			@include typography-h3-adaptive;
+		}
 	}
 
 	// text

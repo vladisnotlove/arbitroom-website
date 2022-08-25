@@ -24,6 +24,7 @@
 
 	cursor: pointer;
 	@include shadow-hovering;
+	box-shadow: 0 0 24px rgba(255, 168, 112, 0.4);
 
 	.icon {
 		margin-top: -50%;
@@ -52,7 +53,7 @@
 
 	&:hover:not(.without-hover) {
 		box-shadow: none;
-		background: $color-action-hover;
+		background: rgba(255,255,255, 0.08);
 		transition: background $animation-normal;
 	}
 }

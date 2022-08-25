@@ -13,11 +13,7 @@
   top: 42%;
   left: 0;
   transform: translate(-40%, -50%);
-  height: 36vw;
-  aspect-ratio: 1;
-
-  background: rgba(125, 251, 248, 0.12);
-  filter: blur(128px);
+  @include glow;
 }
 
 
@@ -61,7 +57,7 @@
   width: 100%;
   height: 100%;
   border-radius: inherit;
-  @include border-gradient($gradient: linear-gradient(to right, #7DFBF8CC, #7DFBF833), $border-width: 0.83px);
+  @include border-gradient($gradient: $gradient-border-secondary, $border-width: 0.83px);
 
   &::after {
     content: "";

@@ -171,7 +171,14 @@
 	z-index: $z-index;
 }
 
-@mixin border-gradient($border-width: 2px, $gradient: linear-gradient(to right, #FFFFFF29, #00000014)) {
+@mixin border-gradient(
+	$border-width: 1px,
+	$gradient: $gradient-border,
+	$disable-border-top: false,
+	$disable-border-bottom: false,
+	$disable-border-left: false,
+	$disable-border-right: false,
+) {
 
 	&::before {
 		content: "";
@@ -187,5 +194,36 @@
 		-webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
 		-webkit-mask-composite: destination-out;
 		mask-composite: exclude;
+		z-index: -1;
+
+		@if ($disable-border-top == true) {
+			top: -1px;
+		}
+
+		@if ($disable-border-left == true) {
+			left: -1px;
+		}
+
+		@if ($disable-border-bottom == true) {
+			bottom: -1px;
+		}
+
+		@if ($disable-border-right == true) {
+			right: -1px;
+		}
+	}
+}
+
+@mixin glow($color: rgba(125, 251, 248, 0.12)) {
+	height: 36vw;
+	aspect-ratio: 1;
+
+	background: $color;
+	filter: blur(6.5vw);
+}
+
+@mixin disable-border-gradient() {
+	&::before {
+		display: none;
 	}
 }

@@ -337,7 +337,16 @@
   }
 
   .ver-table__body > .ver-table__row:last-child > .ver-table__cell {
+    position: relative;
     @include paper-bottom;
+    @include border-gradient(
+      $gradient: $gradient-border-primary,
+      $disable-border-top: true,
+      $disable-border-left: true,
+      $disable-border-right: true,
+    );
+    overflow: hidden;
+
   }
 
 

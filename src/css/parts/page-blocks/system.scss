@@ -17,11 +17,8 @@
   top: 50%;
   left: 100%;
   transform: translate(-40%, -50%);
-  height: 36vw;
-  aspect-ratio: 1;
 
-  background: rgba(255, 103, 255, 0.12);
-  filter: blur(128px);
+  @include glow($color: rgba(255, 103, 255, 0.12));
 }
 
 .system__description {
@@ -51,7 +48,7 @@
 
   position: relative;
   border-radius: 1.5rem;
-  @include border-gradient($border-width: 1px, $gradient: linear-gradient(to right, #FF67FFCC, #FF67FF33));
+  @include border-gradient($gradient: $gradient-border-tertiary);
 
   img {
     width: 100%;

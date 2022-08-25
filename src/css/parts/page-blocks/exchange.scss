@@ -12,6 +12,14 @@
   column-gap: 1rem;
 }
 
+.exchange__glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-25%, -25%);
+  @include glow();
+}
+
 .exchange__title {
   grid-area: title;
   align-self: center;
@@ -26,13 +34,13 @@
 
 .exchange__table-container {
   grid-area: table;
-  overflow: auto;
 }
 
 
 .exchange__subtitle {
   @include typography-subtitle1;
   margin-top: 1rem;
+  text-shadow: none;
 }
 
 .exchange__description-text {
@@ -47,13 +55,37 @@
 
 
 .exchange__table-container {
+  position: relative;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+
   @include paper;
-  overflow: auto;
-  @include with-custom-scrollbar;
+  @include border-gradient($gradient: $gradient-border-primary);
 
   .ver-table {
     @include disable-paper;
   }
+}
+
+.exchange__table-scroll-content {
+  max-width: 100%;
+  overflow: auto;
+  @include with-custom-scrollbar;
+}
+
+.exchange__table-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  aspect-ratio: 779 / 469;
+  z-index: -1;
+
+  border-radius: 50%;
+  background: rgba(255, 127, 81, 0.24);
+  filter: blur(150px);
 }
 
 .exchange__exchange-token {
@@ -154,9 +186,24 @@
 
   .exchange__table-container {
     @include disable-paper;
-    @include without-scrollbar;
+    @include disable-border-gradient;
+
+    max-width: none;
+    overflow: visible;
     margin-left: calc(#{$container-padding-adaptive} * -1);
     margin-right: calc(#{$container-padding-adaptive} * -1);
+  }
+
+  .exchange__table-glow {
+    height: auto;
+    max-height: 100%;
+    width: 90%;
+    aspect-ratio: 299 / 340;
+    filter: blur(76px);
+  }
+
+  .exchange__table-scroll-content {
+    @include without-scrollbar;
   }
 
 

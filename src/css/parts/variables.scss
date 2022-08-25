@@ -31,6 +31,12 @@ $color-divider: rgba(40, 30, 28, 0.08);
 $color-error: #F44336;
 
 
+$gradient-border: linear-gradient(127.08deg, rgba(255, 255, 255, 0.16) 0%, rgba(0, 0, 0, 0.08) 99.96%);
+$gradient-border-secondary: linear-gradient(127.08deg, rgba(125, 251, 248, 0.8) 0%, rgba(125, 251, 248, 0.2) 99.96%);
+$gradient-border-tertiary: linear-gradient(127.08deg, rgba(255, 103, 255, 0.8) 0%, rgba(255, 103, 255, 0.2) 99.96%);
+$gradient-border-primary: linear-gradient(127.08deg, rgba(255, 127, 81, 0.6) 0%, rgba(255, 127, 81, 0.08) 99.96%, rgba(255, 127, 81, 0.16) 99.96%);
+
+
 $typography-h2-font-weight: 500;
 $typography-h2-font-size: 5rem;
 $typography-h2-line-height: 1.25;

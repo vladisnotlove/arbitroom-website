@@ -140,7 +140,7 @@ $promo-first-container-padding-bottom: 3.75rem;
   background: $color-background-upper1;
 
   border-radius: 1rem;
-  @include border-gradient;
+  @include border-gradient($border-width: 2px);
 
   div:first-child {
     position: relative;
