@@ -73,9 +73,11 @@
 }
 
 .exchange__table-scroll-content {
+  position: relative;
   max-width: 100%;
   overflow: auto;
   @include with-custom-scrollbar;
+  z-index: 2;
 }
 
 .exchange__table-glow {
@@ -85,7 +87,7 @@
   transform: translate(-50%, -50%);
   height: 100%;
   aspect-ratio: 779 / 469;
-  z-index: -1;
+  z-index: 1;
 
   border-radius: 50%;
   background: rgba(255, 127, 81, 0.24);
