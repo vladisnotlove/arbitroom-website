@@ -34,7 +34,7 @@ $promo-first-container-padding-bottom: 3.75rem;
 .promo__video-wrapper {
   position: absolute;
   top: 50%;
-  right: 0;
+  right: -5%;
   width: 85%;
   transform: translateY(-50%);
   font-size: 0;
@@ -46,9 +46,9 @@ $promo-first-container-padding-bottom: 3.75rem;
   position: absolute;
   top: 0;
   left: 0;
-  transform: translateY(-1px);
+  transform: translateY(-2%);
   width: 100%;
-  height: 5rem;
+  height: 12%;
   z-index: 1;
   background: linear-gradient(to bottom, $promo-background, change-color($promo-background, $alpha: 0));
 }
@@ -58,9 +58,9 @@ $promo-first-container-padding-bottom: 3.75rem;
   position: absolute;
   bottom: 0;
   left: 0;
-  transform: translateY(1px);
+  transform: translateY(2%);
   width: 100%;
-  height: 5rem;
+  height: 12%;
   z-index: 1;
   background: linear-gradient(to top, $promo-background, change-color($promo-background, $alpha: 0));
 }
@@ -70,8 +70,8 @@ $promo-first-container-padding-bottom: 3.75rem;
   position: absolute;
   top: 0;
   left: 0;
-  transform: translateX(-1px);
-  width: 2rem;
+  transform: translateX(-2%);
+  width: 6%;
   height: 100%;
   z-index: 1;
   background: linear-gradient(to right, $promo-background, change-color($promo-background, $alpha: 0));
@@ -81,8 +81,6 @@ $promo-first-container-padding-bottom: 3.75rem;
   width: 100%;
   object-fit: contain;
   object-position: center center;
-  position: relative;
-  right: -5%;
 }
 
 .promo__title {
@@ -307,11 +305,6 @@ $promo-first-container-padding-bottom: 3.75rem;
 
   .promo__video-shadow-left {
     display: none;
-  }
-
-  .promo__video-shadow-bottom,
-  .promo__video-shadow-top {
-    height: 3rem;
   }
 
   .promo__main {
