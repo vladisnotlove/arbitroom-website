@@ -11,15 +11,17 @@ const ANIMATION_FAST_MS = cssVars.animationNormal * 1000;
 
 window.addEventListener('load', () => {
 
+	const cursor = new Cursor();
+
 	document.querySelectorAll("[data-follow-animation-container]").forEach(container => {
+
+		const speed = 0.04;
+		const maxSpeed = 7;
 
 		const target = container.querySelector("[data-follow-animation]");
 
-		let enabled = false;
+		let animating = false;
 		let returning = false;
-
-		let mouseX = 0;
-		let mouseY = 0;
 
 		let initialX = target.offsetLeft;
 		let initialY = target.offsetTop;
@@ -27,81 +29,76 @@ window.addEventListener('load', () => {
 		let ballX = initialX;
 		let ballY = initialY;
 
-		let speed = 0.1;
+		function startAnimation() {
+			if (!animating) {
+				animating = true;
+				animate();
+			}
+		}
 
+		function stopAnimation() {
+			animating = false;
+		}
 
-		function animate(){
+		function animate() {
 
-			if (!enabled) return;
+			if (!animating) return;
+
+			let distX;
+			let distY;
 
 			if (returning) {
-				let distX = initialX - ballX;
-				let distY = initialY - ballY;
+				distX = initialX - ballX;
+				distY = initialY - ballY;
 
 				// if returned
 				if (Math.abs(distX) < 1 && Math.abs(distY) < 1) {
-					enabled = false;
-
-					target.style.left = "";
-					target.style.top = "";
-
-					ballX = initialX;
-					ballY = initialY;
-				}
-				else {
-					ballX = ballX + (distX * speed);
-					ballY = ballY + (distY * speed);
-
-					target.style.left = ballX + "px";
-					target.style.top = ballY + "px";
-
-					requestAnimationFrame(animate);
+					stopAnimation();
+					return;
 				}
 			}
-
-			if (!returning) {
+			else {
 				const containerRect = container.getBoundingClientRect();
 				const containerX = containerRect.left;
 				const containerY = containerRect.top;
 
-				let mouseInContainerX = mouseX - containerX;
-				let mouseInContainerY = mouseY - containerY;
+				let mouseInContainerX = cursor.position().x - containerX;
+				let mouseInContainerY = cursor.position().y - containerY;
 
-				let distX = mouseInContainerX - ballX;
-				let distY = mouseInContainerY - ballY;
-
-				ballX = ballX + (distX * speed);
-				ballY = ballY + (distY * speed);
-
-				target.style.left = ballX + "px";
-				target.style.top = ballY + "px";
-
-				requestAnimationFrame(animate);
+				distX = mouseInContainerX - ballX;
+				distY = mouseInContainerY - ballY;
 			}
+
+			let delta = new Vector(distX * speed, distY * speed).normalTo(maxSpeed);
+
+			ballX = ballX + delta.x;
+			ballY = ballY + delta.y;
+
+			target.style.left = ballX + "px";
+			target.style.top = ballY + "px";
+
+			requestAnimationFrame(animate);
 		}
-		animate();
 
 		container.addEventListener("mouseenter", () => {
-			enabled = true;
 			returning = false;
-			animate();
+			startAnimation();
 		})
 
 		container.addEventListener("mouseleave", () => {
 			returning = true;
+			startAnimation();
 		})
 
 		container.addEventListener("mousemove", (event) => {
-			if (!enabled) {
-				enabled = true;
-				returning = false;
-				animate();
-			}
-
-			mouseX = event.clientX;
-			mouseY = event.clientY;
+			returning = false;
+			startAnimation();
 		})
 
+		window.addEventListener("resize", () => {
+			initialX = target.offsetLeft;
+			initialY = target.offsetTop;
+		})
 	})
 
 })

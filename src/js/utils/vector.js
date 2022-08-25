@@ -19,6 +19,15 @@ class Vector {
 		)
 	}
 
+	normalTo (targetLength) {
+		const length = this.length();
+
+		if (Math.abs(length) > targetLength) {
+			return this.normal().multiply(targetLength);
+		}
+		return this.clone();
+	}
+
 	add (value1, value2) {
 		if (typeof value1 === "object" && typeof value1.x === "number" && typeof value1.y === "number") {
 			return new Vector(this.x + value1.x, this.y + value1.y)

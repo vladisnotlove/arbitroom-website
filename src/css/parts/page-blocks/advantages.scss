@@ -6,7 +6,8 @@
 
 .advantages__container {
   position: relative;
-  overflow: visible;
+  overflow: hidden;
+  background: $color-background-lower1;
 }
 
 .advantages {
@@ -19,23 +20,28 @@
   justify-content: center;
 
   position: absolute;
-  top: 45%;
+  top: 54%;
   left: 50%;
   transform: translate(-50%, -50%);
 
-  width: 27vw;
-  height: 27vw;
+  width: 41vw;
+  height: 41vw;
   aspect-ratio: 1 / 1;
-  z-index: -1;
 
   img {
     width: 260%;
     height: 260%;
-    max-width: 100vw;
   }
 }
 
+.advantages__title {
+  position: relative;
+  text-align: center;
+  z-index: 5;
+}
+
 .advantages__cards {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-areas:
@@ -46,6 +52,7 @@
     "f f f f f f e e e e e e"
     "f f f f f f g g g g g g";
   gap: 1rem;
+  z-index: 5;
 }
 
 .advantages__card.card-1 {
@@ -73,6 +80,7 @@
 
 
 .advantages__card {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -80,6 +88,9 @@
   @include paper;
   @include typography-h4;
   padding: 2rem;
+
+  @include border-gradient($border-width: 1px);
+  z-index: 0;
 
   img {
     width: 4.5rem;
@@ -132,6 +143,7 @@
   font-size: 10rem;
   line-height: 1.08;
   letter-spacing: 0.03em;
+  text-shadow: 0px 0px 48px rgba(255, 255, 255, 0.6);
 }
 
 .advantages__card-number-unit {
@@ -279,8 +291,13 @@
 
 @media (max-width: $small-tablet) {
 
+  .advantages__title {
+    text-align: left;
+  }
+
   .advantages__background {
-    display: none;
+    width: 164vw;
+    height: 164vw;
   }
 
   .advantages__cards {
@@ -359,6 +376,11 @@
 }
 
 @media (max-width: $mobile) {
+
+  .advantages__container {
+    overflow: visible;
+    background: $color-background-lower2;
+  }
 
   .advantages__cards {
     gap: 0.5rem;
