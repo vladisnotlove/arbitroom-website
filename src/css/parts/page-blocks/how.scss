@@ -44,11 +44,6 @@
   align-items: center;
   gap: 1.5rem;
   @include typography-h5;
-
-  img {
-    width: 4.5rem;
-    height: 4.5rem;
-  }
 }
 
 .how__step-chip {
@@ -81,11 +76,6 @@
 
   .how__step {
     font-size: 1.25rem;
-
-    img {
-      width: 4rem;
-      height: 4rem;
-    }
   }
 
 }
@@ -117,15 +107,6 @@
   }
 
 
-  .how__step {
-    @include typography-h4-adaptive;
-
-    img {
-      width: 3.5rem;
-      height: 3.5rem;
-    }
-  }
-
 }
 
 @media (max-width: $small-tablet) {
@@ -136,6 +117,18 @@
 
   .how__img {
     display: none;
+  }
+
+  .how__step {
+    font-size: 1.125rem;
+  }
+
+}
+
+@media (max-width: $mobile) {
+
+  .how__step {
+    @include typography-body1-adaptive;
   }
 
 }

@@ -1,23 +1,26 @@
-import cssVars from '../styles/cssVars';
-import trottle from '../utils/trottle';
-import {min} from '@popperjs/core/lib/utils/math';
+import  'sticksy';
 
-const focusTopPercents = 0.2;
-const focusBottomPercents = 0.5;
-const minOpacity = 0.32;
+
+const focusTopPercents = 0.25;
+const focusBottomPercents = 0.45;
+const minOpacity = 0.2;
 const maxOpacity = 1;
+
+
+const cards = document.querySelector(".goals__cards")
 
 /**
  *
  * @param {Element} elem
  */
-const updateOpacity = (elem, index) => {
+const updateOpacity = (elem) => {
 	const rect = elem.getBoundingClientRect();
 	const center = rect.top + rect.height * 0.5;
 
 	const isInView = center > 0 && center < window.innerHeight;
 	if (!isInView) {
 		elem.style.opacity = minOpacity;
+		elem.classList.remove("highlight");
 		return;
 	}
 
@@ -30,15 +33,22 @@ const updateOpacity = (elem, index) => {
 
 	if (isInFocus) {
 		elem.style.opacity = maxOpacity;
+		elem.classList.add("highlight");
 		return;
 	}
 
 	const diff = Math.abs(center - focusCenter);
-	const coeff = focusHeight / 2.3 / diff;
+	const coeff = 1 - diff / cards.clientHeight;
+
+
+	console.log(diff);
+	console.log(cards.clientHeight);
 
 	elem.style.opacity = coeff > 1 ?
 		maxOpacity :
 		Math.max(coeff, minOpacity);
+
+	elem.classList.remove("highlight");
 }
 
 window.addEventListener("load", () => {
