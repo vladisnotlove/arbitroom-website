@@ -88,7 +88,7 @@
   cursor: pointer;
 
   &.selected {
-    background: $color-background-upper1;
+    background: $color-background-upper2;
 
     .program__info {
       display: inline-block;
@@ -96,7 +96,7 @@
   }
 
   &:hover {
-    background: $color-background-upper1 !important;
+    background: $color-background-upper2 !important;
     transition: background $animation-normal, transform $animation-normal;
   }
 }

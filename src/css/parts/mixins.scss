@@ -107,7 +107,7 @@
 }
 
 @mixin paper {
-	background: $color-background-upper1;
+	background: $color-background-upper2;
 	color: $color-text-prime;
 	border-radius: 1rem;
 }
@@ -117,19 +117,19 @@
 }
 
 @mixin paper-top {
-	background: $color-background-upper1;
+	background: $color-background-upper2;
 	color: $color-text-prime;
 	border-radius: 1rem 1rem 0 0;
 }
 
 @mixin paper-middle {
-	background: $color-background-upper1;
+	background: $color-background-upper2;
 	color: $color-text-prime;
 	border-radius: 0;
 }
 
 @mixin paper-bottom {
-	background: $color-background-upper1;
+	background: $color-background-upper2;
 	color: $color-text-prime;
 	border-radius: 0 0 1rem 1rem;
 }
@@ -194,7 +194,6 @@
 		-webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
 		-webkit-mask-composite: destination-out;
 		mask-composite: exclude;
-		z-index: -1;
 
 		@if ($disable-border-top == true) {
 			top: -1px;

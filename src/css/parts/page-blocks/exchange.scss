@@ -3,6 +3,10 @@
 
 // exchange
 
+.exchange__container {
+  background: $color-background-upper1;
+}
+
 .exchange {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -183,6 +187,10 @@
 }
 
 @media (max-width: $small-tablet) {
+
+  .exchange__glow {
+    display: none;
+  }
 
   .exchange__table-container {
     @include disable-paper;

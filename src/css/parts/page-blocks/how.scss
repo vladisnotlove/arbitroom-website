@@ -3,16 +3,29 @@
 
 // how
 
+.how__container {
+  background: $color-background-upper1;
+}
+
+.how__glow {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(30%, 5%);
+  @include glow;
+}
+
 .how__content {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-areas:
-    "s s s s s s s i i i i i";
+    "s s s s s i i i i i i i";
   gap: 1rem;
 }
 
 .how__steps {
   grid-area: s;
+  align-self: center;
 }
 
 .how__img {
@@ -20,11 +33,10 @@
 }
 
 
-
 .how__steps {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .how__step {
@@ -36,6 +48,19 @@
   img {
     width: 4.5rem;
     height: 4.5rem;
+  }
+}
+
+.how__step-chip {
+  position: relative;
+  padding: 0.75rem;
+  background: rgba(255, 103, 255, 0.16);
+  border-radius: 1rem;
+  @include border-gradient;
+
+  img {
+    width: 3rem;
+    height: 3rem;
   }
 }
 
@@ -65,13 +90,30 @@
 
 }
 
+
+@media (max-width: $small-laptop) {
+
+  .how__content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+      "s s s s s s i i i i i i";
+    gap: 1rem;
+  }
+
+  .how__steps {
+    gap: 2rem;
+  }
+
+}
+
 @media (max-width: $tablet) {
 
   .how__content {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-areas:
-    "s s s s s s i i i i i i";
+      "s s s s s s s i i i i i";
   }
 
 
