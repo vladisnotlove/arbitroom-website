@@ -559,7 +559,7 @@ $social-link-padding: 0.625rem;
 	body {
 		background: $color-background;
 		position: relative;
-		overflow-x: visible;
+		overflow-x: hidden;
 		max-width: 100vw;
 		padding-top: $header-height-mobile;
 	}
