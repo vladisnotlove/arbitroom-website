@@ -10,7 +10,7 @@
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="css/styles{{version}}.css">
 </head>
-<body>
+<body class="dark">
 
 
 <div id="dropdownOverlay"></div>
@@ -528,7 +528,7 @@
 
 <!-- header -->
 <div class="header__wrapper" id="headerWrapper">
-    <div class="container">
+    <div class="container transparent">
         <header class="header hidden">
             <a class="header__logo" href="index.html">
                 <img src="img/logo.svg" alt="">
@@ -602,7 +602,12 @@
 
 <!-- MAIN -->
 
-<div class="container about__container">
+<div class="about-page__glow-1"></div>
+<div class="about-page__glow-2"></div>
+
+<div class="container transparent">
+
+    <div class="about-page__glow-3"></div>
 
     <!-- about -->
     <section class="page-block main about">
@@ -638,7 +643,8 @@
             </p>
 
 
-            <p class="text margin-bottom-big">
+            <p class="text margin-bottom-big about__article-img-wrapper">
+                <span class="about__article-img-glow"></span>
                 <img class="about__article-img" src="img/about-img-1.png" alt="Принцип межбиржевого арбитража криптовалют">
             </p>
 
@@ -657,7 +663,8 @@
             </p>
 
 
-            <p class="text margin-bottom-big">
+            <p class="text margin-bottom-big about__article-img-wrapper">
+                <span class="about__article-img-glow"></span>
                 <img class="about__article-img" src="img/about-img-2.png" alt="Принцип межбиржевого арбитража криптовалют">
             </p>
 
@@ -682,14 +689,18 @@
 
 <!-- FOOTER-->
 
-<div class="container dark">
+<div class="container footer__container transparent">
+    <div class="footer__glow-1"></div>
+    <div class="footer__glow-2"></div>
     <footer class="footer">
         <div class="footer__main">
             <h2 class="footer__title">
-                Заработайте<br>
-                сейчас независимо от&nbsp;тренда
+                <span class="color-secondary">Заработайте</span><br>
+                <span class="color-secondary">сейчас</span> независимо от&nbsp;тренда
             </h2>
-            <img class="footer__background" src="img/footer-background.png" alt="">
+            <div class="footer__background-wrapper">
+                <img class="footer__background" src="img/footer-background.png" alt="">
+            </div>
         </div>
         <div class="footer__header header" id="footerHeader">
             <a class="header__logo" href="index.html">

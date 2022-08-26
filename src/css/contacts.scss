@@ -162,6 +162,18 @@
 
 @media (max-width: $small-tablet) {
 
+	.contacts-page__glow-1 {
+		top: 0;
+		left: 0;
+		transform: translate(-35%, -10%);
+	}
+
+	.contacts-page__glow-2 {
+		top: 240px;
+		right: 0;
+		transform: translateX(30%);
+	}
+
 	.contacts {
 		display: block;
 	}
@@ -170,8 +182,16 @@
 		display: none;
 	}
 
+	.contacts__cards-glow {
+		display: none;
+	}
+
 	.contacts__card {
 		@include disable-border-gradient;
+	}
+
+	.contacts__card-title {
+		color: $color-text-prime;
 	}
 }
 
