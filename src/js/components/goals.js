@@ -1,12 +1,10 @@
-import  'sticksy';
+import  'sticksy'
+
 
 
 const focusCenterPercents = 0.3;
 const minOpacity = 0.2;
 const maxOpacity = 1;
-
-
-const cards = document.querySelector(".goals__cards")
 
 /**
  *
@@ -65,14 +63,19 @@ const updateHighlight = (elems) => {
 	}
 }
 
-
 window.addEventListener("load", () => {
-	const updateAll = () => {
-		const cards = document.querySelectorAll(".goals__card");
-		cards.forEach(updateOpacity);
-		updateHighlight(cards);
+
+	const cards = document.querySelectorAll(".goals__card");
+
+	if (cards.length > 0) {
+
+			const updateAll = () => {
+				cards.forEach(updateOpacity);
+				updateHighlight(cards);
+			}
+
+			updateAll();
+			window.addEventListener("scroll", updateAll);
 	}
 
-	updateAll();
-	window.addEventListener("scroll", updateAll);
-})
+});
