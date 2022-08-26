@@ -18,7 +18,7 @@
   left: 100%;
   transform: translate(-40%, -50%);
 
-  @include glow($color: rgba(255, 103, 255, 0.12));
+  @include glow($color: $color-glow-tertiary);
 }
 
 .system__description {

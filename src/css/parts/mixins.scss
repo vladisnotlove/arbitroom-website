@@ -113,6 +113,7 @@
 }
 
 @mixin paper-elevation1 {
+	backdrop-filter: blur(4rem);
 	box-shadow: 0 .5rem 0.75rem rgba(51, 20, 0, 0.08);
 }
 
@@ -213,12 +214,14 @@
 	}
 }
 
-@mixin glow($color: rgba(125, 251, 248, 0.12)) {
-	height: 36vw;
-	aspect-ratio: 1;
+@mixin glow($color: $color-glow-secondary, $width: 36vw, $aspect-ratio: 1, $blur: max(($width * 0.18), 100px)) {
+	width: $width;
+	aspect-ratio: $aspect-ratio;
+	min-width: 300px;
 
+	border-radius: 50%;
 	background: $color;
-	filter: blur(6.5vw);
+	filter: blur($blur);
 }
 
 @mixin disable-border-gradient() {

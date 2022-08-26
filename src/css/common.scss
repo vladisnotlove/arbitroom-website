@@ -273,7 +273,7 @@ $left-shift: 0.5rem;
 .menu__nav {
 	display: flex;
 	flex-direction: column;
-	gap: 1.5rem;
+	gap: 1.25rem;
 	margin-top: 1.5rem;
 
 	a {
@@ -339,32 +339,70 @@ $left-shift: 0.5rem;
 
 // footer
 
+.footer__container {
+	background: $color-background-lower1;
+}
+
 .footer {
 	position: relative;
 	padding-top: 11.25rem;
 	padding-bottom: 4rem;
 }
 
+.footer__glow-1 {
+	position: absolute;
+	top: 53%;
+	left: 0;
+	transform: translate(-48%, -50%);
+	@include glow($color: rgba(125, 251, 248, 0.08));
+}
+
+.footer__glow-2 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	@include glow($color: rgba(255, 103, 255, 0.2), $width: 56vw, $aspect-ratio: 56 / 16);
+	filter: blur(10vw);
+}
+
 .footer__main {
-	display: flex;
-	align-items: center;
-	gap: 4.5rem;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-areas: "t t t t t t t t t b b b";
 	margin-bottom: 8rem;
+	gap: 1rem;
 }
 
 .footer__title {
-	display: flex;
-	align-items: center;
+	grid-area: t;
+	align-self: center;
+}
 
+.footer__background-wrapper {
+	grid-area: b;
+	align-self: flex-end;
+}
+
+
+.footer__title {
 	font-weight: 500;
 	font-size: 6.875rem;
 	line-height: 1.16;
 	letter-spacing: 0.01em;
+
+	text-shadow: 0px 0px 48px rgba(125, 251, 248, 0.6);
+}
+
+.footer__background-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
 }
 
 .footer__background {
-	width: 23%;
-	object-fit: contain;
+	width: 120%;
+	transform: translateY(5%);
 }
 
 .footer__divider {
@@ -499,8 +537,15 @@ $social-link-padding: 0.625rem;
 
 @media (max-width: $small-tablet) {
 
+	.footer__glow-2 {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		@include glow($color: rgba(255, 103, 255, 0.2), $width: 120vw, $aspect-ratio: 56 / 16, $blur: 12vw);
+	}
 
-	.footer__background {
+	.footer__background-wrapper {
 		display: none;
 	}
 
@@ -528,13 +573,6 @@ $social-link-padding: 0.625rem;
 			border: 1px solid $color-text-prime;
 			transition: background $animation-slow;
 
-			.icon {
-				fill: $color-prime-main;
-
-				use {
-					fill: $color-prime-main;
-				}
-			}
 
 			&:hover {
 				text-decoration: none;
@@ -586,11 +624,16 @@ $social-link-padding: 0.625rem;
 	}
 
 	.footer__main {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas: "t";
 		margin-bottom: 2rem;
 	}
 
 	.footer__title {
 		@include typography-h3-adaptive;
+
+
 		br {
 			display: none;
 		}

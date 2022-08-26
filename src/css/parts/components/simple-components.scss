@@ -71,7 +71,10 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background: $color-dark-background;
+
+	background: $color-overlay;
+	backdrop-filter: blur(4rem);
+
 	opacity: 0;
 	pointer-events: none;
 	transition: opacity $animation-slow;

@@ -14,6 +14,10 @@ $color-tertiary-main: #FF67FF;
 $color-dark-background: rgba(33, 33, 33, 0.48); // delete
 $color-light-background: #3a3a45;  // delete
 
+$color-glow-primary: #FF7F511F;
+$color-glow-secondary: rgba(125, 251, 248, 0.12);
+$color-glow-tertiary: #FF67FF1F;
+
 $color-background: #1E1C31;
 $color-background-upper1: #202037;
 $color-background-upper2: rgba(255, 198, 255, 0.12);
@@ -26,7 +30,7 @@ $color-text-prime: rgba(255, 255, 255, 0.92);
 $color-text-secondary: rgba(255, 255, 255, 0.64);
 $color-text-more-secondary: rgba(255, 255, 255, 0.32);
 
-$color-action-hover-opacity: 0.06;
+$color-action-hover-opacity: 0.12;
 $color-action-hover: rgba(52, 20, 0, $color-action-hover-opacity);
 $color-divider: rgba(40, 30, 28, 0.08);
 
