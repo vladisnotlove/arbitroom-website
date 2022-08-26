@@ -24,6 +24,10 @@
 	&.dark {
 		background: $color-background-lower1;
 	}
+
+	&.transparent {
+		background: transparent;
+	}
 }
 
 // page-block

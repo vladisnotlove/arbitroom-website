@@ -45,6 +45,10 @@ body {
 	position: relative;
 	padding-top: $header-height-desktop;
 	background: $color-background;
+
+	&.dark {
+		background: $color-background-lower1;
+	}
 }
 
 h1, h2, h3, label, p {
