@@ -4,9 +4,6 @@
 
 // tooltip
 
-$tooltip-bottom-icon: "%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='8' viewBox='0 0 24 8' fill='none'%3E%3Cpath d='M11.9996 8C14.6907 8 17.4621 0.000228741 24 0H0C6.53691 0.000558008 9.30842 8 11.9996 8Z' fill='" + to-rgba($color-text-prime) + "'/%3E%3C/svg%3E";
-$tooltip-left-icon: "%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='24' viewBox='0 0 8 24' fill='none'%3E%3Cpath d='M0 11.9996C-1.84602e-07 14.6907 7.99977 17.4621 8 24L8 0C7.99944 6.53691 1.84602e-07 9.30842 0 11.9996Z' fill='" + to-rgba($color-text-prime) + "'/%3E%3C/svg%3E";
-
 .tooltip {
   display: grid;
   grid-template-areas:
@@ -30,11 +27,16 @@ $tooltip-left-icon: "%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height=
   &::before {
     content: "";
     width: 1.5rem;
-    height: 0.5rem;
+    height: 1rem;
     grid-area: p;
     align-self: center;
     justify-self: center;
-    background: url("data:image/svg+xml," + $tooltip-bottom-icon);
+    background: $color-background-upper2;
+    -webkit-mask-image: url("/img/tooltip-arrow-down.svg");
+    mask-image: url("/img/tooltip-arrow-down.svg");
+    -webkit-mask-size: 100% auto;
+    -webkit-mask-repeat: no-repeat;
+    backdrop-filter: blur(4rem);
   }
 
   // default: top
@@ -53,9 +55,12 @@ $tooltip-left-icon: "%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height=
           "p c";
 
     &::before {
-      width: 0.5rem;
+      width: 1rem;
       height: 1.5rem;
-      background: url("data:image/svg+xml," + $tooltip-left-icon);
+      -webkit-mask-image: url("/img/tooltip-arrow-right.svg");
+      -webkit-mask-size: auto 100%;
+      mask-image: url("/img/tooltip-arrow-right.svg");
+      transform: rotate(180deg);
     }
   }
 
@@ -64,10 +69,11 @@ $tooltip-left-icon: "%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height=
           "c p";
 
     &::before {
-      width: 0.5rem;
+      width: 1rem;
       height: 1.5rem;
-      transform: rotate(180deg);
-      background: url("data:image/svg+xml," + $tooltip-left-icon);
+      -webkit-mask-image: url("/img/tooltip-arrow-right.svg");
+      -webkit-mask-size: auto 100%;
+      mask-image: url("/img/tooltip-arrow-right.svg");
     }
   }
 }
@@ -78,10 +84,11 @@ $tooltip-left-icon: "%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height=
   border-radius: 0.75rem;
   @include typography-body2;
   text-align: left;
-  background: $color-text-prime;
-  color: $color-background-upper2;
+  background: $color-background-upper2;
+  color: $color-text-prime;
   min-width: 0;
   white-space: normal;
+  backdrop-filter: blur(4rem);
 }
 
 // with-tooltip

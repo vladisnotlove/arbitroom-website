@@ -30,9 +30,11 @@ $color-text-prime: rgba(255, 255, 255, 0.92);
 $color-text-secondary: rgba(255, 255, 255, 0.64);
 $color-text-more-secondary: rgba(255, 255, 255, 0.32);
 
-$color-action-hover-opacity: 0.12;
-$color-action-hover: rgba(52, 20, 0, $color-action-hover-opacity);
-$color-divider: rgba(40, 30, 28, 0.08);
+$color-action-hover-opacity: 0.08;
+$color-action-hover: rgba(255, 255, 255, $color-action-hover-opacity);
+$color-action-selected-opacity: 0.2;
+$color-action-selected: rgba(255, 127, 81, $color-action-selected-opacity);
+$color-divider: rgba(255, 255, 255, 0.08);
 
 $color-error: #F44336;
 
