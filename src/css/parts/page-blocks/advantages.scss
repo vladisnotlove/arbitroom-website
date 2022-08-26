@@ -30,7 +30,7 @@
   aspect-ratio: 1 / 1;
 
   img {
-    width: 260%;
+    min-width: 260%; // min width because firefox not working
     height: 260%;
   }
 }
