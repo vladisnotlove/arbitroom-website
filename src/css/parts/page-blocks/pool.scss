@@ -4,7 +4,37 @@
 
 // pool
 
+.pool-page__glow-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include glow($width: 27vw, $color: #7DFBF829);
+  min-width: 360px;
+  z-index: -1;
+}
+
+.pool-page__glow-2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(12%, -20%);
+  @include glow($width: 43vw, $color: #FF7F511F);
+  min-width: 317px;
+  z-index: -1;
+}
+
+.pool-page__glow-3 {
+  position: absolute;
+  top: 50%;
+  right: calc(#{$container-padding-adaptive} * -1);
+  transform: translate(0, -50%);
+  @include glow($width: 27vw, $color: #FF7F511F);
+  min-width: 457px;
+  z-index: -1;
+}
+
 .pool__content {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(15rem, auto) 1fr 1fr 1fr;
   grid-template-areas:
@@ -27,7 +57,6 @@
   display: flex;
   flex-direction: column;
 
-
   & .collapse-table {
     flex-grow: 1;
   }
@@ -36,6 +65,26 @@
   & .table {
     height: 100%;
   }
+
+  .collapse-table__table {
+    border-radius: 1rem;
+    position: relative;
+    @include border-gradient($z-index: -1);
+  }
+}
+
+.pool__table-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 92%;
+  aspect-ratio: 1;
+
+  border-radius: 50%;
+  background: rgba(255, 127, 81, 0.12);
+  filter: blur(150px);
+  z-index: -1;
 }
 
 .pool__table-title {
@@ -47,6 +96,10 @@
   @include paper;
   padding: 1.5rem;
   min-width: 16.5rem;
+
+  border-radius: 1rem;
+  position: relative;
+  @include border-gradient($z-index: -1);
 }
 
 .pool__conditions-title {
@@ -68,9 +121,11 @@
 
 .invest-pool {
   position: relative;
-  background: #252525;
+  background: #0B0B0B;
   border-radius: 1rem;
   overflow: hidden;
+
+  @include border-gradient($gradient: $gradient-border-primary, $z-index: 1);
 
   div, span, h1, h2, p {
     color: #fff;
@@ -150,7 +205,7 @@
   font-size: 1rem;
   line-height: 1.25rem;
 
-  background: #fff;
+  background: $color-background-upper2;
   color: $color-text-prime;
   transition: box-shadow $animation-normal;
 
@@ -184,6 +239,10 @@
 }
 
 @media (max-width: 1160px) {
+
+  .pool-page__glow-3 {
+    display: none;
+  }
 
   .pool__invest-pool {
 
@@ -241,6 +300,32 @@
 }
 
 @media (max-width: $small-tablet) {
+
+  .pool-page__glow-1 {
+    top: 0;
+    left: 0;
+    transform: translate(-35%, -10%);
+  }
+
+  .pool-page__glow-2 {
+    left: -1px;
+    top: 608px;
+    width: 457px;
+    height: 529px;
+    transform: translateX(30%);
+  }
+
+  .pool__conditions {
+    @include disable-border-gradient;
+  }
+
+  .pool__table .collapse-table__table {
+    @include disable-border-gradient;
+  }
+
+  .pool__table-glow {
+    display: none;
+  }
 
   .pool__condition {
     @include typography-body2-text;

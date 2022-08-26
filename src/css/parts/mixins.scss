@@ -179,6 +179,7 @@
 	$disable-border-bottom: false,
 	$disable-border-left: false,
 	$disable-border-right: false,
+	$z-index: 0,
 ) {
 
 	&::before {
@@ -195,6 +196,7 @@
 		-webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
 		-webkit-mask-composite: destination-out;
 		mask-composite: exclude;
+		z-index: $z-index;
 
 		@if ($disable-border-top == true) {
 			top: -1px;

@@ -10,7 +10,7 @@
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="css/styles{{version}}.css">
 </head>
-<body>
+<body class="dark">
 
 <div id="dropdownOverlay"></div>
 
@@ -527,7 +527,7 @@
 
 <!-- header -->
 <div class="header__wrapper" id="headerWrapper">
-    <div class="container">
+    <div class="container transparent">
         <header class="header hidden">
             <a class="header__logo" href="index.html">
                 <img src="img/logo.svg" alt="">
@@ -601,25 +601,31 @@
 
 <!-- MAIN -->
 
-<div class="container">
+<div class="pool-page__glow-1"></div>
+<div class="pool-page__glow-2"></div>
+
+<div class="container transparent">
+
 
     <!-- pool -->
     <section class="page-block pool">
+
+
         <h2 class="page-block__title">
             Пул ликвидности
         </h2>
         <div class="pool__content">
+
+            <div class="pool-page__glow-3"></div>
+
             <div class="pool__invest-pool">
                 <div class="invest-pool">
                     <img class="invest-pool__background" src="img/pool-form-background.png" alt="">
-                    <img class="invest-pool__ellipse" src="img/pool-ellipse.svg" alt="">
+                    <img class="invest-pool__ellipse" src="img/pool-glow.svg" alt="">
                     <div class="invest-pool__content">
                         <div class="invest-pool__percents">
                             <div class="invest-pool__percent">
-                                <span class="subtitle1">от&nbsp;</span>15%
-                            </div>
-                            <div class="invest-pool__percent">
-                                <span class="subtitle1">до&nbsp;</span>20%<span
+                                <span class="subtitle1">до&nbsp;</span>25%<span
                                     class="h5">&nbsp;&nbsp; в&nbsp;месяц</span>
                             </div>
                         </div>
@@ -647,6 +653,7 @@
                 </div>
                 <div class="collapse-table full-height">
                     <div class="collapse-table__table scroll-container">
+                        <div class="pool__table-glow"></div>
                         <div class="scroll-container__inner">
                             <div class="table compact">
                                 <div class="table__header">
@@ -876,28 +883,31 @@
                 </div>
                 <div class="pool__conditions-body">
                     <div class="pool__condition">
-                        • Депозит возвращается в любое время, срок вывода 21 рабочий день
+                        • Гарантированный доход от 15% до 25% в мес.
                     </div>
                     <div class="pool__condition">
-                        • Процент: 15 - 25% в мес.
+                        • Распределение прибыли производится ежедневно
                     </div>
                     <div class="pool__condition">
-                        • Дополнительно +1% к базовому вознаграждению за удержание депозита и процентов (каждую неделю)
+                        • +0,5% за удержание инвестиции и ежедневной прибыли к базовому вознаграждению
                     </div>
                     <div class="pool__condition">
-                        • Откат процентов обратно, если частично или полностью снимали проценты или депозит
+                        • Возврат к базовому вознаграждению, если частично или полностью выводилась прибыль или инвестиция
                     </div>
                     <div class="pool__condition">
                         • Комиссия на вывод 5%
                     </div>
                     <div class="pool__condition">
-                        • Внутренний перевод средств моментальный и без комиссий
+                        • Внутренний перевод бесплатно
                     </div>
                     <div class="pool__condition">
-                        • Начисление процентов каждый день
+                        • Вывод прибыли до 3-х дней
                     </div>
                     <div class="pool__condition">
-                        • Вывод процентов до 3-х рабочих дней
+                        • Вывод инвестиции до 21 дня
+                    </div>
+                    <div class="pool__condition">
+                        • Экспресс вывод инвестиции за 3 дня.
                     </div>
                 </div>
             </div>
@@ -908,14 +918,18 @@
 
 
 <!-- FOOTER-->
-<div class="container dark">
+<div class="container footer__container">
+    <div class="footer__glow-1"></div>
+    <div class="footer__glow-2"></div>
     <footer class="footer">
         <div class="footer__main">
             <h2 class="footer__title">
-                Заработайте<br>
-                сейчас независимо от&nbsp;тренда
+                <span class="color-secondary">Заработайте</span><br>
+                <span class="color-secondary">сейчас</span> независимо от&nbsp;тренда
             </h2>
-            <img class="footer__background" src="img/footer-background.png" alt="">
+            <div class="footer__background-wrapper">
+                <img class="footer__background" src="img/footer-background.png" alt="">
+            </div>
         </div>
         <div class="footer__header header" id="footerHeader">
             <a class="header__logo" href="index.html">
