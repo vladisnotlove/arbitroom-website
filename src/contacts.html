@@ -10,7 +10,7 @@
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="css/styles{{version}}.css">
 </head>
-<body>
+<body class="dark">
 
 <div id="dropdownOverlay"></div>
 
@@ -527,7 +527,7 @@
 
 <!-- header -->
 <div class="header__wrapper" id="headerWrapper">
-    <div class="container">
+    <div class="container transparent">
         <header class="header hidden">
             <a class="header__logo" href="index.html">
                 <img src="img/logo.svg" alt="">
@@ -601,7 +601,10 @@
 
 <!-- MAIN -->
 
-<div class="container">
+<div class="contacts-page__glow-1"></div>
+<div class="contacts-page__glow-2"></div>
+
+<div class="container transparent">
 
     <!-- contacts -->
     <section class="page-block main contacts">
@@ -610,6 +613,7 @@
         </h2>
         <img class="contacts__img" src="img/contacts-background.png" />
         <div class="contacts__cards">
+            <div class="contacts__cards-glow"></div>
             <a class="contacts__card" href="mailto:support@arbitroom.io" target="_blank">
                 <div class="contacts__card-title">
                     support@arbitroom.io
@@ -642,14 +646,18 @@
 
 <!-- FOOTER-->
 
-<div class="container dark">
+<div class="container footer__container">
+    <div class="footer__glow-1"></div>
+    <div class="footer__glow-2"></div>
     <footer class="footer">
         <div class="footer__main">
             <h2 class="footer__title">
-                Заработайте<br>
-                сейчас независимо от&nbsp;тренда
+                <span class="color-secondary">Заработайте</span><br>
+                <span class="color-secondary">сейчас</span> независимо от&nbsp;тренда
             </h2>
-            <img class="footer__background" src="img/footer-background.png" alt="">
+            <div class="footer__background-wrapper">
+                <img class="footer__background" src="img/footer-background.png" alt="">
+            </div>
         </div>
         <div class="footer__header header" id="footerHeader">
             <a class="header__logo" href="index.html">

@@ -9,7 +9,7 @@
 	left: 0;
 	@include glow($width: 27vw, $color: #7DFBF829);
 	min-width: 360px;
-	z-index: 10;
+	z-index: -1;
 }
 
 .faq-page__glow-2 {
@@ -19,7 +19,7 @@
 	transform: translate(12%, -20%);
 	@include glow($width: 43vw, $color: #FF7F511F);
 	min-width: 317px;
-	z-index: 10;
+	z-index: -1;
 }
 
 .faq-page__glow-3 {
@@ -29,7 +29,7 @@
 	transform: translateX(50%);
 	@include glow($width: 43vw, $color: $color-glow-tertiary);
 	min-width: 317px;
-	z-index: 10;
+	z-index: -1;
 }
 
 .faq {
