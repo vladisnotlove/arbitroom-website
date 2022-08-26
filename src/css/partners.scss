@@ -235,12 +235,14 @@
 
   .structure-turn {
     backdrop-filter: blur(0);
+    -webkit-backdrop-filter: blur(0);
     transition: backdrop-filter $animation-normal;
   }
 
   &.open {
     .structure-turn {
-      backdrop-filter: blur(64px);
+      backdrop-filter: blur(4rem);
+      -webkit-backdrop-filter: blur(4rem);
     }
   }
 }

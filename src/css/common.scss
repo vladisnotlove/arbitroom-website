@@ -118,7 +118,8 @@ h1, h2, h3, label, p {
 
 	&.scrolled {
 		background: rgba(23, 26, 48, 0.12);
-		backdrop-filter: blur(64px);
+		backdrop-filter: blur(4rem);
+		-webkit-backdrop-filter: blur(4rem);
 	}
 
 	.container {

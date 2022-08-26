@@ -37,6 +37,7 @@
     -webkit-mask-size: 100% auto;
     -webkit-mask-repeat: no-repeat;
     backdrop-filter: blur(4rem);
+    -webkit-backdrop-filter: blur(4rem);
   }
 
   // default: top
@@ -89,6 +90,7 @@
   min-width: 0;
   white-space: normal;
   backdrop-filter: blur(4rem);
+  -webkit-backdrop-filter: blur(4rem);
 }
 
 // with-tooltip

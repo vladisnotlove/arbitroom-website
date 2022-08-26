@@ -78,6 +78,7 @@
 
 	background: $color-overlay;
 	backdrop-filter: blur(4rem);
+	-webkit-backdrop-filter: blur(4rem);
 
 	opacity: 0;
 	pointer-events: none;

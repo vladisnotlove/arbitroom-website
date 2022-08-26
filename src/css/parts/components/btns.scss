@@ -23,8 +23,8 @@
 	background: $color-prime-main;
 
 	cursor: pointer;
-	@include shadow-hovering;
-	box-shadow: 0 0 24px rgba(255, 168, 112, 0.4);
+	box-shadow: 0 0 1.5rem rgba(255, 168, 112, 0.4);
+	transition: box-shadow $animation-slow;
 
 	.icon {
 		margin-top: -50%;
@@ -37,6 +37,8 @@
 
 	&:hover {
 		text-decoration: none;
+		box-shadow: 0 0 2.25rem rgba(255, 168, 112, 0.6);
+		transition: box-shadow $animation-normal;
 	}
 }
 

@@ -351,9 +351,10 @@
 
 
   .ver-table__cell {
-    width: calc(#{$mobile} - #{$container-padding-adaptive} * 2);
-    max-width: calc(100vwv - #{$container-padding-adaptive} * 2);
     border: none !important;
+    width: calc(#{$mobile} - #{$container-padding-adaptive} * 2);
+    max-width: calc(100vw - #{$container-padding-adaptive} * 2);
+    box-sizing: border-box;
 
     &:first-child {
       display: none;
@@ -377,7 +378,7 @@
 
   .ver-table__cell {
     width: calc(#{$mobile} - #{$container-padding-mobile * 2});
-    max-width: calc(100vw - #{$container-padding-mobile * 2});
+    max-width: calc(50vw - #{$container-padding-mobile * 2});
   }
 
 }

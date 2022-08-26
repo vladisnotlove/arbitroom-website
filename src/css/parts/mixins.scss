@@ -114,6 +114,7 @@
 
 @mixin paper-elevation1 {
 	backdrop-filter: blur(4rem);
+	-webkit-backdrop-filter: blur(4rem);
 	box-shadow: 0 .5rem 0.75rem rgba(51, 20, 0, 0.08);
 }
 

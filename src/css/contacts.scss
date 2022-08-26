@@ -70,12 +70,13 @@
 
 	position: relative;
 	@include border-gradient;
+	transition: box-shadow $animation-slow;
 
 	&:hover {
 		text-decoration: none;
+		box-shadow: 0 0 2.25rem $color-glow-secondary;
+		transition: box-shadow $animation-normal;
 	}
-
-	@include shadow-hovering($color-prime-main);
 }
 
 .contacts__card-title {
