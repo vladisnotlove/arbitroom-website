@@ -378,7 +378,7 @@
 
   .ver-table__cell {
     width: calc(#{$mobile} - #{$container-padding-mobile * 2});
-    max-width: calc(50vw - #{$container-padding-mobile * 2});
+    max-width: calc(100vw - #{$container-padding-mobile * 2});
   }
 
 }
