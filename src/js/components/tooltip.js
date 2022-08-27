@@ -13,7 +13,7 @@ window.addEventListener('load', () => {
 
 		const popper = createPopper(trigger, tooltip, {
 			placement: placement,
-			strategy: "fixed",
+			strategy: "absolute",
 			modifiers: [
 				{
 					name: "flip",
@@ -34,6 +34,10 @@ window.addEventListener('load', () => {
 		let disappearTimeoutId = -1;
 
 		trigger.addEventListener("mouseenter", () => {
+			if (tooltip.parentElement !== document.body) {
+				document.body.appendChild(tooltip);
+			}
+
 			tooltip.classList.add("show");
 			tooltip.classList.remove("fade-out-slow");
 			clearTimeout(disappearTimeoutId);
@@ -44,6 +48,7 @@ window.addEventListener('load', () => {
 			tooltip.classList.add("fade-out-slow");
 
 			disappearTimeoutId = setTimeout(() => {
+				console.log("dissapear clear");
 				tooltip.classList.remove("show");
 			}, ANIMATION_SLOW_MS)
 		});

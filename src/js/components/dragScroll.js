@@ -1,8 +1,10 @@
 import ScrollBooster from 'scrollbooster';
-
+import isTouchEnabled from "../utils/device/isTouchEnabled";
 
 
 window.addEventListener('load', () => {
+
+	if (isTouchEnabled()) return;
 
 	// add toggleClass behavior
 

@@ -62,8 +62,14 @@ window.addEventListener('load', () => {
 				const containerX = containerRect.left;
 				const containerY = containerRect.top;
 
-				let mouseInContainerX = cursor.position().x - containerX;
-				let mouseInContainerY = cursor.position().y - containerY;
+				const cursorPosition = cursor.position();
+
+				if (cursorPosition.y < containerRect.top || cursorPosition.y > containerRect.bottom) {
+					returning = true;
+				}
+
+				let mouseInContainerX = cursorPosition.x - containerX;
+				let mouseInContainerY = cursorPosition.y - containerY;
 
 				distX = mouseInContainerX - ballX;
 				distY = mouseInContainerY - ballY;

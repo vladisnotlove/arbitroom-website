@@ -45,6 +45,7 @@ body {
 	position: relative;
 	padding-top: $header-height-desktop;
 	background: $color-background;
+	overflow-x: hidden;
 
 	&.dark {
 		background: $color-background-lower1;
