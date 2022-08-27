@@ -20,6 +20,7 @@
 .dropdown__menu {
 	z-index: $z-index-dropdown-menu;
 	opacity: 1;
+	overflow: hidden;
 
 	padding: 0.5rem 0;
 	@include paper;
@@ -60,6 +61,11 @@
 		background: $color-action-selected;
 		transition: background $animation-fast;
 		z-index: -1;
+	}
+
+	&.disabled {
+		opacity: 0.15;
+		pointer-events: none;
 	}
 }
 
