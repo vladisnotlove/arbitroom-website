@@ -146,6 +146,10 @@
 			"c";
   }
 
+  .goals__cards {
+    gap: 3rem;
+  }
+
   .goals__title {
     position: initial;
   }
@@ -160,6 +164,10 @@
 
   .goals__card {
     grid-row-gap: 1rem;
+  }
+
+  .goals__cards {
+    gap: 2rem;
   }
 
   .goals__card-description {
