@@ -29,9 +29,22 @@
   height: 41vw;
   aspect-ratio: 1 / 1;
 
-  img {
+  .advantages__background-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     min-width: 260%; // min width because firefox not working
     height: 260%;
+
+    &::before {
+      content: "";
+      width: 38.46%;
+      height: 38.46%;
+      border-radius: 50%;
+      background: rgba(255, 103, 255, 0.2);
+      filter: blur(200px);
+    }
+
   }
 }
 

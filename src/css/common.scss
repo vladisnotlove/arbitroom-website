@@ -238,12 +238,16 @@ $left-shift: 0.5rem;
 
 	transform: translateX(100%);
 	pointer-events: none;
-	transition: all $animation-slow;
+	transition: transform $animation-slow;
 
 	&.open {
 		transform: translateX(0);
 		pointer-events: auto;
-		transition: all $animation-normal;
+		transition: transform $animation-normal;
+	}
+
+	&:not(.ready) {
+		opacity: 0;
 	}
 }
 

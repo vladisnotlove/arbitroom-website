@@ -4,7 +4,6 @@ import cssVars from '../styles/cssVars';
 
 
 window.addEventListener('load', () => {
-	const body = document.body;
 
 	const headerWrapper = document.getElementById("headerWrapper");
 	const header = headerWrapper.querySelector(".header:not(.variant-collapsed)");
@@ -43,7 +42,7 @@ window.addEventListener('load', () => {
 	headerBurger.addEventListener("click", openMenu);
 	menuOverlay.addEventListener("click", closeMenu);
 	menuCloseBtn.addEventListener("click", closeMenu);
-
+	menu.classList.add("ready");
 
 	const onScroll = () => {
 		if (window.scrollY > 1) {
@@ -60,6 +59,7 @@ window.addEventListener('load', () => {
 
 
 	const onResize = () => {
+		console.log("header")
 		let isOverflowed = false;
 		[...header.children].forEach(element => {
 			if (element.clientWidth < element.scrollWidth) isOverflowed = true;

@@ -622,7 +622,12 @@
             <div class="promo__video-shadow-top"></div>
             <div class="promo__video-shadow-bottom"></div>
             <div class="promo__video-shadow-left"></div>
-            <video class="promo__video" loop autoplay muted><source src="video/promo.mp4" type="video/mp4"></video>
+            <video class="promo__video"
+                loop
+                muted
+                preload="auto"
+                poster="img/promo-video-poster.jpg"
+            ><source src="video/promo.mp4" type="video/mp4"></video>
         </div>
         <div class="promo__main">
             <h1 class="promo__title">
@@ -673,7 +678,7 @@
         <div class="video__glow"></div>
         <div class="video__preview">
             <div class="video__preview-img-wrapper">
-                <img src="img/video-preview.png" alt="">
+                <img class="lazy" src="img/video-preview__placeholder.jpg" data-src="img/video-preview.jpg" alt="">
             </div>
             <div class="video__play"
                  data-youtube-embedded
@@ -716,7 +721,7 @@
             </div>
         </div>
         <div class="system__img-wrapper">
-            <img src="img/dashboard-screenshot.png" alt="dashboard screenshot">
+            <img class="lazy" src="img/dashboard-screenshot__placeholder.jpg" data-src="img/dashboard-screenshot.png" alt="dashboard screenshot">
         </div>
     </div>
 </section>
@@ -725,7 +730,7 @@
 <div class="container advantages__container" data-follow-animation-container>
     <section class="page-block advantages">
         <div class="advantages__background" data-follow-animation>
-            <img  src="img/advantages-glow.png" alt="">
+            <div class="advantages__background-img"></div>
         </div>
         <h2 class="advantages__title page-block__title">Основные преимущества</h2>
         <div class="advantages__cards">
@@ -1488,7 +1493,7 @@
                 </div>
             </div>
             <div class="how__img">
-                <img src="img/how-background.png" alt="">
+                <img class="lazy" data-src="img/how-background.webp" alt="">
             </div>
         </div>
     </div>
@@ -1576,7 +1581,7 @@
                 <span class="color-secondary">сейчас</span> независимо от&nbsp;тренда
             </h2>
             <div class="footer__background-wrapper">
-                <img class="footer__background" src="img/footer-background.png" alt="">
+                <img class="footer__background" src="img/footer-background.webp" alt="">
             </div>
         </div>
         <div class="footer__header header" id="footerHeader">
