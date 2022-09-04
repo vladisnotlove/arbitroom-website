@@ -121,6 +121,7 @@ const build = series(clean, parallel(html, pdf, favicon, img, video, fonts, scss
 
 const watch = series(build, (cb) => {
 	gulpWatch(paths.pdfSrcAll, pdf);
+	gulpWatch(paths.faviconSrcAll, favicon);
 	gulpWatch(paths.htmlSrcAll, html);
 	gulpWatch(paths.imgSrcAll, img);
 	gulpWatch(paths.videoSrcAll, video);
