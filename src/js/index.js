@@ -13,3 +13,4 @@ import "./components/popper";
 import "./components/tooltip";
 import "./components/animations";
 import "./components/promoVideo";
+import "./components/qurters";

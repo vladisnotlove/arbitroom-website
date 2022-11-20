@@ -99,7 +99,11 @@ const js = () => {
 							loader: 'skeleton-loader',
 							options: {procedure: content => `${content}; export default LeaderLine`}
 						}]
-					}
+					},
+					{
+						test: /\.css$/i,
+						use: ["style-loader", "css-loader"],
+					},
 				],
 			},
 		}),

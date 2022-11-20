@@ -1,0 +1,15 @@
+@import "../variables";
+
+.chip {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  border-radius: 2rem;
+  @include typography-h6;
+  background: change-color($color-prime-main, $alpha: 0.12);
+  color: $color-text-secondary;
+
+  &.prime {
+    background: $color-prime-main;
+    color: $color-text-prime;
+  }
+}

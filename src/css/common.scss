@@ -24,6 +24,7 @@ div, span, h1, h2, p  {
 @import "parts/components/youtube-embedded";
 @import "parts/components/text";
 @import "parts/components/tooltip";
+@import "parts/components/chip";
 @import "parts/modificators";
 
 html {
@@ -484,7 +485,7 @@ $social-link-padding: 0.625rem;
 	.menu__logo img {
 		width: get-adaptive-value(12.25rem, 7.75rem)
 	}
-	
+
 	// footer
 
 	.footer {

@@ -16,9 +16,12 @@
   "author": "Vladislav",
   "dependencies": {
     "@popperjs/core": "^2.11.5",
+    "css-loader": "^6.7.2",
     "leader-line": "^1.0.7",
     "scrollbooster": "^3.0.2",
     "sticksy": "^0.2.0",
+    "style-loader": "^3.3.1",
+    "swiper": "^8.4.4",
     "validator": "^13.7.0",
     "vanilla-lazyload": "^17.8.1"
   },

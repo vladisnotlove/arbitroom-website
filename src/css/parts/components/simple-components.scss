@@ -43,14 +43,22 @@
 
 .page-block__title {
 	text-shadow: 0 0 48px rgba(125, 251, 248, 0.6);
-
 	@include typography-h2;
-
 	margin-bottom: 4rem;
 
 	&.small {
 		@include typography-h3;
 	}
+}
+
+.page-block__subtitle {
+	@include typography-h4;
+	margin-bottom: 4rem;
+	color: $color-text-secondary
+}
+
+.page-block__title + .page-block__subtitle {
+	margin-top: -3rem;
 }
 
 // link
@@ -292,7 +300,7 @@
 	.page-block__title {
 		@include typography-h3-adaptive;
 		margin-bottom: 1.5rem;
-		
+
 		&.small {
 			@include typography-h3-adaptive;
 		}
