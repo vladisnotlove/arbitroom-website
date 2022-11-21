@@ -13,3 +13,19 @@
     color: $color-text-prime;
   }
 }
+
+
+@media (max-width: $tablet) {
+
+  .chip {
+    font-size: 1.125rem;
+  }
+}
+
+
+@media (max-width: $small-tablet) {
+
+  .chip {
+    @include typography-body1-adaptive;
+  }
+}
