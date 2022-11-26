@@ -105,6 +105,11 @@ html.modal-open {
 	display: flex;
 	justify-content: center;
 	width: 100%;
+	gap: 1rem;
+
+	> *.full-width {
+		flex-grow: 1;
+	}
 }
 
 .modal__dialog-sub-actions {

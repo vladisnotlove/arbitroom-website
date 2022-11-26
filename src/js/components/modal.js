@@ -2,33 +2,37 @@ import log from '../utils/log';
 import cssVars from '../styles/cssVars';
 
 window.addEventListener("load", () => {
-	const body = document.body;
 
-	document.querySelectorAll("[data-modal]").forEach(trigger => {
-		const target = document.querySelector(trigger.dataset.target);
+	document.querySelectorAll("[data-modal-trigger]").forEach(trigger => {
+		const modal = document.querySelector(trigger.dataset.modalTrigger);
+		const modalStepper = modal.querySelector("[data-modal-stepper]");
 
 		trigger.addEventListener("click", () => {
-			if (target) {
-				document.querySelectorAll(".modal").forEach(modal => modal.classList.remove("open"));
+			if (modal) {
+				document.querySelectorAll("[data-modal]").forEach(modal => modal.classList.remove("open"));
 				document.documentElement.classList.add("modal-open");
-				target.classList.add("open");
+				modal.classList.add("open");
+
+				const steps = modalStepper.querySelectorAll("[data-stepper-item]");
+				steps.forEach(step => step.classList.remove("active"));
+				if (steps[0]) steps[0].classList.add("active");
 			}
 		})
 	})
 
 	let bodyRemoveClassTimeout = -1;
 
-	document.querySelectorAll(".modal").forEach(modal => {
-		const modalBtn = modal.querySelector(".modal__dialog-close-btn");
-		const modalOverlay = modal.querySelector(".modal__overlay");
+	document.querySelectorAll("[data-modal]").forEach(modal => {
+		const modalBtns = modal.querySelectorAll("[data-modal-close]");
+		const modalOverlays = modal.querySelectorAll("[data-modal-overlay]");
 
-		if (!modalBtn) {
-			log.elementNotFound(".modal__dialog-close-btn");
+		if (!modalBtns || modalBtns.length === 0) {
+			log.elementNotFound("[data-modal-close]");
 			return;
 		}
 
-		if (!modalOverlay) {
-			log.elementNotFound(".modal__overlay");
+		if (!modalOverlays || modalOverlays.length === 0) {
+			log.elementNotFound("[data-modal-overlay]");
 			return;
 		}
 
@@ -41,8 +45,8 @@ window.addEventListener("load", () => {
 			}, cssVars.animationSlow * 1000);
 		}
 
-		modalOverlay.addEventListener("click", closeModal);
-		modalBtn.addEventListener("click", closeModal);
+		modalBtns.forEach(modalBtn => modalBtn.addEventListener("click", closeModal));
+		modalOverlays.forEach(modalOverlay => modalOverlay.addEventListener("click", closeModal));
 
 		modal.classList.add("ready");
 	})

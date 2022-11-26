@@ -18,15 +18,15 @@
 <!-- MODALS -->
 
 <!-- registration modal -->
-<div class="modal" id="registrationModal">
+<div data-modal class="modal" id="registrationModal">
     <div class="modal__content">
-        <div class="modal__overlay"></div>
+        <div data-modal-overlay class="modal__overlay"></div>
         <div class="modal__dialog">
             <div class="modal__dialog-title">
                 <span>
                     Регистрация на платформе
                 </span>
-                <button class="modal__dialog-close-btn icon-btn rounded small">
+                <button data-modal-close class="modal__dialog-close-btn icon-btn rounded small">
                     <svg class="icon" viewBox="0 0 20 20">
                         <use href="img/icons/close-rounded.svg#svg"/>
                     </svg>
@@ -176,7 +176,7 @@
             </form>
             <div class="modal__dialog-sub-actions">
                 Уже есть аккаунт?
-                <span class="link" data-modal data-target="#loginModal">
+                <span class="link" data-modal-trigger="#loginModal">
                     Войти с логином и паролем
                 </span>
             </div>
@@ -185,15 +185,15 @@
 </div>
 
 <!-- login modal -->
-<div class="modal" id="loginModal">
+<div data-modal class="modal" id="loginModal">
     <div class="modal__content">
-        <div class="modal__overlay"></div>
+        <div data-modal-overlay class="modal__overlay"></div>
         <div class="modal__dialog">
             <div class="modal__dialog-title">
                 <span>
                     Войти в личный кабинет
                 </span>
-                <button class="modal__dialog-close-btn icon-btn rounded small">
+                <button data-modal-close class="modal__dialog-close-btn icon-btn rounded small">
                     <svg class="icon" viewBox="0 0 20 20">
                         <use href="img/icons/close-rounded.svg#svg"/>
                     </svg>
@@ -235,7 +235,7 @@
                                    placeholder="Пароль"
                             >
                             <div class="textfield__end-adornment">
-                                <button class="btn btn-text" type="button" data-modal data-target="#restorationModal">
+                                <button class="btn btn-text" type="button" data-modal-trigger="#restorationModal">
                                     Забыли?
                                 </button>
                             </div>
@@ -253,7 +253,7 @@
             </form>
             <div class="modal__dialog-sub-actions">
                 Нет аккаунта?
-                <span class="link" data-modal data-target="#registrationModal">
+                <span class="link" data-modal-trigger="#registrationModal">
                     Зарегистрируйтесь
                 </span>
             </div>
@@ -262,15 +262,15 @@
 </div>
 
 <!-- restoration modal -->
-<div class="modal" id="restorationModal">
+<div data-modal class="modal" id="restorationModal">
     <div class="modal__content">
-        <div class="modal__overlay"></div>
+        <div data-modal-overlay class="modal__overlay"></div>
         <div class="modal__dialog">
             <div class="modal__dialog-title">
                 <span>
                     Забыли пароль?
                 </span>
-                <button class="modal__dialog-close-btn icon-btn rounded small">
+                <button data-modal-close class="modal__dialog-close-btn icon-btn rounded small">
                     <svg class="icon" viewBox="0 0 20 20">
                         <use href="img/icons/close-rounded.svg#svg"/>
                     </svg>
@@ -308,15 +308,15 @@
 </div>
 
 <!-- calculator modal -->
-<div class="modal" id="calculatorModal">
+<div data-modal class="modal" id="calculatorModal">
     <div class="modal__content">
-        <div class="modal__overlay"></div>
+        <div data-modal-overlay class="modal__overlay"></div>
         <div class="modal__dialog">
             <div class="modal__dialog-title">
                 <span>
                     Калькулятор
                 </span>
-                <button class="modal__dialog-close-btn icon-btn rounded small">
+                <button data-modal-close class="modal__dialog-close-btn icon-btn rounded small">
                     <svg class="icon" viewBox="0 0 20 20">
                         <use href="img/icons/close-rounded.svg#svg"/>
                     </svg>
@@ -410,15 +410,15 @@
 </div>
 
 <!-- balance modal -->
-<div class="modal" id="balanceModal">
+<div data-modal class="modal" id="balanceModal">
     <div class="modal__content">
-        <div class="modal__overlay"></div>
+        <div data-modal-overlay class="modal__overlay"></div>
         <div class="modal__dialog">
             <div class="modal__dialog-title">
                 <span>
                     USDT (TRC20)
                 </span>
-                <button class="modal__dialog-close-btn icon-btn rounded small">
+                <button data-modal-close class="modal__dialog-close-btn icon-btn rounded small">
                     <svg class="icon" viewBox="0 0 20 20">
                         <use href="img/icons/close-rounded.svg#svg"/>
                     </svg>
@@ -530,9 +530,9 @@
 <div class="menu__overlay overlay" id="menuOverlay"></div>
 <div class="menu" id="menu">
     <div class="menu__header">
-        <div class="menu__logo">
+        <a class="menu__logo" href="index.html">
             <img src="img/logo.svg" alt="">
-        </div>
+        </a>
         <div class="menu__language language dropdown">
             <div class="language__label dropdown__trigger">
                 <span>Ru</span>
@@ -560,7 +560,7 @@
         </svg>
     </div>
     <div class="menu__body">
-        <button class="btn btn-outlined menu__action" data-modal data-target="#loginModal">
+        <button class="btn btn-outlined menu__action" data-modal-trigger="#loginModal">
             Вход / Регистрация
         </button>
         <nav class="menu__nav">
@@ -627,7 +627,7 @@
                     </div>
                 </div>
             </div>
-            <div class="header__action" data-modal data-target="#loginModal">
+            <div class="header__action" data-modal-trigger="#loginModal">
                 Вход / Регистрация
             </div>
         </header>

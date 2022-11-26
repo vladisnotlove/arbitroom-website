@@ -1,6 +1,9 @@
 const log = {
 	elementNotFound: (name) => {
 		console.error(`Element \"${name}\" is not found`);
+	},
+	customMessage: (message) => {
+		console.error(message);
 	}
 }
 

@@ -14,3 +14,4 @@ import "./components/tooltip";
 import "./components/animations";
 import "./components/promoVideo";
 import "./components/qurters";
+import "./components/stepper";

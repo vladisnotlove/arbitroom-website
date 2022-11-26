@@ -1,0 +1,15 @@
+@import "../variables";
+@import "../mixins";
+@import "../animations";
+
+.stepper {
+
+}
+
+.stepper__item {
+  animation: fade-in $animation-normal;
+
+  &:not(.active) {
+    display: none;
+  }
+}
