@@ -36,6 +36,14 @@ html.modal-open {
 	}
 
 	@include with-custom-scrollbar ($z-index-modal + 1);
+
+	&.dark {
+
+		.modal__dialog {
+			background: $color-background-lower1;
+		}
+
+	}
 }
 
 
@@ -84,6 +92,34 @@ html.modal-open {
 	z-index: 20;
 }
 
+.modal__dialog-step-status {
+	margin-bottom: 2rem;
+	@include typography-subtitle1;
+	color: $color-text-secondary;
+}
+
+.modal__dialog-steps {
+	display: flex;
+	gap: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+.modal__dialog-step {
+	flex-grow: 1;
+	min-width: 0;
+	height: 0.375rem;
+	border-radius: 1rem;
+	background: $color-text-prime;
+	opacity: 0.16;
+
+	@include with-outer-collider();
+	cursor: pointer;
+
+	&.passed {
+		opacity: 1;
+	}
+}
+
 .modal__dialog-title {
 	display: flex;
 	align-items: flex-start;
@@ -92,8 +128,20 @@ html.modal-open {
 
 	margin-bottom: 2rem;
 
-	font-size: 2.25rem;
-	line-height: 3rem;
+	@include typography-h4;
+}
+
+.modal__dialog-subtitle-btn {
+	display: flex;
+	gap: 0.75rem;
+	cursor: pointer;
+
+	@include typography-h6;
+	color: $color-prime-main;
+	fill: $color-prime-main;
+
+	margin-top: -1rem;
+	margin-bottom: 2rem;
 }
 
 .modal__dialog-close-btn {
@@ -123,21 +171,83 @@ html.modal-open {
 
 .modal__dialog-content {
 	margin-bottom: 2rem;
+
+	@include typography-body1;
+
+	p {
+		margin-bottom: 1.5rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
 }
 
 // ADAPTIVE
 
 @media (max-width: $mobile) {
 
+	.modal {
+		&.full-screen-on-mobile {
+			.modal__content {
+				padding: 0;
+				border-radius: 0;
+			}
+
+			.modal__overlay {
+				background: $color-background;
+			}
+
+			&.dark {
+				.modal__overlay {
+					background: $color-background-lower1;
+				}
+			}
+		}
+	}
 
 	.modal__dialog {
 		padding: 2rem;
 		border-radius: 1rem;
 	}
 
+	.modal__dialog-step-status {
+		@include typography-body2-adaptive;
+	}
+
+	.modal__dialog-steps {
+		gap: 0.75rem
+	}
+
 	.modal__dialog-title {
-		font-size: 1.25rem;
-		line-height: 1.75rem;
+		@include typography-h4-adaptive;
+	}
+
+	.modal__dialog-subtitle-btn {
+		font-size: 16px;
+		line-height: 20px;
+		margin-top: -1.5rem;
+
+		svg {
+			width: 20px;
+			height: 20px;
+		}
+	}
+
+	.modal__dialog-content {
+		@include typography-body1-adaptive;
+	}
+
+	.modal__dialog-actions {
+		gap: 0.75rem;
+
+		&.wrap-on-mobile {
+			flex-wrap: wrap;
+		}
+
+		&.reverse-on-mobile {
+			flex-direction: row-reverse;
+		}
 	}
 
 	.modal__dialog-sub-actions {

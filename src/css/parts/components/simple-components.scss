@@ -69,6 +69,10 @@
 		text-decoration: none;
 		transition: color $animation-fast;
 	}
+
+	&.in-text {
+		text-decoration: underline !important;
+	}
 }
 
 // overlay
