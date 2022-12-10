@@ -18,11 +18,11 @@
 <!-- MODALS -->
 
 <!-- what first modal -->
-<div data-modal class="modal dark full-screen-on-mobile" id="whatFirst">
+<div class="modal dark full-screen-on-mobile" id="whatFirst">
     <div class="modal__content">
-        <div data-modal-overlay class="modal__overlay"></div>
+        <div class="modal__overlay"></div>
         <div class="modal__dialog">
-            <div class="stepper" data-modal-stepper data-stepper>
+            <div class="modal__stepper stepper" data-stepper>
                 <!-- step #1 -->
                 <div class="stepper__item active" data-stepper-item>
                     <div class="modal__dialog-step-status">
@@ -198,15 +198,15 @@
 </div>
 
 <!-- registration modal -->
-<div data-modal class="modal" id="registrationModal">
+<div class="modal" id="registrationModal">
     <div class="modal__content">
-        <div data-modal-overlay class="modal__overlay"></div>
+        <div class="modal__overlay"></div>
         <div class="modal__dialog">
             <div class="modal__dialog-title">
                 <span>
                     Регистрация на платформе
                 </span>
-                <button data-modal-close class="modal__dialog-close-btn icon-btn rounded small">
+                <button class="modal__dialog-close-btn icon-btn rounded small">
                     <svg class="icon" viewBox="0 0 20 20">
                         <use href="img/icons/close-rounded.svg#svg"/>
                     </svg>
@@ -325,7 +325,7 @@
                                 </svg>
                             </div>
                         </div>
-                        <span>Я прочел(а) и согласен(а) <a class="link" href="./User-Agreement.pdf" target="_blank">с пользовательским соглашением</a></span>
+                        <span>Я прочел(а) и согласен(а) <a class="link" href="./Terms-of-use.pdf" target="_blank">с пользовательским соглашением</a></span>
                     </label>
 
                     <label class="checkbox">
@@ -356,7 +356,7 @@
             </form>
             <div class="modal__dialog-sub-actions">
                 Уже есть аккаунт?
-                <span class="link" data-modal-trigger="#loginModal">
+                <span class="link" data-modal data-target="#loginModal">
                     Войти с логином и паролем
                 </span>
             </div>
@@ -365,15 +365,15 @@
 </div>
 
 <!-- login modal -->
-<div data-modal class="modal" id="loginModal">
+<div class="modal" id="loginModal">
     <div class="modal__content">
-        <div data-modal-overlay class="modal__overlay"></div>
+        <div class="modal__overlay"></div>
         <div class="modal__dialog">
             <div class="modal__dialog-title">
                 <span>
                     Войти в личный кабинет
                 </span>
-                <button data-modal-close class="modal__dialog-close-btn icon-btn rounded small">
+                <button class="modal__dialog-close-btn icon-btn rounded small">
                     <svg class="icon" viewBox="0 0 20 20">
                         <use href="img/icons/close-rounded.svg#svg"/>
                     </svg>
@@ -415,7 +415,7 @@
                                    placeholder="Пароль"
                             >
                             <div class="textfield__end-adornment">
-                                <button class="btn btn-text" type="button" data-modal-trigger="#restorationModal">
+                                <button class="btn btn-text" type="button" data-modal data-target="#restorationModal">
                                     Забыли?
                                 </button>
                             </div>
@@ -433,7 +433,7 @@
             </form>
             <div class="modal__dialog-sub-actions">
                 Нет аккаунта?
-                <span class="link" data-modal-trigger="#registrationModal">
+                <span class="link" data-modal data-target="#registrationModal">
                     Зарегистрируйтесь
                 </span>
             </div>
@@ -442,15 +442,15 @@
 </div>
 
 <!-- restoration modal -->
-<div data-modal class="modal" id="restorationModal">
+<div class="modal" id="restorationModal">
     <div class="modal__content">
-        <div data-modal-overlay class="modal__overlay"></div>
+        <div class="modal__overlay"></div>
         <div class="modal__dialog">
             <div class="modal__dialog-title">
                 <span>
                     Забыли пароль?
                 </span>
-                <button data-modal-close class="modal__dialog-close-btn icon-btn rounded small">
+                <button class="modal__dialog-close-btn icon-btn rounded small">
                     <svg class="icon" viewBox="0 0 20 20">
                         <use href="img/icons/close-rounded.svg#svg"/>
                     </svg>
@@ -488,15 +488,15 @@
 </div>
 
 <!-- calculator modal -->
-<div data-modal class="modal" id="calculatorModal">
+<div class="modal" id="calculatorModal">
     <div class="modal__content">
-        <div data-modal-overlay class="modal__overlay"></div>
+        <div class="modal__overlay"></div>
         <div class="modal__dialog">
             <div class="modal__dialog-title">
                 <span>
                     Калькулятор
                 </span>
-                <button data-modal-close class="modal__dialog-close-btn icon-btn rounded small">
+                <button class="modal__dialog-close-btn icon-btn rounded small">
                     <svg class="icon" viewBox="0 0 20 20">
                         <use href="img/icons/close-rounded.svg#svg"/>
                     </svg>
@@ -590,15 +590,15 @@
 </div>
 
 <!-- balance modal -->
-<div data-modal class="modal" id="balanceModal">
+<div class="modal" id="balanceModal">
     <div class="modal__content">
-        <div data-modal-overlay class="modal__overlay"></div>
+        <div class="modal__overlay"></div>
         <div class="modal__dialog">
             <div class="modal__dialog-title">
                 <span>
                     USDT (TRC20)
                 </span>
-                <button data-modal-close class="modal__dialog-close-btn icon-btn rounded small">
+                <button class="modal__dialog-close-btn icon-btn rounded small">
                     <svg class="icon" viewBox="0 0 20 20">
                         <use href="img/icons/close-rounded.svg#svg"/>
                     </svg>
@@ -719,9 +719,9 @@
 <div class="menu__overlay overlay" id="menuOverlay"></div>
 <div class="menu" id="menu">
     <div class="menu__header">
-        <a class="menu__logo" href="index.html">
+        <div class="menu__logo">
             <img src="img/logo.svg" alt="">
-        </a>
+        </div>
         <div class="menu__language language dropdown">
             <div class="language__label dropdown__trigger">
                 <span>Ru</span>
@@ -749,7 +749,7 @@
         </svg>
     </div>
     <div class="menu__body">
-        <button class="btn btn-outlined menu__action" data-modal-trigger="#loginModal">
+        <button class="btn btn-outlined menu__action" data-modal data-target="#loginModal">
             Вход / Регистрация
         </button>
         <nav class="menu__nav">
@@ -816,7 +816,7 @@
                     </div>
                 </div>
             </div>
-            <div class="header__action" data-modal-trigger="#loginModal">
+            <div class="header__action" data-modal data-target="#loginModal">
                 Вход / Регистрация
             </div>
         </header>
@@ -879,8 +879,8 @@
                 максимальной прибыли с арбитражной торговли.
             </div>
             <div class="promo__buttons">
-                <button class="btn btn_promo" data-modal-trigger="#registrationModal">Начать сейчас</button>
-                <button class="btn btn-outlined" data-modal-trigger="#whatFirst">
+                <button class="btn btn_promo" data-modal data-target="#registrationModal">Начать сейчас</button>
+                <button class="btn btn-outlined" data-modal data-target="#whatFirst">
                     <svg class="icon">
                         <use href="img/icons/play.svg#svg"/>
                     </svg>
@@ -1036,7 +1036,7 @@
                 Задача платформы - предоставить взимовыгодные условия сотрудничества в арбитраже криптовалют
             </div>
             <div class="exchange__description-buttons">
-                <button class="btn btn_promo" data-modal-trigger="#registrationModal">Начать сейчас</button>
+                <button class="btn btn_promo" data-modal data-target="#registrationModal">Начать сейчас</button>
                 <a class="btn btn-outlined" href="about.html">Больше о нас</a>
             </div>
         </div>

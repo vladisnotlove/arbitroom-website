@@ -3,13 +3,13 @@ import cssVars from '../styles/cssVars';
 
 window.addEventListener("load", () => {
 
-	document.querySelectorAll("[data-modal-trigger]").forEach(trigger => {
-		const modal = document.querySelector(trigger.dataset.modalTrigger);
-		const modalStepper = modal.querySelector("[data-modal-stepper]");
+	document.querySelectorAll("[data-modal]").forEach(trigger => {
+		const modal = document.querySelector(trigger.dataset.target);
+		const modalStepper = modal.querySelector(".modal__stepper");
 
 		trigger.addEventListener("click", () => {
 			if (modal) {
-				document.querySelectorAll("[data-modal]").forEach(modal => modal.classList.remove("open"));
+				document.querySelectorAll(".modal").forEach(modal => modal.classList.remove("open"));
 				document.documentElement.classList.add("modal-open");
 				modal.classList.add("open");
 
@@ -22,17 +22,17 @@ window.addEventListener("load", () => {
 
 	let bodyRemoveClassTimeout = -1;
 
-	document.querySelectorAll("[data-modal]").forEach(modal => {
-		const modalBtns = modal.querySelectorAll("[data-modal-close]");
-		const modalOverlays = modal.querySelectorAll("[data-modal-overlay]");
+	document.querySelectorAll(".modal").forEach(modal => {
+		const modalBtns = modal.querySelectorAll(".modal__dialog-close-btn, [data-modal-close]");
+		const modalOverlays = modal.querySelectorAll(".modal__overlay");
 
 		if (!modalBtns || modalBtns.length === 0) {
-			log.elementNotFound("[data-modal-close]");
+			log.customMessage("no close btns");
 			return;
 		}
 
 		if (!modalOverlays || modalOverlays.length === 0) {
-			log.elementNotFound("[data-modal-overlay]");
+			log.customMessage("no overlay");
 			return;
 		}
 
