@@ -8,11 +8,11 @@ window.addEventListener("load", () => {
 		const stepBtns = stepper.querySelectorAll("[data-stepper-to]");
 
 		if (!steps) {
-			log.elementNotFound("[data-stepper-item]");
+			console.warn("Stepper element", stepper, "has no steps (elements with 'data-stepper-item' attribute)")
 			return;
 		}
 
-		nextBtns.forEach(nextBtn => {
+		if (nextBtns) nextBtns.forEach(nextBtn => {
 			nextBtn.addEventListener("click", () => {
 				const activeStepIndex = [...steps].findIndex(step => step.classList.contains("active"));
 				const nextActiveStepIndex = activeStepIndex + 1;
@@ -25,7 +25,7 @@ window.addEventListener("load", () => {
 			})
 		});
 
-		stepBtns.forEach(stepBtn => {
+		if (stepBtns) stepBtns.forEach(stepBtn => {
 			stepBtn.addEventListener("click", () => {
 				const nextActiveStepIndex = parseInt(stepBtn.dataset.stepperTo);
 				const nextActiveStep = steps[nextActiveStepIndex];
