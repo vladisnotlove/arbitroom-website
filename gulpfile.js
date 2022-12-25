@@ -1,10 +1,10 @@
 const {src, parallel, series, dest, watch: gulpWatch} = require('gulp');
-const del = require('del');
 const webpackSteam = require('webpack-stream');
 const sass = require('gulp-sass')(require('sass'));
 const yargs = require('yargs');
 const rename = require("gulp-rename");
 const replace = require('gulp-replace');
+const fs = require('fs');
 
 const isProduction = (yargs.argv.production !== undefined);
 const version = process.env.npm_package_version;
@@ -117,7 +117,7 @@ const js = () => {
 // public
 
 const clean = (cb) => {
-	del(['./dist/**'], {force: true});
+	fs.rmSync('./dist',  {recursive: true, force: true});
 	cb();
 };
 
