@@ -41,6 +41,24 @@
   }
 }
 
+.header__logo,
+.menu__logo {
+  position: relative;
+
+  &:after {
+    display: block;
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 107.75%;
+    height: 142.21%;
+    background: url("/img/santa-hat-to-logo.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
 
 // ADAPTIVE
 
