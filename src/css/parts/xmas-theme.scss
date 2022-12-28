@@ -1,12 +1,18 @@
 @import "variables";
 
 
-.with-frost-background {
+.with-frost-background1,
+.with-frost-background2 {
   position: relative;
 
   .container {
     background: transparent;
   }
+}
+
+.with-frost-background2 {
+  background: $color-background-upper1;
+  z-index: 2;
 }
 
 .frost-background {
@@ -16,7 +22,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1;
   overflow: hidden;
 
   img {
@@ -53,7 +58,7 @@
     bottom: 0;
     width: 107.75%;
     height: 142.21%;
-    background: url("/img/santa-hat-to-logo.svg");
+    background: url("/img/xmas/santa-hat-to-logo.svg");
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -69,7 +74,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("/img/frost-background-to-button.webp");
+    background: url("/img/xmas/frost-background-to-button.webp");
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: top 0 left 0;
@@ -97,13 +102,117 @@
   }
 }
 
+.button-with-xmas-branch {
+  position: relative;
+
+  & > .xmas-branch {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-50%);
+    width: 109px;
+    object-fit: contain;
+    z-index: -1;
+    filter: drop-shadow(0px 0px 34px rgba(255, 101, 0, 0.5));
+  }
+}
+
+.advantage-title-with-xmas-branches {
+  display: inline-block;
+  position: relative;
+
+  & > .xmas-branch-start {
+    position: absolute;
+    top: 33%;
+    left: 0;
+    transform: translate(-74%, -50%);
+    width: clamp(105px, 12.1vw, 233px);
+    filter: drop-shadow(0px 0px 34px rgba(125, 251, 248, 0.6));
+  }
+
+  & > .xmas-branch-end {
+    position: absolute;
+    top: 33%;
+    right: 0;
+    object-fit: contain;
+    transform: translate(74%, -50%);
+    width: clamp(98px, 11.3vw, 218px);
+    filter: drop-shadow(0px 0px 34px rgba(125, 251, 248, 0.6));
+  }
+}
+
+.goals-title-with-xmas-branch {
+  display: inline-block;
+  position: relative;
+
+  & > .xmas-branch {
+    position: absolute;
+    top: 44%;
+    left: 0;
+    transform: translate(-76%, -50%);
+    width: clamp(99px, 11.4vw, 220px);
+    filter: drop-shadow(0px 0px 38px rgba(125, 251, 248, 0.5));
+  }
+}
 
 // ADAPTIVE
 
+@media (max-width: $small-laptop) {
+
+  .button-with-xmas-branch {
+    & > .xmas-branch {
+      width: 80px;
+      bottom: 5px;
+    }
+  }
+
+  .goals-title-with-xmas-branch {
+    & > .xmas-branch {
+      width: clamp(99px, 10vw, 220px);
+    }
+  }
+}
+
+@media (max-width: $small-tablet) {
+  .goals-title-with-xmas-branch {
+    & > .xmas-branch {
+      display: none;
+    }
+  }
+}
+
+
+@media (max-width: $small-tablet) {
+  .button-with-xmas-branch {
+    & > .xmas-branch {
+      bottom: 10px;
+      width: 60px;
+      transform: translateX(-40%);
+    }
+  }
+
+  .advantage-title-with-xmas-branches {
+
+    & > .xmas-branch-start {
+      display: none;
+    }
+
+    & > .xmas-branch-end {
+      display: none;
+    }
+  }
+}
+
 @media (max-width: $mobile) {
 
-  .frost-background {
-    display: none;
+  //.frost-background {
+  //  display: none;
+  //}
+
+  .button-with-xmas-branch {
+    & > .xmas-branch {
+      display: none;
+    }
   }
 
 }
