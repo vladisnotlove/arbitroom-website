@@ -60,9 +60,9 @@ $promo-first-container-padding-bottom: 3.75rem;
   left: 0;
   transform: translateY(5%);
   width: 100%;
-  height: 12%;
+  height: 16%;
   z-index: 1;
-  background: linear-gradient(to top, $promo-background, change-color($promo-background, $alpha: 0));
+  background: linear-gradient(to top, $promo-background 10%, change-color($promo-background, $alpha: 0));
 }
 
 .promo__video-shadow-left {

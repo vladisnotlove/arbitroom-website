@@ -17,3 +17,27 @@
     opacity: 0;
   }
 }
+
+@keyframes float1 {
+  0% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -9px;
+  }
+  100% {
+    translate: 0 0;
+  }
+}
+
+@keyframes float2 {
+  0% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -12px;
+  }
+  100% {
+    translate: 0 0;
+  }
+}

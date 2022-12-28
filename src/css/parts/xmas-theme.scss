@@ -10,6 +10,12 @@
   }
 }
 
+.with-frost-background1 {
+  .frost-background {
+    top: 5.75rem;
+  }
+}
+
 .with-frost-background2 {
   background: $color-background-upper1;
   z-index: 2;
@@ -205,9 +211,11 @@
 
 @media (max-width: $mobile) {
 
-  //.frost-background {
-  //  display: none;
-  //}
+  .with-frost-background1 {
+    .frost-background {
+      top: 0;
+    }
+  }
 
   .button-with-xmas-branch {
     & > .xmas-branch {
