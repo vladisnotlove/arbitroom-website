@@ -23,8 +23,8 @@
     align-self: center;
     justify-self: center;
     background: $color-background-upper2;
-    -webkit-mask-image: url("/img/tooltip-arrow-down.svg");
-    mask-image: url("/img/tooltip-arrow-down.svg");
+    -webkit-mask-image: url("../img/tooltip-arrow-down.svg");
+    mask-image: url("../img/tooltip-arrow-down.svg");
     -webkit-mask-size: 100% auto;
     -webkit-mask-repeat: no-repeat;
     backdrop-filter: blur(4rem);
@@ -49,9 +49,9 @@
     &::before {
       width: 1rem;
       height: 1.5rem;
-      -webkit-mask-image: url("/img/tooltip-arrow-right.svg");
+      -webkit-mask-image: url("../img/tooltip-arrow-right.svg");
       -webkit-mask-size: auto 100%;
-      mask-image: url("/img/tooltip-arrow-right.svg");
+      mask-image: url("../img/tooltip-arrow-right.svg");
       transform: rotate(180deg);
     }
   }
@@ -63,9 +63,9 @@
     &::before {
       width: 1rem;
       height: 1.5rem;
-      -webkit-mask-image: url("/img/tooltip-arrow-right.svg");
+      -webkit-mask-image: url("../img/tooltip-arrow-right.svg");
       -webkit-mask-size: auto 100%;
-      mask-image: url("/img/tooltip-arrow-right.svg");
+      mask-image: url("../img/tooltip-arrow-right.svg");
     }
   }
 }
