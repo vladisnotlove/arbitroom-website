@@ -11,26 +11,7 @@ window.addEventListener('load', () => {
 		const placement = trigger.dataset.withTooltipPlacement || "top";
 		const tooltip = trigger.querySelector(".tooltip");
 
-		const popper = createPopper(trigger, tooltip, {
-			placement: placement,
-			strategy: "absolute",
-			modifiers: [
-				{
-					name: "flip",
-					options: {
-						fallbackPlacements: ['auto'],
-					},
-				},
-				createPlacementHandler((placement, element) => {
-					element.classList.remove("top");
-					element.classList.remove("left");
-					element.classList.remove("right");
-					element.classList.remove("bottom");
-					element.classList.add(placement);
-				}),
-			],
-		});
-
+		let popper;
 		let disappearTimeoutId = -1;
 
 		trigger.addEventListener("mouseenter", () => {
@@ -38,9 +19,30 @@ window.addEventListener('load', () => {
 				document.body.appendChild(tooltip);
 			}
 
+			if (!popper) popper = createPopper(trigger, tooltip, {
+				placement: placement,
+				strategy: "absolute",
+				modifiers: [
+					{
+						name: "flip",
+						options: {
+							fallbackPlacements: ['auto'],
+						},
+					},
+					createPlacementHandler((placement, element) => {
+						element.classList.remove("top");
+						element.classList.remove("left");
+						element.classList.remove("right");
+						element.classList.remove("bottom");
+						element.classList.add(placement);
+					}),
+				],
+			});
+
 			tooltip.classList.add("show");
 			tooltip.classList.remove("fade-out-slow");
 			clearTimeout(disappearTimeoutId);
+
 			popper.update();
 		});
 
@@ -48,8 +50,11 @@ window.addEventListener('load', () => {
 			tooltip.classList.add("fade-out-slow");
 
 			disappearTimeoutId = setTimeout(() => {
-				console.log("dissapear clear");
 				tooltip.classList.remove("show");
+				if (popper) {
+					popper.destroy();
+					popper = undefined;
+				}
 			}, ANIMATION_SLOW_MS)
 		});
 

@@ -4,11 +4,12 @@
 
 // tooltip
 
+// default arrow is arrow down (↓)
+$arrow-width: 1.5rem;
+$arrow-height: 1rem;
+
 .tooltip {
-  display: grid;
-  grid-template-areas:
-          "c"
-          "p";
+  padding: $arrow-height;
   box-sizing: border-box;
   max-width: calc(100vw - 1rem);
   cursor: pointer;
@@ -16,9 +17,13 @@
   z-index: $z-index-tooltip;
 
   &::before {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
     content: "";
-    width: 1.5rem;
-    height: 1rem;
+    width: $arrow-width;
+    height: $arrow-height;
     grid-area: p;
     align-self: center;
     justify-self: center;
@@ -34,25 +39,22 @@
   // default: top
 
   &.bottom {
-    grid-template-areas:
-          "p"
-          "c";
     &::before {
-      transform: rotate(180deg);
+      top: 0;
+      bottom: unset;
+      right: unset;
+      left: 50%;
+      transform: translate(-50%, 0) rotate(180deg);
     }
   }
 
   &.right {
-    grid-template-areas:
-          "p c";
-
     &::before {
-      width: 1rem;
-      height: 1.5rem;
-      -webkit-mask-image: url("../img/tooltip-arrow-right.svg");
-      -webkit-mask-size: auto 100%;
-      mask-image: url("../img/tooltip-arrow-right.svg");
-      transform: rotate(180deg);
+      top: 50%;
+      bottom: unset;
+      right: unset;
+      left: 0;
+      transform: translate(#{$arrow-height * -0.25}, -50%) rotate(90deg);
     }
   }
 
@@ -61,11 +63,11 @@
           "c p";
 
     &::before {
-      width: 1rem;
-      height: 1.5rem;
-      -webkit-mask-image: url("../img/tooltip-arrow-right.svg");
-      -webkit-mask-size: auto 100%;
-      mask-image: url("../img/tooltip-arrow-right.svg");
+      top: 50%;
+      bottom: unset;
+      right: 0;
+      left: unset;
+      transform: translate(#{$arrow-height * 0.25}, -50%) rotate(-90deg);
     }
   }
 }

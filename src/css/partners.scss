@@ -229,6 +229,10 @@
   }
 }
 
+.program__cell-premium .program__label {
+  opacity: 0;
+}
+
 // structure turn
 
 .popper {
@@ -416,6 +420,10 @@
     }
   }
 
+  .program__cell-premium .program__label {
+    opacity: 1;
+  }
+
   // structure turn
 
   .structure-turn {
@@ -448,7 +456,6 @@
       color: $color-text-prime;
     }
   }
-
 
 }
 
@@ -513,15 +520,12 @@
   }
 
   .program__cell-conditions {
-
-    .btn {
-      position: absolute;
-      top: 1.5rem;
-      right: 1.5rem;
-      margin-right: -0.75rem;
-      margin-left: -0.75rem;
-      @include button-small;
-    }
+    display: inline-block;
+    width: fit-content;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    @include button-small;
   }
 
 
