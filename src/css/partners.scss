@@ -229,10 +229,6 @@
   }
 }
 
-.program__cell-premium .program__label {
-  opacity: 0;
-}
-
 // structure turn
 
 .popper {
@@ -418,10 +414,6 @@
       margin-left: -0.75rem;
       @include button-small;
     }
-  }
-
-  .program__cell-premium .program__label {
-    opacity: 1;
   }
 
   // structure turn
