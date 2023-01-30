@@ -142,6 +142,11 @@ html.modal-open {
 
 	margin-top: -1rem;
 	margin-bottom: 2rem;
+
+	&.disabled {
+		opacity: 0.3;
+		pointer-events: none;
+	}
 }
 
 .modal__dialog-close-btn {
