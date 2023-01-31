@@ -7,7 +7,6 @@ const replace = require('gulp-replace');
 const fs = require('fs');
 
 const isProduction = (yargs.argv.production !== undefined);
-const version = process.env.npm_package_version;
 
 // config
 
@@ -52,7 +51,6 @@ const paths = {
 
 const html = () => {
 	return src(paths.htmlSrc)
-	.pipe(replace("{{version}}", version))
 	.pipe(dest(paths.htmlDist));
 };
 
@@ -79,9 +77,6 @@ const fonts = () => {
 const scss = () => {
 	return src(paths.scssSrc)
 	.pipe(sass().on('error', sass.logError))
-	.pipe(rename({
-		suffix: "" + version,
-	}))
 	.pipe(dest(paths.cssDist));
 };
 
@@ -108,9 +103,6 @@ const js = () => {
 			},
 		}),
 	)
-	.pipe(rename({
-		suffix: "" + version,
-	}))
 	.pipe(dest(paths.jsDist));
 };
 
