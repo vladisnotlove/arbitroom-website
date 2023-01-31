@@ -174,11 +174,13 @@ $header-link: 0.625rem;
 
 	cursor: pointer;
 	transition: color $animation-slow;
+	text-decoration: none;
 
 	&.active,
 	&:hover {
 		color: $color-prime-main;
 		transition: color $animation-normal;
+		text-decoration: none;
 	}
 }
 
