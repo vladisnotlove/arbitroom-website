@@ -1,0 +1,40 @@
+@import "../variables";
+
+.toggle-button-group {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+
+  padding: 0.25rem;
+  border: 1px solid $color-divider;
+  border-radius: 1.5rem;
+
+  .toggle-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0.375rem 0.625rem;
+    border-radius: 1.5rem;
+
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+
+    color: $color-text-secondary;
+    cursor: pointer;
+    transition: color $animation-normal, background $animation-normal, box-shadow $animation-normal;
+
+    &.active {
+      color: $color-text-prime;
+      background: $color-background-upper2;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
+    }
+
+    &:hover {
+      color: $color-text-prime;
+      transition: color $animation-fast;
+    }
+  }
+}

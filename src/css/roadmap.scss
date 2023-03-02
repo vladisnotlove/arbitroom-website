@@ -135,10 +135,27 @@
 
 // events
 
+.roadmap__events {
+  &:not(.active) {
+    display: none;
+  }
+}
+
 .events {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+}
+
+.events__section-title {
+  @include typography-h4;
+  margin-bottom: 1.5rem;
+}
+
+.events__section-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .event {
@@ -195,6 +212,17 @@
   }
 }
 
+@media (max-width: $small-desktop) {
+  .events__section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: $laptop) {
+  .events__section-title {
+    font-size: 1.5rem;
+  }
+}
 
 @media (max-width: $small-laptop) {
 
@@ -235,6 +263,16 @@
 
   // events
 
+  .events__section {
+    &:not(.active) {
+      display: none;
+    }
+  }
+
+  .events__section-title {
+    font-size: 1.25rem;
+  }
+
   .event__title {
     font-size: 1.75rem;
   }
@@ -244,7 +282,6 @@
   }
 
 }
-
 
 @media (max-width: $tablet) {
 
@@ -300,7 +337,6 @@
     flex-grow: 7;
   }
 }
-
 
 @media (max-width: $small-tablet) {
 
@@ -458,6 +494,10 @@
   @include quarters__gap($dash-width: 5px);
 
   // events
+
+  .events__section-title {
+    @include typography-h4-adaptive;
+  }
 
   .event__poster {
     aspect-ratio: 1.37;

@@ -15,3 +15,5 @@ import "./components/animations";
 import "./components/promoVideo";
 import "./components/qurters";
 import "./components/stepper";
+import "./components/toggleButton";
+import "./components/roadmap";
