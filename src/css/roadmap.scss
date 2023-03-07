@@ -147,6 +147,12 @@
   gap: 3rem;
 }
 
+.events__section {
+  &:not(.active) {
+    display: none;
+  }
+}
+
 .events__section-title {
   @include typography-h4;
   margin-bottom: 1.5rem;
@@ -263,12 +269,6 @@
   }
 
   // events
-
-  .events__section {
-    &:not(.active) {
-      display: none;
-    }
-  }
 
   .events__section-title {
     font-size: 1.25rem;
