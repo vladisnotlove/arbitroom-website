@@ -1,14 +1,14 @@
 import cssVars from "../styles/cssVars";
 import {createPopper} from "@popperjs/core";
 
-
 const ANIMATION_SLOW_MS = cssVars.animationSlow * 1000;
+const VIEWPORT_PADDING = 12;
 
 window.addEventListener('load', () => {
-
-	document.querySelectorAll('.popper').forEach((popperMenu) => {
-		const onHover = popperMenu.dataset.popperOnHover !== undefined;
-		const anchorElement = document.querySelectorAll(popperMenu.dataset.popperAnchorElement)
+	document.querySelectorAll('.popper').forEach((element) => {
+		const onHover = element.dataset.popperOnHover !== undefined;
+		const offset = parseFloat(element.dataset.popperOffset || "0");
+		const anchorElement = document.querySelectorAll(element.dataset.popperAnchorElement)
 
 		let overlay;
 		let popper;
@@ -22,8 +22,22 @@ window.addEventListener('load', () => {
 
 			clearTimeout(closingTimeout);
 
-			if (!popper) popper = createPopper(currentAnchorElement, popperMenu, {
+			if (!popper) popper = createPopper(currentAnchorElement, element, {
 				strategy: "fixed",
+				modifiers: [
+					{
+						name: 'offset',
+						options: {
+							offset: [offset, offset],
+						},
+					},
+					{
+						name: 'preventOverflow',
+						options: {
+							padding: VIEWPORT_PADDING
+						},
+					}
+				]
 			});
 
 			if (!options.disableOverlay) {
@@ -32,13 +46,14 @@ window.addEventListener('load', () => {
 				overlay.addEventListener("click", closePopper);
 				document.body.prepend(overlay);
 			}
-			popperMenu.classList.add("open");
+			element.classList.add("open");
+			element.style.maxWidth = `calc(100vw - ${VIEWPORT_PADDING * 2}px)`;
 		}
 
 		const closePopper = () => {
 			overlay?.remove();
 			overlay = undefined;
-			popperMenu.classList.remove("open");
+			element.classList.remove("open");
 
 			clearTimeout(closingTimeout);
 			closingTimeout = setTimeout(() => {
@@ -50,14 +65,14 @@ window.addEventListener('load', () => {
 		if (onHover) {
 			anchorElement.forEach(elem => {
 				elem.addEventListener("mouseenter", (e) => {
-					const isOpen = popperMenu.classList.contains("open");
+					const isOpen = element.classList.contains("open");
 
 					if (!isOpen) {
 						openPopper(e.currentTarget, {disableOverlay: true});
 					}
 				});
 				elem.addEventListener("mouseleave", (e) => {
-					const isOpen = popperMenu.classList.contains("open");
+					const isOpen = element.classList.contains("open");
 
 					if (isOpen) {
 						closePopper();
@@ -66,10 +81,9 @@ window.addEventListener('load', () => {
 			})
 		}
 		else {
-
 			anchorElement.forEach(elem => {
 				elem.addEventListener("click", (e) => {
-					const isOpen = popperMenu.classList.contains("open");
+					const isOpen = element.classList.contains("open");
 
 					if (!isOpen) {
 						openPopper(e.currentTarget);

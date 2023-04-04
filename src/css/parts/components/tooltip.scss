@@ -13,7 +13,6 @@ $arrow-height: 1rem;
   box-sizing: border-box;
   max-width: calc(100vw - 1rem);
   cursor: pointer;
-  animation: $animation-fast fade-in;
   z-index: $z-index-tooltip;
 
   &::before {
@@ -34,6 +33,7 @@ $arrow-height: 1rem;
     -webkit-mask-repeat: no-repeat;
     backdrop-filter: blur(4rem);
     -webkit-backdrop-filter: blur(4rem);
+    animation: $animation-fast fade-in;
   }
 
   // default: top
@@ -70,6 +70,33 @@ $arrow-height: 1rem;
       transform: translate(#{$arrow-height * 0.25}, -50%) rotate(-90deg);
     }
   }
+
+  &:not(.show) {
+    display: none;
+
+    & > .tooltip__content {
+      opacity: 0;
+    }
+
+    &::before {
+      opacity: 0;
+    }
+  }
+
+  &.fade-out-slow {
+    opacity: 1;
+    animation: none;
+
+    & > .tooltip__content {
+      opacity: 0;
+      animation: $animation-slow fade-out;
+    }
+
+    &::before {
+      opacity: 0;
+      animation: $animation-slow fade-out;
+    }
+  }
 }
 
 .tooltip__content {
@@ -84,12 +111,8 @@ $arrow-height: 1rem;
   white-space: normal;
   backdrop-filter: blur(4rem);
   -webkit-backdrop-filter: blur(4rem);
+  animation: $animation-fast fade-in;
 }
-
-.tooltip:not(.show) {
-  display: none;
-  opacity: 0;
-};
 
 // with-tooltip
 
