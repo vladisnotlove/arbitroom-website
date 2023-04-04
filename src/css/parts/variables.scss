@@ -263,12 +263,12 @@ $container-padding-adaptive: get-adaptive-value($container-padding-desktop, $con
 	@return clamp(#{$small-value}, #{$small-value} + #{strip-unit($increment)} * (100vw - #{$small-screen}) / (#{strip-unit($big-screen - $small-screen)} / var(--rem)), #{$big-value});
 }
 
-//@function get-true-adaptive-value($big-value, $small-value, $big-screen: $desktop, $small-screen: $mobile) {
-//	$fixed: $small-value - math.div(($big-value - $small-value) * $small-screen, $big-screen - $small-screen);
-//	$float: math.div(($big-value - $small-value) * 1000, $big-screen - $small-screen);
-//
-//	@return clamp(#{$small-value}, calc(#{$fixed} + #{strip-unit($float) * 0.1vw}), #{$big-value});
-//}
+@function get-true-adaptive-value($big-value, $small-value, $big-screen: $desktop, $small-screen: $mobile) {
+	$fixed: $small-value - math.div(($big-value - $small-value) * $small-screen, $big-screen - $small-screen);
+	$float: math.div(($big-value - $small-value) * 1000, $big-screen - $small-screen);
+
+	@return clamp(#{$small-value}, calc(#{$fixed} + #{strip-unit($float) * 0.1vw}), #{$big-value});
+}
 
 @function get-column-width($max-columns, $gap, $columns) {
 	@return calc(((100% - #{$gap} * #{$max-columns - 1}) / #{$max-columns} + #{$gap}) * #{$columns} - #{$gap});

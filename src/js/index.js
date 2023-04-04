@@ -17,3 +17,4 @@ import "./components/qurters";
 import "./components/stepper";
 import "./components/toggleButton";
 import "./components/roadmap";
+import "./components/promoModal";
