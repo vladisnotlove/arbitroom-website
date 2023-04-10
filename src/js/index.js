@@ -2,7 +2,6 @@ import "./components/collapse";
 import "./components/dataToggleClass";
 import "./components/dropdown";
 import "./components/youtube-embedded";
-import "./components/header";
 import "./components/modal";
 import "./components/goals";
 import "./components/form";

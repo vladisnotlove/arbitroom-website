@@ -308,7 +308,116 @@
     </div>
 </div>
 
+<!-- header script -->
+<script>
+	const debounce = (func, wait, immediate) => {
+		let timeout;
 
+		return function executedFunction() {
+			const context = this;
+			const args = arguments;
+
+			const later = function() {
+				timeout = null;
+				if (!immediate) func.apply(context, args);
+			};
+
+			const callNow = immediate && !timeout;
+
+			clearTimeout(timeout);
+
+			timeout = setTimeout(later, wait);
+
+			if (callNow) func.apply(context, args);
+		};
+	};
+
+	const checkElementsNotNull = (data) => {
+		try {
+			let areValid = true;
+			data.forEach(({element, name}) => {
+				if (!element) {
+					log.elementNotFound(name);
+					areValid = false;
+				}
+			});
+			return areValid;
+		}
+		catch (e) {
+			console.error(e);
+		}
+	}
+
+	const headerWrapper = document.getElementById("headerWrapper");
+	const header = headerWrapper.querySelector(".header:not(.variant-collapsed)");
+	const headerCollapsed = headerWrapper.querySelector(".header.variant-collapsed");
+	const headerBurger = headerWrapper.querySelector(".header__burger");
+
+	const menu = document.getElementById("menu");
+	const menuOverlay = document.getElementById("menuOverlay");
+	const menuCloseBtn = menu.querySelector(".menu__close-btn");
+
+	const elementsNotNull = checkElementsNotNull([
+		{ element: headerWrapper, name: "#headerWrapper"},
+		{ element: headerBurger, name: ".header__burger"},
+		{ element: menu, name: "#menu"},
+		{ element: menuOverlay, name: "#menuOverlay"},
+		{ element: menuCloseBtn, name: ".menu__close-btn"},
+	])
+
+	if (elementsNotNull) {
+		let bodyEnableScrollTimeout = -1;
+		const openMenu = () => {
+			clearTimeout(bodyEnableScrollTimeout);
+			menu.classList.add("open");
+			menuOverlay.classList.add("open");
+			document.documentElement.classList.add("disable-scroll");
+		}
+		const closeMenu = () => {
+			clearTimeout(bodyEnableScrollTimeout);
+			menu.classList.remove("open");
+			menuOverlay.classList.remove("open");
+			bodyEnableScrollTimeout = setTimeout(() => {
+				document.documentElement.classList.remove("disable-scroll");
+			}, 2500);
+		}
+		headerBurger.addEventListener("click", openMenu);
+		menuOverlay.addEventListener("click", closeMenu);
+		menuCloseBtn.addEventListener("click", closeMenu);
+		menu.classList.add("ready");
+
+		const onScroll = () => {
+			if (window.scrollY > 1) {
+				headerWrapper.classList.add("scrolled");
+			}
+			else {
+				if (headerWrapper.classList.contains("scrolled")) {
+					headerWrapper.classList.remove("scrolled");
+				}
+			}
+		}
+		onScroll();
+		window.addEventListener("scroll", onScroll);
+
+		const onResize = () => {
+			let isOverflowed = false;
+			[...header.children].forEach(element => {
+				if (element.clientWidth < element.scrollWidth) isOverflowed = true;
+			})
+
+			if (isOverflowed) {
+				header.classList.add("hidden");
+				headerCollapsed.classList.remove("hidden");
+			}
+			else {
+				headerCollapsed.classList.add("hidden");
+				header.classList.remove("hidden");
+			}
+		}
+		onResize();
+		window.addEventListener("resize", debounce(onResize, 1000));
+	}
+</script>
 
 <!-- MAIN -->
 
