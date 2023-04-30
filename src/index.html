@@ -722,10 +722,19 @@
             <div class="promo__video-shadow-top"></div>
             <div class="promo__video-shadow-bottom"></div>
             <div class="promo__video-shadow-left"></div>
+
+            <script>
+                window.addEventListener("load", () => {
+					const video = document.querySelector("video.promo__video");
+					if (!(video instanceof HTMLVideoElement)) return;
+					video.autoplay = true;
+                })
+            </script>
+
             <video class="promo__video"
                 loop
                 muted
-                preload="auto"
+                preload="none"
                 poster="img/promo-video-poster.jpg"
             ><source src="video/promo.mp4" type="video/mp4"></video>
         </div>

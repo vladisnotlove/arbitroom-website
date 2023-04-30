@@ -3,7 +3,7 @@ import { createPopper } from '@popperjs/core';
 
 // MAIN
 
-window.addEventListener('load', () => {
+(() => {
 	const dropdownOverlay = document.getElementById("dropdownOverlay");
 	const components = [];
 
@@ -73,4 +73,4 @@ window.addEventListener('load', () => {
 		dropdownOverlay.classList.remove("active");
 	});
 
-});
+})();
