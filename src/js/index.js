@@ -17,3 +17,4 @@ import "./components/stepper";
 import "./components/toggleButton";
 import "./components/roadmap";
 import "./components/promoModal";
+import "./components/select";

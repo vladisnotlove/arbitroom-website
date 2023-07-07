@@ -151,7 +151,6 @@ const validateField = (field, input) => {
 		}
 	}
 
-
 	return {
 		isValid: true,
 	}
@@ -162,20 +161,13 @@ const validateField = (field, input) => {
 window.addEventListener('load', () => {
 
 	document.querySelectorAll("[data-form]").forEach(form => {
-		const state = {
+		const formState = {
 			isSubmitted: false,
 			isValid: false,
 		}
 
-		// let fieldUpdaters = [];
-		// const updateAllFields = () => {
-		// 	fieldUpdaters.forEach(updateField => updateField());
-		// }
-		//
-		// let fieldTrimmers = [];
-		// const trimAllFields = () => {
-		// 	fieldTrimmers.forEach(trimField => trimField());
-		// }
+		let fieldUpdaters = [];
+		let fieldTrimmers = [];
 
 		form.querySelectorAll("[data-form-field]").forEach(field => {
 			const fieldState = {
@@ -186,7 +178,7 @@ window.addEventListener('load', () => {
 
 			const updateField = () => {
 				const { isValid: isFieldValid, message } = validateField(field, input);
-				state.isValid = state.isValid && isFieldValid;
+				formState.isValid = formState.isValid && isFieldValid;
 
 				if (!isFieldValid) {
 					field.classList.add("error");
@@ -197,12 +189,12 @@ window.addEventListener('load', () => {
 					if (messageContainer) messageContainer.textContent = "";
 				}
 			}
-			// fieldUpdaters.push(updateField);
-			//
-			// const trimField = () => {
-			// 	input.value = trim(input.value);
-			// }
-			// fieldTrimmers.push(trimField);
+			fieldUpdaters.push(updateField);
+
+			const trimField = () => {
+				input.value = trim(input.value);
+			}
+			fieldTrimmers.push(trimField);
 
 			input.addEventListener("blur", () => {
 				fieldState.touched = true;
@@ -216,13 +208,21 @@ window.addEventListener('load', () => {
 
 		});
 
-		// form.addEventListener("submit", (e) => {
-		// 	state.isSubmitted = true;
-		// 	state.isValid = true;
-		// 	updateAllFields();
-		// 	if (state.isValid) trimAllFields();
-		// 	if (!state.isValid) e.preventDefault();
-		// });
+		const trimAllFields = () => {
+			fieldTrimmers.forEach(trimField => trimField());
+		}
+
+		const updateAllFields = () => {
+			fieldUpdaters.forEach(updateField => updateField());
+		}
+
+		form.addEventListener("submit", (e) => {
+			formState.isSubmitted = true;
+			formState.isValid = true;
+			updateAllFields();
+			if (formState.isValid) trimAllFields();
+			if (!formState.isValid) e.preventDefault();
+		});
 
 	})
 

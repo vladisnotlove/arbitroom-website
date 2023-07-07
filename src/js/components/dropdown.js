@@ -1,5 +1,5 @@
-import {checkElementsNotNull} from '../utils/log';
-import { createPopper } from '@popperjs/core';
+import {checkElementsNotNull} from "../utils/log";
+import {createPopper} from "@popperjs/core";
 
 // MAIN
 
@@ -8,8 +8,8 @@ import { createPopper } from '@popperjs/core';
 	const components = [];
 
 	const elementsNotNull = checkElementsNotNull([
-		{ element: dropdownOverlay, name: "#dropdownOverlay"},
-	])
+		{element: dropdownOverlay, name: "#dropdownOverlay"},
+	]);
 	if (!elementsNotNull) return;
 
 	document.querySelectorAll(".dropdown").forEach((dropdown) => {
@@ -17,15 +17,15 @@ import { createPopper } from '@popperjs/core';
 		const menu = dropdown.querySelector(".dropdown__menu");
 
 		const elementsNotNull = checkElementsNotNull([
-			{ element: trigger, name: ".dropdown__trigger"},
-			{ element: menu, name: ".dropdown__menu"},
-		])
+			{element: trigger, name: ".dropdown__trigger"},
+			{element: menu, name: ".dropdown__menu"},
+		]);
 		if (!elementsNotNull) return;
 
 		const popper = createPopper(trigger, menu, {
 			modifiers: [
 				{
-					name: 'offset',
+					name: "offset",
 					options: {
 						offset: [0, 8],
 					},
@@ -45,7 +45,7 @@ import { createPopper } from '@popperjs/core';
 				...options,
 				modifiers: [
 					...options.modifiers,
-					{ name: 'eventListeners', enabled: true },
+					{name: "eventListeners", enabled: true},
 				],
 			}));
 			popper.update();
@@ -56,7 +56,7 @@ import { createPopper } from '@popperjs/core';
 			trigger,
 			menu,
 			popper
-		})
+		});
 	});
 
 	dropdownOverlay.addEventListener("click", () => {
@@ -66,7 +66,7 @@ import { createPopper } from '@popperjs/core';
 				...options,
 				modifiers: [
 					...options.modifiers,
-					{ name: 'eventListeners', enabled: false },
+					{name: "eventListeners", enabled: false},
 				],
 			}));
 		});

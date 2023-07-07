@@ -1,6 +1,3 @@
-
-
-
 import cssVars from '../styles/cssVars';
 
 window.addEventListener("load", () => {
